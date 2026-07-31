@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+site/
+.kilo/
+.kilocode/
+.DS_Store
+Thumbs.db
+.env
+.env.*
+node_modules/
+.idea/
+.vscode/

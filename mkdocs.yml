@@ -1,0 +1,96 @@
+site_name: reCocina
+site_description: Recetario de cocina casera
+site_author: reCocina
+theme:
+  name: material
+  language: es
+  custom_dir: theme
+  features:
+  - navigation.sections
+  - navigation.top
+  - search.highlight
+  - search.suggest
+  - content.code.copy
+  palette:
+  - scheme: default
+    primary: indigo
+    accent: indigo
+    toggle:
+      icon: material/toggle-switch-off-outline
+      name: Activar modo oscuro
+  - scheme: slate
+    primary: indigo
+    accent: indigo
+    toggle:
+      icon: material/toggle-switch
+      name: Desactivar modo oscuro
+plugins:
+- search
+markdown_extensions:
+- admonition
+- abbr
+- attr_list
+- def_list
+- footnotes
+- md_in_html
+- pymdownx.arithmatex
+- pymdownx.betterem
+- pymdownx.superfences
+- pymdownx.highlight
+- pymdownx.details
+- pymdownx.tasklist
+extra:
+  social:
+  - icon: fontawesome/brands/github
+    link: https://github.com/tu-usuario/recocina
+  footer: © 2024 reCocina — Hecho con Material para MkDocs
+nav:
+- Recetario: index.md
+- Aperitivos:
+  - recetas/aperitivos/ensaladilla-de-papas-con-lacon-y-huevo.md
+  - recetas/aperitivos/fajitas-de-soja-texturizada.md
+- Arroz:
+  - recetas/arroz/arroz-a-banda-con-sepia.md
+  - recetas/arroz/arroz-con-pollo-y-gambas.md
+  - recetas/arroz/curry-de-verduras-con-gambas.md
+  - recetas/arroz/salmon-teriyaki-con-arroz.md
+- Pasta:
+  - recetas/pasta/espagueti-carbonara.md
+  - recetas/pasta/pasta-con-cherrys.md
+  - recetas/pasta/pasta-con-langostinos.md
+  - recetas/pasta/pasta-con-setas-a-la-foie.md
+- Carne y Pollo:
+  - recetas/carne/cabra-guisada.md
+  - recetas/carne/cerdo-agridulce.md
+  - recetas/carne/cuscus-de-pollo-y-verduras.md
+  - recetas/carne/estofado-de-ternera.md
+  - recetas/carne/pastel-de-calabaza-y-pollo.md
+  - recetas/carne/pechuga-cocida-con-champinones.md
+  - recetas/carne/pechuga-de-pollo-con-salsa-de-miel-y-mostaza.md
+  - recetas/carne/pollo-caprese-al-pesto.md
+  - recetas/carne/solomillo-de-cerdo-con-papas-y-frutos-secos.md
+- Pescado y Mariscos:
+  - recetas/pescado-mariscos/calamares-rellenos-de-carne.md
+  - recetas/pescado-mariscos/guiso-de-calamares-con-alcachofas-y-albondigas.md
+  - recetas/pescado-mariscos/marmitako-de-atun.md
+- Postres:
+  - recetas/postres/brownie-coulant.md
+  - recetas/postres/peras-al-vino.md
+- Salsas:
+  - recetas/salsas/bechamel.md
+  - recetas/salsas/salsa-barbacoa.md
+  - recetas/salsas/salsa-curry.md
+  - recetas/salsas/salsa-pesto.md
+  - recetas/salsas/salsa-teriyaki.md
+- Sopas y Cremas:
+  - recetas/sopas-cremas/crema-de-champinones.md
+  - recetas/sopas-cremas/crema-de-quinoa-y-calabaza.md
+  - recetas/sopas-cremas/sopa-de-ajo.md
+  - recetas/sopas-cremas/sopa-de-melon.md
+  - recetas/sopas-cremas/sopa-de-verduras-con-huevo.md
+  - recetas/sopas-cremas/sopa-minestrone.md
+- Verduras, Legumbres y Potajes:
+  - recetas/verduras-legumbres/musabaha.md
+  - recetas/verduras-legumbres/potaje-de-berros.md
+  - recetas/verduras-legumbres/potaje-de-vigilia.md
+docs_dir: docs
