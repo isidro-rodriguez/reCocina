@@ -33,4 +33,4 @@ Incorpora el caldo de carne y deja guisar unos 45 minutos a fuego medio.
 
 Añade los guisantes y deja cocinar unos 15 minutos más.
 
-Termina probando el punto de sal y salpimenta a gusto antes. Deja reposar el cocido antes de servir.
+Termina probando el punto de sal y salpimenta a gusto antes de servir. Deja reposar el cocido antes de servir.

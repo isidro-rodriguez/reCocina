@@ -7,7 +7,7 @@
 * 1 kg de carne de cabra
 * 2 cebollas
 * 3 dientes de ajo
-* 2 limibes
+* 2 limones
 * 200 ml de vino tinto
 * Almendras tostadas y pasas
 * Orégano, comino y laurel

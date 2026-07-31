@@ -19,7 +19,7 @@
 
 ## Preparación
 
-Raspa y trocea la zanahoria, lava y separa en ramitos el brócoli y la colifror, pela y pica en juliana el pimiento, lava y trocea las acelgas.
+Raspa y trocea la zanahoria, lava y separa en ramitos el brócoli y la coliflor, pela y pica en juliana el pimiento, lava y trocea las acelgas.
 
 Rehoga la verdura en una sartén con aceite durante 5 minutos, agrega la salsa de curry y las gambas y cuece hasta que las gambas estén hechas.
 

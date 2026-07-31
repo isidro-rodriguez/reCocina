@@ -25,7 +25,7 @@ Pelar y picar las cebollas, los ajos y la calabaza.
 Preparar el relleno del pastel en un wok:
 
 1. Empezar salteando la cebolla 5 minutos.
-1. Añadir el ajo y sigue salteando otro minutos más.
+1. Añadir el ajo y sigue salteando otros minutos más.
 1. Añadir la calabaza junto al caldo y las especias y dejar cocer unos diez minutos o hasta que el agua se evapore.
 1. Agregar el pollo junto al queso ricota desmenuzado, cocer unos minutos y retirar.
 

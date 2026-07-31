@@ -1,6 +1,6 @@
-# Sopa De Melon
+# Sopa De Melón
 
-![Sopa De Melon](../../assets/fotos/sopa-de-melon.jpg)
+![Sopa De Melón](../../assets/fotos/sopa-de-melon.jpg)
 
 ## Ingredientes
 
@@ -19,6 +19,6 @@ Corta el melón por la mitad, quita las semillas y extrae la pulpa colocándola 
 
 Añade la nata líquida, el yogur, el zumo del limón y salpimenta.
 
-Licúa la mezcla con una batidora y dejala enfriar en la nevera un par de horas con la ramita de menta fresca para aportar frescura.
+Licúa la mezcla con una batidora y déjala enfriar en la nevera un par de horas con la ramita de menta fresca para aportar frescura.
 
 Emplatar con un chorrito de aceite de oliva virgen extra y unas virutas de jamón serrano.

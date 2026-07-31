@@ -4,7 +4,7 @@
 
 ## Ingredientes
 
-- 4 prechugas de pollo
+- 4 pechugas de pollo
 - Aceite de oliva
 - Sal y pimienta
 
@@ -12,8 +12,8 @@ Para la salsa:
 
 - 4 cucharadas de aceite de oliva
 - 2 cucharadas de miel
-- 3 cucharadas de mostoza antigua
-- 3 cucharadas de mostoza amarilla
+- 3 cucharadas de mostaza antigua
+- 3 cucharadas de mostaza amarilla
 - 2 cucharadas de vinagre
 - 1 cucharadita de pimentón
 - 1 cucharadita de romero
@@ -24,7 +24,7 @@ Para la salsa:
 Para acompañar:
 
 - 500 gr de papas
-- Una ensalada de de lechuga, tomate y pepino
+- Una ensalada de lechuga, tomate y pepino
 
 ## Preparación
 

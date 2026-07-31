@@ -4,7 +4,7 @@
 
 ## Ingredientes
 
-- 200 gr. cous cous
+- 200 gr. cuscús
 - 3 pechugas de pollo
 - 1 zanahoria
 - 1 calabacín
@@ -22,7 +22,7 @@ Picar la pechuga en tiras y sellarlas en una sartén caliente con aceite. Aparta
 
 En la misma sartén pochar la cebolla, la zanahoria, el ajo, los pimientos y el calabacín.
 
-A continuación agregamos el pollo  las especias al gusto (sobres de fajitas, curry, avecrem, etc.),
+A continuación agregamos el pollo y las especias al gusto (sobres de fajitas, curry, avecrem, etc.),
 dejar unos minutos y reservar.
 
 Preparar taza y media de cous cous y dos tazas de caldo de verduras.

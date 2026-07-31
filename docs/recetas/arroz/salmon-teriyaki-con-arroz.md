@@ -1,6 +1,6 @@
-# Salmon Teriyaki Con Arroz
+# Salmón Teriyaki Con Arroz
 
-![Salmon Teriyaki Con Arroz](../../assets/fotos/salmon-teriyaki-con-arroz.jpg)
+![Salmón Teriyaki Con Arroz](../../assets/fotos/salmon-teriyaki-con-arroz.jpg)
 
 ## Ingredientes
 
@@ -18,7 +18,7 @@
 
 Pela y pica en juliana la cebolla, despunta y trocea en dados el calabacín, pela y pica en juliana el pimiento, raspa y corta en rodajas la zanahoria, limpia y corta en rodajas el puerro.
 
-En un wok con aceite saltea la verdura durante 3 minutos. Agrega una cucharada de salsa de soja y el arroz y sigue rehogando otros 3 minutos. Cubre con agua caliente el volumen indicado por el fabricante del arroz (por ejemplo, si pusiste 1 taza de arroz tienes que poner 3 de agua) y dejalo cocer el tiempo que especifica.
+En un wok con aceite saltea la verdura durante 3 minutos. Agrega una cucharada de salsa de soja y el arroz y sigue rehogando otros 3 minutos. Cubre con agua caliente el volumen indicado por el fabricante del arroz (por ejemplo, si pusiste 1 taza de arroz tienes que poner 3 de agua) y déjalo cocer el tiempo que especifica.
 
 Mientras tanto prepara la [salsa teriyaki](../salsas/salsa-teriyaki.md).
 

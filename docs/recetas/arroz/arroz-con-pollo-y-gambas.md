@@ -25,7 +25,7 @@ Pica el jamón serrano en dados menores a 1/2 centímetro y pica la verdura lo m
 
 Cubre la paellera con una capa fina de aceite de oliva, dora las alitas de pollo a fuego fuerte y reservalas.
 
-En la misma paellera empieza preparando el sofrito pochando la cebolla a fuego medio hasta que transparente, añade las gambas para que se vayan dorando junto con el pimiento y pochalo durante 5 minutos, luego el ajo y déjalo 1 minuto, finalmente añade el tomate triturado y el vino y déjalo hervir un par de minutos para que evapore el alcohol.
+En la misma paellera empieza preparando el sofrito pochando la cebolla a fuego medio hasta que transparente, añade las gambas para que se vayan dorando junto con el pimiento y póchalo durante 5 minutos, luego el ajo y déjalo 1 minuto, finalmente añade el tomate triturado y el vino y déjalo hervir un par de minutos para que evapore el alcohol.
 
 Añade el arroz, el jamón serrano y los pimentones y revuelve bien para integrar los sabores. Vierte el caldo y deja cocinar a fuego medio el tiempo indicado para el arroz.
 

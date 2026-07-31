@@ -18,7 +18,7 @@
 
 ## Preparación
 
-Empieza mechando la pechuga. Colócalas en un caldero con agua, llévalo a ebullición y déjalo reposar. Saca las pechuga y desmenúzalas en hilas con dos tenedores.
+Empieza mechando la pechuga. Colócala en un caldero con agua, llévalo a ebullición y déjalo reposar. Saca la pechuga y desmenúzalas en hilos con dos tenedores.
 
 En un wok con un poco de aceite dora el ajo picado, agrega el tomate triturado y cuece hasta que evapore el agua. Vierte la nata y adereza con sal y pimienta. Cuece 2 minutos más y añade el pollo mechado.
 

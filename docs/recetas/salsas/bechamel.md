@@ -11,7 +11,7 @@
 
 ## Preparación
 
-En una sartén derretir la mantequilla y en un calentar la leche a fuego bajo.
+En una sartén derrite la mantequilla y calienta la leche a fuego bajo.
 
 Añadir la harina tamizada a la mantequilla derretida.
 

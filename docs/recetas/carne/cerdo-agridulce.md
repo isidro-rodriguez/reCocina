@@ -24,7 +24,7 @@ Salpimenta los dados de solomillo y empánalos con una capa de pan rallado, otra
 
 En una sartén honda con aceite muy caliente pon a freir el solomillo empanado hasta que esté dorado, reservalo en una bandeja con servilletas para que chupe el exceso de aceite.
 
-En la misma sartén sofríe la verdura hasta que la cebolla transparente. Añade el tomate triturado y el almíbar de la piña y sigue cocinando hasta que merme la salsa hasta la mitad. Añade la piña cortada en dados, prueba el punto de sal, salpimenta y sigue cocinado otros cinco minutos. Incorpora la carne a la salsa y dejar reposar.
+En la misma sartén sofríe la verdura hasta que la cebolla transparente. Añade el tomate triturado y el almíbar de la piña y sigue cocinando hasta que merme la salsa hasta la mitad. Añade la piña cortada en dados, prueba el punto de sal, salpimenta y sigue cocinando otros cinco minutos. Incorpora la carne a la salsa y dejar reposar.
 
 Cuece el arroz siguiendo las indicaciones del fabricante.
 

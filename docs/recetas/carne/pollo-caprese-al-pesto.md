@@ -19,7 +19,7 @@
 
 ## Preparación
 
-Corta los tomates y las rodajas de mozarella en rodajas de medio centímetro.
+Corta los tomates y las rodajas de mozzarella en rodajas de medio centímetro.
 
 Haz cortes transversales a las pechugas, sin llegar hasta el fondo. En cada corte introduce una rodaja de tomate, otra de mozzarella y una hoja de albahaca.
 

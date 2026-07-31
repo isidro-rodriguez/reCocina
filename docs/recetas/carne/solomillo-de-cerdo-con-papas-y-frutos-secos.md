@@ -22,7 +22,7 @@ En la misma sartén añade el vino y el tomillo y deja evaporar 1 minuto. Vierte
 
 Unta cada roda de solomillo con la salsa preparada y rebózalos con los frutos secos picados para hacer costra.
 
-Coloca las el solomillo rebozado en una bandeja refractaria y hornéalos 8 minutos a 180ºC en un horno precalentado.
+Coloca el solomillo rebozado en una bandeja refractaria y hornéalos 8 minutos a 180ºC en un horno precalentado.
 
 Corta las papas en rodajas muy finas y fríelas en aceite caliente hasta que doren, escúrrelas y sazónalas.
 

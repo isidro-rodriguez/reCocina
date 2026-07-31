@@ -19,9 +19,9 @@
 
 ## Preparación
 
-En una cazuela dora la sepia picada a tamaño de bocado y condimentada en sal.
+En una cazuela dora la sepia picada a tamaño de bocado y condimentada con sal.
 
-Añade el pimiento y el ajo picados y pochalo unos minutos. Después incorpora el perejil picado, el azafrán, el pimentón y el tomate triturado. Revuelve y cocina a fuego medio para reducir el agua.
+Añade el pimiento y el ajo picados y póchalo unos minutos. Después incorpora el perejil picado, el azafrán, el pimentón y el tomate triturado. Revuelve y cocina a fuego medio para reducir el agua.
 
 Incorpora el arroz mezclándolo bien con el sofrito. Añade el caldo de pescado caliente y rectifica con sal y pimienta. Cuece el arroz el tiempo indicado por el distribuidor.
 

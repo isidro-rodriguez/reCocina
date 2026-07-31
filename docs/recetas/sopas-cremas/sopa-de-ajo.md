@@ -12,7 +12,7 @@
 
 ## Preparación
 
-En sartén poner a freir el ajo con el aceite y antes de que dore añadir el pan y dejar pochando.
+En sartén poner a freír el ajo con el aceite y antes de que dore añadir el pan y dejar pochando.
 
 Añadir el pimentón y pochar un poco más, sin quemarlo, y añadir el caldo de verdura.
 

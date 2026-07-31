@@ -9,7 +9,7 @@
 - 1 cebolla
 - 1 pimiento
 - 200 gr. alubias cocidas
-- 100 gr. maiz
+- 100 gr. maíz
 - 100 gr. guacamole
 - 1 limón
 - Aceite, sal, pimienta, comino y cilantro
@@ -20,6 +20,6 @@ Pochar la cebolla y pimientos picados.
 
 Añadir la soja texturizada junto a las alubias y pochar unos minutos más hasta que la soja esté blanda.
 
-Mezclar en frío el maiz, el guacamole, las especias y el zumo del limón.
+Mezclar en frío el maíz, el guacamole, las especias y el zumo del limón.
 
 Rellenar las fajitas.

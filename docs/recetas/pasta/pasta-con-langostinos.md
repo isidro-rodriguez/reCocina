@@ -8,7 +8,7 @@
 - 20 langostinos
 - 300 ml de nata
 - 80 gr de queso rallado
-- 3 diente de ajo
+- 3 dientes de ajo
 - Aceite de oliva
 - Sal y pimienta
 

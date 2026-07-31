@@ -21,7 +21,7 @@ Pica el pollo en tacos de tamaño bocado, salpiméntallos y séllalos a fuego fu
 
 En la misma cazuela, con el resto del aceite y la mantequilla pocha la cebolla hasta que transparente.
 
-Agrega los champiñones limpios y cortados láminas y cocina hasta que suelten el agua y estén dorados.
+Agrega los champiñones limpios y cortados en láminas y cocina hasta que suelten el agua y estén dorados.
 
 Añade el pollo, la crema agria y el caldo. Remueve, tapa la cazuela y deja cocinar 30 minutos a fuego medio.
 

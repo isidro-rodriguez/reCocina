@@ -1,4 +1,4 @@
-# Guiso De Calamares Con Alcachofas Y Albondigas
+# Guiso De Calamares Con Alcachofas Y Albóndigas
 
 ![Guiso De Calamares Con Alcachofas Y Albondigas](../../assets/fotos/guiso-de-calamares-con-alcachofas-y-albondigas.jpg)
 
@@ -28,7 +28,7 @@ Para las albóndigas:
 
 ## Preparación
 
-Prepara las albóndigos remojango el pan en la leche y mézclalo con la carne picada, añade 1 huevo, un chorro de aceite, ajo molido y perejil picado, sal y pimienta. Forma pequeñas albóndigas con las manos humedecidas y enharinadas. Reserva.
+Prepara las albóndigas remojando el pan en la leche y mézclalo con la carne picada, añade 1 huevo, un chorro de aceite, ajo molido y perejil picado, sal y pimienta. Forma pequeñas albóndigas con las manos humedecidas y enharinadas. Reserva.
 
 > También puedes hacer esta receta con albóndigas de pollo o pescado.
 
