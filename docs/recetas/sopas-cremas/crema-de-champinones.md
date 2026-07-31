@@ -1,6 +1,7 @@
 # Crema De Champinones
 
 ![Crema De Champinones](../../assets/fotos/crema-de-champinones.jpg)
+
 ## Ingredientes
 
 - 600 gr de champiñones

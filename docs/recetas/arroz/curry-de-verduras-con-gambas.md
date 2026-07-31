@@ -1,6 +1,7 @@
 # Curry De Verduras Con Gambas
 
 ![Curry De Verduras Con Gambas](../../assets/fotos/curry-de-verduras-con-gambas.jpg)
+
 ## Ingredientes
 
 - 20 gambas peladas

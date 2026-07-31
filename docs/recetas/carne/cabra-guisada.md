@@ -1,6 +1,7 @@
 # Cabra Guisada
 
 ![Cabra Guisada](../../assets/fotos/cabra-guisada.jpg)
+
 ## Ingredientes
 
 * 1 kg de carne de cabra

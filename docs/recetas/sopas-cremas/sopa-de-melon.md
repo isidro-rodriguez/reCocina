@@ -1,6 +1,7 @@
 # Sopa De Melon
 
 ![Sopa De Melon](../../assets/fotos/sopa-de-melon.jpg)
+
 ## Ingredientes
 
 - 1,5 kg. de melón

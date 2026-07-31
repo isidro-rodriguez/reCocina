@@ -1,6 +1,7 @@
 # Pasta Con Setas A La Foie
 
 ![Pasta Con Setas A La Foie](../../assets/fotos/pasta-con-setas-a-la-foie.jpg)
+
 ## Ingredientes
 
 * 350 gr de setas
@@ -16,7 +17,7 @@
 
 ## Preparación
 
-Limpia las setas, lávalas rápidamente y sécalas con papel de cocina. 
+Limpia las setas, lávalas rápidamente y sécalas con papel de cocina.
 
 Cuece las setas en una sartén honda hasta que suelten todo el agua. Vierte un poco de aceite y sofríe las setas con el ajo picado unos cinco minutos.
 

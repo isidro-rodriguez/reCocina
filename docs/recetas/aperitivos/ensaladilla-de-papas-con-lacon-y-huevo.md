@@ -1,6 +1,7 @@
 # Ensaladilla De Papas Con Lacon Y Huevo
 
 ![Ensaladilla De Papas Con Lacon Y Huevo](../../assets/fotos/ensaladilla-de-papas-con-lacon-y-huevo.jpg)
+
 ## Ingredientes
 
 - 4 papas grandes

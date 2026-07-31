@@ -1,6 +1,7 @@
 # Salmon Teriyaki Con Arroz
 
 ![Salmon Teriyaki Con Arroz](../../assets/fotos/salmon-teriyaki-con-arroz.jpg)
+
 ## Ingredientes
 
 - 700 gr de salmón

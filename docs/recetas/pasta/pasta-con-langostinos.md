@@ -1,6 +1,7 @@
 # Pasta Con Langostinos
 
 ![Pasta Con Langostinos](../../assets/fotos/pasta-con-langostinos.jpg)
+
 ## Ingredientes
 
 - 300 gr de pasta

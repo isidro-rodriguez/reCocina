@@ -1,6 +1,7 @@
 # Bechamel
 
 ![Bechamel](../../assets/fotos/bechamel.jpg)
+
 ## Ingredientes
 
 * 125 gr. harina

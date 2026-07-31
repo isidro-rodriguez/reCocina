@@ -1,6 +1,7 @@
 # Pechuga De Pollo Con Salsa De Miel Y Mostaza
 
 ![Pechuga De Pollo Con Salsa De Miel Y Mostaza](../../assets/fotos/pechuga-al-horno-con-miel-y-mostaza.jpg)
+
 ## Ingredientes
 
 - 4 prechugas de pollo
@@ -22,7 +23,7 @@ Para la salsa:
 
 Para acompañar:
 
-- 500 gr de papas 
+- 500 gr de papas
 - Una ensalada de de lechuga, tomate y pepino
 
 ## Preparación

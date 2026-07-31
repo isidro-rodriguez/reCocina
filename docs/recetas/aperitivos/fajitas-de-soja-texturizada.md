@@ -1,6 +1,7 @@
 # Fajitas De Soja Texturizada
 
 ![Fajitas De Soja Texturizada](../../assets/fotos/fajitas-de-soja-texturizada.jpg)
+
 ## Ingredientes
 
 - Fajitas

@@ -1,6 +1,7 @@
 # Pechuga Cocida Con Champinones
 
 ![Pechuga Cocida Con Champinones](../../assets/fotos/pechuga-cocida-con-champinones.jpg)
+
 ## Ingredientes
 
 - 4 pechugas de pollo
@@ -24,7 +25,7 @@ Agrega los champiñones limpios y cortados láminas y cocina hasta que suelten e
 
 Añade el pollo, la crema agria y el caldo. Remueve, tapa la cazuela y deja cocinar 30 minutos a fuego medio.
 
-Mientras el cocido se va haciendo, prepara el arroz de acompañamiento siguiendo las indicaciones del fabricante. 
+Mientras el cocido se va haciendo, prepara el arroz de acompañamiento siguiendo las indicaciones del fabricante.
 
 Espolvorea el arroz cocido con pimienta negra y ajo en polvo y saltéalo en una sartén con un poco de aceite hasta que esté tostado.
 

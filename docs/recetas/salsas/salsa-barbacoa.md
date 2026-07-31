@@ -1,6 +1,7 @@
 # Salsa Barbacoa
 
 ![Salsa Barbacoa](../../assets/fotos/salsa-barbacoa.jpg)
+
 ## Ingredientes
 
 * 1 cebolla picada fina

@@ -1,6 +1,7 @@
 # Salsa Curry
 
 ![Salsa Curry](../../assets/fotos/salsa-curry.jpg)
+
 ## Ingredientes
 
 - 1 cebolla pequeña

@@ -1,6 +1,7 @@
 # Guiso De Calamares Con Alcachofas Y Albondigas
 
 ![Guiso De Calamares Con Alcachofas Y Albondigas](../../assets/fotos/guiso-de-calamares-con-alcachofas-y-albondigas.jpg)
+
 ## Ingredientes
 
 - 400 gr de calamares
@@ -35,6 +36,6 @@ Limpia los calamares retirando la boca y las tripas y lávalos bien. Córtalos e
 
 Pela las alcachofas y córtalas en cuartos retirando el heno. Reserva.
 
-En una cazuela con aceite dora las albóndigas con los calamares y las alcachofas. Añade la ñora y el tomate frito y cuece unos minutos para reducir el agua. Añade el caldo de carne caliente junto a los guisantes, salpimenta y deja guisar a fuego medio unos 25 minutos. 
+En una cazuela con aceite dora las albóndigas con los calamares y las alcachofas. Añade la ñora y el tomate frito y cuece unos minutos para reducir el agua. Añade el caldo de carne caliente junto a los guisantes, salpimenta y deja guisar a fuego medio unos 25 minutos.
 
 Deja reposar antes de servir.

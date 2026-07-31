@@ -1,6 +1,7 @@
 # Salsa Pesto
 
 ![Salsa Pesto](../../assets/fotos/salsa-pesto.jpg)
+
 ## Ingredientes
 
 - 50 gr de albahaca fresca

@@ -1,6 +1,7 @@
 # Pollo Caprese Al Pesto
 
 ![Pollo Caprese Al Pesto](../../assets/fotos/pollo-caprese-al-pesto.jpg)
+
 ## Ingredientes
 
 - 4 pechugas de pollo

@@ -1,6 +1,7 @@
 # Musabaha
 
 ![Musabaha](../../assets/fotos/musabaha.jpg)
+
 ## Ingredientes
 
 - 300 g de garbanzos cocidos (200 gramos de garbanzos secos)

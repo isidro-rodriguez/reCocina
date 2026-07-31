@@ -1,6 +1,7 @@
 # Arroz A Banda Con Sepia
 
 ![Arroz A Banda Con Sepia](../../assets/fotos/arroz-a-banda-con-sepia.jpg)
+
 ## Ingredientes
 
 - 400 gr de sepia limpia

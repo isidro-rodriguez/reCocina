@@ -1,6 +1,7 @@
 # Potaje De Vigilia
 
 ![Potaje De Vigilia](../../assets/fotos/potaje-de-vigilia.jpg)
+
 ## Ingredientes
 
 - 360 gr. garbanzos

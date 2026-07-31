@@ -1,6 +1,7 @@
 # Espagueti Carbonara
 
 ![Espagueti Carbonara](../../assets/fotos/espagueti-carbonara.jpg)
+
 ## Ingredientes
 
 - 250 gr. espaguetis

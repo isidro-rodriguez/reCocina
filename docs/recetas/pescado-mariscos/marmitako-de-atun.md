@@ -1,6 +1,7 @@
 # Marmitako De Atun
 
 ![Marmitako De Atun](../../assets/fotos/marmitako-de-atun.jpg)
+
 ## Ingredientes
 
 - 400 gr de lomo de atún o bonito
@@ -23,7 +24,7 @@
 
 Corta el atún en tacos de tamaño bocado y salpiméntalos, pela y pica la cebolla en dados pequeños, lava y pica el pimiento, lava y tritura el tomate, pela las papas y cáscalas, lava y pica el perejil y pela y pica los ajos.
 
-En una cazuela rehoga la cebolla y el pimiento hasta que transparente la cebolla. Añade el ajo, la guindilla, la ñora y el pimentón dulce y el tomate triturado y cuece hasta que reduzca el agua. 
+En una cazuela rehoga la cebolla y el pimiento hasta que transparente la cebolla. Añade el ajo, la guindilla, la ñora y el pimentón dulce y el tomate triturado y cuece hasta que reduzca el agua.
 
 Mientras tanto en un cazo deja calentándose el caldo de pescado a fuego bajo.
 

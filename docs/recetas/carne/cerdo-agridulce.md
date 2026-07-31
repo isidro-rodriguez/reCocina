@@ -1,6 +1,7 @@
 # Cerdo Agridulce
 
 ![Cerdo Agridulce](../../assets/fotos/cerdo-agridulce.jpg)
+
 ## Ingredientes
 
 - 700 gr de solomillo de cerdo

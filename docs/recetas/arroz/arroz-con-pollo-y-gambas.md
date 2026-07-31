@@ -1,6 +1,7 @@
 # Arroz Con Pollo Y Gambas
 
 ![Arroz Con Pollo Y Gambas](../../assets/fotos/arroz-con-pollo-y-gambas.jpg)
+
 ## Ingredientes
 
 - 400 gr de arroz para paella

@@ -1,6 +1,7 @@
 # Peras Al Vino
 
 ![Peras Al Vino](../../assets/fotos/peras-al-vino.jpg)
+
 ## Ingredientes
 
 - Vino tinto, el necesario para cubrir las peras en la olla

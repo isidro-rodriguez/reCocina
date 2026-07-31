@@ -1,6 +1,7 @@
 # Pastel De Calabaza Y Pollo
 
 ![Pastel De Calabaza Y Pollo](../../assets/fotos/pastel-de-calabaza-y-pollo.jpg)
+
 ## Ingredientes
 
 - Una docena de placas de pasta para lasaña

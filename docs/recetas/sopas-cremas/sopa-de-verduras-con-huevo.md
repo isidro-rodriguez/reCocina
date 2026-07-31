@@ -1,6 +1,7 @@
 # Sopa De Verduras Con Huevo
 
 ![Sopa De Verduras Con Huevo](../../assets/fotos/sopa-de-verduras-con-huevo.jpg)
+
 ## Ingredientes
 
 - 2 zanahorias

@@ -1,6 +1,7 @@
 # Crema De Quinoa Y Calabaza
 
 ![Crema De Quinoa Y Calabaza](../../assets/fotos/crema-de-quinoa-y-calabaza.jpg)
+
 ## Ingredientes
 
 - 1,5 kg de calabaza

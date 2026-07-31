@@ -1,6 +1,7 @@
 # Salsa Teriyaki
 
 ![Salsa Teriyaki](../../assets/fotos/salsa-teriyaki.jpg)
+
 ## Ingredientes
 
 * 120 ml de salsa de soja

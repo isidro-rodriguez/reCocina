@@ -1,6 +1,7 @@
 # Sopa Minestrone
 
 ![Sopa Minestrone](../../assets/fotos/sopa-minestrone.jpg)
+
 ## Ingredientes
 
 - 80 gr de alubias cocidas

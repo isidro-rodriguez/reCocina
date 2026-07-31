@@ -1,6 +1,7 @@
 # Calamares Rellenos De Carne
 
 ![Calamares Rellenos De Carne](../../assets/fotos/calamares-rellenos-de-carne.jpg)
+
 ## Ingredientes
 
 - 500 gr de calamares

@@ -1,6 +1,7 @@
 # Potaje De Berros
 
 ![Potaje De Berros](../../assets/fotos/potaje-de-berros.jpg)
+
 ## Ingredientes
 
 * 500 gr de berros

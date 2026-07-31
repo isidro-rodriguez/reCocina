@@ -1,6 +1,7 @@
 # Sopa De Ajo
 
 ![Sopa De Ajo](../../assets/fotos/sopa-de-ajo.jpg)
+
 ## Ingredientes
 
 * 3 dientes de ajo

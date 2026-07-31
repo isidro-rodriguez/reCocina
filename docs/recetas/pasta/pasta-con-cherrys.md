@@ -1,6 +1,7 @@
 # Pasta Con Cherrys
 
 ![Pasta Con Cherrys](../../assets/fotos/pasta-con-cherrys.jpg)
+
 ## Ingredientes
 
 - 300 gr de pasta

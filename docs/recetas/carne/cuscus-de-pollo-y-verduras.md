@@ -1,6 +1,7 @@
 # Cuscus De Pollo Y Verduras
 
 ![Cuscus De Pollo Y Verduras](../../assets/fotos/cuscus-de-pollo-y-verduras.jpg)
+
 ## Ingredientes
 
 - 200 gr. cous cous
