@@ -4,10 +4,10 @@
 
 ## Ingredientes
 
-- 250 gr. de espaguetis
+- 250 g de espaguetis
 - 3 yemas de huevo
-- 150 gr. de panceta
-- 150 gr. de queso añejo rallado
+- 150 g de panceta
+- 150 g de queso añejo rallado
 - Pimienta negra
 
 ## Preparación

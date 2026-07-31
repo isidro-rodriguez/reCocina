@@ -4,7 +4,7 @@
 
 ## Ingredientes
 
-- 1,5 kg. de melón
+- 1,5 kg de melón
 - 200 ml de nata líquida
 - 1 yogur griego
 - 1 limón

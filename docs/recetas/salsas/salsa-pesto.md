@@ -4,9 +4,9 @@
 
 ## Ingredientes
 
-- 50 gr de albahaca fresca
-- 50 gr de queso parmesano rallado
-- 30 gr de piñones tostados
+- 50 g de albahaca fresca
+- 50 g de queso parmesano rallado
+- 30 g de piñones tostados
 - 150 ml de aceite de oliva
 - 1 diente de ajo
 

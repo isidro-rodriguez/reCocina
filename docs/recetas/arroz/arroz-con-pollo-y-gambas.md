@@ -4,11 +4,11 @@
 
 ## Ingredientes
 
-- 400 gr de arroz para paella
+- 400 g de arroz para paella
 - Caldo de pollo o marisco (la cantidad de líquido que recomiende el arroz)
 - 12 alitas de pollo (2 por comensal)
-- 300 gr de gambas
-- 200 gr de jamón serrano
+- 300 g de gambas
+- 200 g de jamón serrano
 - 1 cebolla
 - 2 tomates triturados
 - 1 pimiento verde

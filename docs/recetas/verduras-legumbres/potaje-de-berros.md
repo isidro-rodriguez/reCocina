@@ -4,9 +4,9 @@
 
 ## Ingredientes
 
-* 500 gr de berros
-* 500 gr de papas
-* 600 gr de costillas
+* 500 g de berros
+* 500 g de papas
+* 600 g de costillas
 * 1 cebolla grande
 * 1 pimiento verde
 * 3 piñas de millo

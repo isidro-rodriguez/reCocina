@@ -9,9 +9,9 @@
 - 1 calabacín
 - 1 penca de apio o puerro
 - 2 tomates
-- 250 gr de champiñones
+- 250 g de champiñones
 - 4 huevos
-- 125 gr de fideos finos
+- 125 g de fideos finos
 - Aceite de oliva
 - Sal y pimienta
 

@@ -5,12 +5,12 @@
 ## Ingredientes
 
 - 4 pechugas de pollo
-- 250 gr de champiñones
+- 250 g de champiñones
 - 150 ml de caldo de pollo
-- 300 gr de crema agria o nata
+- 300 g de crema agria o nata
 - 1 cebolla
-- 50 gr de mantequilla
-- 200 gr de arroz
+- 50 g de mantequilla
+- 200 g de arroz
 - Aceite de oliva
 - Perejil
 - Sal y pimienta

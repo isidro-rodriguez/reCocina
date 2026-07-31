@@ -4,16 +4,16 @@
 
 ## Ingredientes
 
-- 800 gr de ternera cortada en tacos
+- 800 g de ternera cortada en tacos
 - 1 cebolla
 - 2 ajos
-- 200 gr de champiñones
+- 200 g de champiñones
 - 3 zanahorias
 - 200 ml de tomate triturado (1 tomate)
 - 200 ml de cerveza
 - 800 ml de caldo de carne
-- 100 gr de harina de trigo
-- 200 gr de guisantes
+- 100 g de harina de trigo
+- 200 g de guisantes
 - 2 ramitas de perejil
 - Tomillo
 - Aceite de oliva

@@ -5,12 +5,12 @@
 ## Ingredientes
 
 - Fajitas
-- 200 gr. soja texturizada
+- 200 g soja texturizada
 - 1 cebolla
 - 1 pimiento
-- 200 gr. alubias cocidas
-- 100 gr. maíz
-- 100 gr. guacamole
+- 200 g alubias cocidas
+- 100 g maíz
+- 100 g guacamole
 - 1 limón
 - Aceite, sal, pimienta, comino y cilantro
 

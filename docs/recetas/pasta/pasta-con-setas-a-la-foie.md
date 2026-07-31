@@ -4,10 +4,10 @@
 
 ## Ingredientes
 
-* 350 gr de setas
-* 320 gr de pasta corta
+* 350 g de setas
+* 320 g de pasta corta
 * 200 ml de nata
-* 100 gr de foie fresco
+* 100 g de foie fresco
 * 500 ml de caldo de carne
 * 1 diente de ajo
 * 1 rama de perejil

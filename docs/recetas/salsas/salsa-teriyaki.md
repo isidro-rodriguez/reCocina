@@ -15,7 +15,7 @@
 * 150 ml de salsa de soja
 * 150 ml de mirin
 * 50 ml de sake
-* 50 gr de azúcar blanco
+* 50 g de azúcar blanco
 
 ## Preparación
 

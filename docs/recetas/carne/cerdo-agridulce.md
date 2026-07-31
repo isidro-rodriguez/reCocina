@@ -4,13 +4,13 @@
 
 ## Ingredientes
 
-- 700 gr de solomillo de cerdo
+- 700 g de solomillo de cerdo
 - 1/2 pimiento verde
 - 1/2 pimiento rojo
 - 1 cebolla
 - 600 ml de tomate triturado
-- 500 gr de piña en almíbar
-- 200 gr de arroz
+- 500 g de piña en almíbar
+- 200 g de arroz
 - 3 huevos
 - Pan rallado
 - Aceite de oliva

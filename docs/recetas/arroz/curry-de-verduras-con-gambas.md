@@ -6,12 +6,12 @@
 
 - 20 gambas peladas
 - 3 zanahorias
-- 200 gr de brócoli
-- 200 gr de coliflor
-- 200 gr de acelgas o espinacas
+- 200 g de brócoli
+- 200 g de coliflor
+- 200 g de acelgas o espinacas
 - 1 pimiento rojo
 - 1 ajo
-- 200 gr de arroz basmati o jazmín
+- 200 g de arroz basmati o jazmín
 - [Salsa de curry](../salsas/salsa-curry.md), la mitad de la receta
 - 1 rama de cilantro
 - Aceite de girasol

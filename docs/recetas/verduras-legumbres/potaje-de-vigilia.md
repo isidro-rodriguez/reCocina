@@ -4,13 +4,13 @@
 
 ## Ingredientes
 
-- 360 gr. garbanzos
+- 360 g garbanzos
 - 2 cebollas picadas
 - 2 pimientos verdes picados
 - 4 huevos cocidos
-- 400 gr. espinacas
-- 400 gr. bacalao
-- 600 gr. tomate triturado
+- 400 g espinacas
+- 400 g bacalao
+- 600 g tomate triturado
 - aceite, bicarbonato, sal y pimienta
 
 ## Preparación

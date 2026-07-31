@@ -6,8 +6,8 @@
 
 - 1 cebolla pequeña
 - 2 dientes de ajo
-- 200 gr. de leche de coco
-- 200 ml. de caldo de carne o pescado
+- 200 g de leche de coco
+- 200 m de caldo de carne o pescado
 - 1 plátano
 - 1 cucharada de curry
 - 1 cucharada de cúrcuma

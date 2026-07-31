@@ -4,14 +4,14 @@
 
 ## Ingredientes
 
-- 600 gr de champiñones
-- 1,5 l. de caldo de verdura o pollo
+- 600 g de champiñones
+- 1,5 l de caldo de verdura o pollo
 - 1 muslo de pollo
 - 2 cebollas
 - 1 puerro
 - 2 zanahorias
 - 1 papa
-- 70 gr de maíz frito
+- 70 g de maíz frito
 - 2 dientes de ajo
 - Aceite de oliva
 - Perejil

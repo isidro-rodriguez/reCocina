@@ -4,10 +4,10 @@
 
 ## Ingredientes
 
-- 300 gr de pasta
+- 300 g de pasta
 - 20 langostinos
 - 300 ml de nata
-- 80 gr de queso rallado
+- 80 g de queso rallado
 - 3 dientes de ajo
 - Aceite de oliva
 - Sal y pimienta

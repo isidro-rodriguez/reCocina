@@ -4,9 +4,9 @@
 
 ## Ingredientes
 
-* 125 gr. harina
-* 125 gr. mantequilla
-* 1 l. leche entera
+* 125 g harina
+* 125 g mantequilla
+* 1 l leche entera
 * Nuez moscada, sal y pimienta
 
 ## Preparación

@@ -6,7 +6,7 @@
 
 - 1,5 kg de calabaza
 - 2 cebollas medianas
-- 250 gr de quinoa
+- 250 g de quinoa
 - 1 l de caldo de verdura
 - 1 cucharadita de canela
 - 1 cucharadita de comino

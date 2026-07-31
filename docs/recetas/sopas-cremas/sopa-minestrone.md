@@ -4,17 +4,17 @@
 
 ## Ingredientes
 
-- 80 gr de alubias cocidas
-- 100 gr de pasta corta o arroz
+- 80 g de alubias cocidas
+- 100 g de pasta corta o arroz
 - 1 tomate maduro
-- 300 gr de calabaza
+- 300 g de calabaza
 - 3 pencas de apio
 - 1 cebolla
 - 1 zanahoria
 - 1/2 calabacín
 - 1/2 brócoli
 - 2 litros de caldo de verdura
-- 50 gr de queso rallado
+- 50 g de queso rallado
 - Aceite de oliva
 - 2 hojas de laurel
 - Unas hojas de albahaca

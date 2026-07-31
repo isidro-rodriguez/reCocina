@@ -10,8 +10,8 @@
 - 200 ml de caldo de ave
 - 2 cebollas
 - 2 dientes de ajo
-- 500 gr de queso ricota
-- 100 gr de queso rallado
+- 500 g de queso ricota
+- 100 g de queso rallado
 - 2 cucharadas de mantequilla
 - Unas hojas de salvia (o mezcla de romero y tomillo)
 - Sal y pimienta

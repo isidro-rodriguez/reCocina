@@ -5,8 +5,8 @@
 ## Ingredientes
 
 - 4 papas grandes
-- 200 gr de lacón o salchichas frankfurt
-- 150 gr de atún
+- 200 g de lacón o salchichas frankfurt
+- 150 g de atún
 - 3 huevos cocidos
 - 3 pepinillos grandes
 - 100 ml de mayonesa

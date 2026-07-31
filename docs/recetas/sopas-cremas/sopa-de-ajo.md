@@ -5,8 +5,8 @@
 ## Ingredientes
 
 * 3 dientes de ajo
-* 100 gr de pan en tiras
-* 1 cdta. de pimentón
+* 100 g de pan en tiras
+* 1 cucharadita de pimentón
 * 1 litro de caldo de verduras
 * 2 huevos batidos
 

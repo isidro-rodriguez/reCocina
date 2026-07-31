@@ -4,8 +4,8 @@
 
 ## Ingredientes
 
-- 400 gr de sepia limpia
-- 350 gr de arroz bomba
+- 400 g de sepia limpia
+- 350 g de arroz bomba
 - 1 l de caldo de pescado
 - 400 ml tomate triturado
 - 1 pimiento verde

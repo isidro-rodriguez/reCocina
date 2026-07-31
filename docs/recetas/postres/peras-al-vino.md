@@ -6,7 +6,7 @@
 
 - Vino tinto, el necesario para cubrir las peras en la olla
 - 4 peras conferencia
-- 125 gr. de azúcar
+- 125 g de azúcar
 - 1 cucharadita de anís
 - 1 rama de canela
 - 1 cáscara de limón

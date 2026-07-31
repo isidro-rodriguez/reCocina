@@ -4,7 +4,7 @@
 
 ## Ingredientes
 
-- 200 gr. cuscús
+- 200 g cuscús
 - 3 pechugas de pollo
 - 1 zanahoria
 - 1 calabacín

@@ -18,7 +18,7 @@
 
 Para las albóndigas:
 
-- 400 gr de carne picada
+- 400 g de carne picada
 - 1 huevo
 - 2 ramitas de perejil
 - Harina de trigo

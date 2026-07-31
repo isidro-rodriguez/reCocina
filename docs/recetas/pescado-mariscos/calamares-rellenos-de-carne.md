@@ -4,8 +4,8 @@
 
 ## Ingredientes
 
-- 500 gr de calamares
-- 200 gr de carne picada (1/2 cerdo y 1/2 ternera)
+- 500 g de calamares
+- 200 g de carne picada (1/2 cerdo y 1/2 ternera)
 - 1 rebanada de pan duro
 - 100 ml de leche
 - 2 huevos

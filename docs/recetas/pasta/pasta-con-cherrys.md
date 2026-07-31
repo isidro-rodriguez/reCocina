@@ -4,12 +4,12 @@
 
 ## Ingredientes
 
-- 300 gr de pasta
-- 600 gr de pechuga de pollo
+- 300 g de pasta
+- 600 g de pechuga de pollo
 - 800 ml de tomate triturado
 - 100 ml de nata
 - 12 tomates cherry
-- 100 gr de queso rallado
+- 100 g de queso rallado
 - 1 cucharadita de pimentón
 - 1 diente de ajo
 - Albahaca

@@ -4,8 +4,8 @@
 
 ## Ingredientes
 
-- 700 gr de salmón
-- 200 gr de arroz
+- 700 g de salmón
+- 200 g de arroz
 - 1 cebolla
 - 1 calabacín
 - 1/2 pimiento rojo
