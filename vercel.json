@@ -1,5 +1,5 @@
 {
-  "installCommand": "uv pip install -r requirements.txt",
+  "installCommand": "pip install --user --break-system-packages -r requirements.txt",
   "buildCommand": "mkdocs build",
   "outputDirectory": "site",
   "framework": null
