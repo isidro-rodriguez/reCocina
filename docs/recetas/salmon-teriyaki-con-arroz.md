@@ -1,6 +1,6 @@
-# Salmón Teriyaki Con Arroz
+# Salmón teriyaki con arroz
 
-![Salmón Teriyaki Con Arroz](../img/fotos/salmon-teriyaki-con-arroz.webp)
+![Salmón teriyaki con arroz](../img/fotos/salmon-teriyaki-con-arroz.webp)
 
 ## Ingredientes
 

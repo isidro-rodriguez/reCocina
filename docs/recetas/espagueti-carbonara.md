@@ -1,6 +1,6 @@
-# Espagueti Carbonara
+# Espagueti carbonara
 
-![Espagueti Carbonara](../img/fotos/espagueti-carbonara.webp)
+![Espagueti carbonara](../img/fotos/espagueti-carbonara.webp)
 
 ## Ingredientes
 

@@ -1,6 +1,6 @@
-# Pechuga De Pollo Con Salsa De Miel Y Mostaza
+# Pechuga de pollo con salsa de miel y mostaza
 
-![Pechuga De Pollo Con Salsa De Miel Y Mostaza](../img/fotos/pechuga-al-horno-con-miel-y-mostaza.webp)
+![Pechuga de pollo con salsa de miel y mostaza](../img/fotos/pechuga-al-horno-con-miel-y-mostaza.webp)
 
 ## Ingredientes
 

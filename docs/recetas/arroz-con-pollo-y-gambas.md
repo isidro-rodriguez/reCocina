@@ -1,6 +1,6 @@
-# Arroz Con Pollo Y Gambas
+# Arroz con pollo y gambas
 
-![Arroz Con Pollo Y Gambas](../img/fotos/arroz-con-pollo-y-gambas.webp)
+![Arroz con pollo y gambas](../img/fotos/arroz-con-pollo-y-gambas.webp)
 
 ## Ingredientes
 

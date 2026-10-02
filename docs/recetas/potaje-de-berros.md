@@ -1,6 +1,6 @@
-# Potaje De Berros
+# Potaje de berros
 
-![Potaje De Berros](../img/fotos/potaje-de-berros.webp)
+![Potaje de berros](../img/fotos/potaje-de-berros.webp)
 
 ## Ingredientes
 

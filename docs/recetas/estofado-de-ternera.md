@@ -1,6 +1,6 @@
-# Estofado De Ternera
+# Estofado de ternera
 
-![Estofado De Ternera](../img/fotos/estofado-de-ternera.webp)
+![Estofado de ternera](../img/fotos/estofado-de-ternera.webp)
 
 ## Ingredientes
 

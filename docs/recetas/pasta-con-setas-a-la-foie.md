@@ -1,6 +1,6 @@
-# Pasta Con Setas A La Foie
+# Pasta con setas a la foie
 
-![Pasta Con Setas A La Foie](../img/fotos/pasta-con-setas-a-la-foie.webp)
+![Pasta con setas a la foie](../img/fotos/pasta-con-setas-a-la-foie.webp)
 
 ## Ingredientes
 

@@ -1,6 +1,6 @@
-# Sopa De Ajo
+# Sopa de ajo
 
-![Sopa De Ajo](../img/fotos/sopa-de-ajo.webp)
+![Sopa de ajo](../img/fotos/sopa-de-ajo.webp)
 
 ## Ingredientes
 

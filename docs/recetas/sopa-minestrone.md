@@ -1,6 +1,6 @@
-# Sopa Minestrone
+# Sopa minestrone
 
-![Sopa Minestrone](../img/fotos/sopa-minestrone.webp)
+![Sopa minestrone](../img/fotos/sopa-minestrone.webp)
 
 ## Ingredientes
 

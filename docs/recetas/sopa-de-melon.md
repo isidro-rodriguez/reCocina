@@ -1,6 +1,6 @@
-# Sopa De Melón
+# Sopa de melón
 
-![Sopa De Melón](../img/fotos/sopa-de-melon.webp)
+![Sopa de melón](../img/fotos/sopa-de-melon.webp)
 
 ## Ingredientes
 

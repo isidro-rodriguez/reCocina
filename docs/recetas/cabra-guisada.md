@@ -1,6 +1,6 @@
-# Cabra Guisada
+# Cabra guisada
 
-![Cabra Guisada](../img/fotos/cabra-guisada.webp)
+![Cabra guisada](../img/fotos/cabra-guisada.webp)
 
 ## Ingredientes
 

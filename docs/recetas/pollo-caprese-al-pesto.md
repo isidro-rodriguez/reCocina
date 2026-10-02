@@ -1,6 +1,6 @@
-# Pollo Caprese Al Pesto
+# Pollo caprese al pesto
 
-![Pollo Caprese Al Pesto](../img/fotos/pollo-caprese-al-pesto.webp)
+![Pollo caprese al pesto](../img/fotos/pollo-caprese-al-pesto.webp)
 
 ## Ingredientes
 

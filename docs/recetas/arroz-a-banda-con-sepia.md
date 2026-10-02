@@ -1,6 +1,6 @@
-# Arroz A Banda Con Sepia
+# Arroz a banda con sepia
 
-![Arroz A Banda Con Sepia](../img/fotos/arroz-a-banda-con-sepia.webp)
+![Arroz a banda con sepia](../img/fotos/arroz-a-banda-con-sepia.webp)
 
 ## Ingredientes
 

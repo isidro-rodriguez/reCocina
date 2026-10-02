@@ -1,6 +1,6 @@
-# Peras Al Vino
+# Peras al vino
 
-![Peras Al Vino](../img/fotos/peras-al-vino.webp)
+![Peras al vino](../img/fotos/peras-al-vino.webp)
 
 ## Ingredientes
 

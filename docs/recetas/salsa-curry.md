@@ -1,6 +1,6 @@
-# Salsa Curry
+# Salsa curry
 
-![Salsa Curry](../img/fotos/salsa-curry.webp)
+![Salsa curry](../img/fotos/salsa-curry.webp)
 
 ## Ingredientes
 

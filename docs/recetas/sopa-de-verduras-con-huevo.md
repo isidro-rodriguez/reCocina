@@ -1,6 +1,6 @@
-# Sopa De Verduras Con Huevo
+# Sopa de verduras con huevo
 
-![Sopa De Verduras Con Huevo](../img/fotos/sopa-de-verduras-con-huevo.webp)
+![Sopa de verduras con huevo](../img/fotos/sopa-de-verduras-con-huevo.webp)
 
 ## Ingredientes
 
