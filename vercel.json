@@ -1,6 +1,6 @@
 {
-  "installCommand": "pip install --user --break-system-packages -r requirements.txt",
-  "buildCommand": "python -m mkdocs build",
+  "installCommand": "uv sync",
+  "buildCommand": "uv run mkdocs build --strict",
   "outputDirectory": "site",
   "framework": null
 }
