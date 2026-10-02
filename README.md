@@ -3,8 +3,6 @@
 Recetario de cocina casera generado con **MkDocs** y el tema **Material**.
 Cada receta incluye foto, ingredientes y preparación, organizada por categorías en el menú lateral.
 
-> **¿Hace mucho que no añades recetas?** Ve directo a [Guía rápida](#guía-rápida) y [Añadir una receta](#añadir-una-receta).
-
 ## Guía rápida
 
 ```bash
@@ -29,8 +27,6 @@ nav:
   - recetas/arroz-a-banda-con-sepia.md
   - recetas/mi-receta-nueva.md   # <- añade esta línea
 ```
-
-> ⚠️ El paso 3 es el que más se olvida: si la receta no está en el `nav`, no aparecerá en la barra lateral aunque el archivo exista. Los [tests](#validación) lo detectan por ti.
 
 ### Plantilla de receta
 
@@ -70,13 +66,13 @@ Describe el segundo paso.
 
 ## Validación
 
-Un único test comprueba que **recetas ↔ menú ↔ fotos** están sincronizados:
+Un conjunto de tests comprueba que **recetas ↔ menú ↔ fotos** y los **recursos del sitio** están sincronizados:
 
 ```bash
 uv run pytest   # 0 tests fallidos = todo OK
 ```
 
-Detecta:
+`tests/test_recipes.py` detecta:
 
 - recetas en disco que **no** están en el `nav` (aviso: no se verían en el sitio)
 - entradas del `nav` que apuntan a ficheros inexistentes (error: rompe el build)
@@ -84,11 +80,60 @@ Detecta:
 - fotos en `docs/img/fotos/` que ninguna receta usa (aviso: huérfanas)
 - fotos en `docs/img/fotos/` **vacías o corruptas** (imágenes muertas)
 
+`tests/test_theme.py` detecta:
+
+- favicons del set **ausentes** en `docs/img/favicon/`
+- `theme.favicon` sin declarar o apuntando a un fichero inexistente
+- `theme/main.html` sin enlazar algún icono o el manifiesto
+- `site.webmanifest` inválido (JSON roto, rutas no portátiles o iconos inexistentes)
+
+`tests/test_spelling.py` detecta:
+
+- palabras no reconocidas por el diccionario español `es_ES` (ortografía), fuera de la allowlist
+
+## Favicon e iconos del sitio
+
+Los iconos viven en `docs/img/favicon/` (separados de las fotos de recetas):
+
+- `theme.favicon: img/favicon/favicon.ico` en `mkdocs.yml` fija el `<link rel="icon">` principal.
+- `theme/main.html` inyecta en el `<head>` el resto (apple-touch-icon, PNG 16/32 y el manifiesto).
+
+Para cambiarlos, sustituye los ficheros manteniendo los nombres y ajusta `site.webmanifest` si cambian los iconos.
+
+## Linteo y formato de Markdown
+
+El Markdown (recetas y este README) se formatea con **mdformat** y el plugin
+**mdformat-mkdocs** (que entiende la sintaxis de Material: admoniciones, pestañas…).
+La configuración vive en `.mdformat.toml`.
+
+```bash
+uv run mdformat docs README.md          # aplica el formato (bullets -, etc.)
+uv run mdformat --check docs README.md  # comprueba sin modificar (falla si no está formateado)
+```
+
+> El hook de pre-commit ya ejecuta `mdformat --check`, así que basta con formatear antes de commitear.
+
+## Corrección ortográfica
+
+El recetario se revisa con **spylls**, una implementación en Python de Hunspell, y el
+diccionario español `es_ES` incluido en `tests/spelling/`. El test `tests/test_spelling.py`
+lo ejecuta junto al resto de la suite:
+
+```bash
+uv run pytest   # incluye la comprobación ortográfica
+```
+
+- Las palabras que el diccionario no conoce (términos culinarios, marcas, préstamos,
+    formas verbales con pronombre…) se aceptan desde `tests/spelling/allowlist.txt`.
+- Para permitir una palabra válida, añádela a ese fichero (una por línea; `#` para comentarios).
+
+> Revisa **ortografía**, no gramática. Licencia del diccionario en `tests/spelling/LICENSE/`.
+
 ## Hook pre-commit
 
 Un hook ejecuta la validación **automáticamente antes de cada commit**: si el lint
-(`ruff check`), el formato (`ruff format --check`) o los tests (`pytest`) fallan, el
-commit se cancela.
+(`ruff check`), el formato Python (`ruff format --check`), el formato Markdown
+(`mdformat --check`) o los tests (`pytest`) fallan, el commit se cancela.
 
 Instálalo una sola vez (tras `uv sync`):
 
@@ -107,16 +152,18 @@ uv run pre-commit run --all-files
 
 ## Comandos
 
-| Comando | Qué hace |
-| --- | --- |
-| `uv sync` | Instala/actualiza dependencias desde `pyproject.toml` + `uv.lock` |
-| `uv run mkdocs serve` | Previsualiza en http://localhost:8000 con recarga en vivo |
-| `uv run mkdocs build --strict` | Genera el sitio en `site/`; falla ante enlaces internos rotos |
-| `uv run pytest` | Valida que recetas, `nav` y fotos están sincronizados |
-| `uv run pre-commit install` | Activa el hook de pre-commit (una sola vez) |
-| `uv run pre-commit run --all-files` | Ejecuta lint + formato + tests sobre todo el repo |
-| `uv run ruff format .` | Formatea el código Python |
-| `uv run ruff check .` | Analiza (lint) el código Python |
+| Comando                                  | Qué hace                                                          |
+| ---------------------------------------- | ----------------------------------------------------------------- |
+| `uv sync`                                | Instala/actualiza dependencias desde `pyproject.toml` + `uv.lock` |
+| `uv run mkdocs serve`                    | Previsualiza en http://localhost:8000 con recarga en vivo         |
+| `uv run mkdocs build --strict`           | Genera el sitio en `site/`; falla ante enlaces internos rotos     |
+| `uv run pytest`                          | Valida que recetas, `nav` y fotos están sincronizados             |
+| `uv run mdformat docs README.md`         | Formatea el Markdown (recetas y README)                           |
+| `uv run mdformat --check docs README.md` | Comprueba el formato del Markdown sin modificar                   |
+| `uv run pre-commit install`              | Activa el hook de pre-commit (una sola vez)                       |
+| `uv run pre-commit run --all-files`      | Ejecuta lint + formato + tests sobre todo el repo                 |
+| `uv run ruff format .`                   | Formatea el código Python                                         |
+| `uv run ruff check .`                    | Analiza (lint) el código Python                                   |
 
 ## Estructura
 
@@ -126,18 +173,22 @@ uv run pre-commit run --all-files
 ├── pyproject.toml          # Dependencias y configuración de ruff/pytest
 ├── uv.lock                 # Versiones fijadas (no editar a mano)
 ├── .pre-commit-config.yaml # Hooks de pre-commit (lint + formato + tests)
+├── .mdformat.toml          # Configuración de mdformat (formato de Markdown)
 ├── vercel.json             # Configuración de despliegue
-├── AGENTS.md               # Contexto del proyecto
 ├── theme/                  # Overrides del tema Material
+│   ├── main.html           # <head>: favicons y manifiesto
 │   └── partials/copyright.html
 ├── tests/
-│   └── test_recipes.py     # Valida recetas ↔ nav ↔ fotos (pytest)
+│   ├── test_recipes.py     # Valida recetas ↔ nav ↔ fotos (pytest)
+│   ├── test_theme.py       # Valida favicons y recursos del sitio (pytest)
+│   ├── test_spelling.py    # Corrección ortográfica es_ES (pytest)
+│   └── spelling/           # Diccionario es_ES + allowlist + licencias
 └── docs/
     ├── index.md            # Portada
     ├── recetas/            # Recetas (archivos .md planos)
     └── img/
         ├── fotos/          # Fotos de las recetas (mismo nombre que el .md)
-        └── ...             # Favicons del sitio
+        └── favicon/        # Favicons e iconos del sitio
 ```
 
 ## Despliegue

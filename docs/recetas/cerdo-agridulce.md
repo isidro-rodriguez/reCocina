@@ -22,7 +22,7 @@ Pelar y picar la cebolla y los pimientos (el verde NO hace falta pelarlo) en dad
 
 Salpimenta los dados de solomillo y empánalos con una capa de pan rallado, otra de huevo y otra más de pan rallado.
 
-En una sartén honda con aceite muy caliente pon a freir el solomillo empanado hasta que esté dorado, reservalo en una bandeja con servilletas para que chupe el exceso de aceite.
+En una sartén honda con aceite muy caliente pon a freír el solomillo empanado hasta que esté dorado, resérvalo en una bandeja con servilletas para que chupe el exceso de aceite.
 
 En la misma sartén sofríe la verdura hasta que la cebolla transparente. Añade el tomate triturado y el almíbar de la piña y sigue cocinando hasta que merme la salsa hasta la mitad. Añade la piña cortada en dados, prueba el punto de sal, salpimenta y sigue cocinando otros cinco minutos. Incorpora la carne a la salsa y dejar reposar.
 

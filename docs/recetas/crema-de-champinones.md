@@ -1,6 +1,6 @@
-# Crema De Champinones
+# Crema De Champiñones
 
-![Crema De Champinones](../img/fotos/crema-de-champinones.jpg)
+![Crema De Champiñones](../img/fotos/crema-de-champinones.jpg)
 
 ## Ingredientes
 

@@ -4,14 +4,14 @@
 
 ## Ingredientes
 
-* 1 kg de carne de cabra
-* 2 cebollas
-* 3 dientes de ajo
-* 2 limones
-* 200 ml de vino tinto
-* Almendras tostadas y pasas
-* Orégano, comino y laurel
-* Aceite, sal y pimienta
+- 1 kg de carne de cabra
+- 2 cebollas
+- 3 dientes de ajo
+- 2 limones
+- 200 ml de vino tinto
+- Almendras tostadas y pasas
+- Orégano, comino y laurel
+- Aceite, sal y pimienta
 
 ## Preparación
 
@@ -19,7 +19,7 @@ Guisar la carne de cabra con un limón y media cebolla. Al romper a hervir, saca
 
 Aderezar la carne con zumo de limón y salpimentarla.
 
-Saltear la carne en un caldero junto con la verdura para sofreirla.
+Saltear la carne en un caldero junto con la verdura para sofreírla.
 
 Majar las especias junto a las almendras tostadas y añadirlas al caldero.
 

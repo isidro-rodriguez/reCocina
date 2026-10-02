@@ -26,4 +26,4 @@ Limpia la cebolla y pícala, pela el tomate y pícalo menudo, raspa la zanahoria
 
 En una cazuela con aceite sofríe la cebolla hasta que transparente, luego incorpora y tomate y rehoga 10 minutos para que evapore el agua. Vierte el caldo de verduras y añade el apio, la calabaza, el calabacín, la zanahoria y el laurel. Salpimenta y deja que cueza a fuego medio durante 15 minutos.
 
-Agrega el brócoli, la pasta y las alubias y cuece hasta que la pasta esté listá según las indicaciones del fabricante. Añade la albahaca y rectifica salpimentando. Deja reposar la sopa.
+Agrega el brócoli, la pasta y las alubias y cuece hasta que la pasta esté lista según las indicaciones del fabricante. Añade la albahaca y rectifica salpimentando. Deja reposar la sopa.

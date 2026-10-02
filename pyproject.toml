@@ -6,21 +6,27 @@ readme = "README.md"
 requires-python = ">=3.12"
 authors = [{ name = "Isidro Rodríguez" }]
 dependencies = [
+    "markdown>=3.10.3",
     "mkdocs>=1.6.1",
     "mkdocs-material>=9.7.7",
     "pymdown-extensions>=11.0.1",
     "pyyaml>=6.0.3",
     "pyyaml-env-tag>=1.1",
-    "markdown>=3.10.3",
     "watchdog>=6.0.0",
 ]
 
 [dependency-groups]
 dev = [
+    "mdformat==1.0.0",
+    "mdformat-mkdocs>=5.3",
     "ruff>=0.6",
+    "spylls>=0.1.7",
     "pytest>=8",
     "pre-commit>=3",
 ]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
 
 [tool.ruff]
 target-version = "py312"
@@ -29,6 +35,3 @@ extend-exclude = ["site", "theme"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
-
-[tool.pytest.ini_options]
-testpaths = ["tests"]

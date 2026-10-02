@@ -1,6 +1,6 @@
-# Pechuga Cocida Con Champinones
+# Pechuga Cocida Con Champiñones
 
-![Pechuga Cocida Con Champinones](../img/fotos/pechuga-cocida-con-champinones.jpg)
+![Pechuga Cocida Con Champiñones](../img/fotos/pechuga-cocida-con-champinones.jpg)
 
 ## Ingredientes
 
@@ -17,7 +17,7 @@
 
 ## Preparación
 
-Pica el pollo en tacos de tamaño bocado, salpiméntallos y séllalos a fuego fuerte en una cazuela con aceite de oliva. Retira el pollo de la cazuela y reserva.
+Pica el pollo en tacos de tamaño bocado, salpiméntalos y séllalos a fuego fuerte en una cazuela con aceite de oliva. Retira el pollo de la cazuela y reserva.
 
 En la misma cazuela, con el resto del aceite y la mantequilla pocha la cebolla hasta que transparente.
 

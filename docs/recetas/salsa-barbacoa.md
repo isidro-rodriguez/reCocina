@@ -4,18 +4,18 @@
 
 ## Ingredientes
 
-* 1 cebolla picada fina
-* 250 ml de tomate triturado
-* 2 cucharadas de azúcar
-* 2 cucharaditas de salsa Worcestershire
-* 1 cucharadita de pimentón
-* 1 cucharadita de mostaza antigua
-* 2 cucharaditas de miel
-* 1 cucharadita de salsa de soja
-* 4 cucharaditas de vinagre
-* 2 chorritos de tabasco
-* 1 cucharadita de aceite de oliva
-* pimienta negra y sal
+- 1 cebolla picada fina
+- 250 ml de tomate triturado
+- 2 cucharadas de azúcar
+- 2 cucharaditas de salsa Worcestershire
+- 1 cucharadita de pimentón
+- 1 cucharadita de mostaza antigua
+- 2 cucharaditas de miel
+- 1 cucharadita de salsa de soja
+- 4 cucharaditas de vinagre
+- 2 chorritos de tabasco
+- 1 cucharadita de aceite de oliva
+- pimienta negra y sal
 
 ## Preparación
 

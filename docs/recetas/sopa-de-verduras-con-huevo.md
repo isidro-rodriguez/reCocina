@@ -25,4 +25,4 @@ Mientras tanto, limpia los champiñones, lamínalos y ásalos en una sartén has
 
 Cuando haya acabado de cocerse la sopa, añade los champiñones tostados y los fideos. Sigue cociendo el tiempo indicado por el fabricante de los fideos.
 
-Para emplatar, en un cazo casca un huevo y cuécelo con caldo de la sopa, recógelo y sirvelo en una ración de sopa.
+Para emplatar, en un cazo casca un huevo y cuécelo con caldo de la sopa, recógelo y sírvelo en una ración de sopa.

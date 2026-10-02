@@ -5,6 +5,7 @@ theme:
   name: material
   language: es
   custom_dir: theme
+  favicon: img/favicon/favicon.ico
   features:
   - navigation.sections
   - navigation.top

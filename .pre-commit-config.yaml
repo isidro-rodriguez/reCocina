@@ -26,3 +26,10 @@ repos:
         language: system
         pass_filenames: false
         always_run: true
+
+      - id: mdformat
+        name: mdformat --check
+        entry: uv run mdformat --check
+        language: system
+        types: [markdown]
+        require_serial: true

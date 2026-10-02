@@ -1,6 +1,6 @@
-# Marmitako De Atun
+# Marmitako De Atún
 
-![Marmitako De Atun](../img/fotos/marmitako-de-atun.jpg)
+![Marmitako De Atún](../img/fotos/marmitako-de-atun.jpg)
 
 ## Ingredientes
 
