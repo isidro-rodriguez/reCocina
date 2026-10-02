@@ -1,6 +1,6 @@
 # Cerdo Agridulce
 
-![Cerdo Agridulce](../img/fotos/cerdo-agridulce.jpg)
+![Cerdo Agridulce](../img/fotos/cerdo-agridulce.webp)
 
 ## Ingredientes
 

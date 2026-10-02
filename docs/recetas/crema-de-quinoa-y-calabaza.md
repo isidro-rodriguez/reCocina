@@ -1,6 +1,6 @@
 # Crema De Quinoa Y Calabaza
 
-![Crema De Quinoa Y Calabaza](../img/fotos/crema-de-quinoa-y-calabaza.jpg)
+![Crema De Quinoa Y Calabaza](../img/fotos/crema-de-quinoa-y-calabaza.webp)
 
 ## Ingredientes
 

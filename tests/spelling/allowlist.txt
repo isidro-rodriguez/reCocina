@@ -107,4 +107,5 @@ tests
 touch
 uv
 vercel
+webp
 

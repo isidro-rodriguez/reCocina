@@ -1,6 +1,6 @@
 # Brownie Coulant
 
-![Brownie Coulant](../img/fotos/brownie-coulant.jpg)
+![Brownie Coulant](../img/fotos/brownie-coulant.webp)
 
 ## Ingredientes
 

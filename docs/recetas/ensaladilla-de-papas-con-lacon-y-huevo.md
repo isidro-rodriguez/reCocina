@@ -1,6 +1,6 @@
 # Ensaladilla De Papas Con Lacón Y Huevo
 
-![Ensaladilla De Papas Con Lacón Y Huevo](../img/fotos/ensaladilla-de-papas-con-lacon-y-huevo.jpg)
+![Ensaladilla De Papas Con Lacón Y Huevo](../img/fotos/ensaladilla-de-papas-con-lacon-y-huevo.webp)
 
 ## Ingredientes
 

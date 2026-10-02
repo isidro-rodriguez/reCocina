@@ -1,6 +1,6 @@
 # Calamares Rellenos De Carne
 
-![Calamares Rellenos De Carne](../img/fotos/calamares-rellenos-de-carne.jpg)
+![Calamares Rellenos De Carne](../img/fotos/calamares-rellenos-de-carne.webp)
 
 ## Ingredientes
 

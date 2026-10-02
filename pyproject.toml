@@ -1,6 +1,6 @@
 [project]
 name = "recocina"
-version = "0.1.0"
+version = "2026.10.02"
 description = "Recetario de cocina casera generado con MkDocs y el tema Material"
 readme = "README.md"
 requires-python = ">=3.12"
@@ -17,7 +17,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "mdformat==1.0.0",
+    "mdformat>=1.0.0",
     "mdformat-mkdocs>=5.3",
     "ruff>=0.6",
     "spylls>=0.1.7",

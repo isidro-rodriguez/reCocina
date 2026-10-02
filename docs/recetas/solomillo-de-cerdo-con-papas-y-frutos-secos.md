@@ -1,6 +1,6 @@
 # Solomillo De Cerdo Con Papas Y Frutos Secos
 
-![Solomillo De Cerdo Con Papas Y Frutos Secos](../img/fotos/solomillo-de-cerdo-con-papas-y-frutos-secos.jpg)
+![Solomillo De Cerdo Con Papas Y Frutos Secos](../img/fotos/solomillo-de-cerdo-con-papas-y-frutos-secos.webp)
 
 ## Ingredientes
 

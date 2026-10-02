@@ -1,6 +1,6 @@
 # Salsa Barbacoa
 
-![Salsa Barbacoa](../img/fotos/salsa-barbacoa.jpg)
+![Salsa Barbacoa](../img/fotos/salsa-barbacoa.webp)
 
 ## Ingredientes
 

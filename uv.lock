@@ -686,7 +686,7 @@ wheels = [
 
 [[package]]
 name = "recocina"
-version = "0.1.0"
+version = "2026.10.2"
 source = { virtual = "." }
 dependencies = [
     { name = "markdown" },
@@ -721,7 +721,7 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "mdformat", specifier = "==1.0.0" },
+    { name = "mdformat", specifier = ">=1.0.0" },
     { name = "mdformat-mkdocs", specifier = ">=5.3" },
     { name = "pre-commit", specifier = ">=3" },
     { name = "pytest", specifier = ">=8" },

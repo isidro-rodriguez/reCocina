@@ -1,6 +1,6 @@
 # Guiso De Calamares Con Alcachofas Y Albóndigas
 
-![Guiso De Calamares Con Alcachofas Y Albóndigas](../img/fotos/guiso-de-calamares-con-alcachofas-y-albondigas.jpg)
+![Guiso De Calamares Con Alcachofas Y Albóndigas](../img/fotos/guiso-de-calamares-con-alcachofas-y-albondigas.webp)
 
 ## Ingredientes
 

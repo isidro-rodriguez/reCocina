@@ -1,6 +1,6 @@
 # Bechamel
 
-![Bechamel](../img/fotos/bechamel.jpg)
+![Bechamel](../img/fotos/bechamel.webp)
 
 ## Ingredientes
 

@@ -1,6 +1,6 @@
 # Curry De Verduras Con Gambas
 
-![Curry De Verduras Con Gambas](../img/fotos/curry-de-verduras-con-gambas.jpg)
+![Curry De Verduras Con Gambas](../img/fotos/curry-de-verduras-con-gambas.webp)
 
 ## Ingredientes
 

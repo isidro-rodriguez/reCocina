@@ -1,6 +1,6 @@
 # Musabaha
 
-![Musabaha](../img/fotos/musabaha.jpg)
+![Musabaha](../img/fotos/musabaha.webp)
 
 ## Ingredientes
 

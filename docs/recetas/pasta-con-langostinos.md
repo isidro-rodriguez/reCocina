@@ -1,6 +1,6 @@
 # Pasta Con Langostinos
 
-![Pasta Con Langostinos](../img/fotos/pasta-con-langostinos.jpg)
+![Pasta Con Langostinos](../img/fotos/pasta-con-langostinos.webp)
 
 ## Ingredientes
 

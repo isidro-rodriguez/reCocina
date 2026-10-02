@@ -1,6 +1,6 @@
 # Pastel De Calabaza Y Pollo
 
-![Pastel De Calabaza Y Pollo](../img/fotos/pastel-de-calabaza-y-pollo.jpg)
+![Pastel De Calabaza Y Pollo](../img/fotos/pastel-de-calabaza-y-pollo.webp)
 
 ## Ingredientes
 

@@ -14,10 +14,10 @@ Operational rules for AI agents and contributors working **on** this repo.
 ## Code style & language
 
 - Python 3.12+. Package manager: **uv only** (`uv run`, `uv add`, `uv sync`) — never raw `pip` (unless inside an isolated venv).
-- **Code:** English identifiers, structure, and commit messages.
-- **Human-facing text:** Spanish — docstrings, comments, test names, user/UI output, and the recipes themselves.
+- **Code:** English identifiers and structure.
+- **Human-facing text:** Spanish — docstrings, comments, user/UI output, and the recipes themselves.
 - Idiomatic Python: type hints, PEP 8, `pathlib` over `os.path`, `from __future__ import annotations`.
-- **ruff is the boss:** `target-version = py312`, `line-length = 88`, rules `E, F, I, UP, B`; excludes `site/` and `theme/`.
+- **ruff is the boss:** `target-version = py312`, `line-length = 88`, rules `E, F, I, UP, B, D`; excludes `site/` and `theme/`.
 
 ## Quality policy — Definition of Done
 
@@ -42,16 +42,16 @@ Checklist before handing off:
 
 ## Content conventions (recipes)
 
-- One recipe = `docs/recetas/<kebab-case-no-accents>.md` + `docs/img/fotos/<slug>.jpg` + an entry in `mkdocs.yml` `nav`. Missing any of the three fails the tests.
+- One recipe = `docs/recetas/<kebab-case-no-accents>.md` + `docs/img/fotos/<slug>.webp` (WebP de 900x600) + an entry in `mkdocs.yml` `nav`. Missing any of the three fails the tests.
 - Title in Title Case **with accents** (`# Sopa De Ajo`); file name kebab-case **without** accents.
 - Sections: `## Ingredientes`, `## Preparación`. Optional ones already in use: `## Opcional`, `## Alternativas`, `## Preparación en robot de cocina`. No frontmatter.
-- Image always `../img/fotos/<slug>.jpg`.
+- Image always `../img/fotos/<slug>.webp` (WebP de 900x600).
 - Nav categories: Aperitivos · Arroz · Pasta · Carne y Pollo · Pescado y Mariscos · Verduras, Legumbres y Potajes · Sopas y Cremas · Salsas · Postres.
 - **Units:** prefer ISO 80000 (`g`, `l`, `ml`, space before unit: `100 g de …`). Don't rewrite existing recipes just to normalize this.
 
 ## Tests contract
 
-- `tests/test_recipes.py` — recipes ⇄ nav ⇄ photos in sync; no broken/dead/orphan images.
+- `tests/test_recipes.py` — recipes ⇄ nav ⇄ photos in sync; no broken/dead/orphan images; photos must be 900x600 WebP.
 - `tests/test_theme.py` — favicon set complete; `theme.favicon`, `theme/main.html` links and `site.webmanifest` valid.
 - `tests/test_spelling.py` — Spanish spelling (spylls + vendored `es_ES`); unknown words must be in `tests/spelling/allowlist.txt`.
 

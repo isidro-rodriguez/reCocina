@@ -1,6 +1,6 @@
 # Salsa Teriyaki
 
-![Salsa Teriyaki](../img/fotos/salsa-teriyaki.jpg)
+![Salsa Teriyaki](../img/fotos/salsa-teriyaki.webp)
 
 ## Ingredientes
 

@@ -1,6 +1,6 @@
 # Cuscús De Pollo Y Verduras
 
-![Cuscús De Pollo Y Verduras](../img/fotos/cuscus-de-pollo-y-verduras.jpg)
+![Cuscús De Pollo Y Verduras](../img/fotos/cuscus-de-pollo-y-verduras.webp)
 
 ## Ingredientes
 

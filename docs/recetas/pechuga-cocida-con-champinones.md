@@ -1,6 +1,6 @@
 # Pechuga Cocida Con Champiñones
 
-![Pechuga Cocida Con Champiñones](../img/fotos/pechuga-cocida-con-champinones.jpg)
+![Pechuga Cocida Con Champiñones](../img/fotos/pechuga-cocida-con-champinones.webp)
 
 ## Ingredientes
 

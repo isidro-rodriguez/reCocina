@@ -18,7 +18,7 @@ Requisitos: [uv](https://docs.astral.sh/uv/) y Python 3.12+ (uv lo gestiona solo
 Tres pasos:
 
 1. **Crea el archivo** `docs/recetas/<nombre-en-kebab-case>.md`
-2. **Copia la foto** en `docs/img/fotos/<mismo-nombre>.jpg`
+2. **Copia la foto** en `docs/img/fotos/<mismo-nombre>.webp` (WebP de 900x600)
 3. **Regístrala en el menú**: abre `mkdocs.yml` y añade la ruta dentro de la categoría correspondiente del bloque `nav`:
 
 ```yaml
@@ -35,7 +35,7 @@ Copia y pega en el nuevo `.md`:
 ```markdown
 # Nombre de la receta
 
-![Nombre de la receta](../img/fotos/nombre-de-la-receta.jpg)
+![Nombre de la receta](../img/fotos/nombre-de-la-receta.webp)
 
 ## Ingredientes
 
@@ -49,7 +49,7 @@ Describe el primer paso.
 Describe el segundo paso.
 ```
 
-- La ruta de la foto es siempre `../img/fotos/<slug>.jpg` (las recetas están planas en `docs/recetas/`).
+- La ruta de la foto es siempre `../img/fotos/<slug>.webp` (las recetas están planas en `docs/recetas/`). Las fotos son WebP de 900x600.
 - Secciones opcionales ya usadas en el recetario: `## Opcional`, `## Alternativas`, `## Preparación en robot de cocina`.
 
 ### Categorías del menú
@@ -59,7 +59,7 @@ Describe el segundo paso.
 ### Checklist rápida
 
 - [ ] `.md` creado en `docs/recetas/`
-- [ ] `.jpg` copiado en `docs/img/fotos/`
+- [ ] `.webp` copiado en `docs/img/fotos/` (WebP de 900x600)
 - [ ] ruta añadida al `nav` en `mkdocs.yml`
 - [ ] validación en verde (`uv run pytest`)
 - [ ] `uv run mkdocs serve` y comprobar que aparece en el menú
@@ -79,6 +79,7 @@ uv run pytest   # 0 tests fallidos = todo OK
 - imágenes enlazadas desde una receta que **no existen** (error)
 - fotos en `docs/img/fotos/` que ninguna receta usa (aviso: huérfanas)
 - fotos en `docs/img/fotos/` **vacías o corruptas** (imágenes muertas)
+- fotos en `docs/img/fotos/` que **no son WebP** o no miden **900x600**
 
 `tests/test_theme.py` detecta:
 

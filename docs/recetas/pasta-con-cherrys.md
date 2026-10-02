@@ -1,6 +1,6 @@
 # Pasta Con Cherrys
 
-![Pasta Con Cherrys](../img/fotos/pasta-con-cherrys.jpg)
+![Pasta Con Cherrys](../img/fotos/pasta-con-cherrys.webp)
 
 ## Ingredientes
 

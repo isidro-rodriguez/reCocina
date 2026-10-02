@@ -1,6 +1,6 @@
 # Salsa Pesto
 
-![Salsa Pesto](../img/fotos/salsa-pesto.jpg)
+![Salsa Pesto](../img/fotos/salsa-pesto.webp)
 
 ## Ingredientes
 

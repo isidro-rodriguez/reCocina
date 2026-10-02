@@ -1,6 +1,6 @@
 # Potaje De Vigilia
 
-![Potaje De Vigilia](../img/fotos/potaje-de-vigilia.jpg)
+![Potaje De Vigilia](../img/fotos/potaje-de-vigilia.webp)
 
 ## Ingredientes
 

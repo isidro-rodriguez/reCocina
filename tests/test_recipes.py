@@ -8,6 +8,7 @@ están sincronizados:
 * Cada imagen enlazada desde una receta existe en disco.
 * Cada foto de ``docs/img/fotos`` está referenciada por alguna receta.
 * Ninguna foto de ``docs/img/fotos`` está vacía o corrupta (imagen muerta).
+* Cada foto de ``docs/img/fotos`` es WebP de 900x600.
 
 Ejecutar con::
 
@@ -17,6 +18,7 @@ Ejecutar con::
 from __future__ import annotations
 
 import re
+import struct
 from pathlib import Path
 
 import yaml
@@ -124,12 +126,75 @@ def _dead_photos() -> list[str]:
         if not photo.is_file():
             continue
         with photo.open("rb") as handle:
-            header = handle.read(16)
+            header = handle.read(32)
         if not header:
             dead.append(f"{photo.name}: fichero vacío (0 bytes)")
         elif not _looks_like_image(header):
             dead.append(f"{photo.name}: contenido no reconocido como imagen")
     return dead
+
+
+# Formato exigido a las fotos de recetas: WebP de 900x600.
+EXPECTED_EXTENSION = ".webp"
+EXPECTED_WIDTH = 900
+EXPECTED_HEIGHT = 600
+
+
+def _webp_dimensions(header: bytes) -> tuple[int, int] | None:
+    """Dimensiones (ancho, alto) de una cabecera WebP (VP8, VP8L o VP8X)."""
+    if len(header) < 30 or header[:4] != b"RIFF" or header[8:12] != b"WEBP":
+        return None
+    fourcc = header[12:16]
+    if fourcc == b"VP8 ":
+        if header[23:26] != b"\x9d\x01\x2a" or len(header) < 30:
+            return None
+        width = struct.unpack("<H", header[26:28])[0] & 0x3FFF
+        height = struct.unpack("<H", header[28:30])[0] & 0x3FFF
+        return (width, height)
+    if fourcc == b"VP8L":
+        if header[20] != 0x2F or len(header) < 25:
+            return None
+        bits = struct.unpack("<I", header[21:25])[0]
+        return ((bits & 0x3FFF) + 1, ((bits >> 14) & 0x3FFF) + 1)
+    if fourcc == b"VP8X":
+        width = int.from_bytes(header[24:27], "little") + 1
+        height = int.from_bytes(header[27:30], "little") + 1
+        return (width, height)
+    return None
+
+
+def _non_webp_photos() -> list[str]:
+    """Fotos de ``docs/img/fotos`` que no son WebP (por extensión o contenido)."""
+    non_webp: list[str] = []
+    for photo in sorted(PHOTOS_DIR.glob("*")):
+        if not photo.is_file():
+            continue
+        with photo.open("rb") as handle:
+            header = handle.read(32)
+        is_webp = photo.suffix.lower() == EXPECTED_EXTENSION
+        if not is_webp or _webp_dimensions(header) is None:
+            non_webp.append(f"{photo.name}: no es WebP ({EXPECTED_EXTENSION})")
+    return non_webp
+
+
+def _wrongly_sized_photos() -> list[str]:
+    """Fotos WebP de ``docs/img/fotos`` que no miden 900x600."""
+    wrong_size: list[str] = []
+    for photo in sorted(PHOTOS_DIR.glob(f"*{EXPECTED_EXTENSION}")):
+        if not photo.is_file():
+            continue
+        with photo.open("rb") as handle:
+            header = handle.read(32)
+        dimensions = _webp_dimensions(header)
+        if dimensions is None:
+            continue
+        width, height = dimensions
+        if (width, height) != (EXPECTED_WIDTH, EXPECTED_HEIGHT):
+            wrong_size.append(
+                f"{photo.name}: {width}x{height} "
+                f"(se esperaban {EXPECTED_WIDTH}x{EXPECTED_HEIGHT})"
+            )
+    return wrong_size
 
 
 def test_todas_las_recetas_estan_en_el_nav() -> None:
@@ -161,3 +226,17 @@ def test_sin_fotos_huerfanas() -> None:
 def test_sin_imagenes_muertas() -> None:
     """Ninguna foto de ``docs/img/fotos`` debe estar vacía o corrupta."""
     assert _dead_photos() == [], "Imágenes muertas:\n" + "\n".join(_dead_photos())
+
+
+def test_fotos_en_webp() -> None:
+    """Toda foto de ``docs/img/fotos`` debe ser WebP."""
+    assert _non_webp_photos() == [], "Fotos que no son WebP:\n" + "\n".join(
+        _non_webp_photos()
+    )
+
+
+def test_fotos_con_resolucion_900x600() -> None:
+    """Toda foto WebP de ``docs/img/fotos`` debe medir 900x600."""
+    assert _wrongly_sized_photos() == [], (
+        "Fotos con resolución incorrecta:\n" + "\n".join(_wrongly_sized_photos())
+    )
