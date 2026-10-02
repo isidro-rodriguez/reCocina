@@ -47,50 +47,50 @@ extra:
 nav:
 - Recetario: index.md
 - Aperitivos:
-  - recetas/aperitivos/ensaladilla-de-papas-con-lacon-y-huevo.md
-  - recetas/aperitivos/fajitas-de-soja-texturizada.md
+  - recetas/ensaladilla-de-papas-con-lacon-y-huevo.md
+  - recetas/fajitas-de-soja-texturizada.md
 - Arroz:
-  - recetas/arroz/arroz-a-banda-con-sepia.md
-  - recetas/arroz/arroz-con-pollo-y-gambas.md
-  - recetas/arroz/curry-de-verduras-con-gambas.md
-  - recetas/arroz/salmon-teriyaki-con-arroz.md
+  - recetas/arroz-a-banda-con-sepia.md
+  - recetas/arroz-con-pollo-y-gambas.md
+  - recetas/curry-de-verduras-con-gambas.md
+  - recetas/salmon-teriyaki-con-arroz.md
 - Pasta:
-  - recetas/pasta/espagueti-carbonara.md
-  - recetas/pasta/pasta-con-cherrys.md
-  - recetas/pasta/pasta-con-langostinos.md
-  - recetas/pasta/pasta-con-setas-a-la-foie.md
+  - recetas/espagueti-carbonara.md
+  - recetas/pasta-con-cherrys.md
+  - recetas/pasta-con-langostinos.md
+  - recetas/pasta-con-setas-a-la-foie.md
 - Carne y Pollo:
-  - recetas/carne/cabra-guisada.md
-  - recetas/carne/cerdo-agridulce.md
-  - recetas/carne/cuscus-de-pollo-y-verduras.md
-  - recetas/carne/estofado-de-ternera.md
-  - recetas/carne/pastel-de-calabaza-y-pollo.md
-  - recetas/carne/pechuga-cocida-con-champinones.md
-  - recetas/carne/pechuga-de-pollo-con-salsa-de-miel-y-mostaza.md
-  - recetas/carne/pollo-caprese-al-pesto.md
-  - recetas/carne/solomillo-de-cerdo-con-papas-y-frutos-secos.md
+  - recetas/cabra-guisada.md
+  - recetas/cerdo-agridulce.md
+  - recetas/cuscus-de-pollo-y-verduras.md
+  - recetas/estofado-de-ternera.md
+  - recetas/pastel-de-calabaza-y-pollo.md
+  - recetas/pechuga-cocida-con-champinones.md
+  - recetas/pechuga-de-pollo-con-salsa-de-miel-y-mostaza.md
+  - recetas/pollo-caprese-al-pesto.md
+  - recetas/solomillo-de-cerdo-con-papas-y-frutos-secos.md
 - Pescado y Mariscos:
-  - recetas/pescado-mariscos/calamares-rellenos-de-carne.md
-  - recetas/pescado-mariscos/guiso-de-calamares-con-alcachofas-y-albondigas.md
-  - recetas/pescado-mariscos/marmitako-de-atun.md
+  - recetas/calamares-rellenos-de-carne.md
+  - recetas/guiso-de-calamares-con-alcachofas-y-albondigas.md
+  - recetas/marmitako-de-atun.md
 - Postres:
-  - recetas/postres/brownie-coulant.md
-  - recetas/postres/peras-al-vino.md
-  - recetas/sopas-cremas/sopa-de-melon.md
+  - recetas/brownie-coulant.md
+  - recetas/peras-al-vino.md
+  - recetas/sopa-de-melon.md
 - Salsas:
-  - recetas/salsas/bechamel.md
-  - recetas/salsas/salsa-barbacoa.md
-  - recetas/salsas/salsa-curry.md
-  - recetas/salsas/salsa-pesto.md
-  - recetas/salsas/salsa-teriyaki.md
+  - recetas/bechamel.md
+  - recetas/salsa-barbacoa.md
+  - recetas/salsa-curry.md
+  - recetas/salsa-pesto.md
+  - recetas/salsa-teriyaki.md
 - Sopas y Cremas:
-  - recetas/sopas-cremas/crema-de-champinones.md
-  - recetas/sopas-cremas/crema-de-quinoa-y-calabaza.md
-  - recetas/sopas-cremas/sopa-de-ajo.md
-  - recetas/sopas-cremas/sopa-de-verduras-con-huevo.md
-  - recetas/sopas-cremas/sopa-minestrone.md
+  - recetas/crema-de-champinones.md
+  - recetas/crema-de-quinoa-y-calabaza.md
+  - recetas/sopa-de-ajo.md
+  - recetas/sopa-de-verduras-con-huevo.md
+  - recetas/sopa-minestrone.md
 - Verduras, Legumbres y Potajes:
-  - recetas/verduras-legumbres/musabaha.md
-  - recetas/verduras-legumbres/potaje-de-berros.md
-  - recetas/verduras-legumbres/potaje-de-vigilia.md
+  - recetas/musabaha.md
+  - recetas/potaje-de-berros.md
+  - recetas/potaje-de-vigilia.md
 docs_dir: docs

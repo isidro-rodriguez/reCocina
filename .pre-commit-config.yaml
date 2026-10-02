@@ -1,0 +1,28 @@
+# Hooks ejecutados automáticamente en cada `git commit`.
+# Instalar una sola vez con:  uv run pre-commit install
+#
+# Se usan hooks locales que invocan las herramientas ya fijadas en uv.lock
+# (no requieren descargar nada de la red y respetan las versiones del proyecto).
+repos:
+  - repo: local
+    hooks:
+      - id: ruff-check
+        name: ruff check
+        entry: uv run ruff check --force-exclude
+        language: system
+        types_or: [python, pyi]
+        require_serial: true
+
+      - id: ruff-format
+        name: ruff format --check
+        entry: uv run ruff format --check --force-exclude
+        language: system
+        types_or: [python, pyi]
+        require_serial: true
+
+      - id: pytest
+        name: pytest
+        entry: uv run pytest
+        language: system
+        pass_filenames: false
+        always_run: true
