@@ -33,8 +33,10 @@ FAVICON_FILES = (
     "apple-touch-icon.png",
     "android-chrome-192x192.png",
     "android-chrome-512x512.png",
-    "site.webmanifest",
+    "favicon.svg",
 )
+
+MANIFEST_FILE = DOCS_DIR / "site.webmanifest"
 
 
 def _missing_favicon_files() -> list[str]:
@@ -70,11 +72,10 @@ def _favicon_head_links() -> list[str]:
 
 def _manifest_icon_problems() -> list[str]:
     """Problemas del ``site.webmanifest`` (JSON inválido o iconos inexistentes)."""
-    manifest = FAVICON_DIR / "site.webmanifest"
-    if not manifest.is_file():
-        return ["site.webmanifest (no existe)"]
+    if not MANIFEST_FILE.is_file():
+        return ["site.webmanifest (no existe en docs/)"]
     try:
-        data = json.loads(manifest.read_text(encoding="utf-8"))
+        data = json.loads(MANIFEST_FILE.read_text(encoding="utf-8"))
     except json.JSONDecodeError as error:
         return [f"site.webmanifest: JSON inválido ({error})"]
 
@@ -83,9 +84,16 @@ def _manifest_icon_problems() -> list[str]:
         problems.append("site.webmanifest: 'name'/'short_name' vacíos")
     for icon in data.get("icons", []):
         src = icon.get("src", "")
-        if src.startswith(("/", "http://", "https://")):
-            problems.append(f"site.webmanifest: ruta absoluta no portátil '{src}'")
-        elif not (FAVICON_DIR / src).is_file():
+        if src.startswith("/"):
+            # Rutas absolutas desde la raíz del sitio: comprobar en docs/
+            icon_path = DOCS_DIR / src.lstrip("/")
+        elif src.startswith(("http://", "https://")):
+            problems.append(f"site.webmanifest: URL externa '{src}'")
+            continue
+        else:
+            # Ruta relativa al manifiesto (en docs/)
+            icon_path = MANIFEST_FILE.parent / src
+        if not icon_path.is_file():
             problems.append(f"site.webmanifest: icono inexistente '{src}'")
     return problems
 
