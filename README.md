@@ -60,11 +60,11 @@ Describe el segundo paso.
 
 ### Checklist rápida
 
-- [ ] `.md` creado en `docs/recetas/`
-- [ ] `.webp` copiado en `docs/img/fotos/` (WebP de 900x600)
-- [ ] ruta añadida al `nav` en `zensical.toml`
-- [ ] validación en verde (`uv run pytest`)
-- [ ] `uv run zensical serve` y comprobar que aparece en el menú
+- [ ] Documento `.md` creado en `docs/recetas/`
+- [ ] Imagen `.webp` copiada en `docs/img/fotos/` (WebP de 900x600).
+- [ ] Ruta añadida al `nav` en `zensical.toml`
+- [ ] Validación con `uv run pytest`
+- [ ] Ejecutar `uv run zensical serve` y comprobar que aparece en el menú.
 
 ## Validación
 
@@ -76,23 +76,24 @@ uv run pytest   # 0 tests fallidos = todo OK
 
 `tests/test_recipes.py` detecta:
 
-- recetas en disco que **no** están en el `nav` (aviso: no se verían en el sitio)
-- entradas del `nav` que apuntan a ficheros inexistentes (error: rompe el build)
-- imágenes enlazadas desde una receta que **no existen** (error)
-- fotos en `docs/img/fotos/` que ninguna receta usa (aviso: huérfanas)
-- fotos en `docs/img/fotos/` **vacías o corruptas** (imágenes muertas)
-- fotos en `docs/img/fotos/` que **no son WebP** o no miden **900x600**
+- recetas en disco que **no** están en el `nav` (aviso: no se verían en el sitio).
+- entradas del `nav` que apuntan a ficheros inexistentes (error: rompe el build).
+- imágenes enlazadas desde una receta que **no existen** (error).
+- fotos en `docs/img/fotos/` que:
+    - Ninguna receta usa (aviso: huérfanas).
+    - **Vacías o corruptas** (imágenes muertas).
+    - Que **no son WebP** o no miden **900x600**.
 
 `tests/test_theme.py` detecta:
 
-- favicons del set **ausentes** en `docs/img/favicon/`
-- `theme.favicon` sin declarar o apuntando a un fichero inexistente
-- `theme/main.html` sin enlazar algún icono o el manifiesto
-- `site.webmanifest` inválido (JSON roto, rutas no portátiles o iconos inexistentes)
+- Favicons del set **ausentes** en `docs/img/favicon/`.
+- `theme.favicon` sin declarar o apuntando a un fichero inexistente.
+- `theme/main.html` sin enlazar algún icono o el manifiesto.
+- `site.webmanifest` inválido (JSON roto, rutas no portátiles o iconos inexistentes).
 
 `tests/test_spelling.py` detecta:
 
-- palabras no reconocidas por el diccionario español `es_ES` (ortografía), fuera de la allowlist
+- palabras no reconocidas por el diccionario español `es_ES` (ortografía), fuera de la allowlist.
 
 ## Favicon e iconos del sitio
 
@@ -130,8 +131,6 @@ uv run pytest   # incluye la comprobación ortográfica
     formas verbales con pronombre…) se aceptan desde `tests/spelling/allowlist.txt`.
 - Para permitir una palabra válida, añádela a ese fichero (una por línea; `#` para comentarios).
 
-> Revisa **ortografía**, no gramática. Licencia del diccionario en `tests/spelling/LICENSE/`.
-
 ## Hook pre-commit
 
 Un hook ejecuta la validación **automáticamente antes de cada commit**: si el lint
@@ -158,7 +157,7 @@ uv run pre-commit run --all-files
 | Comando                                  | Qué hace                                                          |
 | ---------------------------------------- | ----------------------------------------------------------------- |
 | `uv sync`                                | Instala/actualiza dependencias desde `pyproject.toml` + `uv.lock` |
-| `uv run zensical serve`                  | Previsualiza en http://localhost:8000 con recarga en vivo         |
+| `uv run zensical serve`                  | Previsualiza en <http://localhost:8000> con recarga en vivo       |
 | `uv run zensical build --strict`         | Genera el sitio en `site/`; aborta ante avisos de build           |
 | `uv run pytest`                          | Valida que recetas, `nav` y fotos están sincronizados             |
 | `uv run mdformat docs README.md`         | Formatea el Markdown (recetas y README)                           |

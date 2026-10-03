@@ -29,7 +29,7 @@ repos:
 
       - id: mdformat
         name: mdformat --check
-        entry: uv run mdformat --check
+        entry: uv run mdformat --check docs README.md
         language: system
-        types: [markdown]
-        require_serial: true
+        pass_filenames: false
+        always_run: true

@@ -1,4 +1,4 @@
-# 🍳 reCocina
+# reCocina
 
 Recetario casero organizado por categorías.
 

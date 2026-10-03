@@ -4,68 +4,68 @@ site_description = "Recetario de cocina casera"
 site_author = "reCocina"
 docs_dir = "docs"
 extra_css = [
-  "css/extra.css",
+    "css/extra.css",
 ]
 
 nav = [
-  { "Recetario" = "index.md" },
-  { "Aperitivos" = [
-    "recetas/ensaladilla-de-papas-con-lacon-y-huevo.md",
-    "recetas/fajitas-de-soja-texturizada.md",
-  ] },
-  { "Arroz" = [
-    "recetas/arroz-a-banda-con-sepia.md",
-    "recetas/arroz-con-pollo-y-gambas.md",
-    "recetas/curry-de-verduras-con-gambas.md",
-    "recetas/salmon-teriyaki-con-arroz.md",
-  ] },
-  { "Pasta" = [
-    "recetas/espagueti-carbonara.md",
-    "recetas/pasta-con-cherrys.md",
-    "recetas/pasta-con-langostinos.md",
-    "recetas/pasta-con-setas-a-la-foie.md",
-  ] },
-  { "Carne y Pollo" = [
-    "recetas/cabra-guisada.md",
-    "recetas/cerdo-agridulce.md",
-    "recetas/cuscus-de-pollo-y-verduras.md",
-    "recetas/estofado-de-ternera.md",
-    "recetas/pastel-de-calabaza-y-pollo.md",
-    "recetas/pechuga-cocida-con-champinones.md",
-    "recetas/pechuga-de-pollo-con-salsa-de-miel-y-mostaza.md",
-    "recetas/pollo-caprese-al-pesto.md",
-    "recetas/solomillo-de-cerdo-con-papas-y-frutos-secos.md",
-  ] },
-  { "Pescado y Mariscos" = [
-    "recetas/calamares-rellenos-de-carne.md",
-    "recetas/guiso-de-calamares-con-alcachofas-y-albondigas.md",
-    "recetas/marmitako-de-atun.md",
-  ] },
-  { "Postres" = [
-    "recetas/brownie-coulant.md",
-    "recetas/peras-al-vino.md",
-    "recetas/sopa-de-melon.md",
-  ] },
-  { "Salsas" = [
-    "recetas/bechamel.md",
-    "recetas/mojo-de-cilantro.md",
-    "recetas/salsa-barbacoa.md",
-    "recetas/salsa-curry.md",
-    "recetas/salsa-pesto.md",
-    "recetas/salsa-teriyaki.md",
-  ] },
-  { "Sopas y Cremas" = [
-    "recetas/crema-de-champinones.md",
-    "recetas/crema-de-quinoa-y-calabaza.md",
-    "recetas/sopa-de-ajo.md",
-    "recetas/sopa-de-verduras-con-huevo.md",
-    "recetas/sopa-minestrone.md",
-  ] },
-  { "Verduras, Legumbres y Potajes" = [
-    "recetas/musabaha.md",
-    "recetas/potaje-de-berros.md",
-    "recetas/potaje-de-vigilia.md",
-  ] },
+    { "Recetario" = "index.md" },
+    { "Aperitivos" = [
+        "recetas/ensaladilla-de-papas-con-lacon-y-huevo.md",
+        "recetas/fajitas-de-soja-texturizada.md",
+    ] },
+    { "Arroz" = [
+        "recetas/arroz-a-banda-con-sepia.md",
+        "recetas/arroz-con-pollo-y-gambas.md",
+        "recetas/curry-de-verduras-con-gambas.md",
+        "recetas/salmon-teriyaki-con-arroz.md",
+    ] },
+    { "Pasta" = [
+        "recetas/espagueti-carbonara.md",
+        "recetas/pasta-con-cherrys.md",
+        "recetas/pasta-con-langostinos.md",
+        "recetas/pasta-con-setas-a-la-foie.md",
+    ] },
+    { "Carne y Pollo" = [
+        "recetas/cabra-guisada.md",
+        "recetas/cerdo-agridulce.md",
+        "recetas/cuscus-de-pollo-y-verduras.md",
+        "recetas/estofado-de-ternera.md",
+        "recetas/pastel-de-calabaza-y-pollo.md",
+        "recetas/pechuga-cocida-con-champinones.md",
+        "recetas/pechuga-de-pollo-con-salsa-de-miel-y-mostaza.md",
+        "recetas/pollo-caprese-al-pesto.md",
+        "recetas/solomillo-de-cerdo-con-papas-y-frutos-secos.md",
+    ] },
+    { "Pescado y Mariscos" = [
+        "recetas/calamares-rellenos-de-carne.md",
+        "recetas/guiso-de-calamares-con-alcachofas-y-albondigas.md",
+        "recetas/marmitako-de-atun.md",
+    ] },
+    { "Postres" = [
+        "recetas/brownie-coulant.md",
+        "recetas/peras-al-vino.md",
+        "recetas/sopa-de-melon.md",
+    ] },
+    { "Salsas" = [
+        "recetas/bechamel.md",
+        "recetas/mojo-de-cilantro.md",
+        "recetas/salsa-barbacoa.md",
+        "recetas/salsa-curry.md",
+        "recetas/salsa-pesto.md",
+        "recetas/salsa-teriyaki.md",
+    ] },
+    { "Sopas y Cremas" = [
+        "recetas/crema-de-champinones.md",
+        "recetas/crema-de-quinoa-y-calabaza.md",
+        "recetas/sopa-de-ajo.md",
+        "recetas/sopa-de-verduras-con-huevo.md",
+        "recetas/sopa-minestrone.md",
+    ] },
+    { "Verduras, Legumbres y Potajes" = [
+        "recetas/musabaha.md",
+        "recetas/potaje-de-berros.md",
+        "recetas/potaje-de-vigilia.md",
+    ] },
 ]
 
 [project.theme]
@@ -73,26 +73,27 @@ variant = "classic"
 language = "es"
 custom_dir = "theme"
 favicon = "img/favicon/favicon.ico"
+logo = "img/logo.svg"
 features = [
-  "navigation.sections",
-  "navigation.top",
-  "search.highlight",
-  "search.suggest",
-  "content.code.copy",
+    "navigation.sections",
+    "navigation.top",
+    "search.highlight",
+    "search.suggest",
+    "content.code.copy",
 ]
 
 [[project.theme.palette]]
 scheme = "light"
 primary = "custom"
 accent = "custom"
-toggle.icon = "lucide/sun"
+toggle.icon = "fontawesome/regular/sun"
 toggle.name = "Cambiar a modo oscuro"
 
 [[project.theme.palette]]
 scheme = "slate"
 primary = "custom"
 accent = "custom"
-toggle.icon = "lucide/moon"
+toggle.icon = "fontawesome/regular/moon"
 toggle.name = "Cambiar a modo claro"
 
 [project.extra]
