@@ -1,6 +1,6 @@
 # reCocina
 
-Recetario de cocina casera generado con **Zensical** (variante `classic`, con la estética de Material for MkDocs).
+Recetario de cocina casera generado con **Zensical**.
 Cada receta incluye foto, ingredientes y preparación, organizada por categorías en el menú lateral.
 
 ## Guía rápida
@@ -107,7 +107,7 @@ Para cambiarlos, sustituye los ficheros manteniendo los nombres y ajusta `site.w
 ## Linteo y formato de Markdown
 
 El Markdown (recetas y este README) se formatea con **mdformat** y el plugin
-**mdformat-mkdocs** (que entiende la sintaxis de MkDocs/Material: admoniciones, pestañas…).
+**mdformat-mkdocs** (que entiende la sintaxis de Zensical: admoniciones, pestañas…).
 La configuración vive en `.mdformat.toml`.
 
 ```bash
