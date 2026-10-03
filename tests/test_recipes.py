@@ -1,6 +1,6 @@
 """Tests de consistencia del recetario.
 
-Comprueban que las recetas, el menú (``nav`` de ``mkdocs.yml``) y las fotos
+Comprueban que las recetas, el menú (``nav`` de ``zensical.toml``) y las fotos
 están sincronizados:
 
 * Cada receta ``docs/recetas/*.md`` está listada en el ``nav``.
@@ -19,15 +19,14 @@ from __future__ import annotations
 
 import re
 import struct
+import tomllib
 from pathlib import Path
-
-import yaml
 
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 DOCS_DIR = PROJECT_DIR / "docs"
 RECIPES_DIR = DOCS_DIR / "recetas"
 PHOTOS_DIR = DOCS_DIR / "img" / "fotos"
-MKDOCS_FILE = PROJECT_DIR / "mkdocs.yml"
+ZENSICAL_FILE = PROJECT_DIR / "zensical.toml"
 
 # Enlaces de imagen en Markdown: ![alt](ruta) o ![alt](ruta "título")
 IMAGE_PATTERN = re.compile(r"!\[[^\]]*\]\(\s*([^)\s]+)")
@@ -35,7 +34,7 @@ NAV_PREFIX = "recetas/"
 
 
 def _flatten_nav(node: object) -> list[str]:
-    """Aplana recursivamente la estructura del ``nav`` de MkDocs."""
+    """Aplana recursivamente la estructura del ``nav`` de Zensical."""
     if isinstance(node, list):
         return [page for item in node for page in _flatten_nav(item)]
     if isinstance(node, dict):
@@ -47,8 +46,9 @@ def _flatten_nav(node: object) -> list[str]:
 
 def _nav_recipes() -> set[str]:
     """Rutas de recetas (relativas a ``docs``) declaradas en el ``nav``."""
-    config = yaml.safe_load(MKDOCS_FILE.read_text(encoding="utf-8"))
-    pages = _flatten_nav(config.get("nav", []))
+    config = tomllib.loads(ZENSICAL_FILE.read_text(encoding="utf-8"))
+    project = config.get("project") or {}
+    pages = _flatten_nav(project.get("nav", []))
     return {page for page in pages if page.startswith(NAV_PREFIX)}
 
 

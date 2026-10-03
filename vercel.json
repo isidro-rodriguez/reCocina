@@ -1,6 +1,6 @@
 {
   "installCommand": "uv sync",
-  "buildCommand": "uv run mkdocs build --strict",
+  "buildCommand": "uv run zensical build --strict",
   "outputDirectory": "site",
   "framework": null
 }

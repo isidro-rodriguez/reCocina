@@ -4,7 +4,7 @@ Comprueban que el set de favicons de ``docs/img/favicon`` está completo y
 debidamente enlazado:
 
 * Los ficheros esperados existen.
-* ``theme.favicon`` en ``mkdocs.yml`` apunta a un fichero existente.
+* ``project.theme.favicon`` en ``zensical.toml`` apunta a un fichero existente.
 * ``theme/main.html`` referencia los iconos y el manifiesto.
 * ``site.webmanifest`` es JSON válido y sus iconos existen en disco.
 
@@ -16,15 +16,14 @@ Ejecutar con::
 from __future__ import annotations
 
 import json
+import tomllib
 from pathlib import Path
-
-import yaml
 
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 DOCS_DIR = PROJECT_DIR / "docs"
 FAVICON_DIR = DOCS_DIR / "img" / "favicon"
 THEME_MAIN = PROJECT_DIR / "theme" / "main.html"
-MKDOCS_FILE = PROJECT_DIR / "mkdocs.yml"
+ZENSICAL_FILE = PROJECT_DIR / "zensical.toml"
 
 # Ficheros que debe contener el set de favicons.
 FAVICON_FILES = (
@@ -44,9 +43,10 @@ def _missing_favicon_files() -> list[str]:
 
 
 def _theme_favicon_file() -> str | None:
-    """Ruta (relativa a ``docs``) del favicon declarado en ``mkdocs.yml``, si existe."""
-    config = yaml.safe_load(MKDOCS_FILE.read_text(encoding="utf-8"))
-    favicon = (config.get("theme") or {}).get("favicon")
+    """Ruta (relativa a ``docs``) del favicon en ``zensical.toml``, si existe."""
+    config = tomllib.loads(ZENSICAL_FILE.read_text(encoding="utf-8"))
+    project = config.get("project") or {}
+    favicon = (project.get("theme") or {}).get("favicon")
     return str(favicon) if favicon else None
 
 
@@ -100,7 +100,7 @@ def test_set_de_favicons_completo() -> None:
 def test_theme_favicon_apunta_a_un_fichero() -> None:
     """``theme.favicon`` debe declararse y apuntar a un fichero existente."""
     favicon = _theme_favicon_file()
-    assert favicon is not None, "Falta 'theme.favicon' en mkdocs.yml"
+    assert favicon is not None, "Falta 'theme.favicon' en zensical.toml"
     target = DOCS_DIR / favicon
     assert target.is_file(), f"theme.favicon apunta a un fichero inexistente: {favicon}"
 

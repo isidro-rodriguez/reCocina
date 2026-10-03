@@ -1,29 +1,26 @@
 [project]
 name = "recocina"
 version = "2026.10.02"
-description = "Recetario de cocina casera generado con MkDocs y el tema Material"
+description = "Recetario de cocina casera generado con Zensical"
 readme = "README.md"
 requires-python = ">=3.12"
 authors = [{ name = "Isidro Rodríguez" }]
 dependencies = [
-    "markdown>=3.10.3",
-    "mkdocs>=1.6.1",
-    "mkdocs-material>=9.7.7",
-    "pymdown-extensions>=11.0.1",
-    "pyyaml>=6.0.3",
-    "pyyaml-env-tag>=1.1",
-    "watchdog>=6.0.0",
+    "zensical",
 ]
 
 [dependency-groups]
 dev = [
     "mdformat>=1.0.0",
     "mdformat-mkdocs>=5.3",
+    "pre-commit>=3",
+    "pytest>=8",
     "ruff>=0.6",
     "spylls>=0.1.7",
-    "pytest>=8",
-    "pre-commit>=3",
 ]
+
+[tool.uv]
+package = false
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -34,4 +31,4 @@ line-length = 88
 extend-exclude = ["site", "theme"]
 
 [tool.ruff.lint]
-select = ["E", "F", "I", "UP", "B"]
+select = ["E", "F", "I", "UP", "B", "SIM", "PTH"]

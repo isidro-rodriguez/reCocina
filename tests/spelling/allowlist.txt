@@ -82,6 +82,7 @@ commit
 commitear
 favicon
 favicons
+for
 hook
 hooks
 http
@@ -108,4 +109,4 @@ touch
 uv
 vercel
 webp
-
+zensical

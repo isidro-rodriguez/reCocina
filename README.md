@@ -1,14 +1,14 @@
 # reCocina
 
-Recetario de cocina casera generado con **MkDocs** y el tema **Material**.
+Recetario de cocina casera generado con **Zensical** (variante `classic`, con la estética de Material for MkDocs).
 Cada receta incluye foto, ingredientes y preparación, organizada por categorías en el menú lateral.
 
 ## Guía rápida
 
 ```bash
 uv sync                 # 1. Prepara el entorno (primera vez o tras cambiar dependencias)
-uv run mkdocs serve     # 2. Previsualiza en http://localhost:8000 (recarga en vivo)
-uv run mkdocs build     # 3. Genera el sitio estático en site/
+uv run zensical serve   # 2. Previsualiza en http://localhost:8000 (recarga en vivo)
+uv run zensical build   # 3. Genera el sitio estático en site/
 ```
 
 Requisitos: [uv](https://docs.astral.sh/uv/) y Python 3.12+ (uv lo gestiona solo).
@@ -19,13 +19,15 @@ Tres pasos:
 
 1. **Crea el archivo** `docs/recetas/<nombre-en-kebab-case>.md`
 2. **Copia la foto** en `docs/img/fotos/<mismo-nombre>.webp` (WebP de 900x600)
-3. **Regístrala en el menú**: abre `mkdocs.yml` y añade la ruta dentro de la categoría correspondiente del bloque `nav`:
+3. **Regístrala en el menú**: abre `zensical.toml` y añade la ruta dentro de la categoría correspondiente del bloque `nav`:
 
-```yaml
-nav:
-- Arroz:
-  - recetas/arroz-a-banda-con-sepia.md
-  - recetas/mi-receta-nueva.md   # <- añade esta línea
+```toml
+nav = [
+  { "Arroz" = [
+    "recetas/arroz-a-banda-con-sepia.md",
+    "recetas/mi-receta-nueva.md",   # <- añade esta línea
+  ] },
+]
 ```
 
 ### Plantilla de receta
@@ -60,9 +62,9 @@ Describe el segundo paso.
 
 - [ ] `.md` creado en `docs/recetas/`
 - [ ] `.webp` copiado en `docs/img/fotos/` (WebP de 900x600)
-- [ ] ruta añadida al `nav` en `mkdocs.yml`
+- [ ] ruta añadida al `nav` en `zensical.toml`
 - [ ] validación en verde (`uv run pytest`)
-- [ ] `uv run mkdocs serve` y comprobar que aparece en el menú
+- [ ] `uv run zensical serve` y comprobar que aparece en el menú
 
 ## Validación
 
@@ -96,7 +98,7 @@ uv run pytest   # 0 tests fallidos = todo OK
 
 Los iconos viven en `docs/img/favicon/` (separados de las fotos de recetas):
 
-- `theme.favicon: img/favicon/favicon.ico` en `mkdocs.yml` fija el `<link rel="icon">` principal.
+- `theme.favicon: img/favicon/favicon.ico` en `zensical.toml` fija el `<link rel="icon">` principal.
 - `theme/main.html` inyecta en el `<head>` el resto (apple-touch-icon, PNG 16/32 y el manifiesto).
 
 Para cambiarlos, sustituye los ficheros manteniendo los nombres y ajusta `site.webmanifest` si cambian los iconos.
@@ -104,7 +106,7 @@ Para cambiarlos, sustituye los ficheros manteniendo los nombres y ajusta `site.w
 ## Linteo y formato de Markdown
 
 El Markdown (recetas y este README) se formatea con **mdformat** y el plugin
-**mdformat-mkdocs** (que entiende la sintaxis de Material: admoniciones, pestañas…).
+**mdformat-mkdocs** (que entiende la sintaxis de MkDocs/Material: admoniciones, pestañas…).
 La configuración vive en `.mdformat.toml`.
 
 ```bash
@@ -156,8 +158,8 @@ uv run pre-commit run --all-files
 | Comando                                  | Qué hace                                                          |
 | ---------------------------------------- | ----------------------------------------------------------------- |
 | `uv sync`                                | Instala/actualiza dependencias desde `pyproject.toml` + `uv.lock` |
-| `uv run mkdocs serve`                    | Previsualiza en http://localhost:8000 con recarga en vivo         |
-| `uv run mkdocs build --strict`           | Genera el sitio en `site/`; falla ante enlaces internos rotos     |
+| `uv run zensical serve`                  | Previsualiza en http://localhost:8000 con recarga en vivo         |
+| `uv run zensical build --strict`         | Genera el sitio en `site/`; aborta ante avisos de build           |
 | `uv run pytest`                          | Valida que recetas, `nav` y fotos están sincronizados             |
 | `uv run mdformat docs README.md`         | Formatea el Markdown (recetas y README)                           |
 | `uv run mdformat --check docs README.md` | Comprueba el formato del Markdown sin modificar                   |
@@ -170,34 +172,37 @@ uv run pre-commit run --all-files
 
 ```
 .
-├── mkdocs.yml              # Configuración del sitio y del menú (nav)
-├── pyproject.toml          # Dependencias y configuración de ruff/pytest
-├── uv.lock                 # Versiones fijadas (no editar a mano)
+├── docs/
+│   ├── css/extra.css       # Paleta de colores (--rc-*) y maquetación
+│   ├── img/
+│   │   ├── fotos/          # Fotos de las recetas (mismo nombre que el .md)
+│   │   └── favicon/        # Favicons e iconos del sitio
+│   ├── recetas/            # Recetas (archivos .md planos)
+│   └── index.md            # Portada
+├── theme/                  # Overrides de plantillas (custom_dir de Zensical)
+│   ├── partials/
+│   │   ├── header.html     # Cabecera sin el bloque "source"
+│   │   └── copyright.html  # Pie: "Creado con Zensical"
+│   └── main.html           # <head>: favicons; bloque site_nav sin TOC lateral
+├── tests/
+│   ├── spelling/           # Diccionario es_ES + allowlist + licencias
+│   ├── test_recipes.py     # Valida recetas ↔ nav ↔ fotos (pytest)
+│   ├── test_spelling.py    # Corrección ortográfica es_ES (pytest)
+│   └── test_theme.py       # Valida favicons y recursos del sitio (pytest)
 ├── .pre-commit-config.yaml # Hooks de pre-commit (lint + formato + tests)
 ├── .mdformat.toml          # Configuración de mdformat (formato de Markdown)
+├── pyproject.toml          # Dependencias y configuración de ruff/pytest
 ├── vercel.json             # Configuración de despliegue
-├── theme/                  # Overrides del tema Material
-│   ├── main.html           # <head>: favicons y manifiesto
-│   └── partials/copyright.html
-├── tests/
-│   ├── test_recipes.py     # Valida recetas ↔ nav ↔ fotos (pytest)
-│   ├── test_theme.py       # Valida favicons y recursos del sitio (pytest)
-│   ├── test_spelling.py    # Corrección ortográfica es_ES (pytest)
-│   └── spelling/           # Diccionario es_ES + allowlist + licencias
-└── docs/
-    ├── index.md            # Portada
-    ├── recetas/            # Recetas (archivos .md planos)
-    └── img/
-        ├── fotos/          # Fotos de las recetas (mismo nombre que el .md)
-        └── favicon/        # Favicons e iconos del sitio
+└── zensical.toml           # Configuración del sitio y del menú (nav)
 ```
 
 ## Despliegue
 
-Vercel despliega automáticamente desde la rama `main`: `vercel.json` ejecuta `uv sync` e `uv run mkdocs build --strict`, y publica el contenido de `site/`.
+Vercel despliega automáticamente desde la rama `main`: `vercel.json` ejecuta `uv sync` e `uv run zensical build --strict`, y publica el contenido de `site/`.
 
 ## Notas
 
-- Interfaz en español (`language: es` en `mkdocs.yml`).
-- Tema Material personalizado en `theme/partials/copyright.html`.
+- Interfaz en español (`language = "es"` en `zensical.toml`).
+- Plantillas personalizadas en `theme/`: son copias de las de Zensical v0.0.67 (marcadas con su versión de origen); al actualizar Zensical, compararlas con las nuevas.
+- Paleta de colores centralizada en `docs/css/extra.css` (variables `--rc-*` en `:root`).
 - Nombres de archivo en kebab-case y sin acentos (ej. `sopa-de-melon.md`).
