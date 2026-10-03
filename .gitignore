@@ -6,6 +6,7 @@ site/
 .env
 .env.*
 *.pyc
+*~
 .DS_Store
 nul
 Thumbs.db
