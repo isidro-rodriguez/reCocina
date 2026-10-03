@@ -1,176 +1,353 @@
 /* ========================================
+
    Paleta (capa 1: colores en bruto)
+
    Escala 50 (claro) → 950 (oscuro)
+
    ======================================== */
+
 :root {
-    /* Verde bosque */
-    --verde-200: #C1D8C7;
-    --verde-600: #526F5C;
-    --verde-700: #3F5F4A;
-    --verde-800: #314B3A;
-    --verde-900: #284B34;
 
-    /* Terracota */
-    --terracota-300: #E3A083;
-    --terracota-400: #D0805F;
-    --terracota-500: #C96F4A;
+  /* Verde bosque */
 
-    /* Papel (esquema claro) */
-    --arena-50: #FFFCF7;
-    --arena-100: #F3EBDD;
-    --blanco: #FFFFFF;
-    --tinta-900: #292725;
-    --gris-500: #737970;
+  --verde-200: #C1D8C7;
 
-    /* Noche (esquema oscuro) */
-    --carbon-600: #465047;
-    --carbon-700: #303830;
-    --carbon-800: #29312A;
-    --carbon-900: #252C26;
-    --carbon-950: #202620;
-    --marfil-100: #F3EFE5;
+  --verde-600: #526F5C;
+
+  --verde-700: #3F5F4A;
+
+  --verde-800: #314B3A;
+
+  --verde-900: #284B34;
+
+
+
+  /* Terracota */
+
+  --terracota-300: #E3A083;
+
+  --terracota-400: #D0805F;
+
+  --terracota-500: #C96F4A;
+
+
+
+  /* Papel (esquema claro) */
+
+  --arena-50: #FFFCF7;
+
+  --arena-100: #F3EBDD;
+
+  --blanco: #FFFFFF;
+
+  --tinta-900: #292725;
+
+  --gris-500: #737970;
+
+
+
+  /* Noche (esquema oscuro) */
+
+  --carbon-600: #465047;
+
+  --carbon-700: #303830;
+
+  --carbon-800: #29312A;
+
+  --carbon-900: #252C26;
+
+  --carbon-950: #202620;
+
+  --marfil-100: #F3EFE5;
+
 }
 
+
+
 /* ========================================
+
    Maquetación
+
    ======================================== */
+
+
 
 .md-grid {
-    max-width: calc(12.1rem + 1rem + 900px);
+
+  max-width: calc(12.1rem + 1rem + 900px);
+
 }
+
+
 
 .md-content {
-    max-width: 900px;
-    margin-right: auto;
+
+  max-width: 900px;
+
+  margin-right: auto;
+
 }
+
+
 
 @media screen and (max-width: 76.234375em) {
-    .md-content {
-        margin-left: auto;
-    }
+
+  .md-content {
+
+    margin-left: auto;
+
+  }
+
 }
+
+
 
 @media screen and (min-width: 76.25em) {
-    /* 1 rem de separación entre el menú lateral y el artículo */
-    [dir="ltr"] .md-sidebar--primary:not([hidden]) ~ .md-content {
-        margin-left: 1rem;
-        margin-right: 0;
-    }
 
-    /* El artículo ocupa los 900 px completos (sin margen interno) */
-    [dir="ltr"] .md-sidebar--primary:not([hidden]) ~ .md-content > .md-content__inner {
-        margin-left: 0;
-        margin-right: 0;
-    }
+
+
+  /* 1 rem de separación entre el menú lateral y el artículo */
+
+  [dir="ltr"] .md-sidebar--primary:not([hidden])~.md-content {
+
+    margin-left: 1rem;
+
+    margin-right: 0;
+
+  }
+
+
+
+  /* El artículo ocupa los 900 px completos (sin margen interno) */
+
+  [dir="ltr"] .md-sidebar--primary:not([hidden])~.md-content>.md-content__inner {
+
+    margin-left: 0;
+
+    margin-right: 0;
+
+  }
+
 }
 
+
+
 /* ========================================
+
    Tema claro (capa 2: variables del tema)
+
    ======================================== */
+
+
 
 [data-md-color-scheme="light"] {
-    /* Primary — Verde bosque */
-    --md-primary-fg-color: var(--verde-700);
-    --md-primary-fg-color--light: var(--verde-200);
-    --md-primary-fg-color--dark: var(--verde-900);
 
-    /* Accent — Terracota */
-    --md-accent-fg-color: var(--terracota-500);
-    --md-accent-fg-color--transparent: color-mix(in srgb, var(--terracota-500) 12%, transparent);
+  /* Primary — Verde bosque */
 
-    /* Fondos */
-    --md-default-bg-color: var(--arena-50);
-    --md-default-bg-color--light: var(--arena-50);
-    --md-default-bg-color--lighter: var(--blanco);
-    --md-default-bg-color--lightest: var(--blanco);
+  --md-primary-fg-color: var(--verde-700);
 
-    /* Texto */
-    --md-default-fg-color: var(--tinta-900);
-    --md-default-fg-color--light: color-mix(in srgb, var(--tinta-900) 70%, transparent);
-    --md-default-fg-color--lighter: color-mix(in srgb, var(--tinta-900) 50%, transparent);
-    --md-default-fg-color--lightest: color-mix(in srgb, var(--tinta-900) 25%, transparent);
+  --md-primary-fg-color--light: var(--verde-200);
 
-    /* Superficies */
-    --md-code-bg-color: var(--arena-100);
-    --md-code-fg-color: var(--tinta-900);
+  --md-primary-fg-color--dark: var(--verde-900);
 
-    /* Bordes */
-    --md-typeset-table-color: color-mix(in srgb, var(--gris-500) 35%, transparent);
 
-    /* Footer */
-    --md-footer-bg-color: var(--verde-700);
-    --md-footer-bg-color--dark: var(--verde-700);
 
-    & .md-header,
-    & .md-footer,
-    & .md-tabs {
-        background-color: var(--verde-700);
-    }
+  /* Accent — Terracota */
+
+  --md-accent-fg-color: var(--terracota-500);
+
+  --md-accent-fg-color--transparent: color-mix(in srgb, var(--terracota-500) 12%, transparent);
+
+
+
+  /* Fondos */
+
+  --md-default-bg-color: var(--arena-50);
+
+  --md-default-bg-color--light: var(--arena-50);
+
+  --md-default-bg-color--lighter: var(--blanco);
+
+  --md-default-bg-color--lightest: var(--blanco);
+
+
+
+  /* Texto */
+
+  --md-default-fg-color: var(--tinta-900);
+
+  --md-default-fg-color--light: color-mix(in srgb, var(--tinta-900) 70%, transparent);
+
+  --md-default-fg-color--lighter: color-mix(in srgb, var(--tinta-900) 50%, transparent);
+
+  --md-default-fg-color--lightest: color-mix(in srgb, var(--tinta-900) 25%, transparent);
+
+
+
+  /* Superficies */
+
+  --md-code-bg-color: var(--arena-100);
+
+  --md-code-fg-color: var(--tinta-900);
+
+
+
+  /* Bordes */
+
+  --md-typeset-table-color: color-mix(in srgb, var(--gris-500) 35%, transparent);
+
+
+
+  /* Footer */
+
+  --md-footer-bg-color: var(--verde-700);
+
+  --md-footer-bg-color--dark: var(--verde-700);
+
+
+
+  & .md-header,
+
+  & .md-footer,
+
+  & .md-tabs {
+
+    background-color: var(--verde-700);
+
+  }
+
 }
 
+
+
 /* ========================================
+
    Tema oscuro cálido
+
    ======================================== */
 
+
+
 [data-md-color-scheme="slate"] {
-    /* Identidad */
-    --md-primary-fg-color: var(--verde-700);
-    --md-primary-fg-color--light: var(--verde-600);
-    --md-primary-fg-color--dark: var(--verde-800);
 
-    /* Acento gastronómico */
-    --md-accent-fg-color: var(--terracota-400);
-    --md-accent-fg-color--transparent: color-mix(in srgb, var(--terracota-400) 14%, transparent);
+  /* Identidad */
 
-    /* Fondo general */
-    --md-default-bg-color: var(--carbon-950);
-    --md-default-bg-color--light: var(--carbon-900);
-    --md-default-bg-color--lighter: var(--carbon-800);
-    --md-default-bg-color--lightest: var(--carbon-700);
+  --md-primary-fg-color: var(--verde-700);
 
-    /* Texto */
-    --md-default-fg-color: var(--marfil-100);
-    --md-default-fg-color--light: color-mix(in srgb, var(--marfil-100) 72%, transparent);
-    --md-default-fg-color--lighter: color-mix(in srgb, var(--marfil-100) 52%, transparent);
-    --md-default-fg-color--lightest: color-mix(in srgb, var(--marfil-100) 28%, transparent);
+  --md-primary-fg-color--light: var(--verde-600);
 
-    /* Código */
-    --md-code-bg-color: var(--carbon-800);
-    --md-code-fg-color: var(--marfil-100);
+  --md-primary-fg-color--dark: var(--verde-800);
 
-    /* Footer */
-    --md-footer-bg-color: var(--verde-700);
-    --md-footer-bg-color--dark: var(--verde-700);
 
-    & .md-header,
-    & .md-footer,
-    & .md-tabs {
-        background-color: var(--verde-700);
+
+  /* Acento gastronómico */
+
+  --md-accent-fg-color: var(--terracota-400);
+
+  --md-accent-fg-color--transparent: color-mix(in srgb, var(--terracota-400) 14%, transparent);
+
+
+
+  /* Fondo general */
+
+  --md-default-bg-color: var(--carbon-950);
+
+  --md-default-bg-color--light: var(--carbon-900);
+
+  --md-default-bg-color--lighter: var(--carbon-800);
+
+  --md-default-bg-color--lightest: var(--carbon-700);
+
+
+
+  /* Texto */
+
+  --md-default-fg-color: var(--marfil-100);
+
+  --md-default-fg-color--light: color-mix(in srgb, var(--marfil-100) 72%, transparent);
+
+  --md-default-fg-color--lighter: color-mix(in srgb, var(--marfil-100) 52%, transparent);
+
+  --md-default-fg-color--lightest: color-mix(in srgb, var(--marfil-100) 28%, transparent);
+
+
+
+  /* Código */
+
+  --md-code-bg-color: var(--carbon-800);
+
+  --md-code-fg-color: var(--marfil-100);
+
+
+
+  /* Footer */
+
+  --md-footer-bg-color: var(--verde-700);
+
+  --md-footer-bg-color--dark: var(--verde-700);
+
+
+
+  & .md-header,
+
+  & .md-footer,
+
+  & .md-tabs {
+
+    background-color: var(--verde-700);
+
+  }
+
+
+
+  & .md-typeset a {
+
+    color: var(--terracota-400);
+
+
+
+    &:hover {
+
+      color: var(--terracota-300);
+
     }
 
-    & .md-typeset a {
-        color: var(--terracota-400);
+  }
 
-        &:hover {
-            color: var(--terracota-300);
-        }
-    }
 
-    & .highlight {
-        background-color: var(--carbon-800);
-    }
 
-    & .md-typeset table:not([class]) {
-        border-color: var(--carbon-600);
-    }
+  & .highlight {
 
-    & .md-button {
-        border-radius: 8px;
-    }
+    background-color: var(--carbon-800);
 
-    & .md-button--primary {
-        background-color: var(--terracota-400);
-        border-color: var(--terracota-400);
-        color: var(--blanco);
-    }
+  }
+
+
+
+  & .md-typeset table:not([class]) {
+
+    border-color: var(--carbon-600);
+
+  }
+
+
+
+  & .md-button {
+
+    border-radius: 8px;
+
+  }
+
+
+
+  & .md-button--primary {
+
+    background-color: var(--terracota-400);
+
+    border-color: var(--terracota-400);
+
+    color: var(--blanco);
+
+  }
+
 }

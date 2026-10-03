@@ -33,3 +33,24 @@ repos:
         language: system
         pass_filenames: false
         always_run: true
+
+      - id: djlint-check
+        name: djlint check (theme)
+        entry: uv run djlint theme --check --profile jinja
+        language: system
+        pass_filenames: false
+        always_run: true
+
+      - id: jsbeautifier-check
+        name: jsbeautifier check (docs/sw.js)
+        entry: uv run python scripts/check_js.py
+        language: system
+        pass_filenames: false
+        always_run: true
+
+      - id: cssbeautifier-check
+        name: cssbeautifier check (docs/css)
+        entry: uv run python scripts/check_css.py
+        language: system
+        pass_filenames: false
+        always_run: true

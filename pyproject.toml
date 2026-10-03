@@ -17,10 +17,15 @@ dev = [
     "pytest>=8",
     "ruff>=0.6",
     "spylls>=0.1.7",
+    "ty>=0.0.84",
+    "djlint>=1.46",
+    "jsbeautifier>=2.0",
+    "cssbeautifier>=2.0",
 ]
 
-[tool.uv]
-package = false
+[tool.djlint]
+profile = "jinja"
+indent = 4
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -31,4 +36,19 @@ line-length = 88
 extend-exclude = ["site", "theme"]
 
 [tool.ruff.lint]
-select = ["E", "F", "I", "UP", "B", "SIM", "PTH"]
+select = ["E", "F", "I", "UP", "B", "D", "SIM", "PTH"]
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ty.environment]
+python-version = "3.12"
+
+[tool.ty.analysis]
+strict-equality-semantics = true
+strict-generic-narrowing = true
+
+[tool.ty.rules]
+possibly-unresolved-reference = "error"
+
+[tool.uv]
+package = false
