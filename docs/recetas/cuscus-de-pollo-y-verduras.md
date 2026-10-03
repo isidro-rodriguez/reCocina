@@ -25,9 +25,9 @@ En la misma sartén pochar la cebolla, la zanahoria, el ajo, los pimientos y el 
 A continuación agregamos el pollo y las especias al gusto (sobres de fajitas, curry, avecrem, etc.),
 dejar unos minutos y reservar.
 
-Preparar taza y media de cous cous y dos tazas de caldo de verduras.
-Calentar el caldo y echarlo al cous cous.
+Preparar taza y media de cuscús y dos tazas de caldo de verduras.
+Calentar el caldo y echarlo al cuscús.
 
-Mezclar el cous cous listo con la verdura y el pollo preparados en su jugo.
+Mezclar el cuscús listo con la verdura y el pollo preparados en su jugo.
 
 Dejar reposar unos minutos y servir.

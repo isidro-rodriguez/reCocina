@@ -10,6 +10,7 @@ extra_css = [
 nav = [
     { "Recetario" = "index.md" },
     { "Aperitivos" = [
+        "recetas/almogrote-gomero.md",
         "recetas/ensaladilla-de-papas-con-lacon-y-huevo.md",
         "recetas/fajitas-de-soja-texturizada.md",
     ] },

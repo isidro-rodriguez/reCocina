@@ -6,6 +6,7 @@
 
 # --- Términos culinarios, préstamos y marcas ---
 alitas
+almogrote
 avecrem
 basmati
 bechamel
@@ -19,7 +20,6 @@ champiñones
 chorrito
 chorritos
 coulant
-cous
 cuscús
 fajitas
 foie
@@ -46,7 +46,6 @@ wok
 worcestershire
 
 # --- Unidades ---
-gr
 ml
 
 # --- Formas verbales (imperativo + pronombre) y derivadas ---

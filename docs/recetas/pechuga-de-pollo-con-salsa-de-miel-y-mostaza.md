@@ -23,7 +23,7 @@ Para la salsa:
 
 Para acompañar:
 
-- 500 gr de papas
+- 500 g de papas
 - Una ensalada de lechuga, tomate y pepino
 
 ## Preparación

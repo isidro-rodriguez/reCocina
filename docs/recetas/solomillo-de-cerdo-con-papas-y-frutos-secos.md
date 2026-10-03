@@ -6,7 +6,7 @@
 
 - 2 solomillos de cerdo
 - 4 papas
-- 80 gr de frutos secos (avellanas, almendras, pistachos o piñones)
+- 80 g de frutos secos (avellanas, almendras, pistachos o piñones)
 - 200 ml de caldo
 - 200 ml de vino dulce
 - 1 cucharadita de maicena

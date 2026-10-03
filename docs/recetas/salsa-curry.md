@@ -26,5 +26,5 @@ Pela el plátano y tritúralo con un tenedor, añádelo a la salsa junto con la 
 
 ## Alternativas
 
-Puedes sustituir la leche de coco con 100 gr. de coco rallado, 300 ml. de
-agua y 100 ml. de nata.
+Puedes sustituir la leche de coco con 100 g de coco rallado, 300 ml de
+agua y 100 ml de nata.

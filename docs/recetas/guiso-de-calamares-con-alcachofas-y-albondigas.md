@@ -4,14 +4,14 @@
 
 ## Ingredientes
 
-- 400 gr de calamares
+- 400 g de calamares
 - 4 alcachofas
 - 1 cebolla
-- 100 gr de pan duro
+- 100 g de pan duro
 - 50 ml de leche
 - 100 ml de tomate frito.
 - 400 ml de caldo de carne
-- 150 gr de guisantes
+- 150 g de guisantes
 - Aceite de oliva
 - 1 ñora
 - Sal y pimienta

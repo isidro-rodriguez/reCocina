@@ -4,7 +4,7 @@
 
 ## Ingredientes
 
-- 400 gr de lomo de atún o bonito
+- 400 g de lomo de atún o bonito
 - 1 cebolla
 - 1 tomate
 - 1 pimiento verde

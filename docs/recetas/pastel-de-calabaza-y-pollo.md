@@ -5,7 +5,7 @@
 ## Ingredientes
 
 - Una docena de placas de pasta para lasaña
-- 700 gr de calabaza
+- 700 g de calabaza
 - 1 kg de pechuga de pollo
 - 200 ml de caldo de ave
 - 2 cebollas
