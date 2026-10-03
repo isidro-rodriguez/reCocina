@@ -1,114 +1,111 @@
 /* ========================================
+   Paleta (capa 1: colores en bruto)
+   Escala 50 (claro) → 950 (oscuro)
+   ======================================== */
+:root {
+    /* Verde bosque */
+    --verde-200: #C1D8C7;
+    --verde-600: #526F5C;
+    --verde-700: #3F5F4A;
+    --verde-800: #314B3A;
+    --verde-900: #284B34;
+
+    /* Terracota */
+    --terracota-300: #E3A083;
+    --terracota-400: #D0805F;
+    --terracota-500: #C96F4A;
+
+    /* Papel (esquema claro) */
+    --arena-50: #FFFCF7;
+    --arena-100: #F3EBDD;
+    --blanco: #FFFFFF;
+    --tinta-900: #292725;
+    --gris-500: #737970;
+
+    /* Noche (esquema oscuro) */
+    --carbon-600: #465047;
+    --carbon-700: #303830;
+    --carbon-800: #29312A;
+    --carbon-900: #252C26;
+    --carbon-950: #202620;
+    --marfil-100: #F3EFE5;
+}
+
+/* ========================================
    Maquetación
    ======================================== */
 
 .md-grid {
-  max-width: calc(12.1rem + 1rem + 900px);
+    max-width: calc(12.1rem + 1rem + 900px);
 }
 
 .md-content {
-  max-width: 900px;
-  margin-right: auto;
+    max-width: 900px;
+    margin-right: auto;
 }
 
 @media screen and (max-width: 76.234375em) {
-  .md-content {
-    margin-left: auto;
-  }
+    .md-content {
+        margin-left: auto;
+    }
 }
 
 @media screen and (min-width: 76.25em) {
-  /* 1 rem de separación entre el menú lateral y el artículo */
-  [dir="ltr"] .md-sidebar--primary:not([hidden]) ~ .md-content {
-    margin-left: 1rem;
-    margin-right: 0;
-  }
+    /* 1 rem de separación entre el menú lateral y el artículo */
+    [dir="ltr"] .md-sidebar--primary:not([hidden]) ~ .md-content {
+        margin-left: 1rem;
+        margin-right: 0;
+    }
 
-  /* El artículo ocupa los 900 px completos (sin margen interno) */
-  [dir="ltr"] .md-sidebar--primary:not([hidden]) ~ .md-content > .md-content__inner {
-    margin-left: 0;
-    margin-right: 0;
-  }
+    /* El artículo ocupa los 900 px completos (sin margen interno) */
+    [dir="ltr"] .md-sidebar--primary:not([hidden]) ~ .md-content > .md-content__inner {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 /* ========================================
-   Paleta centralizada
+   Tema claro (capa 2: variables del tema)
    ======================================== */
-:root {
-  /* Verde bosque */
-  --rc-verde: #3F5F4A;
-  --rc-verde-oscuro: #284B34;
-  --rc-verde-salvia: #526F5C;
-  --rc-verde-noche: #314B3A;
-  --rc-verde-palido: #C1D8C7;
-
-  /* Terracota */
-  --rc-terracota: #C96F4A;
-  --rc-terracota-tenue: rgba(201, 111, 74, 0.12);
-  --rc-terracota-clara: #D0805F;
-  --rc-terracota-clara-tenue: rgba(208, 128, 95, 0.14);
-  --rc-terracota-suave: #E3A083;
-
-  /* Papel (esquema claro) */
-  --rc-crema: #FFFCF7;
-  --rc-blanco: #FFFFFF;
-  --rc-arena: #F3EBDD;
-  --rc-tinta: #292725;
-  --rc-tinta-suave: rgba(41, 39, 37, 0.70);
-  --rc-tinta-media: rgba(41, 39, 37, 0.50);
-  --rc-tinta-tenue: rgba(41, 39, 37, 0.25);
-  --rc-borde: rgba(115, 121, 112, 0.35);
-
-  /* Noche (esquema oscuro) */
-  --rc-carbon: #202620;
-  --rc-carbon-suave: #252C26;
-  --rc-carbon-claro: #29312A;
-  --rc-carbon-luz: #303830;
-  --rc-marfil: #F3EFE5;
-  --rc-marfil-suave: rgba(243, 239, 229, 0.72);
-  --rc-marfil-media: rgba(243, 239, 229, 0.52);
-  --rc-marfil-tenue: rgba(243, 239, 229, 0.28);
-  --rc-borde-oscuro: #465047;
-}
 
 [data-md-color-scheme="light"] {
-  /* Primary — Verde bosque */
-  --md-primary-fg-color: var(--rc-verde);
-  --md-primary-fg-color--light: var(--rc-verde-palido);
-  --md-primary-fg-color--dark: var(--rc-verde-oscuro);
+    /* Primary — Verde bosque */
+    --md-primary-fg-color: var(--verde-700);
+    --md-primary-fg-color--light: var(--verde-200);
+    --md-primary-fg-color--dark: var(--verde-900);
 
-  /* Accent — Terracota */
-  --md-accent-fg-color: var(--rc-terracota);
-  --md-accent-fg-color--transparent: var(--rc-terracota-tenue);
+    /* Accent — Terracota */
+    --md-accent-fg-color: var(--terracota-500);
+    --md-accent-fg-color--transparent: color-mix(in srgb, var(--terracota-500) 12%, transparent);
 
-  /* Fondos */
-  --md-default-bg-color: var(--rc-crema);
-  --md-default-bg-color--light: var(--rc-crema);
-  --md-default-bg-color--lighter: var(--rc-blanco);
-  --md-default-bg-color--lightest: var(--rc-blanco);
+    /* Fondos */
+    --md-default-bg-color: var(--arena-50);
+    --md-default-bg-color--light: var(--arena-50);
+    --md-default-bg-color--lighter: var(--blanco);
+    --md-default-bg-color--lightest: var(--blanco);
 
-  /* Texto */
-  --md-default-fg-color: var(--rc-tinta);
-  --md-default-fg-color--light: var(--rc-tinta-suave);
-  --md-default-fg-color--lighter: var(--rc-tinta-media);
-  --md-default-fg-color--lightest: var(--rc-tinta-tenue);
+    /* Texto */
+    --md-default-fg-color: var(--tinta-900);
+    --md-default-fg-color--light: color-mix(in srgb, var(--tinta-900) 70%, transparent);
+    --md-default-fg-color--lighter: color-mix(in srgb, var(--tinta-900) 50%, transparent);
+    --md-default-fg-color--lightest: color-mix(in srgb, var(--tinta-900) 25%, transparent);
 
-  /* Superficies */
-  --md-code-bg-color: var(--rc-arena);
-  --md-code-fg-color: var(--rc-tinta);
+    /* Superficies */
+    --md-code-bg-color: var(--arena-100);
+    --md-code-fg-color: var(--tinta-900);
 
-  /* Bordes */
-  --md-typeset-table-color: var(--rc-borde);
+    /* Bordes */
+    --md-typeset-table-color: color-mix(in srgb, var(--gris-500) 35%, transparent);
 
-  /* Footer */
-  --md-footer-bg-color: var(--rc-verde);
-  --md-footer-bg-color--dark: var(--rc-verde);
-}
+    /* Footer */
+    --md-footer-bg-color: var(--verde-700);
+    --md-footer-bg-color--dark: var(--verde-700);
 
-[data-md-color-scheme="light"] .md-header,
-[data-md-color-scheme="light"] .md-footer,
-[data-md-color-scheme="light"] .md-tabs {
-  background-color: var(--rc-verde);
+    & .md-header,
+    & .md-footer,
+    & .md-tabs {
+        background-color: var(--verde-700);
+    }
 }
 
 /* ========================================
@@ -116,64 +113,64 @@
    ======================================== */
 
 [data-md-color-scheme="slate"] {
-  /* Identidad */
-  --md-primary-fg-color: var(--rc-verde);
-  --md-primary-fg-color--light: var(--rc-verde-salvia);
-  --md-primary-fg-color--dark: var(--rc-verde-noche);
+    /* Identidad */
+    --md-primary-fg-color: var(--verde-700);
+    --md-primary-fg-color--light: var(--verde-600);
+    --md-primary-fg-color--dark: var(--verde-800);
 
-  /* Acento gastronómico */
-  --md-accent-fg-color: var(--rc-terracota-clara);
-  --md-accent-fg-color--transparent: var(--rc-terracota-clara-tenue);
+    /* Acento gastronómico */
+    --md-accent-fg-color: var(--terracota-400);
+    --md-accent-fg-color--transparent: color-mix(in srgb, var(--terracota-400) 14%, transparent);
 
-  /* Fondo general */
-  --md-default-bg-color: var(--rc-carbon);
-  --md-default-bg-color--light: var(--rc-carbon-suave);
-  --md-default-bg-color--lighter: var(--rc-carbon-claro);
-  --md-default-bg-color--lightest: var(--rc-carbon-luz);
+    /* Fondo general */
+    --md-default-bg-color: var(--carbon-950);
+    --md-default-bg-color--light: var(--carbon-900);
+    --md-default-bg-color--lighter: var(--carbon-800);
+    --md-default-bg-color--lightest: var(--carbon-700);
 
-  /* Texto */
-  --md-default-fg-color: var(--rc-marfil);
-  --md-default-fg-color--light: var(--rc-marfil-suave);
-  --md-default-fg-color--lighter: var(--rc-marfil-media);
-  --md-default-fg-color--lightest: var(--rc-marfil-tenue);
+    /* Texto */
+    --md-default-fg-color: var(--marfil-100);
+    --md-default-fg-color--light: color-mix(in srgb, var(--marfil-100) 72%, transparent);
+    --md-default-fg-color--lighter: color-mix(in srgb, var(--marfil-100) 52%, transparent);
+    --md-default-fg-color--lightest: color-mix(in srgb, var(--marfil-100) 28%, transparent);
 
-  /* Código */
-  --md-code-bg-color: var(--rc-carbon-claro);
-  --md-code-fg-color: var(--rc-marfil);
+    /* Código */
+    --md-code-bg-color: var(--carbon-800);
+    --md-code-fg-color: var(--marfil-100);
 
-  /* Footer */
-  --md-footer-bg-color: var(--rc-verde);
-  --md-footer-bg-color--dark: var(--rc-verde);
-}
+    /* Footer */
+    --md-footer-bg-color: var(--verde-700);
+    --md-footer-bg-color--dark: var(--verde-700);
 
-[data-md-color-scheme="slate"] .md-header,
-[data-md-color-scheme="slate"] .md-footer,
-[data-md-color-scheme="slate"] .md-tabs {
-  background-color: var(--rc-verde);
-}
+    & .md-header,
+    & .md-footer,
+    & .md-tabs {
+        background-color: var(--verde-700);
+    }
 
-[data-md-color-scheme="slate"] .md-typeset a {
-  color: var(--rc-terracota-clara);
-}
+    & .md-typeset a {
+        color: var(--terracota-400);
 
-[data-md-color-scheme="slate"] .md-typeset a:hover {
-  color: var(--rc-terracota-suave);
-}
+        &:hover {
+            color: var(--terracota-300);
+        }
+    }
 
-[data-md-color-scheme="slate"] .highlight {
-  background-color: var(--rc-carbon-claro);
-}
+    & .highlight {
+        background-color: var(--carbon-800);
+    }
 
-[data-md-color-scheme="slate"] .md-typeset table:not([class]) {
-  border-color: var(--rc-borde-oscuro);
-}
+    & .md-typeset table:not([class]) {
+        border-color: var(--carbon-600);
+    }
 
-[data-md-color-scheme="slate"] .md-button {
-  border-radius: 8px;
-}
+    & .md-button {
+        border-radius: 8px;
+    }
 
-[data-md-color-scheme="slate"] .md-button--primary {
-  background-color: var(--rc-terracota-clara);
-  border-color: var(--rc-terracota-clara);
-  color: var(--rc-blanco);
+    & .md-button--primary {
+        background-color: var(--terracota-400);
+        border-color: var(--terracota-400);
+        color: var(--blanco);
+    }
 }

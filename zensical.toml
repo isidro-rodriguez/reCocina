@@ -6,6 +6,7 @@ docs_dir = "docs"
 copyright = "© 2024 reCocina"
 extra_css = [
     "css/extra.css",
+    "css/print.css"
 ]
 
 nav = [
