@@ -3,6 +3,7 @@ site_name = "reCocina"
 site_description = "Recetario de cocina casera"
 site_author = "reCocina"
 docs_dir = "docs"
+copyright = "© 2024 reCocina"
 extra_css = [
     "css/extra.css",
 ]
@@ -97,12 +98,17 @@ accent = "custom"
 toggle.icon = "fontawesome/regular/moon"
 toggle.name = "Cambiar a modo claro"
 
-[project.extra]
-footer = "© 2024 reCocina — Hecho con Material para MkDocs"
-
 [[project.extra.social]]
 icon = "fontawesome/brands/github"
 link = "https://github.com/isidro-rodriguez/recocina"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/python"
+link = "https://www.python.org"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/markdown"
+link = "https://daringfireball.net/projects/markdown/"
 
 [project.markdown_extensions]
 admonition = {}
