@@ -3,9 +3,9 @@ title: Espagueti carbonara
 people: 4
 time: 30
 date: 2023-08-17
-source: Accademia italiana della cucina
+source: Accademia Italiana della Cucina
 tags:
-  - wok
+  - Wok
 ---
 
 ## Ingredientes

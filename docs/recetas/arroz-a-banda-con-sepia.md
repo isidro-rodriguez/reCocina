@@ -5,7 +5,7 @@ time: 60
 date: 2023-08-17
 source: Lecturas
 tags:
-  - pescetariano
+  - Pescetariano
 ---
 
 ## Ingredientes

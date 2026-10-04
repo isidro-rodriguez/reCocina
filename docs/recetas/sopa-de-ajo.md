@@ -5,7 +5,7 @@ time: 40
 date: 2023-08-17
 source: El Comidista en EL PAÍS
 tags:
-  - vegetariano
+  - Vegetariano
 ---
 
 ## Ingredientes

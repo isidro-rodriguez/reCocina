@@ -5,8 +5,8 @@ time: 60
 date: 2023-08-25
 source: Lecturas
 tags:
-  - horno
-  - wok
+  - Horno
+  - Wok
 ---
 
 ## Ingredientes

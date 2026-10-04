@@ -5,7 +5,7 @@ time: 90
 date: 2023-08-25
 source: Lecturas
 tags:
-  - vegetariano
+  - Vegetariano
 ---
 
 ## Ingredientes

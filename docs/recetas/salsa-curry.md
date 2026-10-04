@@ -4,8 +4,8 @@ people: 4
 time: 20
 date: 2023-08-27
 tags:
-  - batidora
-  - wok
+  - Batidora
+  - Wok
 ---
 
 ## Ingredientes

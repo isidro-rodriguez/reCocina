@@ -4,7 +4,7 @@ people: 4
 time: 10
 date: 2023-08-20
 tags:
-  - vegetariano
+  - Vegetariano
 ---
 
 ## Ingredientes

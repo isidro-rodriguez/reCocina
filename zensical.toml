@@ -11,6 +11,7 @@ extra_css = [
 
 nav = [
     { "Entrada" = "index.md" },
+    { "Etiquetas" = "etiquetas.md" },
     { "Fuentes" = "fuentes.md" },
     { "Aperitivos" = [
         "recetas/almogrote-gomero.md",

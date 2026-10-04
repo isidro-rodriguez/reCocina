@@ -5,7 +5,7 @@ time: 70
 date: 2023-08-24
 source: Lecturas
 tags:
-  - horno
+  - Horno
 ---
 
 ## Ingredientes

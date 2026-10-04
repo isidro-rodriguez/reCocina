@@ -4,7 +4,7 @@ people: 6
 time: 50
 date: 2024-09-19
 tags:
-  - paellera
+  - Paellera
 ---
 
 ## Ingredientes

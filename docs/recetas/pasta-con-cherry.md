@@ -5,7 +5,7 @@ time: 40
 date: 2023-08-17
 source: Lecturas
 tags:
-  - wok
+  - Wok
 ---
 
 ## Ingredientes

@@ -4,8 +4,8 @@ people: 8
 time: 50
 date: 2026-05-19
 tags:
-  - horno
-  - vegetariano
+  - Horno
+  - Vegetariano
 ---
 
 ## Ingredientes

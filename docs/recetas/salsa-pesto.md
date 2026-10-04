@@ -4,8 +4,8 @@ people: 4
 time: 5
 date: 2023-08-23
 tags:
-  - batidora
-  - vegetariano
+  - Batidora
+  - Vegetariano
 ---
 
 ## Ingredientes

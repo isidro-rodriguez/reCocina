@@ -5,7 +5,7 @@ time: 50
 date: 2024-09-17
 source: LOVE cocina
 tags:
-  - vegano
+  - Vegano
 ---
 
 ## Ingredientes

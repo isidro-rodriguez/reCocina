@@ -4,7 +4,7 @@ people: 6
 time: 50
 date: 2023-11-26
 tags:
-  - robot-de-cocina
+  - Robot de cocina
 ---
 
 ## Ingredientes

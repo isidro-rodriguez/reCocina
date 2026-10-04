@@ -22,6 +22,7 @@ chorrito
 chorritos
 comidista
 coulant
+cuisine
 cuscús
 fajitas
 foie
@@ -30,6 +31,7 @@ maicena
 marmitako
 minestrone
 mirin
+monsieur
 mozzarella
 musabaha
 ñora
@@ -46,6 +48,7 @@ serializada
 tahini
 teriyaki
 texturizada
+thermomix
 youtube
 wok
 worcestershire

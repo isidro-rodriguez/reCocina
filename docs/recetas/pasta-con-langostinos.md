@@ -4,8 +4,8 @@ people: 4
 time: 20
 date: 2023-10-16
 tags:
-  - wok
-  - pescetariano
+  - Wok
+  - Pescetariano
 ---
 
 ## Ingredientes

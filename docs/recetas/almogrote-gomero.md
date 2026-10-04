@@ -5,8 +5,8 @@ time: 30
 date: 2026-10-02
 source: Lo mejor de la cocina canaria
 tags:
-  - mortero
-  - vegetariano
+  - Mortero
+  - Vegetariano
 ---
 
 ## Ingredientes
