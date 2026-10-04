@@ -1,24 +1,27 @@
 #!/usr/bin/env python3
-"""Check JS formatting with jsbeautifier."""
+"""Comprueba el formato de docs/sw.js con jsbeautifier."""
 
 import sys
 from pathlib import Path
 
 import jsbeautifier
 
+ROOT = Path(__file__).resolve().parents[1]
+TARGET = ROOT / "docs" / "sw.js"
+
 
 def main() -> int:
-    """Check if docs/sw.js is properly formatted."""
+    """Devuelve 1 si docs/sw.js no está formateado."""
     opts = jsbeautifier.default_options()
-    opts.indent_size = 2
+    opts.indent_size = 4
     opts.eol = "\n"
+    opts.end_with_newline = True
 
-    formatted = jsbeautifier.beautify_file("docs/sw.js", opts)
-    with Path("docs/sw.js").open(encoding="utf-8") as f:
-        original = f.read()
+    original = TARGET.read_text(encoding="utf-8")
+    formatted = jsbeautifier.beautify(original, opts)
 
     if formatted != original:
-        print("docs/sw.js is not formatted")
+        print(f"{TARGET.relative_to(ROOT).as_posix()} no está formateado")
         return 1
     return 0
 
