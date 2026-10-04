@@ -1,6 +1,11 @@
-# Cerdo agridulce
-
-![Cerdo agridulce](../img/fotos/cerdo-agridulce.webp)
+﻿---
+title: Cerdo agridulce
+people: 6
+time: 60
+date: 2023-08-31
+source:
+tags:
+---
 
 ## Ingredientes
 
@@ -18,13 +23,19 @@
 
 ## Preparación
 
-Pelar y picar la cebolla y los pimientos (el verde NO hace falta pelarlo) en dados de tamaño bocado, limpiar el solomillo retirando los excesos de grasa y picarlo en dados de tamaño bocado.
+Pelar y picar la cebolla y los pimientos (el verde NO hace falta pelarlo) en dados de tamaño bocado,
+limpiar el solomillo retirando los excesos de grasa y picarlo en dados de tamaño bocado.
 
-Salpimenta los dados de solomillo y empánalos con una capa de pan rallado, otra de huevo y otra más de pan rallado.
+Salpimenta los dados de solomillo y empánalos con una capa de pan rallado, otra de huevo y otra más
+de pan rallado.
 
-En una sartén honda con aceite muy caliente pon a freír el solomillo empanado hasta que esté dorado, resérvalo en una bandeja con servilletas para que chupe el exceso de aceite.
+En una sartén honda con aceite muy caliente pon a freír el solomillo empanado hasta que esté dorado,
+resérvalo en una bandeja con servilletas para que chupe el exceso de aceite.
 
-En la misma sartén sofríe la verdura hasta que la cebolla transparente. Añade el tomate triturado y el almíbar de la piña y sigue cocinando hasta que merme la salsa hasta la mitad. Añade la piña cortada en dados, prueba el punto de sal, salpimenta y sigue cocinando otros cinco minutos. Incorpora la carne a la salsa y dejar reposar.
+En la misma sartén sofríe la verdura hasta que la cebolla transparente. Añade el tomate triturado y
+el almíbar de la piña y sigue cocinando hasta que merme la salsa hasta la mitad. Añade la piña
+cortada en dados, prueba el punto de sal, salpimenta y sigue cocinando otros cinco minutos.
+Incorpora la carne a la salsa y dejar reposar.
 
 Cuece el arroz siguiendo las indicaciones del fabricante.
 

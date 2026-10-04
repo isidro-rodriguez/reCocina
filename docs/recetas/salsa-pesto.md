@@ -1,6 +1,11 @@
-# Salsa pesto
-
-![Salsa pesto](../img/fotos/salsa-pesto.webp)
+﻿---
+title: Salsa pesto
+people: 4
+time: 5
+date: 2023-08-23
+source:
+tags:
+---
 
 ## Ingredientes
 
@@ -12,4 +17,5 @@
 
 ## Preparación
 
-En un vaso de batidora añade todos los ingredientes y tritura con la batidora hasta obtener una salsa fina.
+En un vaso de batidora añade todos los ingredientes y tritura con la batidora hasta obtener una
+salsa fina.

@@ -1,6 +1,11 @@
-# Brownie coulant
-
-![Brownie coulant](../img/fotos/brownie-coulant.webp)
+---
+title: Brownie coulant
+people: 8
+time: 50
+date: 2026-05-19
+source:
+tags:
+---
 
 ## Ingredientes
 
@@ -21,7 +26,8 @@ Prepara el café y déjalo enfriar, derrite la mantequilla y trocea el chocolate
 
 En un bol, mezcla la mantequilla derretida con los huevos, el café y la esencia de vainilla.
 
-Incorpora el azúcar, la sal, el cacao en polvo, el chocolate y las nueces troceadas. Remueve hasta tener una masa homogénea.
+Incorpora el azúcar, la sal, el cacao en polvo, el chocolate y las nueces troceadas. Remueve hasta
+tener una masa homogénea.
 
 Termina añadiendo la harina y remueve sin batir demasiado.
 
@@ -33,6 +39,7 @@ Dejar enfriar al menos 2 o 3 horas antes de empezar a partir el brownie.
 
 Algunas variantes de este postre incluyen:
 
-- Incorporar ralladura de naranja a la masa antes de hornear, el chocolate y la naranja combinan bien en postres.
+- Incorporar ralladura de naranja a la masa antes de hornear, el chocolate y la naranja combinan
+  bien en postres.
 - Espolvorear con canela o mezcla de cacao puro y azúcar glas.
 - Servir acompañado de una bola de helado de vainilla.

@@ -1,46 +1,58 @@
-{% extends "base.html" %}
-{% block extrahead %}
-    <link rel="apple-touch-icon"
-          sizes="180x180"
-          href="{{ 'img/favicon/apple-touch-icon.png' | url }}">
-    <link rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="{{ 'img/favicon/favicon-32x32.png' | url }}">
-    <link rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="{{ 'img/favicon/favicon-16x16.png' | url }}">
-    <link rel="manifest" href="{{ '/site.webmanifest' | url }}">
-    <script>
-    if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("/sw.js");
+{% extends "page.html" %}
 
-            window.addEventListener("appinstalled", async () => {
-                const reg = await navigator.serviceWorker.ready;
-                reg.active.postMessage({ type: "PRECACHE" });
-            });
-    }
-    </script>
-{% endblock %}
-{#-
-    Sobrescribe el bloque "site_nav" de Zensical (base.html v0.0.67).
-    Único cambio: eliminado el TOC lateral ("md-sidebar--secondary"),
-    que no se usa en este tema. El JS lo tolera: consulta el elemento
-    con guarda (typeof ... != "undefined").
--#}
-{% block site_nav %}
-    {% if nav %}
-        {% if page.meta and page.meta.hide %}
-            {% set hidden = "hidden" if "navigation" in page.meta.hide %}
-        {% endif %}
-        <div class="md-sidebar md-sidebar--primary"
-             data-md-component="sidebar"
-             data-md-type="navigation"
-             {{ hidden }}>
-            <div class="md-sidebar__scrollwrap">
-                <div class="md-sidebar__inner">{% include "partials/nav.html" %}</div>
-            </div>
-        </div>
+{% block content %}
+{% include "partials/actions.html" %}
+
+{% set slug = page.url | trim('/') | split('/') | last %}
+
+{%
+set source_slug = page.meta.source | lower
+| replace(' ', '-') | replace('ñ', 'n')
+| replace('á', 'a') | replace('é', 'e') | replace('í', 'i')
+| replace('ó', 'o') | replace('ú', 'u') | replace('ü', 'u')
+%}
+
+<h1 id="{{slug}}">{{ page.title | d(config.site_name, true)}}</h1>
+
+<p>
+    <img alt="{{page.title}}" src="{{ ('img/fotos/' ~ slug ~ '.webp') | url }}">
+</p>
+
+<p class="page-metadata">
+    <span>
+        <span class="twemoji">
+            {% include ".icons/fontawesome/solid/people-group.svg" %}
+        </span> {{page.meta.people}}
+    </span>
+
+    <span>
+        <span class="twemoji">
+            {% include ".icons/fontawesome/regular/clock.svg" %}
+        </span> {{page.meta.time}}
+    </span>
+
+    <span>
+        <span class="twemoji">
+            {% include ".icons/fontawesome/solid/calendar-days.svg" %}
+        </span> {{page.meta.date}}
+    </span>
+
+    {% if page.meta.source %}
+    <span>
+        <span class="twemoji">
+            {% include ".icons/fontawesome/solid/newspaper.svg" %}
+        </span>
+        <a href="{{ ('fuentes#' ~ source_slug) | url }}">
+            {{page.meta.source}}
+        </a>
+    </span>
     {% endif %}
+</p>
+
+{{ page.content }}
+
+{% include "partials/tags.html" %}
+{% include "partials/source-file.html" %}
+{% include "partials/feedback.html" %}
+{% include "partials/comments.html" %}
 {% endblock %}

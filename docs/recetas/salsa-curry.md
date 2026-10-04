@@ -1,6 +1,11 @@
-# Salsa curry
-
-![Salsa curry](../img/fotos/salsa-curry.webp)
+﻿---
+title: Salsa curry
+people: 4
+time: 20
+date: 2023-08-27
+source:
+tags:
+---
 
 ## Ingredientes
 
@@ -20,9 +25,12 @@
 
 Pela y pica en dados la cebolla, el ajo y el tomate.
 
-En un wok rehoga la verdura picada hasta que transparente la cebolla. Añade el curry, la cúrcuma y el jengibre y sigue rehogando dos minutos más. Añade la leche de coco y el caldo y deja cocinar a fuego medio durante 15 minutos.
+En un wok rehoga la verdura picada hasta que transparente la cebolla. Añade el curry, la cúrcuma y
+el jengibre y sigue rehogando dos minutos más. Añade la leche de coco y el caldo y deja cocinar a
+fuego medio durante 15 minutos.
 
-Pela el plátano y tritúralo con un tenedor, añádelo a la salsa junto con la maicena. Tritura la salsa con una batidora y déjala cocinando a fuego medio unos 10 minutos más
+Pela el plátano y tritúralo con un tenedor, añádelo a la salsa junto con la maicena. Tritura la
+salsa con una batidora y déjala cocinando a fuego medio unos 10 minutos más
 
 ## Alternativas
 

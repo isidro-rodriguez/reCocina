@@ -1,6 +1,11 @@
-# Arroz con pollo y gambas
-
-![Arroz con pollo y gambas](../img/fotos/arroz-con-pollo-y-gambas.webp)
+---
+title: Arroz con pollo y gambas
+people: 6
+time: 50
+date: 2024-09-19
+source:
+tags:
+---
 
 ## Ingredientes
 
@@ -23,10 +28,15 @@
 
 Pica el jamón serrano en dados menores a 1/2 centímetro y pica la verdura lo más fino que puedas.
 
-Cubre la paellera con una capa fina de aceite de oliva, dora las alitas de pollo a fuego fuerte y resérvalas.
+Cubre la paellera con una capa fina de aceite de oliva, dora las alitas de pollo a fuego fuerte y
+resérvalas.
 
-En la misma paellera empieza preparando el sofrito pochando la cebolla a fuego medio hasta que transparente, añade las gambas para que se vayan dorando junto con el pimiento y póchalo durante 5 minutos, luego el ajo y déjalo 1 minuto, finalmente añade el tomate triturado y el vino y déjalo hervir un par de minutos para que evapore el alcohol.
+En la misma paellera empieza preparando el sofrito pochando la cebolla a fuego medio hasta que
+transparente, añade las gambas para que se vayan dorando junto con el pimiento y póchalo durante 5
+minutos, luego el ajo y déjalo 1 minuto, finalmente añade el tomate triturado y el vino y déjalo
+hervir un par de minutos para que evapore el alcohol.
 
-Añade el arroz, el jamón serrano y los pimentones y revuelve bien para integrar los sabores. Vierte el caldo y deja cocinar a fuego medio el tiempo indicado para el arroz.
+Añade el arroz, el jamón serrano y los pimentones y revuelve bien para integrar los sabores. Vierte
+el caldo y deja cocinar a fuego medio el tiempo indicado para el arroz.
 
 Dejar reposar media hora y servir decorado con un poco de perejil picado o cebollino.

@@ -4,6 +4,7 @@
 # que el test marque como error. No distingue mayúsculas.
 # Los comentarios empiezan por '#'.
 
+
 # --- Términos culinarios, préstamos y marcas ---
 alitas
 almogrote
@@ -19,6 +20,7 @@ cherrys
 champiñones
 chorrito
 chorritos
+comidista
 coulant
 cuscús
 fajitas
@@ -39,14 +41,14 @@ rabito
 recetario
 ricota
 sake
+serializada
 tahini
 teriyaki
 texturizada
+youtube
 wok
 worcestershire
 
-# --- Unidades ---
-ml
 
 # --- Formas verbales (imperativo + pronombre) y derivadas ---
 cáscalas
@@ -74,21 +76,24 @@ séllalas
 séllalos
 ásalos
 
-# --- Términos técnicos (README) ---
+
+# --- Términos técnicos ---
 allowlist
 apple
 build
 checklist
+comitear
 commit
-commitear
 favicon
 favicons
 for
 hook
 hooks
+html
 http
 hunspell
 icon
+ISBN
 json
 kebab
 lint
@@ -97,6 +102,8 @@ localhost
 markdown
 mdformat
 mkdocs
+ml
+page
 plugin
 png
 pre
@@ -107,7 +114,32 @@ repo
 spylls
 tests
 touch
+URL
 uv
 vercel
 webp
 zensical
+
+
+# --- Frontmatter ---
+hidden
+people
+source
+tags
+template
+title
+
+
+# --- Nombres ---
+Bernad
+Felisa
+Yurena
+
+
+# --- Otros lenguajes ---
+accademia
+cucina
+della
+italiana
+love
+ricette

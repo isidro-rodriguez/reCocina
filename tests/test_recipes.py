@@ -5,8 +5,9 @@ están sincronizados:
 
 * Cada receta ``docs/recetas/*.md`` está listada en el ``nav``.
 * Cada entrada ``recetas/...`` del ``nav`` apunta a un fichero existente.
-* Cada imagen enlazada desde una receta existe en disco.
-* Cada foto de ``docs/img/fotos`` está referenciada por alguna receta.
+* Cada receta ``docs/recetas/<slug>.md`` tiene su foto ``docs/img/fotos/<slug>.webp``
+  (la plantilla ``theme/main.html`` la genera a partir de la URL de la página).
+* Cada foto de ``docs/img/fotos`` corresponde a una receta existente.
 * Ninguna foto de ``docs/img/fotos`` está vacía o corrupta (imagen muerta).
 * Cada foto de ``docs/img/fotos`` es WebP de 900x600.
 
@@ -17,7 +18,6 @@ Ejecutar con::
 
 from __future__ import annotations
 
-import re
 import struct
 import tomllib
 from pathlib import Path
@@ -28,8 +28,6 @@ RECIPES_DIR = DOCS_DIR / "recetas"
 PHOTOS_DIR = DOCS_DIR / "img" / "fotos"
 ZENSICAL_FILE = PROJECT_DIR / "zensical.toml"
 
-# Enlaces de imagen en Markdown: ![alt](ruta) o ![alt](ruta "título")
-IMAGE_PATTERN = re.compile(r"!\[[^\]]*\]\(\s*([^)\s]+)")
 NAV_PREFIX = "recetas/"
 
 
@@ -57,14 +55,31 @@ def _recipes_on_disk() -> set[str]:
     return {f"{NAV_PREFIX}{path.name}" for path in RECIPES_DIR.glob("*.md")}
 
 
-def _linked_images(recipe: Path) -> list[str]:
-    """Rutas de imagen enlazadas dentro de una receta (excluye URLs externas)."""
-    text = recipe.read_text(encoding="utf-8")
-    return [
-        link
-        for link in IMAGE_PATTERN.findall(text)
-        if not link.startswith(("http://", "https://"))
-    ]
+def _recipe_slugs() -> set[str]:
+    """Slugs de recetas (nombre del ``.md`` sin extensión)."""
+    return {path.stem for path in RECIPES_DIR.glob("*.md")}
+
+
+def _photo_slugs() -> set[str]:
+    """Slugs de fotos (nombre del ``.webp`` sin extensión)."""
+    return {path.stem for path in PHOTOS_DIR.glob("*.webp") if path.is_file()}
+
+
+def _missing_photos() -> list[str]:
+    """Recetas cuyo ``docs/img/fotos/<slug>.webp`` no existe."""
+    return sorted(
+        slug for slug in _recipe_slugs() if not (PHOTOS_DIR / f"{slug}.webp").is_file()
+    )
+
+
+def _orphan_photos() -> list[str]:
+    """Fotos de ``docs/img/fotos`` sin receta ``docs/recetas/<slug>.md``."""
+    recipes = _recipe_slugs()
+    return sorted(
+        str((PHOTOS_DIR / f"{slug}.webp").relative_to(PROJECT_DIR))
+        for slug in _photo_slugs()
+        if slug not in recipes
+    )
 
 
 def _missing_in_nav() -> list[str]:
@@ -75,30 +90,6 @@ def _missing_in_nav() -> list[str]:
 def _nav_without_file() -> list[str]:
     """Entradas del ``nav`` que apuntan a ficheros inexistentes."""
     return sorted(_nav_recipes() - _recipes_on_disk())
-
-
-def _broken_images() -> list[str]:
-    """Imágenes enlazadas desde recetas que no existen en disco."""
-    broken: list[str] = []
-    for recipe in sorted(RECIPES_DIR.glob("*.md")):
-        for link in _linked_images(recipe):
-            if not (recipe.parent / link).resolve().is_file():
-                broken.append(f"{recipe.name}: {link}")
-    return broken
-
-
-def _orphan_photos() -> list[str]:
-    """Fotos de ``docs/img/fotos`` que ninguna receta referencia."""
-    referenced = {
-        (recipe.parent / link).resolve()
-        for recipe in RECIPES_DIR.glob("*.md")
-        for link in _linked_images(recipe)
-    }
-    return sorted(
-        str(photo.relative_to(PROJECT_DIR))
-        for photo in PHOTOS_DIR.glob("*")
-        if photo.is_file() and photo.resolve() not in referenced
-    )
 
 
 # Firmas (magic bytes) de los formatos de imagen admitidos en el recetario.
@@ -211,15 +202,13 @@ def test_nav_sin_entradas_rotas() -> None:
     )
 
 
-def test_imagenes_existen() -> None:
-    """Toda imagen enlazada desde una receta debe existir."""
-    assert _broken_images() == [], "Imágenes no encontradas:\n" + "\n".join(
-        _broken_images()
-    )
+def test_cada_receta_tiene_su_foto() -> None:
+    """Toda receta debe tener su ``docs/img/fotos/<slug>.webp``."""
+    assert _missing_photos() == [], "Recetas sin foto:\n" + "\n".join(_missing_photos())
 
 
 def test_sin_fotos_huerfanas() -> None:
-    """Toda foto de ``docs/img/fotos`` debe estar referenciada por una receta."""
+    """Toda foto de ``docs/img/fotos`` debe corresponder a una receta existente."""
     assert _orphan_photos() == [], "Fotos sin usar:\n" + "\n".join(_orphan_photos())
 
 

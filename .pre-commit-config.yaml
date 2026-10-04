@@ -10,47 +10,19 @@ repos:
         name: ruff check
         entry: uv run ruff check --force-exclude
         language: system
-        types_or: [python, pyi]
+        types_or: [ python, pyi ]
         require_serial: true
 
       - id: ruff-format
         name: ruff format --check
         entry: uv run ruff format --check --force-exclude
         language: system
-        types_or: [python, pyi]
+        types_or: [ python, pyi ]
         require_serial: true
 
       - id: pytest
         name: pytest
         entry: uv run pytest
-        language: system
-        pass_filenames: false
-        always_run: true
-
-      - id: mdformat
-        name: mdformat --check
-        entry: uv run mdformat --check docs README.md
-        language: system
-        pass_filenames: false
-        always_run: true
-
-      - id: djlint-check
-        name: djlint check (theme)
-        entry: uv run djlint theme --check --profile jinja
-        language: system
-        pass_filenames: false
-        always_run: true
-
-      - id: jsbeautifier-check
-        name: jsbeautifier check (docs/sw.js)
-        entry: uv run python scripts/check_js.py
-        language: system
-        pass_filenames: false
-        always_run: true
-
-      - id: cssbeautifier-check
-        name: cssbeautifier check (docs/css)
-        entry: uv run python scripts/check_css.py
         language: system
         pass_filenames: false
         always_run: true

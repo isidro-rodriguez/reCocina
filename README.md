@@ -19,14 +19,15 @@ Tres pasos:
 
 1. **Crea el archivo** `docs/recetas/<nombre-en-kebab-case>.md`
 2. **Copia la foto** en `docs/img/fotos/<mismo-nombre>.webp` (WebP de 900x600)
-3. **Regístrala en el menú**: abre `zensical.toml` y añade la ruta dentro de la categoría correspondiente del bloque `nav`:
+3. **Regístrala en el menú**: abre `zensical.toml` y añade la ruta dentro de la categoría
+   correspondiente del bloque `nav`:
 
 ```toml
 nav = [
-  { "Arroz" = [
-    "recetas/arroz-a-banda-con-sepia.md",
-    "recetas/mi-receta-nueva.md",   # <- añade esta línea
-  ] },
+    { "Arroz" = [
+        "recetas/arroz-a-banda-con-sepia.md",
+        "recetas/mi-receta-nueva.md", # <- añade esta línea
+    ] },
 ]
 ```
 
@@ -35,9 +36,14 @@ nav = [
 Copia y pega en el nuevo `.md`:
 
 ```markdown
-# Nombre de la receta
-
-![Nombre de la receta](../img/fotos/nombre-de-la-receta.webp)
+---
+title:
+people:
+time:
+date:
+source:
+tags:
+---
 
 ## Ingredientes
 
@@ -51,12 +57,15 @@ Describe el primer paso.
 Describe el segundo paso.
 ```
 
-- La ruta de la foto es siempre `../img/fotos/<slug>.webp` (las recetas están planas en `docs/recetas/`). Las fotos son WebP de 900x600.
-- Secciones opcionales ya usadas en el recetario: `## Opcional`, `## Alternativas`, `## Preparación en robot de cocina`.
+- La foto no se enlaza en el Markdown: la plantilla la genera a partir del nombre de la
+  página (`docs/img/fotos/<nombre>.webp`, WebP de 900x600).
+- Secciones opcionales ya usadas en el recetario: `## Opcional`, `## Alternativas`,
+  `## Preparación en robot de cocina`.
 
 ### Categorías del menú
 
-`Aperitivos` · `Arroz` · `Pasta` · `Carne y Pollo` · `Pescado y Mariscos` · `Verduras, Legumbres y Potajes` · `Sopas y Cremas` · `Salsas` · `Postres`
+`Aperitivos` · `Arroz` · `Pasta` · `Carne y Pollo` · `Pescado y Mariscos` ·
+`Verduras, Legumbres y Potajes` · `Sopas y Cremas` · `Salsas` · `Postres`
 
 ### Checklist rápida
 
@@ -68,7 +77,8 @@ Describe el segundo paso.
 
 ## Validación
 
-Un conjunto de tests comprueba que **recetas ↔ menú ↔ fotos** y los **recursos del sitio** están sincronizados:
+Un conjunto de tests comprueba que **recetas ↔ menú ↔ fotos** y los **recursos del sitio** están
+sincronizados:
 
 ```bash
 uv run pytest   # 0 tests fallidos = todo OK
@@ -78,9 +88,10 @@ uv run pytest   # 0 tests fallidos = todo OK
 
 - recetas en disco que **no** están en el `nav` (aviso: no se verían en el sitio).
 - entradas del `nav` que apuntan a ficheros inexistentes (error: rompe el build).
-- imágenes enlazadas desde una receta que **no existen** (error).
+- recetas sin su foto `docs/img/fotos/<nombre>.webp` (error: la plantilla la genera
+  a partir de la dirección de la página).
 - fotos en `docs/img/fotos/` que:
-    - Ninguna receta usa (aviso: huérfanas).
+    - No corresponden a ninguna receta (aviso: huérfanas).
     - **Vacías o corruptas** (imágenes muertas).
     - Que **no son WebP** o no miden **900x600**.
 
@@ -102,12 +113,13 @@ Los iconos viven en `docs/img/favicon/` (separados de las fotos de recetas):
 - `theme.favicon: img/favicon/favicon.ico` en `zensical.toml` fija el `<link rel="icon">` principal.
 - `theme/main.html` inyecta en el `<head>` el resto (apple-touch-icon, PNG 16/32 y el manifiesto).
 
-Para cambiarlos, sustituye los ficheros manteniendo los nombres y ajusta `site.webmanifest` si cambian los iconos.
+Para cambiarlos, sustituye los ficheros manteniendo los nombres y ajusta `site.webmanifest` si
+cambian los iconos.
 
 ## Linteo y formato de Markdown
 
-El Markdown (recetas y este README) se formatea con **mdformat** y el plugin
-**mdformat-mkdocs** (que entiende la sintaxis de Zensical: admoniciones, pestañas…).
+El Markdown (recetas y este README) se formatea con **mdformat** y el plugin **mdformat-mkdocs**
+(que entiende la sintaxis de Zensical: admoniciones, pestañas…).
 La configuración vive en `.mdformat.toml`.
 
 ```bash
@@ -115,7 +127,8 @@ uv run mdformat docs README.md          # aplica el formato (bullets -, etc.)
 uv run mdformat --check docs README.md  # comprueba sin modificar (falla si no está formateado)
 ```
 
-> El hook de pre-commit ya ejecuta `mdformat --check`, así que basta con formatear antes de commitear.
+> El hook de pre-commit ya ejecuta `mdformat --check`, así que basta con formatear antes de
+> comitear.
 
 ## Corrección ortográfica
 
@@ -128,14 +141,14 @@ uv run pytest   # incluye la comprobación ortográfica
 ```
 
 - Las palabras que el diccionario no conoce (términos culinarios, marcas, préstamos,
-    formas verbales con pronombre…) se aceptan desde `tests/spelling/allowlist.txt`.
+  formas verbales con pronombre…) se aceptan desde `tests/spelling/allowlist.txt`.
 - Para permitir una palabra válida, añádela a ese fichero (una por línea; `#` para comentarios).
 
 ## Hook pre-commit
 
-Un hook ejecuta la validación **automáticamente antes de cada commit**: si el lint
-(`ruff check`), el formato Python (`ruff format --check`), el formato Markdown
-(`mdformat --check`) o los tests (`pytest`) fallan, el commit se cancela.
+Un hook ejecuta la validación **automáticamente antes de cada commit**: si el lint (`ruff check`),
+el formato Python (`ruff format --check`), el formato Markdown (`mdformat --check`) o los tests
+(`pytest`) fallan, el commit se cancela.
 
 Instálalo una sola vez (tras `uv sync`):
 
@@ -154,18 +167,16 @@ uv run pre-commit run --all-files
 
 ## Comandos
 
-| Comando                                  | Qué hace                                                          |
-| ---------------------------------------- | ----------------------------------------------------------------- |
-| `uv sync`                                | Instala/actualiza dependencias desde `pyproject.toml` + `uv.lock` |
-| `uv run zensical serve`                  | Previsualiza en <http://localhost:8000> con recarga en vivo       |
-| `uv run zensical build --strict`         | Genera el sitio en `site/`; aborta ante avisos de build           |
-| `uv run pytest`                          | Valida que recetas, `nav` y fotos están sincronizados             |
-| `uv run mdformat docs README.md`         | Formatea el Markdown (recetas y README)                           |
-| `uv run mdformat --check docs README.md` | Comprueba el formato del Markdown sin modificar                   |
-| `uv run pre-commit install`              | Activa el hook de pre-commit (una sola vez)                       |
-| `uv run pre-commit run --all-files`      | Ejecuta lint + formato + tests sobre todo el repo                 |
-| `uv run ruff format .`                   | Formatea el código Python                                         |
-| `uv run ruff check .`                    | Analiza (lint) el código Python                                   |
+| Comando                             | Qué hace                                                          |
+|-------------------------------------|-------------------------------------------------------------------|
+| `uv sync`                           | Instala/actualiza dependencias desde `pyproject.toml` + `uv.lock` |
+| `uv run zensical serve`             | Previsualiza en <http://localhost:8000> con recarga en vivo       |
+| `uv run zensical build --strict`    | Genera el sitio en `site/`; aborta ante avisos de build           |
+| `uv run pytest`                     | Valida que recetas, `nav` y fotos están sincronizados             |
+| `uv run pre-commit install`         | Activa el hook de pre-commit (una sola vez)                       |
+| `uv run pre-commit run --all-files` | Ejecuta lint + formato + tests sobre todo el repo                 |
+| `uv run ruff format .`              | Formatea el código Python                                         |
+| `uv run ruff check .`               | Analiza (lint) el código Python                                   |
 
 ## Estructura
 
@@ -197,11 +208,13 @@ uv run pre-commit run --all-files
 
 ## Despliegue
 
-Vercel despliega automáticamente desde la rama `main`: `vercel.json` ejecuta `uv sync` e `uv run zensical build --strict`, y publica el contenido de `site/`.
+Vercel despliega automáticamente desde la rama `main`: `vercel.json` ejecuta `uv sync` e
+`uv run zensical build --strict`, y publica el contenido de `site/`.
 
 ## Notas
 
 - Interfaz en español (`language = "es"` en `zensical.toml`).
-- Plantillas personalizadas en `theme/`: son copias de las de Zensical v0.0.67 (marcadas con su versión de origen); al actualizar Zensical, compararlas con las nuevas.
+- Plantillas personalizadas en `theme/`: son copias de las de Zensical v0.0.67 (marcadas con su
+  versión de origen); al actualizar Zensical, compararlas con las nuevas.
 - Paleta de colores centralizada en `docs/css/extra.css` (variables `--rc-*` en `:root`).
 - Nombres de archivo en kebab-case y sin acentos (ej. `sopa-de-melon.md`).

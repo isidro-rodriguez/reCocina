@@ -1,6 +1,11 @@
-# Cuscús de pollo y verduras
-
-![Cuscús de pollo y verduras](../img/fotos/cuscus-de-pollo-y-verduras.webp)
+﻿---
+title: Cuscús de pollo y verduras
+people: 4
+time: 30
+date: 2023-08-17
+source:
+tags:
+---
 
 ## Ingredientes
 
@@ -18,7 +23,8 @@
 
 ## Preparación
 
-Picar la pechuga en tiras y sellarlas en una sartén caliente con aceite. Apartar las pechugas medio hechas y reservar.
+Picar la pechuga en tiras y sellarlas en una sartén caliente con aceite. Apartar las pechugas medio
+hechas y reservar.
 
 En la misma sartén pochar la cebolla, la zanahoria, el ajo, los pimientos y el calabacín.
 

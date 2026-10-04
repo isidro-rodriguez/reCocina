@@ -1,6 +1,11 @@
-# Salsa barbacoa
-
-![Salsa barbacoa](../img/fotos/salsa-barbacoa.webp)
+﻿---
+title: Salsa barbacoa
+people: 4
+time: 20
+date: 2023-08-20
+source:
+tags:
+---
 
 ## Ingredientes
 
@@ -19,9 +24,11 @@
 
 ## Preparación
 
-Pocha la cebolla hasta quedar transparente, añade el azúcar y sigue rehogando unos minutos para que la cebolla termine de caramelizarse por completo.
+Pocha la cebolla hasta quedar transparente, añade el azúcar y sigue rehogando unos minutos para que
+la cebolla termine de caramelizarse por completo.
 
-Añadir el tomate triturado y cocinar hasta que evapore la mayor parte del agua y coja un color más oscuro.
+Añadir el tomate triturado y cocinar hasta que evapore la mayor parte del agua y coja un color más
+oscuro.
 
 Añadir los demás condimentos y cocinar a fuego lento unos cinco minutos removiendo con frecuencia.
 

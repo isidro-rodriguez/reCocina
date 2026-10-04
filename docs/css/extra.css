@@ -44,6 +44,12 @@
     margin-right: auto;
 }
 
+.page-metadata {
+    display: flex;
+    flex-wrap: wrap; /* en móvil baja de línea en vez de desbordar */
+    gap: 0.5rem 1rem;
+}
+
 @media screen and (max-width: 76.234375em) {
     .md-content {
         margin-left: auto;
@@ -53,13 +59,13 @@
 @media screen and (min-width: 76.25em) {
 
     /* 1 rem de separación entre el menú lateral y el artículo */
-    [dir="ltr"] .md-sidebar--primary:not([hidden])~.md-content {
+    [dir="ltr"] .md-sidebar--primary:not([hidden]) ~ .md-content {
         margin-left: 1rem;
         margin-right: 0;
     }
 
     /* El artículo ocupa los 900 px completos (sin margen interno) */
-    [dir="ltr"] .md-sidebar--primary:not([hidden])~.md-content>.md-content__inner {
+    [dir="ltr"] .md-sidebar--primary:not([hidden]) ~ .md-content > .md-content__inner {
         margin-left: 0;
         margin-right: 0;
     }

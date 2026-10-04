@@ -1,6 +1,11 @@
-# Salsa teriyaki
-
-![Salsa teriyaki](../img/fotos/salsa-teriyaki.webp)
+﻿---
+title: Salsa teriyaki
+people: 4
+time: 10
+date: 2023-08-20
+source:
+tags:
+---
 
 ## Ingredientes
 

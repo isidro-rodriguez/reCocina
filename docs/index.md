@@ -1,3 +1,7 @@
+---
+template: page.html
+---
+
 # 🍳 reCocina
 
 Mi recetario personal de cocina casera: platos que hago de verdad, con foto,
@@ -27,7 +31,7 @@ Si no sabes por dónde entrar, prueba alguna de estas:
 - Usa el **menú lateral** para navegar por categorías.
 - Usa el **buscador** (arriba) para encontrar recetas por ingrediente o nombre.
 - Cada receta sigue el mismo esquema: **Ingredientes** y **Preparación**.
-    Algunas añaden **Opcional**, **Alternativas** o **Preparación en robot de cocina**.
+  Algunas añaden **Opcional**, **Alternativas** o **Preparación en robot de cocina**.
 
 ## Notas
 

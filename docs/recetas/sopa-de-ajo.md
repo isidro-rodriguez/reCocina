@@ -1,6 +1,11 @@
-# Sopa de ajo
-
-![Sopa de ajo](../img/fotos/sopa-de-ajo.webp)
+---
+title: Sopa de ajo
+people: 4
+time: 40
+date: 2023-08-17
+source: El Comidista en EL PAÍS
+tags:
+---
 
 ## Ingredientes
 

@@ -1,6 +1,11 @@
-# Sopa minestrone
-
-![Sopa minestrone](../img/fotos/sopa-minestrone.webp)
+---
+title: Sopa minestrone
+people: 4
+time: 45
+date: 2023-08-25
+source: Lecturas
+tags:
+---
 
 ## Ingredientes
 
@@ -22,8 +27,14 @@
 
 ## Preparación
 
-Limpia la cebolla y pícala, pela el tomate y pícalo menudo, raspa la zanahoria y córtala en rodajas, pela y pica la calabaza, pica el calabacín, limpia el brócoli y córtalo en gajos y guisa las alubias.
+Limpia la cebolla y pícala, pela el tomate y pícalo menudo, raspa la zanahoria y córtala en rodajas,
+pela y pica la calabaza, pica el calabacín, limpia el brócoli y córtalo en gajos y guisa las
+alubias.
 
-En una cazuela con aceite sofríe la cebolla hasta que transparente, luego incorpora y tomate y rehoga 10 minutos para que evapore el agua. Vierte el caldo de verduras y añade el apio, la calabaza, el calabacín, la zanahoria y el laurel. Salpimenta y deja que cueza a fuego medio durante 15 minutos.
+En una cazuela con aceite sofríe la cebolla hasta que transparente, luego incorpora y tomate y
+rehoga 10 minutos para que evapore el agua. Vierte el caldo de verduras y añade el apio, la
+calabaza, el calabacín, la zanahoria y el laurel. Salpimenta y deja que cueza a fuego medio durante
+15 minutos.
 
-Agrega el brócoli, la pasta y las alubias y cuece hasta que la pasta esté lista según las indicaciones del fabricante. Añade la albahaca y rectifica salpimentando. Deja reposar la sopa.
+Agrega el brócoli, la pasta y las alubias y cuece hasta que la pasta esté lista según las
+indicaciones del fabricante. Añade la albahaca y rectifica salpimentando. Deja reposar la sopa.

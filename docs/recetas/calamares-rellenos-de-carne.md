@@ -1,6 +1,11 @@
-# Calamares rellenos de carne
-
-![Calamares rellenos de carne](../img/fotos/calamares-rellenos-de-carne.webp)
+﻿---
+title: Calamares rellenos de carne
+people: 4
+time: 60
+date: 2023-08-22
+source: Lecturas
+tags:
+---
 
 ## Ingredientes
 
@@ -20,14 +25,20 @@
 
 ## Preparación
 
-Pon a remojar el pan en leche, endurece un huevo en agua después pélalo y pícalo, limpia los calamares quitando las tripas y la boca, pica los tentáculos de los calamares, pela y corta los ajos, pela y corta las cebollas en juliana, ralla los tomates.
+Pon a remojar el pan en leche, endurece un huevo en agua después pélalo y pícalo, limpia los
+calamares quitando las tripas y la boca, pica los tentáculos de los calamares, pela y corta los
+ajos, pela y corta las cebollas en juliana, ralla los tomates.
 
-Mezcla la carne picada con un huevo crudo, el huevo duro picado, el pan escurrido y los tentáculos picados y salpimenta. Rellena los calamares con la mezcla y ciérralos con ayuda de un palillo
+Mezcla la carne picada con un huevo crudo, el huevo duro picado, el pan escurrido y los tentáculos
+picados y salpimenta. Rellena los calamares con la mezcla y ciérralos con ayuda de un palillo
 
-En una cazuela con aceite sofríe el ajo y la cebolla hasta que transparente. Añade los calamares rellenos y el tomate rallado y sofríe otros 10 minutos a fuego lento.
+En una cazuela con aceite sofríe el ajo y la cebolla hasta que transparente. Añade los calamares
+rellenos y el tomate rallado y sofríe otros 10 minutos a fuego lento.
 
-Añade el pimentón y el caldo, salpimenta y cuece a fuego lento durante 10 minutos. Pasado este tiempo retíralo y sírvelo con un poco de perejil picado.
+Añade el pimentón y el caldo, salpimenta y cuece a fuego lento durante 10 minutos. Pasado este
+tiempo retíralo y sírvelo con un poco de perejil picado.
 
 ## Alternativas
 
-En lugar de utilizar con carne picada puedes rellenar los calamares con merluza, gambas, arroz, quinoa, etc.
+En lugar de utilizar con carne picada puedes rellenar los calamares con merluza, gambas, arroz,
+quinoa, etc.

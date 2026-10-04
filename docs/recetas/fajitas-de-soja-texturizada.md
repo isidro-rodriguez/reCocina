@@ -1,6 +1,11 @@
-# Fajitas de soja texturizada
-
-![Fajitas de soja texturizada](../img/fotos/fajitas-de-soja-texturizada.webp)
+﻿---
+title: Fajitas de soja texturizada
+people: 4
+time: 30
+date: 2023-08-17
+source:
+tags:
+---
 
 ## Ingredientes
 
@@ -18,7 +23,8 @@
 
 Pochar la cebolla y pimientos picados.
 
-Añadir la soja texturizada junto a las alubias y pochar unos minutos más hasta que la soja esté blanda.
+Añadir la soja texturizada junto a las alubias y pochar unos minutos más hasta que la soja esté
+blanda.
 
 Mezclar en frío el maíz, el guacamole, las especias y el zumo del limón.
 

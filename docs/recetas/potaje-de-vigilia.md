@@ -1,6 +1,11 @@
-# Potaje de vigilia
-
-![Potaje de vigilia](../img/fotos/potaje-de-vigilia.webp)
+﻿---
+title: Potaje de vigilia
+people: 4
+time: 100
+date: 2023-08-17
+source: Lecturas
+tags:
+---
 
 ## Ingredientes
 
@@ -19,7 +24,8 @@ Poner los garbanzos en remojo con una cucharadita de bicarbonato.
 
 Guisar los garbanzos con la suficiente agua como para cubrirlos (sin sal).
 
-Pochar las cebollas y pimientos hasta ablandar. Añadir el tomate triturado y dejar reducir hasta que quede una pasta seca.
+Pochar las cebollas y pimientos hasta ablandar. Añadir el tomate triturado y dejar reducir hasta que
+quede una pasta seca.
 
 Moler el sofrito con caldo de pescado (que cubra el sofrito en el vaso de moler).
 

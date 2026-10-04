@@ -1,6 +1,11 @@
-# Mojo de cilantro
-
-![Mojo de cilantro](../img/fotos/mojo-de-cilantro.webp)
+﻿---
+title: Mojo de cilantro
+people: 4
+time: 20
+date: 2026-10-02
+source: Lo mejor de la cocina canaria
+tags:
+---
 
 ## Ingredientes
 

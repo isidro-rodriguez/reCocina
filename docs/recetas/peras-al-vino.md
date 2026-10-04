@@ -1,6 +1,11 @@
-# Peras al vino
-
-![Peras al vino](../img/fotos/peras-al-vino.webp)
+﻿---
+title: Peras al vino
+people: 4
+time: 50
+date: 2024-09-17
+source: LOVE cocina
+tags:
+---
 
 ## Ingredientes
 
@@ -13,7 +18,8 @@
 
 ## Preparación
 
-En una olla pon a hervir durante 10 minutos el vino con el anís, la canela, la cáscara del limón y la mitad del azúcar.
+En una olla pon a hervir durante 10 minutos el vino con el anís, la canela, la cáscara del limón y
+la mitad del azúcar.
 
 Mientras tanto, lava y pela las peras dejando el rabito.
 

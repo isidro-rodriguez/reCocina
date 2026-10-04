@@ -10,7 +10,8 @@ extra_css = [
 ]
 
 nav = [
-    { "Recetario" = "index.md" },
+    { "Entrada" = "index.md" },
+    { "Fuentes" = "fuentes.md" },
     { "Aperitivos" = [
         "recetas/almogrote-gomero.md",
         "recetas/ensaladilla-de-papas-con-lacon-y-huevo.md",
@@ -24,7 +25,7 @@ nav = [
     ] },
     { "Pasta" = [
         "recetas/espagueti-carbonara.md",
-        "recetas/pasta-con-cherrys.md",
+        "recetas/pasta-con-cherry.md",
         "recetas/pasta-con-langostinos.md",
         "recetas/pasta-con-setas-a-la-foie.md",
     ] },
@@ -32,7 +33,7 @@ nav = [
         "recetas/cuscus-de-pollo-y-verduras.md",
         "recetas/pastel-de-calabaza-y-pollo.md",
         "recetas/pechuga-cocida-con-champinones.md",
-        "recetas/pechuga-de-pollo-con-salsa-de-miel-y-mostaza.md",
+        "recetas/pechuga-a-la-miel-y-mostaza.md",
         "recetas/pollo-caprese-al-pesto.md",
     ] },
     { "Carne" = [
@@ -114,15 +115,17 @@ icon = "fontawesome/brands/markdown"
 link = "https://daringfireball.net/projects/markdown/"
 
 [project.markdown_extensions]
-admonition = {}
-abbr = {}
-attr_list = {}
-def_list = {}
-footnotes = {}
-md_in_html = {}
+admonition = { }
+abbr = { }
+attr_list = { }
+def_list = { }
+footnotes = { }
+md_in_html = { }
 pymdownx.arithmatex.generic = false
-pymdownx.betterem = {}
-pymdownx.superfences = {}
-pymdownx.highlight = {}
-pymdownx.details = {}
-pymdownx.tasklist = {}
+pymdownx.betterem = { }
+pymdownx.superfences = { }
+pymdownx.highlight = { }
+pymdownx.details = { }
+pymdownx.tasklist = { }
+pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"

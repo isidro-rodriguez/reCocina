@@ -1,6 +1,11 @@
-# Guiso de calamares con alcachofas y albóndigas
-
-![Guiso de calamares con alcachofas y albóndigas](../img/fotos/guiso-de-calamares-con-alcachofas-y-albondigas.webp)
+﻿---
+title: Guiso de calamares con alcachofas y albóndigas
+people: 4
+time: 75
+date: 2023-08-25
+source: Lecturas
+tags:
+---
 
 ## Ingredientes
 
@@ -28,7 +33,9 @@ Para las albóndigas:
 
 ## Preparación
 
-Prepara las albóndigas remojando el pan en la leche y mézclalo con la carne picada, añade 1 huevo, un chorro de aceite, ajo molido y perejil picado, sal y pimienta. Forma pequeñas albóndigas con las manos humedecidas y enharinadas. Reserva.
+Prepara las albóndigas remojando el pan en la leche y mézclalo con la carne picada, añade 1 huevo,
+un chorro de aceite, ajo molido y perejil picado, sal y pimienta. Forma pequeñas albóndigas con las
+manos humedecidas y enharinadas. Reserva.
 
 > También puedes hacer esta receta con albóndigas de pollo o pescado.
 
@@ -36,6 +43,8 @@ Limpia los calamares retirando la boca y las tripas y lávalos bien. Córtalos e
 
 Pela las alcachofas y córtalas en cuartos retirando el heno. Reserva.
 
-En una cazuela con aceite dora las albóndigas con los calamares y las alcachofas. Añade la ñora y el tomate frito y cuece unos minutos para reducir el agua. Añade el caldo de carne caliente junto a los guisantes, salpimenta y deja guisar a fuego medio unos 25 minutos.
+En una cazuela con aceite dora las albóndigas con los calamares y las alcachofas. Añade la ñora y el
+tomate frito y cuece unos minutos para reducir el agua. Añade el caldo de carne caliente junto a los
+guisantes, salpimenta y deja guisar a fuego medio unos 25 minutos.
 
 Deja reposar antes de servir.

@@ -1,6 +1,11 @@
-# Pechuga de pollo con salsa de miel y mostaza
-
-![Pechuga de pollo con salsa de miel y mostaza](../img/fotos/pechuga-al-horno-con-miel-y-mostaza.webp)
+﻿---
+title: Pechuga a la miel y mostaza
+people: 4
+time: 70
+date: 2023-08-24
+source: Lecturas
+tags:
+---
 
 ## Ingredientes
 
@@ -28,10 +33,13 @@ Para acompañar:
 
 ## Preparación
 
-Prepara la salsa mezclando todos los ingredientes en un bol, emulsiona con un batidor de varillas y reserva.
+Prepara la salsa mezclando todos los ingredientes en un bol, emulsiona con un batidor de varillas y
+reserva.
 
 Salpimenta las pechugas y séllalas en una sartén.
 
-En una fuente de horno extiende las papas cortadas en rodajas, pulveriza un poco de aceite y salpimenta. Encima coloca las pechugas selladas y vierte la salsa de miel y mostaza. Hornea la fuente en un horno precalentado a 190 ºC durante 35 minutos.
+En una fuente de horno extiende las papas cortadas en rodajas, pulveriza un poco de aceite y
+salpimenta. Encima coloca las pechugas selladas y vierte la salsa de miel y mostaza. Hornea la
+fuente en un horno precalentado a 190 ºC durante 35 minutos.
 
 Emplata la ración con una pechuga, una ración de papas y algo de ensalada.

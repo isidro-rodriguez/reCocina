@@ -1,6 +1,11 @@
-# Marmitako de atún
-
-![Marmitako de atún](../img/fotos/marmitako-de-atun.webp)
+﻿---
+title: Marmitako de atún
+people: 4
+time: 45
+date: 2023-08-25
+source: Lecturas
+tags:
+---
 
 ## Ingredientes
 
@@ -22,12 +27,18 @@
 
 ## Preparación
 
-Corta el atún en tacos de tamaño bocado y salpiméntalos, pela y pica la cebolla en dados pequeños, lava y pica el pimiento, lava y tritura el tomate, pela las papas y cáscalas, lava y pica el perejil y pela y pica los ajos.
+Corta el atún en tacos de tamaño bocado y salpiméntalos, pela y pica la cebolla en dados pequeños,
+lava y pica el pimiento, lava y tritura el tomate, pela las papas y cáscalas, lava y pica el perejil
+y pela y pica los ajos.
 
-En una cazuela rehoga la cebolla y el pimiento hasta que transparente la cebolla. Añade el ajo, la guindilla, la ñora y el pimentón dulce y el tomate triturado y cuece hasta que reduzca el agua.
+En una cazuela rehoga la cebolla y el pimiento hasta que transparente la cebolla. Añade el ajo, la
+guindilla, la ñora y el pimentón dulce y el tomate triturado y cuece hasta que reduzca el agua.
 
 Mientras tanto en un cazo deja calentándose el caldo de pescado a fuego bajo.
 
-Incorpora las papas cascadas y el vino blanco y deja que evapore el alcohol. Luego añade el caldo de pescado caliente y el laurel y deja guisar a fuego lento durante 25 minutos hasta que las papas estén tiernas.
+Incorpora las papas cascadas y el vino blanco y deja que evapore el alcohol. Luego añade el caldo de
+pescado caliente y el laurel y deja guisar a fuego lento durante 25 minutos hasta que las papas
+estén tiernas.
 
-Añade los tacos de atún, el perejil picado y salpimenta. Cuece durante 5 minutos más y deja reposar el guiso.
+Añade los tacos de atún, el perejil picado y salpimenta. Cuece durante 5 minutos más y deja reposar
+el guiso.

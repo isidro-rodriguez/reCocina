@@ -1,6 +1,11 @@
-# Sopa de melón
-
-![Sopa de melón](../img/fotos/sopa-de-melon.webp)
+---
+title: Sopa de melón
+people: 6
+time: 15
+date: 2024-07-24
+source:
+tags:
+---
 
 ## Ingredientes
 
@@ -15,10 +20,12 @@
 
 ## Preparación
 
-Corta el melón por la mitad, quita las semillas y extrae la pulpa colocándola en un bol grande que sea cómodo para usar con batidora.
+Corta el melón por la mitad, quita las semillas y extrae la pulpa colocándola en un bol grande que
+sea cómodo para usar con batidora.
 
 Añade la nata líquida, el yogur, el zumo del limón y salpimenta.
 
-Licúa la mezcla con una batidora y déjala enfriar en la nevera un par de horas con la ramita de menta fresca para aportar frescura.
+Licúa la mezcla con una batidora y déjala enfriar en la nevera un par de horas con la ramita de
+menta fresca para aportar frescura.
 
 Emplatar con un chorrito de aceite de oliva virgen extra y unas virutas de jamón serrano.

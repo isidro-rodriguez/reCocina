@@ -1,6 +1,11 @@
-# Musabaha
-
-![Musabaha](../img/fotos/musabaha.webp)
+﻿---
+title: Musabaha
+people: 4
+time: 30
+date: 2024-07-24
+source: El Comidista en EL PAÍS
+tags:
+---
 
 ## Ingredientes
 
@@ -16,14 +21,20 @@
 
 ## Preparación
 
-Pon en remojo los garbanzos desde el día anterior y cuécelos el tiempo indicado en el paquete. También puedes usar garbanzos congelados o de bote que se hacen mucho más rápidos.
+Pon en remojo los garbanzos desde el día anterior y cuécelos el tiempo indicado en el paquete.
+También puedes usar garbanzos congelados o de bote que se hacen mucho más rápidos.
 
-Prepara una salsa verde con el perejil y la pimienta picadas fino, el ajo majado, unas cucharadas de aceite de oliva, sal y pimienta.
+Prepara una salsa verde con el perejil y la pimienta picada fino, el ajo majado, unas cucharadas de
+aceite de oliva, sal y pimienta.
 
-Prepara una salsa para los garbanzos mezclando el tahini, el yogur, el zumo de limón, sal y pimienta negra.
+Prepara una salsa para los garbanzos mezclando el tahini, el yogur, el zumo de limón, sal y pimienta
+negra.
 
-Reservar unos pocos garbanzos para la decoración final y poner el resto en un plato. Aplastar la mitad con un tenedor y picar grueso el resto, mezclar con la salsa de tahini y un par de cucharadas de la salsa de perejil.
+Reservar unos pocos garbanzos para la decoración final y poner el resto en un plato. Aplastar la
+mitad con un tenedor y picar grueso el resto, mezclar con la salsa de tahini y un par de cucharadas
+de la salsa de perejil.
 
 Probar y ajustar de sal, pimienta y limón al gusto.
 
-Añadir el resto de los garbanzos por encima, un chorrito de aceite de oliva y el resto de la salsa de hierbas.
+Añadir el resto de los garbanzos por encima, un chorrito de aceite de oliva y el resto de la salsa
+de hierbas.

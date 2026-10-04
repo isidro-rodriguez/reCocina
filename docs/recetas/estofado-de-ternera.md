@@ -1,6 +1,11 @@
-# Estofado de ternera
-
-![Estofado de ternera](../img/fotos/estofado-de-ternera.webp)
+﻿---
+title: Estofado de ternera
+people: 4
+time: 90
+date: 2023-08-23
+source: Lecturas
+tags:
+---
 
 ## Ingredientes
 
@@ -25,7 +30,8 @@ Salpimenta la carne y rebózalas en harina para dorarla en una cazuela con aceit
 
 Añade la cebolla y rehoga unos minutos hasta que transparente.
 
-Continúa con la zanahoria picada, los champiñones limpios y el tomillo y sigue rehogando unos minutos.
+Continúa con la zanahoria picada, los champiñones limpios y el tomillo y sigue rehogando unos
+minutos.
 
 Añade el tomate triturado y la cerveza y calienta para reducir la cerveza.
 
@@ -33,4 +39,5 @@ Incorpora el caldo de carne y deja guisar unos 45 minutos a fuego medio.
 
 Añade los guisantes y deja cocinar unos 15 minutos más.
 
-Termina probando el punto de sal y salpimenta a gusto antes de servir. Deja reposar el cocido antes de servir.
+Termina probando el punto de sal y salpimenta a gusto antes de servir. Deja reposar el cocido antes
+de servir.

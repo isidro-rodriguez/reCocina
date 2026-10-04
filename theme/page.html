@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+<link rel="apple-touch-icon"
+      sizes="180x180"
+      href="{{ 'img/favicon/apple-touch-icon.png' | url }}">
+<link rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{{ 'img/favicon/favicon-32x32.png' | url }}">
+<link rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{{ 'img/favicon/favicon-16x16.png' | url }}">
+<link rel="manifest" href="{{ '/site.webmanifest' | url }}">
+<script>
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/sw.js");
+
+            window.addEventListener("appinstalled", async () => {
+                const reg = await navigator.serviceWorker.ready;
+                reg.active.postMessage({ type: "PRECACHE" });
+            });
+    }
+</script>
+{% endblock %}
+
+{#-
+Sobrescribe el bloque "site_nav" de Zensical (base.html v0.0.67).
+Único cambio: eliminado el TOC lateral ("md-sidebar--secondary"),
+que no se usa en este tema. El JS lo tolera: consulta el elemento
+con guarda (typeof ... != "undefined").
+-#}
+{% block site_nav %}
+{% if nav %}
+{% if page.meta and page.meta.hide %}
+{% set hidden = "hidden" if "navigation" in page.meta.hide %}
+{% endif %}
+<div class="md-sidebar md-sidebar--primary"
+     data-md-component="sidebar"
+     data-md-type="navigation"
+     {{ hidden }}>
+    <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">{% include "partials/nav.html" %}</div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

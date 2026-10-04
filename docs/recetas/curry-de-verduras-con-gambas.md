@@ -1,6 +1,11 @@
-# Curry de verduras con gambas
-
-![Curry de verduras con gambas](../img/fotos/curry-de-verduras-con-gambas.webp)
+﻿---
+title: Curry de verduras con gambas
+people: 4
+time: 35
+date: 2023-08-27
+source: Lecturas
+tags:
+---
 
 ## Ingredientes
 
@@ -19,9 +24,11 @@
 
 ## Preparación
 
-Raspa y trocea la zanahoria, lava y separa en ramitos el brócoli y la coliflor, pela y pica en juliana el pimiento, lava y trocea las acelgas.
+Raspa y trocea la zanahoria, lava y separa en ramitos el brócoli y la coliflor, pela y pica en
+juliana el pimiento, lava y trocea las acelgas.
 
-Rehoga la verdura en una sartén con aceite durante 5 minutos, agrega la salsa de curry y las gambas y cuece hasta que las gambas estén hechas.
+Rehoga la verdura en una sartén con aceite durante 5 minutos, agrega la salsa de curry y las gambas
+y cuece hasta que las gambas estén hechas.
 
 Mientras tanto en una olla cuece el arroz basmati de la manera que indica el fabricante.
 
