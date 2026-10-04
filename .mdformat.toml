@@ -4,6 +4,9 @@
 wrap = "keep"          # no reescribe el salto de línea de las recetas
 end_of_line = "keep"   # respeta el fin de línea existente (CRLF/LF)
 number = true          # listas ordenadas numeradas consecutivamente (1. 2. 3.)
+# AGENTS.md es documentación de referencia (tablas anchas): no se formatea.
+# 'exclude' requiere Python 3.13+ (el entorno del proyecto ya usa 3.13).
+exclude = ["AGENTS.md"]
 
 [plugin.mkdocs]
 # Soporte de la sintaxis de MkDocs Material (admoniciones, tabs, etc.)

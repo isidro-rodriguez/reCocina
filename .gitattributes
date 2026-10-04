@@ -1,0 +1,13 @@
+# Normaliza el fin de línea a LF en todo el repo.
+# Evita el churn que provoca core.autocrlf=true (aviso "LF will be replaced by CRLF").
+* text=auto eol=lf
+
+# Binarios: git no debe tratarlos como texto ni convertirlos.
+*.png binary
+*.webp binary
+*.ico binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.woff binary
+*.woff2 binary
