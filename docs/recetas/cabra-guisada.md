@@ -3,7 +3,6 @@ title: Cabra guisada
 people: 4
 time: 180
 date: 2023-08-17
-source:
 tags:
   - mortero
 ---

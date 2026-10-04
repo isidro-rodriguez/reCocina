@@ -3,7 +3,6 @@ title: Crema de champiñones
 people: 6
 time: 50
 date: 2023-11-26
-source:
 tags:
   - robot-de-cocina
 ---

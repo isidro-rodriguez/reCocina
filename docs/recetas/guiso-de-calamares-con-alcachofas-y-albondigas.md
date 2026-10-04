@@ -4,7 +4,6 @@ people: 4
 time: 75
 date: 2023-08-25
 source: Lecturas
-tags:
 ---
 
 ## Ingredientes

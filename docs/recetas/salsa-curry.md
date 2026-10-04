@@ -3,7 +3,6 @@ title: Salsa curry
 people: 4
 time: 20
 date: 2023-08-27
-source:
 tags:
   - batidora
   - wok
