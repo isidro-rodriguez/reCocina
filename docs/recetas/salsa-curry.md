@@ -5,6 +5,8 @@ time: 20
 date: 2023-08-27
 source:
 tags:
+  - batidora
+  - wok
 ---
 
 ## Ingredientes
@@ -12,7 +14,7 @@ tags:
 - 1 cebolla pequeña
 - 2 dientes de ajo
 - 200 g de leche de coco
-- 200 m de caldo de carne o pescado
+- 200 ml de caldo de carne o pescado
 - 1 plátano
 - 1 cucharada de curry
 - 1 cucharada de cúrcuma
@@ -23,7 +25,7 @@ tags:
 
 ## Preparación
 
-Pela y pica en dados la cebolla, el ajo y el tomate.
+Pela y pica en dados la cebolla y el ajo.
 
 En un wok rehoga la verdura picada hasta que transparente la cebolla. Añade el curry, la cúrcuma y
 el jengibre y sigue rehogando dos minutos más. Añade la leche de coco y el caldo y deja cocinar a

@@ -5,6 +5,8 @@ time: 40
 date: 2023-08-27
 source: Lecturas
 tags:
+  - wok
+  - pescetariano
 ---
 
 ## Ingredientes

@@ -5,6 +5,7 @@ time: 30
 date: 2023-08-17
 source: Accademia italiana della cucina
 tags:
+  - wok
 ---
 
 ## Ingredientes

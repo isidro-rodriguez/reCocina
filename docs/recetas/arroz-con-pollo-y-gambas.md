@@ -5,6 +5,7 @@ time: 50
 date: 2024-09-19
 source:
 tags:
+  - paellera
 ---
 
 ## Ingredientes

@@ -5,6 +5,8 @@ time: 100
 date: 2023-08-17
 source: Lecturas
 tags:
+  - batidora
+  - pescetariano
 ---
 
 ## Ingredientes

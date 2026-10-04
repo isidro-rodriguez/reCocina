@@ -5,6 +5,7 @@ time: 30
 date: 2024-07-24
 source: El Comidista en EL PAÍS
 tags:
+  - vegetariano
 ---
 
 ## Ingredientes

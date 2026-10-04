@@ -5,6 +5,7 @@ time: 10
 date: 2023-08-20
 source:
 tags:
+  - vegetariano
 ---
 
 ## Ingredientes

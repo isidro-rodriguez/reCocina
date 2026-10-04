@@ -5,6 +5,8 @@ time: 40
 date: 2023-08-22
 source: Lecturas
 tags:
+  - batidora
+  - vegano
 ---
 
 ## Ingredientes

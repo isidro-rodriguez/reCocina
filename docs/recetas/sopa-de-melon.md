@@ -5,6 +5,7 @@ time: 15
 date: 2024-07-24
 source:
 tags:
+  - batidora
 ---
 
 ## Ingredientes

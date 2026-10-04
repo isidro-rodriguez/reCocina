@@ -5,6 +5,7 @@ time: 50
 date: 2023-11-26
 source:
 tags:
+  - robot-de-cocina
 ---
 
 ## Ingredientes
