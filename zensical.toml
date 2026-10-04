@@ -28,15 +28,17 @@ nav = [
         "recetas/pasta-con-langostinos.md",
         "recetas/pasta-con-setas-a-la-foie.md",
     ] },
-    { "Carne y Pollo" = [
-        "recetas/cabra-guisada.md",
-        "recetas/cerdo-agridulce.md",
+    { "Pollo" = [
         "recetas/cuscus-de-pollo-y-verduras.md",
-        "recetas/estofado-de-ternera.md",
         "recetas/pastel-de-calabaza-y-pollo.md",
         "recetas/pechuga-cocida-con-champinones.md",
         "recetas/pechuga-de-pollo-con-salsa-de-miel-y-mostaza.md",
         "recetas/pollo-caprese-al-pesto.md",
+    ] },
+    { "Carne" = [
+        "recetas/cabra-guisada.md",
+        "recetas/cerdo-agridulce.md",
+        "recetas/estofado-de-ternera.md",
         "recetas/solomillo-de-cerdo-con-papas-y-frutos-secos.md",
     ] },
     { "Pescado y Mariscos" = [
