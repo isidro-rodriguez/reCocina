@@ -4,7 +4,7 @@ people: 6
 time: 50
 date: 2023-11-26
 tags:
-  - Robot de cocina
+  - Batidora
 ---
 
 ## Ingredientes
@@ -22,19 +22,19 @@ tags:
 - Perejil
 - Sal y pimienta
 
-## Preparación en robot de cocina
+## Preparación
 
-Limpiar y pelar las cebollas, el ajo, el puerro, las zanahorias y la papa. Introducirlos en el vaso
-del robot de cocina y picar durante 8 segundos a velocidad media.
+Limpiar y pelar las cebollas, el ajo, el puerro, las zanahorias y la papa. Picar todo en dados
+pequeños.
 
-Añadir aceite y sofreír la verdura durante 10 minutos.
+Añadir la mezcla a un caldero con aceite y sofreír durante 10 minutos.
 
-Añadir el caldo, el muslo de pollo y los champiñones picados y cocinar durante 30 minutos a 95 ºC.
+Añadir el caldo, el muslo de pollo y los champiñones picados y cocinar durante 30 minutos.
 
-Una vez cocinado, retirar el muslo de pollo y triturar la crema durante 10 segundos a velocidad
-alta.
+Una vez cocinado, retirar el muslo de pollo y triturar la crema con una batidora.
 
-Retirar y desmenuzar la carne del muslo de pollo y añadirla a la crema junto al maíz frito. Probar
-el punto de sal, salpimentar si se considera necesario y dejar reposar al menos 30 minutos.
+Retirar y desmenuzar la carne del muslo de pollo y añadirla a la crema junto al maíz frito.
+
+Probar el punto de sal y dejar reposar al menos 30 minutos.
 
 Servir con un chorrito de aceite de oliva y decorar con perejil.

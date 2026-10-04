@@ -6,10 +6,10 @@
 {% set slug = page.url | trim('/') | split('/') | last %}
 
 {%
-set source_slug = page.meta.source | lower
-| replace(' ', '-') | replace('ñ', 'n')
-| replace('á', 'a') | replace('é', 'e') | replace('í', 'i')
-| replace('ó', 'o') | replace('ú', 'u') | replace('ü', 'u')
+    set source_slug = page.meta.source | lower
+    | replace(' ', '-') | replace('ñ', 'n')
+    | replace('á', 'a') | replace('é', 'e') | replace('í', 'i')
+    | replace('ó', 'o') | replace('ú', 'u') | replace('ü', 'u')
 %}
 
 <h1 id="{{slug}}">{{ page.title | d(config.site_name, true)}}</h1>

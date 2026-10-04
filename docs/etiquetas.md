@@ -34,11 +34,6 @@ guisos. El mortero aporta una textura que una batidora no consigue.
 Recetas de arroz que se preparan en paellera: su base ancha y poco profunda es lo que da el sofrito,
 el reparto del caldo y el punto del arroz.
 
-### Robot de cocina
-
-Recetas pensadas para un robot de cocina (tipo Thermomix o Monsieur Cuisine), con vaso, temperatura
-y velocidad indicadas en los pasos. Incluye picar, sofreír, cocinar y triturar en el mismo aparato.
-
 ### Wok
 
 Recetas que se cocinan a fuego vivo en wok: salteados y salsas que se reducen rápido. Su base curva

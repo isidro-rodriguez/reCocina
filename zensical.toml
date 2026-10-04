@@ -89,6 +89,7 @@ features = [
     "content.code.copy",
 ]
 
+
 [[project.theme.palette]]
 scheme = "light"
 primary = "custom"
@@ -114,6 +115,24 @@ link = "https://www.python.org"
 [[project.extra.social]]
 icon = "fontawesome/brands/markdown"
 link = "https://daringfireball.net/projects/markdown/"
+
+[project.extra.tags]
+Batidora = "mixer"
+Horno = "oven"
+Mortero = "mortar"
+Paellera = "pan"
+Wok = "pan"
+Pescetariano = "fish"
+Vegano = "vegan"
+Vegetariano = "vegan"
+
+[project.theme.icon.tag]
+mixer = "mixer"
+oven = "oven"
+mortar = "mortar"
+pan = "pan"
+fish = "fish"
+vegan = "vegan"
 
 [project.markdown_extensions]
 admonition = { }
