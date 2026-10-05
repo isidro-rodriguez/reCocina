@@ -22,17 +22,15 @@ duplicate it here.
 - **Human-facing text:** Spanish — docstrings, comments, user/UI output, and the recipes themselves.
 - Idiomatic Python: type hints, PEP 8, `pathlib` over `os.path`,
   `from __future__ import annotations`.
-- **ruff is the boss:** `target-version = py312`, `line-length = 88`, rules `E, F, I, UP, B, D`;
-  excludes `site/` and `theme/`.
+- **ruff is the boss:** `target-version = py312`, `line-length = 88`, rules
+  `E, F, I, UP, B, D, SIM, PTH`, pydocstyle `google`; excludes `site/` and `theme/`.
 
 ## Web assets (CSS/JS/HTML)
 
-- `docs/css/*.css` and `docs/sw.js` are formatted with cssbeautifier/jsbeautifier: **4-space indent,
-  LF, trailing newline**.
-- Enforced by pre-commit hooks `cssbeautifier-check` / `jsbeautifier-check` (scripts
-  `scripts/check_css.py`, `scripts/check_js.py`). They only **check**, never rewrite.
-- `theme/*.html` (Jinja) is formatted with djlint (`profile = jinja`, `indent = 4`); hook
-  `djlint-check`.
+- `docs/assets/stylesheets/*.css`, `docs/assets/javascripts/*.js`, `docs/sw.js`: **4-space indent,
+  LF, trailing newline**. No auto-formatter configured — match the existing style by hand.
+- `theme/*.html` (Jinja): no formatter configured — keep partials aligned manually
+  (4-space indent, LF).
 - Line endings are forced to LF by `.gitattributes` (`* text=auto eol=lf`); don't rely on
   `core.autocrlf`.
 
@@ -40,52 +38,68 @@ duplicate it here.
 
 Nothing is "done" until every applicable gate is green:
 
-| Gate            | Command                                                      | When                                        |
-|-----------------|--------------------------------------------------------------|---------------------------------------------|
-| Python lint     | `uv run ruff check .`                                        | any `.py` change                            |
-| Python format   | `uv run ruff format --check .`                               | any `.py` change                            |
-| Markdown format | `uv run mdformat --check docs README.md`                     | any `.md` change                            |
-| Web format      | `uv run python scripts/check_css.py` / `scripts/check_js.py` | any `docs/css/`/`docs/sw.js` change         |
-| Tests           | `uv run pytest`                                              | any change                                  |
-| Strict build    | `uv run zensical build --strict`                             | any `zensical.toml`/`docs/`/`theme/` change |
-| Everything      | `uv run pre-commit run --all-files`                          | before finishing                            |
+| Gate            | Command                                                  | When                                        |
+|-----------------|----------------------------------------------------------|---------------------------------------------|
+| Python lint     | `uv run ruff check .`                                    | any `.py` change                            |
+| Python format   | `uv run ruff format --check .`                           | any `.py` change                            |
+| Tests           | `uv run pytest`                                          | any change                                  |
+| Strict build    | `uv run zensical build --strict` (+ `scripts/build_recipe_index.py` before, `scripts/build_precache.py` after — full chain in `vercel.json`) | any `zensical.toml`/`docs/`/`theme/` change |
+| Everything      | `uv run pre-commit run --all-files` (ruff check, ruff format --check, pytest) | before finishing |
 
 Checklist before handing off:
 
-- [ ] `uv run pre-commit run --all-files` passes (ruff check, ruff format --check, pytest, mdformat
-  --check, djlint check, cssbeautifier/jsbeautifier check).
-- [ ] `uv run zensical build --strict` has no errors.
-- [ ] New Markdown is formatted (`uv run mdformat docs README.md`).
-- [ ] Legit new words (dishes, brands, proper nouns) added to `tests/spelling/allowlist.txt`.
+- [ ] `uv run pre-commit run --all-files` passes.
+- [ ] `uv run zensical build --strict` has no errors (with recipe index generated before and
+  precache after, per `vercel.json`).
+- [ ] Legit new words (dishes, brands, proper nouns, tech terms used in prose) added to
+  `tests/spelling/allowlist.txt` (code spans and fenced blocks are skipped by the test).
 - [ ] No `git commit --no-verify` unless the user explicitly asks.
 
 ## Content conventions (recipes)
 
-- One recipe = `docs/recetas/<kebab-case-no-accents>.md` + `docs/fotos` (WebP de
-  900x600) + an entry in `mkdocs.yml` `nav`. Missing any of the three fails the tests.
-- Title in Title Case **with accents** (`# Sopa De Ajo`); file name kebab-case **without** accents.
-- Sections: `## Ingredientes`, `## Preparación`. Optional ones already in use: `## Opcional`,
-  `## Alternativas`, `## Preparación en robot de cocina`. No frontmatter.
-- Image always `../img/fotos/<slug>.webp` (WebP de 900x600).
-- Nav categories: Aperitivos · Arroz · Pasta · Carne y Pollo · Pescado y Mariscos · Verduras,
+- One recipe = `docs/recetas/<kebab-case-no-accents>.md` + `docs/fotos/<slug>.webp` (WebP de
+  900x600) + an entry in `zensical.toml` `nav`. Missing any of the three fails the tests.
+- Filename kebab-case **without** accents (ej. `sopa-de-melon.md`); `title` in frontmatter is the
+  display name **with accents**.
+- Mandatory frontmatter (`tests/support.py` schema): `title` (non-empty), `people`/`time`
+  (strict positive ints, `time` in minutes), `date` (`YYYY-MM-DD`, not in the future). Optional:
+  `source` (must match a `##` in `docs/fuentes.md`), `tags` (non-empty list, each must match a
+  `###` in `docs/etiquetas.md`). No empty values (`source:` with nothing), no duplicated keys,
+  no unknown keys.
+- Body sections: `## Ingredientes`, `## Preparación`. Optional ones already in use: `## Opcional`,
+  `## Alternativas`, `## Preparación en robot de cocina`.
+- Image is auto-rendered by `theme/main.html` from `fotos/<slug>.webp` — never link it in Markdown.
+- Nav categories: `Entrada` (`index.md`), `Etiquetas` (`etiquetas.md`), `Fuentes` (`fuentes.md`),
+  then Aperitivos · Arroz · Pasta · Carne · Pollo · Pescado y Mariscos · Verduras,
   Legumbres y Potajes · Sopas y Cremas · Salsas · Postres.
+- Tags taxonomy lives in `docs/etiquetas.md`: aparatos (`Batidora`, `Horno`, `Mortero`,
+  `Paellera`, `Wok`) + dieta (`Pescetariano`, `Vegano`, `Vegetariano`); icons mapped in
+  `zensical.toml` (`[project.extra.tags]`, `[project.theme.icon.tag]`).
 - **Units:** prefer ISO 80000 (`g`, `l`, `ml`, space before unit: `100 g de …`). Don't rewrite
   existing recipes just to normalize this.
+- Generated artifacts are gitignored: `docs/assets/recetas.json` (from
+  `scripts/build_recipe_index.py`), `site/` incl. `precache.json` (from
+  `scripts/build_precache.py`).
 
 ## Tests contract
 
+- `tests/support.py` — shared paths + frontmatter schema (`Recipe` pydantic model); single source
+  of truth for `load_frontmatter` / `headings`.
+- `tests/test_frontmatter.py` — frontmatter valid; no orphans (every `source` → `##` in
+  `docs/fuentes.md`, every tag → `###` in `docs/etiquetas.md`); no duplicated titles.
 - `tests/test_recipes.py` — recipes ⇄ nav ⇄ photos in sync; no broken/dead/orphan images; photos
   must be 900x600 WebP.
-- `tests/test_theme.py` — favicon set complete; `theme.favicon`, `theme/main.html` links and
-  `site.webmanifest` valid.
+- `tests/test_theme.py` — favicon set complete (`docs/assets/images/`); `theme.favicon`,
+  `theme/page.html` links and `site.webmanifest` valid.
 - `tests/test_spelling.py` — Spanish spelling (spylls + vendored `es_ES`); unknown words must be in
-  `tests/spelling/allowlist.txt`.
+  `tests/spelling/allowlist.txt`. Skips fenced/inline code, link targets and HTML tags.
 
 ## Don't touch
 
 - `uv.lock` (regenerate with uv, never hand-edit). `tests/spelling/es_ES.*` + `LICENSE/` (vendored
   dictionary).
-- Respect `.gitignore` (`.venv/`, `site/`, `.idea/`, `.kilo/`, `nul`, …). Don't commit build output.
+- Respect `.gitignore` (`.venv/`, `site/`, `docs/assets/recetas.json`, `nul`, …). Don't commit
+  build output.
 
 ## Commits
 
@@ -94,5 +108,7 @@ commit.
 
 ## Deploy
 
-Vercel auto-deploys from `main` via `vercel.json` (`uv sync` + `uv run mkdocs build --strict`,
-output `site/`). Keep it working.
+Vercel auto-deploys from `main` via `vercel.json` (`uv sync` +
+`uv run python scripts/build_recipe_index.py && uv run zensical build --strict &&
+uv run python scripts/build_precache.py`, output `site/`; `Cache-Control: no-cache` on `/sw.js`).
+Keep it working.

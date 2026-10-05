@@ -91,6 +91,7 @@ commit
 favicon
 favicons
 for
+frontmatter
 hook
 hooks
 html
@@ -104,24 +105,31 @@ lint
 linteo
 localhost
 markdown
-mdformat
 mkdocs
 ml
 page
+pipeline
 plugin
 png
 pre
+precarga
+precargar
+pwa
 python
 readme
 recocina
 repo
+service
 spylls
+stale
 tests
 touch
 URL
 uv
 vercel
 webp
+worker
+yaml
 zensical
 
 

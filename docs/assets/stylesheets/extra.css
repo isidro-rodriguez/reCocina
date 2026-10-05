@@ -151,6 +151,14 @@
     }
 }
 
+.md-header__button[hidden] {
+    display: none;
+}
+
+.md-header__button[data-md-component="cocina"][aria-pressed="true"] {
+    color: var(--md-accent-fg-color);
+}
+
 /* ========================================
    Tema claro (capa 2: variables del tema)
    ======================================== */
