@@ -61,7 +61,7 @@ Checklist before handing off:
 
 ## Content conventions (recipes)
 
-- One recipe = `docs/recetas/<kebab-case-no-accents>.md` + `docs/img/fotos/<slug>.webp` (WebP de
+- One recipe = `docs/recetas/<kebab-case-no-accents>.md` + `docs/fotos` (WebP de
   900x600) + an entry in `mkdocs.yml` `nav`. Missing any of the three fails the tests.
 - Title in Title Case **with accents** (`# Sopa De Ajo`); file name kebab-case **without** accents.
 - Sections: `## Ingredientes`, `## Preparación`. Optional ones already in use: `## Opcional`,

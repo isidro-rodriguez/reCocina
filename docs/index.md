@@ -19,21 +19,6 @@ ingredientes y preparación paso a paso.
 - 🥫 **Salsas**: el fondo de armario de la cocina.
 - 🍰 **Postres**: el final feliz.
 
-## Para empezar
+## Recetas del día
 
-Si no sabes por dónde entrar, prueba alguna de estas:
-
-- [Arroz a banda con sepia](recetas/arroz-a-banda-con-sepia.md)
-- [Sopa de melón](recetas/sopa-de-melon.md)
-
-## Cómo moverte por el recetario
-
-- Usa el **menú lateral** para navegar por categorías.
-- Usa el **buscador** (arriba) para encontrar recetas por ingrediente o nombre.
-- Cada receta sigue el mismo esquema: **Ingredientes** y **Preparación**.
-  Algunas añaden **Opcional**, **Alternativas** o **Preparación en robot de cocina**.
-
-## Notas
-
-- Las cantidades son las que me funcionan a mí; ajústalas a tu gusto.
-- Las recetas se van ampliando poco a poco.
+<div id="daily-recipe"></div>

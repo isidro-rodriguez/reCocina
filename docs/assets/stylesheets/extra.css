@@ -42,6 +42,11 @@
 .md-content {
     max-width: 900px;
     margin-right: auto;
+
+
+    @media screen and (max-width: 76.234375em) {
+        margin-left: auto;
+    }
 }
 
 .page-metadata {
@@ -50,14 +55,89 @@
     gap: 0.5rem 1rem;
 }
 
-@media screen and (max-width: 76.234375em) {
-    .md-content {
-        margin-left: auto;
+#daily-recipe {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: minmax(0, 24rem); /* una por fila */
+    justify-content: center;
+
+    /* Mismo umbral que el menú lateral: aparece → dos columnas */
+    @media screen and (min-width: 76.25em) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
-@media screen and (min-width: 76.25em) {
+.card-recipe {
+    display: block;
+    border-radius: 0.6rem;
+    overflow: hidden;
+    background: var(--md-code-bg-color);
+    box-shadow: var(--md-shadow-z1);
+    transition: box-shadow 0.2s;
 
+    & img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 3 / 2;
+        object-fit: cover;
+    }
+}
+
+.card-recipe__body {
+    padding: 0.8rem 1rem;
+    color: var(--md-default-fg-color--light);
+    transition: color 0.2s;
+
+    & h3 {
+        margin: 0 0 0.3rem;
+        text-align: center;
+    }
+
+    & p {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0.25rem 1rem;
+        margin: 0;
+        font-size: 0.8rem;
+        opacity: 0.8;
+
+        & span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+    }
+}
+
+.card-recipe:hover .card-recipe__body {
+    color: var(--md-accent-fg-color);
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    background-color: currentColor;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+}
+
+.icon--people {
+    mask-image: url("../icons/people-group.svg");
+    -webkit-mask-image: url("../icons/people-group.svg");
+}
+
+.icon--clock {
+    mask-image: url("../icons/clock.svg");
+    -webkit-mask-image: url("../icons/clock.svg");
+}
+
+
+@media screen and (min-width: 76.25em) {
     /* 1 rem de separación entre el menú lateral y el artículo */
     [dir="ltr"] .md-sidebar--primary:not([hidden]) ~ .md-content {
         margin-left: 1rem;

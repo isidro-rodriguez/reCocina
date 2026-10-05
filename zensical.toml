@@ -5,8 +5,11 @@ site_author = "reCocina"
 docs_dir = "docs"
 copyright = "© 2024 reCocina"
 extra_css = [
-    "css/extra.css",
-    "css/print.css"
+    "assets/stylesheets/extra.css",
+    "assets/stylesheets/print.css"
+]
+extra_javascript = [
+    "assets/javascripts/daily-recipe.js",
 ]
 
 nav = [
@@ -79,8 +82,8 @@ nav = [
 variant = "classic"
 language = "es"
 custom_dir = "theme"
-favicon = "img/favicon/favicon.ico"
-logo = "img/logo.svg"
+favicon = "assets/images/favicon.ico"
+logo = "assets/images/logo.svg"
 features = [
     "navigation.sections",
     "navigation.top",
@@ -135,17 +138,17 @@ fish = "fish"
 vegan = "vegan"
 
 [project.markdown_extensions]
-admonition = { }
 abbr = { }
+admonition = { }
 attr_list = { }
 def_list = { }
 footnotes = { }
 md_in_html = { }
 pymdownx.arithmatex.generic = false
 pymdownx.betterem = { }
-pymdownx.superfences = { }
-pymdownx.highlight = { }
 pymdownx.details = { }
-pymdownx.tasklist = { }
 pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
 pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
+pymdownx.highlight = { }
+pymdownx.superfences = { }
+pymdownx.tasklist = { }
