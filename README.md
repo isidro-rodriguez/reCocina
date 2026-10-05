@@ -95,19 +95,19 @@ uv run pytest   # 0 tests fallidos = todo OK
 
 `tests/test_frontmatter.py` detecta:
 
-- frontmatter ausente, YAML inválido o con claves duplicadas.
+- Frontmatter ausente, YAML inválido o con claves duplicadas.
 - `title` vacío, `people`/`time` no enteros positivos o `date` futura o inválida.
-- claves presentes pero vacías (`source:` sin valor) o desconocidas (erratas).
+- Claves presentes pero vacías (`source:` sin valor) o desconocidas (erratas).
 - `source` sin sección `##` homónima en `docs/fuentes.md`.
 - `tags` sin entrada `###` homónima en `docs/etiquetas.md`, o títulos de receta repetidos.
 
 `tests/test_recipes.py` detecta:
 
-- recetas en disco que **no** están en el `nav` (aviso: no se verían en el sitio).
-- entradas del `nav` que apuntan a ficheros inexistentes (error: rompe el build).
-- recetas sin su foto `docs/fotos` (error: la plantilla la genera
+- Recetas en disco que **no** están en el `nav` (aviso: no se verían en el sitio).
+- Entradas del `nav` que apuntan a ficheros inexistentes (error: rompe el build).
+- Recetas sin su foto `docs/fotos` (error: la plantilla la genera
   a partir de la dirección de la página).
-- fotos en `docs/fotos` que:
+- Fotos en `docs/fotos` que:
     - No corresponden a ninguna receta (aviso: huérfanas).
     - **Vacías o corruptas** (imágenes muertas).
     - Que **no son WebP** o no miden **900x600**.
@@ -121,7 +121,7 @@ uv run pytest   # 0 tests fallidos = todo OK
 
 `tests/test_spelling.py` detecta:
 
-- palabras no reconocidas por el diccionario español `es_ES` (ortografía), fuera de la allowlist.
+- Palabras no reconocidas por el diccionario español `es_ES` (ortografía), fuera de la allowlist.
 
 ## Favicon e iconos del sitio
 
@@ -209,18 +209,18 @@ uv run pre-commit run --all-files
 
 ## Comandos
 
-| Comando                                       | Qué hace                                                          |
-|-----------------------------------------------|-------------------------------------------------------------------|
-| `uv sync`                                     | Instala/actualiza dependencias desde `pyproject.toml` + `uv.lock` |
-| `uv run zensical serve`                       | Previsualiza en <http://localhost:8000> con recarga en vivo       |
-| `uv run python scripts/build_recipe_index.py` | Genera `docs/assets/recetas.json` para la receta del día          |
-| `uv run zensical build --strict`              | Genera el sitio en `site/`; aborta ante avisos de build           |
-| `uv run python scripts/build_precache.py`     | Genera `site/precache.json` para el service worker                |
-| `uv run pytest`                               | Valida frontmatter, recetas, `nav`, fotos y ortografía            |
-| `uv run pre-commit install`                   | Activa el hook de pre-commit (una sola vez)                       |
-| `uv run pre-commit run --all-files`           | Ejecuta lint + formato + tests sobre todo el repo                 |
-| `uv run ruff format .`                        | Formatea el código Python                                         |
-| `uv run ruff check .`                         | Analiza (lint) el código Python                                   |
+| Comando                                       | Qué hace                                                    |
+|-----------------------------------------------|-------------------------------------------------------------|
+| `uv sync`                                     | Instala o actualiza dependencias de proyecto                |
+| `uv run zensical serve`                       | Previsualiza en <http://localhost:8000> con recarga en vivo |
+| `uv run python scripts/build_recipe_index.py` | Genera `docs/assets/recetas.json` para la receta del día    |
+| `uv run zensical build --strict`              | Genera el sitio en `site/`; aborta ante avisos de build     |
+| `uv run python scripts/build_precache.py`     | Genera `site/precache.json` para el service worker          |
+| `uv run pytest`                               | Valida frontmatter, recetas, `nav`, fotos y ortografía      |
+| `uv run pre-commit install`                   | Activa el hook de pre-commit (una sola vez)                 |
+| `uv run pre-commit run --all-files`           | Ejecuta lint + formato + tests sobre todo el repo           |
+| `uv run ruff format .`                        | Formatea el código Python                                   |
+| `uv run ruff check .`                         | Analiza (lint) el código Python                             |
 
 ## Estructura
 
@@ -228,10 +228,10 @@ uv run pre-commit run --all-files
 .
 ├── docs/
 │   ├── assets/
-│   │   ├── icons/            # Iconos de metadatos (personas, tiempo)
-│   │   ├── images/           # Favicons, logo e iconos PWA
-│   │   ├── javascripts/      # Receta del día (daily-recipe.js)
-│   │   └── stylesheets/      # Paleta (--rc-*) y maquetación + impresión
+│   │   ├── icons/            # Iconos SVG
+│   │   ├── images/           # Imágenes de interfaz web
+│   │   ├── javascripts/      # Scripts
+│   │   └── stylesheets/      # Hojas de estilo
 │   ├── fotos/                # Fotos de recetas (WebP 900x600, mismo nombre que el .md)
 │   ├── recetas/              # Recetas (.md con frontmatter)
 │   ├── etiquetas.md          # Taxonomía de etiquetas (aparatos y dieta)
