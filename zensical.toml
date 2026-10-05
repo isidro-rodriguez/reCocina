@@ -1,7 +1,7 @@
 [project]
 site_name = "reCocina"
 site_description = "Recetario de cocina casera"
-site_author = "reCocina"
+site_author = "Isidro Rodríguez"
 docs_dir = "docs"
 copyright = "© 2024 reCocina"
 extra_css = [
@@ -85,6 +85,8 @@ language = "es"
 custom_dir = "theme"
 favicon = "assets/images/favicon.ico"
 logo = "assets/images/logo.svg"
+font.text = "Literata"
+font.code = "JetBrains Mono"
 features = [
     "navigation.sections",
     "navigation.top",
@@ -92,7 +94,6 @@ features = [
     "search.suggest",
     "content.code.copy",
 ]
-
 
 [[project.theme.palette]]
 scheme = "light"

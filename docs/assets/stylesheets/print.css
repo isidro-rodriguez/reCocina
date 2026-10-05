@@ -5,6 +5,9 @@
 /* Fuente solo al imprimir; si no carga, entra la pila de respaldo */
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;1,8..60,400&display=swap") print;
 
+/* ========================================
+   1. Hoja
+   ======================================== */
 @page {
     size: A4;
     margin: 1.2cm 1.5cm;
@@ -12,11 +15,21 @@
 
 @media print {
 
-    /* --- Tema claro forzado, sea cual sea el esquema activo --- */
+    /* ========================================
+       2. Medidas de impresión
+       ======================================== */
+    :root {
+        --fuente-serif: "Source Serif 4", "Palatino Linotype", Palatino, Georgia, serif;
+        --separacion-columnas: 1.2cm;
+        --bajada-foto: 5em; /* alinea la foto con la lista de ingredientes (salta el h2) */
+    }
+
+    /* ========================================
+       3. Tema claro forzado (capa 2)
+       Sea cual sea el esquema activo, el papel es claro
+       ======================================== */
     [data-md-color-scheme] {
         color-scheme: light;
-
-        --fuente-serif: "Source Serif 4", "Palatino Linotype", Palatino, Georgia, serif;
 
         --md-default-bg-color: var(--blanco);
         --md-default-fg-color: var(--tinta-900);
@@ -32,6 +45,7 @@
         --md-typeset-table-color: color-mix(in srgb, var(--gris-500) 35%, transparent);
 
         /* Neutraliza las reglas específicas de slate de extra.css */
+
         & .md-typeset a {
             color: var(--verde-700);
         }
@@ -41,7 +55,7 @@
         }
 
         & .md-typeset table:not([class]) {
-            border-color: color-mix(in srgb, var(--gris-500) 35%, transparent);
+            border-color: var(--md-typeset-table-color);
         }
     }
 
@@ -50,7 +64,10 @@
         font-family: var(--fuente-serif), serif;
     }
 
-    /* --- Aprovechar la hoja: sin límites de ancho ni márgenes --- */
+    /* ========================================
+       4. Maquetación: aprovechar la hoja
+       Sin límites de ancho ni márgenes
+       ======================================== */
     .md-grid,
     .md-main__inner,
     .md-content,
@@ -64,7 +81,9 @@
         display: none;
     }
 
-    /* --- Tipografía compacta --- */
+    /* ========================================
+       5. Artículo
+       ======================================== */
     .md-typeset {
         font-family: var(--fuente-serif), serif;
         font-size: 10.5pt;
@@ -74,10 +93,11 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto 1fr;
-        column-gap: 1.2cm;
+        column-gap: var(--separacion-columnas);
 
         /* Por defecto todo ocupa el ancho completo... */
-        &> :not(h1, p:has(> img), h2:first-of-type, h2:first-of-type + ul) {
+
+        & > :not(h1, p:has(> img), h2:first-of-type, h2:first-of-type + ul) {
             grid-column: 1 / -1;
         }
 
@@ -89,18 +109,19 @@
         }
 
         /* ...salvo la foto (derecha) y los ingredientes (izquierda) */
-        &>p:has(> img) {
+
+        & > p:has(> img) {
             grid-column: 2;
             grid-row: 2 / span 2;
             margin: 0;
         }
 
-        &>h2:first-of-type {
+        & > h2:first-of-type {
             grid-column: 1;
             grid-row: 2;
         }
 
-        &>h2:first-of-type+ul {
+        & > h2:first-of-type + ul {
             grid-column: 1;
             grid-row: 3;
             align-self: start;
@@ -119,13 +140,19 @@
             widows: 3;
         }
 
+        & p,
+        & li {
+            hyphens: auto; /* mismo criterio que en pantalla */
+        }
+
         /* --- Imagen: ocupa su columna (≈50 % del ancho útil) --- */
+
         & img {
             display: block;
             width: 100%;
             max-width: 100%;
             height: auto;
-            margin-top: 5em;
+            margin-top: var(--bajada-foto);
             break-inside: avoid;
         }
     }

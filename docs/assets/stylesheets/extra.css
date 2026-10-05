@@ -1,5 +1,5 @@
 /* ========================================
-   Paleta (capa 1: colores en bruto)
+   1. Paleta (capa 1: colores en bruto)
    Escala 50 (claro) → 950 (oscuro)
    ======================================== */
 :root {
@@ -32,29 +32,86 @@
 }
 
 /* ========================================
-   Maquetación
+   2. Medidas del sitio
    ======================================== */
+:root {
+    --ancho-menu: 14rem; /* menú lateral de Material */
+    --ancho-articulo: 780px; /* ≈ 75 caracteres con la fuente de lectura */
+    --separacion-menu: 4rem; /* aire entre menú y artículo */
+    --umbral-menu: 76.25em; /* a partir de aquí aparece el menú lateral */
+}
 
+/* ========================================
+   3. Lectura (tipografía del artículo)
+   ======================================== */
+.md-typeset {
+    font-size: 0.9rem; /* 18 px (1rem = 20 px en Material) */
+    line-height: 1.7;
+    color: var(--tinta-900);
+
+    & p,
+    & li {
+        text-wrap: pretty; /* evita líneas con una palabra huérfana */
+        hyphens: auto; /* requiere lang="es" (language: es) */
+    }
+
+    & li {
+        margin-bottom: 0.3em;
+    }
+
+    & .twemoji {
+        display: inline;
+    }
+}
+
+/* ========================================
+   4. Maquetación
+   ======================================== */
 .md-grid {
-    max-width: calc(12.1rem + 1rem + 900px);
+    max-width: calc(var(--ancho-menu) + var(--separacion-menu) + var(--ancho-articulo));
 }
 
 .md-content {
-    max-width: 900px;
+    max-width: var(--ancho-articulo);
     margin-right: auto;
-
 
     @media screen and (max-width: 76.234375em) {
         margin-left: auto;
     }
 }
 
+@media screen and (min-width: 76.25em) {
+    /* Separación entre el menú lateral y el artículo */
+    [dir="ltr"] .md-sidebar--primary:not([hidden]) ~ .md-content {
+        margin-left: var(--separacion-menu);
+        margin-right: 0;
+    }
+
+    /* El artículo ocupa todo el ancho (sin margen interno) */
+    [dir="ltr"] .md-sidebar--primary:not([hidden]) ~ .md-content > .md-content__inner {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* Evita deformar imágenes si tarjeta y cabecera tienen distinta proporción */
+img {
+    object-fit: cover;
+}
+
+/* ========================================
+   5. Componentes
+   ======================================== */
+
+/* --- Metadatos de página --- */
 .page-metadata {
     display: flex;
     flex-wrap: wrap; /* en móvil baja de línea en vez de desbordar */
     gap: 0.5rem 1rem;
+    color: var(--carbon-600);
 }
 
+/* --- Receta del día --- */
 #daily-recipe {
     display: grid;
     gap: 1rem;
@@ -67,6 +124,7 @@
     }
 }
 
+/* --- Tarjeta de receta --- */
 .card-recipe {
     display: block;
     border-radius: 0.6rem;
@@ -80,6 +138,10 @@
         width: 100%;
         aspect-ratio: 3 / 2;
         object-fit: cover;
+    }
+
+    &:hover .card-recipe__body {
+        color: var(--md-accent-fg-color);
     }
 }
 
@@ -110,47 +172,24 @@
     }
 }
 
-.card-recipe:hover .card-recipe__body {
-    color: var(--md-accent-fg-color);
-}
-
+/* --- Iconos (máscara: heredan el color del texto) --- */
 .icon {
     width: 1em;
     height: 1em;
     background-color: currentColor;
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    -webkit-mask-size: contain;
+    mask: var(--icon) center / contain no-repeat;
+    -webkit-mask: var(--icon) center / contain no-repeat;
 }
 
 .icon--people {
-    mask-image: url("../icons/people-group.svg");
-    -webkit-mask-image: url("../icons/people-group.svg");
+    --icon: url("../icons/people-group.svg");
 }
 
 .icon--clock {
-    mask-image: url("../icons/clock.svg");
-    -webkit-mask-image: url("../icons/clock.svg");
+    --icon: url("../icons/clock.svg");
 }
 
-
-@media screen and (min-width: 76.25em) {
-    /* 1 rem de separación entre el menú lateral y el artículo */
-    [dir="ltr"] .md-sidebar--primary:not([hidden]) ~ .md-content {
-        margin-left: 1rem;
-        margin-right: 0;
-    }
-
-    /* El artículo ocupa los 900 px completos (sin margen interno) */
-    [dir="ltr"] .md-sidebar--primary:not([hidden]) ~ .md-content > .md-content__inner {
-        margin-left: 0;
-        margin-right: 0;
-    }
-}
-
+/* --- Cabecera --- */
 .md-header__button[hidden] {
     display: none;
 }
@@ -159,8 +198,15 @@
     color: var(--md-accent-fg-color);
 }
 
+/* ========================================
+   6. Transiciones entre páginas
+   ======================================== */
 @view-transition {
     navigation: auto;
+}
+
+::view-transition-group(*) {
+    animation-duration: 0.4s;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -169,20 +215,27 @@
     }
 }
 
-img {
-    object-fit: cover;
-}
+/* ========================================
+   7. Rasgos comunes a ambos temas
+   ======================================== */
+[data-md-color-scheme] {
+    --md-footer-bg-color: var(--verde-700);
+    --md-footer-bg-color--dark: var(--verde-700);
 
-/* evita deformarse si tarjeta y cabecera tienen distinta proporción */
+    & .md-header,
+    & .md-footer,
+    & .md-tabs {
+        background-color: var(--verde-700);
+    }
 
-::view-transition-group(*) {
-    animation-duration: 0.4s;
+    & .md-button {
+        border-radius: 8px;
+    }
 }
 
 /* ========================================
-   Tema claro (capa 2: variables del tema)
+   8. Tema claro (capa 2: variables del tema)
    ======================================== */
-
 [data-md-color-scheme="light"] {
     /* Primary — Verde bosque */
     --md-primary-fg-color: var(--verde-700);
@@ -205,28 +258,15 @@ img {
     --md-default-fg-color--lighter: color-mix(in srgb, var(--tinta-900) 50%, transparent);
     --md-default-fg-color--lightest: color-mix(in srgb, var(--tinta-900) 25%, transparent);
 
-    /* Superficies */
+    /* Superficies y bordes */
     --md-code-bg-color: var(--arena-100);
     --md-code-fg-color: var(--tinta-900);
-
-    /* Bordes */
     --md-typeset-table-color: color-mix(in srgb, var(--gris-500) 35%, transparent);
-
-    /* Footer */
-    --md-footer-bg-color: var(--verde-700);
-    --md-footer-bg-color--dark: var(--verde-700);
-
-    & .md-header,
-    & .md-footer,
-    & .md-tabs {
-        background-color: var(--verde-700);
-    }
 }
 
 /* ========================================
-   Tema oscuro cálido
+   9. Tema oscuro cálido
    ======================================== */
-
 [data-md-color-scheme="slate"] {
     /* Identidad */
     --md-primary-fg-color: var(--verde-700);
@@ -237,7 +277,7 @@ img {
     --md-accent-fg-color: var(--terracota-400);
     --md-accent-fg-color--transparent: color-mix(in srgb, var(--terracota-400) 14%, transparent);
 
-    /* Fondo general */
+    /* Fondos */
     --md-default-bg-color: var(--carbon-950);
     --md-default-bg-color--light: var(--carbon-900);
     --md-default-bg-color--lighter: var(--carbon-800);
@@ -253,15 +293,7 @@ img {
     --md-code-bg-color: var(--carbon-800);
     --md-code-fg-color: var(--marfil-100);
 
-    /* Footer */
-    --md-footer-bg-color: var(--verde-700);
-    --md-footer-bg-color--dark: var(--verde-700);
-
-    & .md-header,
-    & .md-footer,
-    & .md-tabs {
-        background-color: var(--verde-700);
-    }
+    /* Componentes */
 
     & .md-typeset a {
         color: var(--terracota-400);
@@ -277,10 +309,6 @@ img {
 
     & .md-typeset table:not([class]) {
         border-color: var(--carbon-600);
-    }
-
-    & .md-button {
-        border-radius: 8px;
     }
 
     & .md-button--primary {
