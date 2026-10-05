@@ -15,7 +15,7 @@
 <h1 id="{{slug}}">{{ page.title | d(config.site_name, true)}}</h1>
 
 <p>
-    <img alt="{{page.title}}" src="{{ ('img/fotos/' ~ slug ~ '.webp') | url }}">
+    <img alt="{{page.title}}" src="{{ ('fotos/' ~ slug ~ '.webp') | url }}">
 </p>
 
 <p class="page-metadata">
@@ -53,6 +53,4 @@
 
 {% include "partials/tags.html" %}
 {% include "partials/source-file.html" %}
-{% include "partials/feedback.html" %}
-{% include "partials/comments.html" %}
 {% endblock %}

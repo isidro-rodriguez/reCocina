@@ -18,7 +18,7 @@ Requisitos: [uv](https://docs.astral.sh/uv/) y Python 3.12+ (uv lo gestiona solo
 Tres pasos:
 
 1. **Crea el archivo** `docs/recetas/<nombre-en-kebab-case>.md`
-2. **Copia la foto** en `docs/img/fotos/<mismo-nombre>.webp` (WebP de 900x600)
+2. **Copia la foto** en `docs/fotos` (WebP de 900x600)
 3. **Regístrala en el menú**: abre `zensical.toml` y añade la ruta dentro de la categoría
    correspondiente del bloque `nav`:
 
@@ -58,7 +58,7 @@ Describe el segundo paso.
 ```
 
 - La foto no se enlaza en el Markdown: la plantilla la genera a partir del nombre de la
-  página (`docs/img/fotos/<nombre>.webp`, WebP de 900x600).
+  página (`docs/fotos`, WebP de 900x600).
 - Secciones opcionales ya usadas en el recetario: `## Opcional`, `## Alternativas`,
   `## Preparación en robot de cocina`.
 
@@ -70,7 +70,7 @@ Describe el segundo paso.
 ### Checklist rápida
 
 - [ ] Documento `.md` creado en `docs/recetas/`
-- [ ] Imagen `.webp` copiada en `docs/img/fotos/` (WebP de 900x600).
+- [ ] Imagen `.webp` copiada en `docs/fotos` (WebP de 900x600).
 - [ ] Ruta añadida al `nav` en `zensical.toml`
 - [ ] Validación con `uv run pytest`
 - [ ] Ejecutar `uv run zensical serve` y comprobar que aparece en el menú.
@@ -88,9 +88,9 @@ uv run pytest   # 0 tests fallidos = todo OK
 
 - recetas en disco que **no** están en el `nav` (aviso: no se verían en el sitio).
 - entradas del `nav` que apuntan a ficheros inexistentes (error: rompe el build).
-- recetas sin su foto `docs/img/fotos/<nombre>.webp` (error: la plantilla la genera
+- recetas sin su foto `docs/fotos` (error: la plantilla la genera
   a partir de la dirección de la página).
-- fotos en `docs/img/fotos/` que:
+- fotos en `docs/fotos` que:
     - No corresponden a ninguna receta (aviso: huérfanas).
     - **Vacías o corruptas** (imágenes muertas).
     - Que **no son WebP** o no miden **900x600**.
@@ -216,5 +216,6 @@ Vercel despliega automáticamente desde la rama `main`: `vercel.json` ejecuta `u
 - Interfaz en español (`language = "es"` en `zensical.toml`).
 - Plantillas personalizadas en `theme/`: son copias de las de Zensical v0.0.67 (marcadas con su
   versión de origen); al actualizar Zensical, compararlas con las nuevas.
-- Paleta de colores centralizada en `docs/css/extra.css` (variables `--rc-*` en `:root`).
+- Paleta de colores centralizada en `docs/assets/stylesheets` (variables `--rc-*` en
+  `:root`).
 - Nombres de archivo en kebab-case y sin acentos (ej. `sopa-de-melon.md`).

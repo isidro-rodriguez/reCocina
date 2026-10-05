@@ -25,7 +25,7 @@ from pathlib import Path
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 DOCS_DIR = PROJECT_DIR / "docs"
 RECIPES_DIR = DOCS_DIR / "recetas"
-PHOTOS_DIR = DOCS_DIR / "img" / "fotos"
+PHOTOS_DIR = DOCS_DIR / "fotos"
 ZENSICAL_FILE = PROJECT_DIR / "zensical.toml"
 
 NAV_PREFIX = "recetas/"

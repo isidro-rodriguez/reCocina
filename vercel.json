@@ -1,6 +1,6 @@
 {
     "installCommand": "uv sync",
-    "buildCommand": "uv run zensical build --strict && uv run python scripts/precache.py",
+    "buildCommand": "uv run python scripts/build_recipe_index.py && uv run mkdocs build --strict && uv run python scripts/build_precache.py",
     "outputDirectory": "site",
     "framework": null,
     "headers": [
