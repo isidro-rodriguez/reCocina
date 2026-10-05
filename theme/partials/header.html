@@ -33,6 +33,16 @@
                 </div>
             </div>
         </div>
+        {# Modo cocina: oculto por defecto; el JS lo muestra si hay Wake Lock #}
+        <button type="button"
+                class="md-header__button md-icon"
+                data-md-component="cocina"
+                title="Modo cocina (pantalla siempre encendida)"
+                aria-label="Modo cocina (pantalla siempre encendida)"
+                aria-pressed="false"
+                hidden>
+            {% include ".icons/lucide/chef-hat.svg" %}
+        </button>
         {% if config.theme.palette %}
             {% if not config.theme.palette is mapping %}
                 {% include "partials/palette.html" %}
