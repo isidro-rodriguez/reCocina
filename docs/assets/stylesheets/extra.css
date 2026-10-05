@@ -159,6 +159,26 @@
     color: var(--md-accent-fg-color);
 }
 
+@view-transition {
+    navigation: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    @view-transition {
+        navigation: none;
+    }
+}
+
+img {
+    object-fit: cover;
+}
+
+/* evita deformarse si tarjeta y cabecera tienen distinta proporción */
+
+::view-transition-group(*) {
+    animation-duration: 0.4s;
+}
+
 /* ========================================
    Tema claro (capa 2: variables del tema)
    ======================================== */

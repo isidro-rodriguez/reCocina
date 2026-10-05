@@ -14,6 +14,22 @@
           href="{{ 'assets/images/favicon-16x16.png' | url }}">
     <link rel="manifest" href="{{ '/site.webmanifest' | url }}">
 
+    <script blocking="render">
+      const slug = (url) => new URL(url).pathname.split("/").filter(Boolean).pop();
+      const tag = (img, name) => img && (img.style.viewTransitionName = `foto-${name}`);
+
+      window.addEventListener("pageswap", (e) => {
+        if (!e.viewTransition || !e.activation?.entry) return;
+        const name = slug(e.activation.entry.url);
+        tag(document.querySelector(`a[href*="${name}"] img`), name);
+      });
+
+      window.addEventListener("pagereveal", (e) => {
+        if (!e.viewTransition || !location.pathname.includes("/recetas/")) return;
+        tag(document.querySelector("article img"), slug(location.href));
+      });
+    </script>
+
     <script>
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.register("/sw.js");
