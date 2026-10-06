@@ -44,8 +44,8 @@ title:
 people:
 time:
 date:
-# source:           <- descomenta y rellena solo si cita una fuente
-# tags:             <- descomenta y rellena solo si lleva etiquetas
+# source:
+# tags:
 ---
 
 ## Ingredientes
@@ -61,9 +61,11 @@ Describe el segundo paso.
 ```
 
 - `people` y `time`: enteros positivos (`time` en minutos). `date`: `YYYY-MM-DD` no futura.
-- `source` (opcional): debe tener una sección `##` homónima en `docs/fuentes.md`.
-- `tags` (opcional): lista no vacía; cada etiqueta debe tener un `###` homónimo en
-  `docs/etiquetas.md`. Sin claves vacías (`source:` sin valor) ni duplicadas.
+- `source` (opcional): debe tener una sección `##` homónima en `docs/fuentes.md`, descoméntala
+  solo si vas a utilizarla.
+- `tags` (opcional): lista de etiquetas, cada etiqueta tiene que tener una entrada `###`
+  homónima en `docs/etiquetas.md`. Sin claves vacías ni duplicadas, descoméntala solo si vas a
+  utilizarla.
 - La foto no se enlaza en el Markdown: la plantilla la genera a partir del nombre de la
   página (`docs/fotos/<slug>.webp`, WebP de 900x600).
 - Secciones opcionales ya usadas en el recetario: `## Opcional`, `## Alternativas`.
@@ -251,7 +253,7 @@ uv run pre-commit run --all-files
 │   ├── support.py            # Rutas y esquema del frontmatter (pydantic)
 │   ├── test_frontmatter.py   # Valida frontmatter ↔ fuentes ↔ etiquetas
 │   ├── test_recipes.py       # Valida recetas ↔ nav ↔ fotos (pytest)
-│   ├── test_spelling.py      # Corrección ortográfica es_ES (pytest)
+│   └── test_spelling.py      # Corrección ortográfica es_ES (pytest)
 ├── .pre-commit-config.yaml   # Hooks de pre-commit (lint + formato + tests)
 ├── pyproject.toml            # Dependencias y configuración de ruff/pytest/ty
 ├── vercel.json               # Configuración de despliegue

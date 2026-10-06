@@ -57,6 +57,7 @@ worcestershire
 # --- Formas verbales (imperativo + pronombre) y derivadas ---
 cáscalas
 colocándola
+descoméntala
 empánalos
 lamínalos
 licúa
