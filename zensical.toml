@@ -73,6 +73,7 @@ nav = [
         "recetas/sopa-minestrone.md",
     ] },
     { "Verduras, Legumbres y Potajes" = [
+        "recetas/lentejas-compuestas.md",
         "recetas/musabaha.md",
         "recetas/potaje-de-berros.md",
         "recetas/potaje-de-vigilia.md",
