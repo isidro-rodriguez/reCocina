@@ -3,7 +3,7 @@ site_name = "reCocina"
 site_description = "Recetario de cocina casera"
 site_author = "Isidro Rodríguez"
 docs_dir = "docs"
-copyright = "© 2024 reCocina"
+copyright = "© reCocina"
 extra_css = [
     "assets/stylesheets/extra.css",
     "assets/stylesheets/print.css"

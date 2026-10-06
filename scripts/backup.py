@@ -1,7 +1,7 @@
 """Copia de seguridad manual de reCocina.
 
 Limpia cachés `__pycache__` y comprime el código fuente en un zip
-ubicado en `local/backup.zip`.
+ubicado en `local/recocina.zip`.
 
 Uso:
     uv run python scripts/backup.py

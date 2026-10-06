@@ -537,7 +537,7 @@ wheels = [
 
 [[package]]
 name = "recocina"
-version = "2026.10.5"
+version = "0.0.0"
 source = { virtual = "." }
 dependencies = [
     { name = "zensical" },

@@ -35,7 +35,8 @@ nav = [
 
 ### Plantilla de receta
 
-Copia y pega en el nuevo `.md` (`title`, `people`, `time` y `date` son obligatorios):
+Copia y pega en el nuevo `.md` (`title`, `people`, `time` y `date` son obligatorios;
+`source` y `tags` solo si la receta los necesita — nunca dejes claves vacías):
 
 ```markdown
 ---
@@ -43,8 +44,8 @@ title:
 people:
 time:
 date:
-source: 
-tags:
+# source:           <- descomenta y rellena solo si cita una fuente
+# tags:             <- descomenta y rellena solo si lleva etiquetas
 ---
 
 ## Ingredientes
@@ -65,8 +66,7 @@ Describe el segundo paso.
   `docs/etiquetas.md`. Sin claves vacías (`source:` sin valor) ni duplicadas.
 - La foto no se enlaza en el Markdown: la plantilla la genera a partir del nombre de la
   página (`docs/fotos/<slug>.webp`, WebP de 900x600).
-- Secciones opcionales ya usadas en el recetario: `## Opcional`, `## Alternativas`,
-  `## Preparación en robot de cocina`.
+- Secciones opcionales ya usadas en el recetario: `## Opcional`, `## Alternativas`.
 
 ### Categorías del menú
 

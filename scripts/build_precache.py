@@ -1,31 +1,51 @@
-"""Genera precache.json para el service worker."""
+"""Genera `site/precache.json` para el service worker.
 
+Debe ejecutarse desde la raíz del proyecto, tras `zensical build`.
+"""
+
+import hashlib
 import json
 from pathlib import Path
 
-SITE = Path("site")
+ROOT = Path(__file__).resolve().parent.parent
+SITE = ROOT / "site"
 
 VALID_SUFFIXES = {
-    ".html",
     ".css",
+    ".html",
+    ".ico",
     ".js",
-    ".webp",
+    ".json",
     ".png",
     ".svg",
-    ".json",
+    ".webmanifest",
+    ".webp",
 }
 
 
-def build_precache():
-    """Genera precache.json para el service worker."""
+def _cache_version() -> str:
+    """Versión de la caché derivada del contenido (invalida al cambiar algo)."""
+    digest = hashlib.sha256()
+    for path in sorted(SITE.rglob("*")):
+        if path.is_file() and path.suffix in VALID_SUFFIXES:
+            digest.update(path.relative_to(SITE).as_posix().encode())
+            digest.update(path.read_bytes())
+    return f"recocina-{digest.hexdigest()[:12]}"
+
+
+def build_precache() -> str:
+    """Genera `precache.json` y devuelve la versión de la caché."""
+    version = _cache_version()
     urls = [
-        "/" + p.relative_to(SITE).as_posix()
-        for p in sorted(SITE.rglob("*"))
-        if p.is_file() and p.suffix in VALID_SUFFIXES
+        "/" + path.relative_to(SITE).as_posix()
+        for path in sorted(SITE.rglob("*"))
+        if path.is_file() and path.suffix in VALID_SUFFIXES
     ]
 
-    (SITE / "precache.json").write_text(json.dumps(urls), encoding="utf-8")
+    payload = {"version": version, "urls": urls}
+    (SITE / "precache.json").write_text(json.dumps(payload), encoding="utf-8")
+    return version
 
 
 if __name__ == "__main__":
-    build_precache()
+    print(f"precache.json generado (caché: {build_precache()})")

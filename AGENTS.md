@@ -76,11 +76,11 @@ Checklist before handing off:
   `###` in `docs/etiquetas.md`). No empty values (`source:` with nothing), no duplicated keys,
   no unknown keys.
 - Body sections: `## Ingredientes`, `## Preparación`. Optional ones already in use: `## Opcional`,
-  `## Alternativas`, `## Preparación en robot de cocina`.
+  `## Alternativas`.
 - Image is auto-rendered by `theme/main.html` from `fotos/<slug>.webp` — never link it in Markdown.
-- Nav categories: `Entrada` (`index.md`), `Etiquetas` (`etiquetas.md`), `Fuentes` (`fuentes.md`),
-  then (orden del `nav`) Aperitivos · Arroz · Pasta · Pollo · Carne · Pescado y Mariscos ·
-  Postres · Salsas · Sopas y Cremas · Verduras, Legumbres y Potajes.
+- Nav categories (same order as the `nav` in `zensical.toml` — see the list in `README.md`):
+  `Entrada` (`index.md`), `Etiquetas` (`etiquetas.md`), `Fuentes` (`fuentes.md`), then the recipe
+  sections.
 - Tags taxonomy lives in `docs/etiquetas.md`: aparatos (`Batidora`, `Horno`, `Mortero`,
   `Paellera`, `Wok`) + dieta (`Pescetariano`, `Vegano`, `Vegetariano`); icons mapped in
   `zensical.toml` (`[project.extra.tags]`, `[project.theme.icon.tag]`).

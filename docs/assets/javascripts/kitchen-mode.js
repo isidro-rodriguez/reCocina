@@ -10,17 +10,18 @@
   const acquire = async () => {
     try {
       lock = await navigator.wakeLock.request("screen");
+      return true;
     } catch (err) {
       console.warn("Wake Lock no disponible:", err);
+      return false;
     }
   };
 
   const setState = async (on) => {
+    if (on && !(await acquire())) on = false;
     button.setAttribute("aria-pressed", String(on));
     sessionStorage.setItem(STORAGE_KEY, on ? "1" : "0");
-    if (on) {
-      await acquire();
-    } else {
+    if (!on) {
       await lock?.release();
       lock = null;
     }

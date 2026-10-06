@@ -12,7 +12,8 @@ ingredientes y preparación paso a paso.
 - 🥂 **Aperitivos**: para picar y abrir boca.
 - 🥘 **Arroz**: de la paella al arroz a banda.
 - 🍝 **Pasta**: rápida, de diario o de domingo.
-- 🍗 **Carne y Pollo**: guisos, asados y planchas.
+- 🍗 **Pollo**: guisos, asados y planchas.
+- 🥩 **Carne**: guisos, asados y planchas.
 - 🐟 **Pescado y Mariscos**: del mar a la mesa.
 - 🥬 **Verduras, Legumbres y Potajes**: cuchara de las de siempre.
 - 🍲 **Sopas y Cremas**: calientes, o frías en verano.

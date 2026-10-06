@@ -1,4 +1,4 @@
-const CACHE = "recocina-v1"; // súbele la versión para invalidar
+const CACHE = "recocina-v1"; // la genera build_precache.py (ver precache.json)
 
 self.addEventListener("install", (e) => {
     e.waitUntil(caches.open(CACHE).then((c) => c.addAll(["/"])));
@@ -34,7 +34,9 @@ self.addEventListener("fetch", (e) => {
 
 self.addEventListener("message", async (e) => {
     if (e.data?.type !== "PRECACHE") return;
-    const urls = await (await fetch("/precache.json")).json();
-    const cache = await caches.open(CACHE);
+    const { urls, version } = await (await fetch("/precache.json")).json();
+    const cache = await caches.open(version);
     await cache.addAll(urls);
+    const keys = await caches.keys();
+    await Promise.all(keys.filter((k) => k !== version).map((k) => caches.delete(k)));
 });

@@ -1,6 +1,6 @@
 [project]
 name = "recocina"
-version = "2026.10.05"
+version = "0.0.0"
 description = "Recetario de cocina casera generado con Zensical"
 readme = "README.md"
 requires-python = ">=3.12"
