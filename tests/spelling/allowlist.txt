@@ -40,6 +40,7 @@ pescetariano
 pesto
 piquillo
 pochado
+roux
 quinoa
 rabito
 recetario

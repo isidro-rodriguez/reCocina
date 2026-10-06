@@ -11,7 +11,7 @@ tags:
 
 ## Ingredientes
 
-- Una docena de placas de pasta para lasaña
+- 12 placas de lasaña
 - 700 g de calabaza
 - 1 kg de pechuga de pollo
 - 200 ml de caldo de ave
@@ -20,8 +20,10 @@ tags:
 - 500 g de queso ricota
 - 100 g de queso rallado
 - 2 cucharadas de mantequilla
-- Unas hojas de salvia (o mezcla de romero y tomillo)
+- Unas hojas de salvia
 - Sal y pimienta
+
+> La salvia puede sustituirse efectivamente por una mezcla de romero y tomillo.
 
 ## Preparación
 

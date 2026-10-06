@@ -14,9 +14,8 @@ tags:
 - 2 bolas de mozzarella
 - 2 tomates medianos
 - 16 hojas de albahaca
-- 250 ml de salsa pesto
+- 250 ml de [salsa pesto](salsa-pesto.md)
 - Piñones
-- [Salsa pesto](salsa-pesto.md)
 - Aceite de oliva
 - Sal y pimienta
 

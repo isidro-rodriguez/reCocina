@@ -30,7 +30,7 @@ Para la salsa:
 Para acompañar:
 
 - 500 g de papas
-- Una ensalada de lechuga, tomate y pepino
+- Ensalada de lechuga, tomate y pepino
 
 ## Preparación
 
@@ -43,4 +43,4 @@ En una fuente de horno extiende las papas cortadas en rodajas, pulveriza un poco
 salpimenta. Encima coloca las pechugas selladas y vierte la salsa de miel y mostaza. Hornea la
 fuente en un horno precalentado a 190 ºC durante 35 minutos.
 
-Emplata la ración con una pechuga, una ración de papas y algo de ensalada.
+Emplata la ración con una pechuga, una ración de papas y ensalada.

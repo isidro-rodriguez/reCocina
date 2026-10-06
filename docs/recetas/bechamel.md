@@ -12,15 +12,16 @@ tags:
 - 125 g harina
 - 125 g mantequilla
 - 1 l leche entera
-- Nuez moscada, sal y pimienta
+- Nuez moscada
+- 1 cucharadita de sal
+- 1/2 cucharadita de pimienta
 
 ## Preparación
 
-En una sartén derrite la mantequilla y calienta la leche a fuego bajo.
+Deja en un cazo la leche calentándose a fuego bajo.
 
-Añadir la harina tamizada a la mantequilla derretida.
+En una sartén derrite la mantequilla y añade la harina tamizada. Mezclar y remover hasta
+formar una roux homogénea levemente tostada.
 
-Mezclar y remover hasta que la harina quede levemente tostada (para que no quede la bechamel con
-sabor a harina).
-
-Añadir poco a poco leche caliente mientras se remueve.
+Añade nuez moscada, la sal y la pimienta y la leche caliente poco a poco mientras la vaya
+absorbiendo la harina 
