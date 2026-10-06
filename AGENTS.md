@@ -29,26 +29,35 @@ duplicate it here.
 
 - `docs/assets/stylesheets/*.css`, `docs/assets/javascripts/*.js`, `docs/sw.js`: **4-space indent,
   LF, trailing newline**. No auto-formatter configured — match the existing style by hand.
-- `theme/*.html` (Jinja): no formatter configured — keep partials aligned manually
-  (4-space indent, LF).
+- `theme/*.html` (Jinja): no formatter configured — keep partials aligned manually (4-space indent,
+  LF).
 - Line endings are forced to LF by `.gitattributes` (`* text=auto eol=lf`); don't rely on
   `core.autocrlf`.
+- New JS/CSS must be registered in `zensical.toml` (`extra_javascript` / `extra_css`), e.g.
+  `daily-recipe.js` (recetas del día de la portada) and `kitchen-mode.js` (modo cocina).
+  `daily-recipe.js` reads `assets/recetas.json`, produced by `scripts/build_recipe_index.py` —
+  never hand-edit that JSON.
 
 ## Quality policy — Definition of Done
 
 Nothing is "done" until every applicable gate is green:
 
-| Gate            | Command                                                  | When                                        |
-|-----------------|----------------------------------------------------------|---------------------------------------------|
-| Python lint     | `uv run ruff check .`                                    | any `.py` change                            |
-| Python format   | `uv run ruff format --check .`                           | any `.py` change                            |
-| Tests           | `uv run pytest`                                          | any change                                  |
-| Strict build    | `uv run zensical build --strict` (+ `scripts/build_recipe_index.py` before, `scripts/build_precache.py` after — full chain in `vercel.json`) | any `zensical.toml`/`docs/`/`theme/` change |
-| Everything      | `uv run pre-commit run --all-files` (ruff check, ruff format --check, pytest) | before finishing |
+| Gate          | Command                                                                                                                                      | When                                        |
+|---------------|----------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|
+| Python lint   | `uv run ruff check .`                                                                                                                        | any `.py` change                            |
+| Python format | `uv run ruff format --check .`                                                                                                               | any `.py` change                            |
+| Type check    | `uv run ty check`                                                                                                                            | any `.py` change                            |
+| Tests         | `uv run pytest`                                                                                                                              | any change                                  |
+| Strict build  | `uv run zensical build --strict` (+ `scripts/build_recipe_index.py` before, `scripts/build_precache.py` after — full chain in `vercel.json`) | any `zensical.toml`/`docs/`/`theme/` change |
+| Everything    | `uv run pre-commit run --all-files` (ruff check, ruff format --check, pytest)                                                                | before finishing                            |
+
+CI (`.github/workflows/ci.yml`) runs `uv run pre-commit run --all-files` on push/PR (ubuntu +
+windows) — keep `main` green.
 
 Checklist before handing off:
 
 - [ ] `uv run pre-commit run --all-files` passes.
+- [ ] `uv run ty check` passes.
 - [ ] `uv run zensical build --strict` has no errors (with recipe index generated before and
   precache after, per `vercel.json`).
 - [ ] Legit new words (dishes, brands, proper nouns, tech terms used in prose) added to
@@ -70,8 +79,8 @@ Checklist before handing off:
   `## Alternativas`, `## Preparación en robot de cocina`.
 - Image is auto-rendered by `theme/main.html` from `fotos/<slug>.webp` — never link it in Markdown.
 - Nav categories: `Entrada` (`index.md`), `Etiquetas` (`etiquetas.md`), `Fuentes` (`fuentes.md`),
-  then Aperitivos · Arroz · Pasta · Carne · Pollo · Pescado y Mariscos · Verduras,
-  Legumbres y Potajes · Sopas y Cremas · Salsas · Postres.
+  then (orden del `nav`) Aperitivos · Arroz · Pasta · Pollo · Carne · Pescado y Mariscos ·
+  Postres · Salsas · Sopas y Cremas · Verduras, Legumbres y Potajes.
 - Tags taxonomy lives in `docs/etiquetas.md`: aparatos (`Batidora`, `Horno`, `Mortero`,
   `Paellera`, `Wok`) + dieta (`Pescetariano`, `Vegano`, `Vegetariano`); icons mapped in
   `zensical.toml` (`[project.extra.tags]`, `[project.theme.icon.tag]`).
@@ -79,7 +88,7 @@ Checklist before handing off:
   existing recipes just to normalize this.
 - Generated artifacts are gitignored: `docs/assets/recetas.json` (from
   `scripts/build_recipe_index.py`), `site/` incl. `precache.json` (from
-  `scripts/build_precache.py`).
+  `scripts/build_precache.py`), `local/` (backup zip from `scripts/backup.py`).
 
 ## Tests contract
 
@@ -89,8 +98,6 @@ Checklist before handing off:
   `docs/fuentes.md`, every tag → `###` in `docs/etiquetas.md`); no duplicated titles.
 - `tests/test_recipes.py` — recipes ⇄ nav ⇄ photos in sync; no broken/dead/orphan images; photos
   must be 900x600 WebP.
-- `tests/test_theme.py` — favicon set complete (`docs/assets/images/`); `theme.favicon`,
-  `theme/page.html` links and `site.webmanifest` valid.
 - `tests/test_spelling.py` — Spanish spelling (spylls + vendored `es_ES`); unknown words must be in
   `tests/spelling/allowlist.txt`. Skips fenced/inline code, link targets and HTML tags.
 
@@ -98,8 +105,8 @@ Checklist before handing off:
 
 - `uv.lock` (regenerate with uv, never hand-edit). `tests/spelling/es_ES.*` + `LICENSE/` (vendored
   dictionary).
-- Respect `.gitignore` (`.venv/`, `site/`, `docs/assets/recetas.json`, `nul`, …). Don't commit
-  build output.
+- Respect `.gitignore` (`.venv/`, `site/`, `docs/assets/recetas.json`, `local/`, `nul`, …). Don't
+  commit build output.
 
 ## Commits
 

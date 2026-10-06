@@ -3,6 +3,7 @@
 .kilo/
 .venv/
 __pycache__/
+local/
 site/
 docs/assets/recetas.json
 .env

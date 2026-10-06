@@ -72,8 +72,8 @@ Describe el segundo paso.
 
 Además de `Entrada`, `Etiquetas` y `Fuentes`, las recetas se reparten en:
 
-`Aperitivos` · `Arroz` · `Pasta` · `Carne` · `Pollo` · `Pescado y Mariscos` ·
-`Verduras, Legumbres y Potajes` · `Sopas y Cremas` · `Salsas` · `Postres`
+`Aperitivos` · `Arroz` · `Pasta` · `Pollo` · `Carne` · `Pescado y Mariscos` ·
+`Postres` · `Salsas` · `Sopas y Cremas` · `Verduras, Legumbres y Potajes`
 
 ### Checklist rápida
 
@@ -86,8 +86,8 @@ Además de `Entrada`, `Etiquetas` y `Fuentes`, las recetas se reparten en:
 
 ## Validación
 
-Un conjunto de tests comprueba que **recetas ↔ menú ↔ fotos** y los **recursos del sitio** están
-sincronizados:
+Un conjunto de tests comprueba que **recetas ↔ menú ↔ fotos** están sincronizados y que la
+ortografía es correcta:
 
 ```bash
 uv run pytest   # 0 tests fallidos = todo OK
@@ -111,13 +111,6 @@ uv run pytest   # 0 tests fallidos = todo OK
     - No corresponden a ninguna receta (aviso: huérfanas).
     - **Vacías o corruptas** (imágenes muertas).
     - Que **no son WebP** o no miden **900x600**.
-
-`tests/test_theme.py` detecta:
-
-- Favicons del set **ausentes** en `docs/assets/images/`.
-- `theme.favicon` sin declarar o apuntando a un fichero inexistente.
-- `theme/page.html` sin enlazar algún icono o el manifiesto.
-- `site.webmanifest` inválido (JSON roto, rutas no portátiles o iconos inexistentes).
 
 `tests/test_spelling.py` detecta:
 
@@ -217,6 +210,8 @@ uv run pre-commit run --all-files
 | `uv run zensical build --strict`              | Genera el sitio en `site/`; aborta ante avisos de build     |
 | `uv run python scripts/build_precache.py`     | Genera `site/precache.json` para el service worker          |
 | `uv run pytest`                               | Valida frontmatter, recetas, `nav`, fotos y ortografía      |
+| `uv run ty check`                             | Comprueba los tipos del código Python                       |
+| `uv run python scripts/backup.py`             | Guarda una copia del código en `local/recocina.zip`         |
 | `uv run pre-commit install`                   | Activa el hook de pre-commit (una sola vez)                 |
 | `uv run pre-commit run --all-files`           | Ejecuta lint + formato + tests sobre todo el repo           |
 | `uv run ruff format .`                        | Formatea el código Python                                   |
@@ -229,7 +224,7 @@ uv run pre-commit run --all-files
 ├── docs/
 │   ├── assets/
 │   │   ├── icons/            # Iconos SVG
-│   │   ├── images/           # Imágenes de interfaz web
+│   │   ├── images/           # Interfaz: favicons, logo, manifiesto, ...
 │   │   ├── javascripts/      # Scripts
 │   │   └── stylesheets/      # Hojas de estilo
 │   ├── fotos/                # Fotos de recetas (WebP 900x600, mismo nombre que el .md)
@@ -240,9 +235,11 @@ uv run pre-commit run --all-files
 │   ├── site.webmanifest      # Manifiesto PWA
 │   └── sw.js                 # Service worker (modo sin conexión)
 ├── scripts/
+│   ├── backup.py             # Copia de seguridad manual del proyecto
 │   ├── build_precache.py     # Genera site/precache.json tras el build
 │   └── build_recipe_index.py # Genera docs/assets/recetas.json antes del build
 ├── theme/                    # Overrides de plantillas (custom_dir de Zensical)
+│   ├── .icons/               # Iconos SVG usados por Zensical
 │   ├── partials/
 │   │   ├── header.html       # Cabecera sin el bloque "source"
 │   │   ├── tags.html         # Etiquetas con iconos y enlaces a etiquetas.md
@@ -255,9 +252,8 @@ uv run pre-commit run --all-files
 │   ├── test_frontmatter.py   # Valida frontmatter ↔ fuentes ↔ etiquetas
 │   ├── test_recipes.py       # Valida recetas ↔ nav ↔ fotos (pytest)
 │   ├── test_spelling.py      # Corrección ortográfica es_ES (pytest)
-│   └── test_theme.py         # Valida favicons y recursos del sitio (pytest)
 ├── .pre-commit-config.yaml   # Hooks de pre-commit (lint + formato + tests)
-├── pyproject.toml            # Dependencias y configuración de ruff/pytest
+├── pyproject.toml            # Dependencias y configuración de ruff/pytest/ty
 ├── vercel.json               # Configuración de despliegue
 └── zensical.toml             # Configuración del sitio y del menú (nav)
 ```
