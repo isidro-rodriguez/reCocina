@@ -11,12 +11,14 @@ tags:
 ## Ingredientes
 
 - 50 g de albahaca fresca
-- 50 g de queso parmesano rallado
-- 30 g de piñones tostados
+- 50 g de queso parmesano
+- 30 g de piñones
 - 150 ml de aceite de oliva
 - 1 diente de ajo
 
 ## Preparación
 
-En un vaso de batidora añade todos los ingredientes y tritura con la batidora hasta obtener una
-salsa fina.
+Ralla el queso y tuesta los piñones en una sartén hasta que estén dorados.
+
+En un vaso de batidora añade la albahaca, el queso, los piñones, el aceite y el diente de ajo y
+tritura con batidora hasta obtener una salsa fina.

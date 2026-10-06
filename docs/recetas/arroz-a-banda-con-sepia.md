@@ -21,7 +21,8 @@ tags:
 - 1 limón
 - Azafrán
 - Aceite de oliva
-- Sal y pimienta
+- Sal
+- Pimienta
 
 ## Preparación
 

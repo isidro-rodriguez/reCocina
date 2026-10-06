@@ -24,7 +24,8 @@ tags:
 - Aceite de oliva
 - 2 hojas de laurel
 - Unas hojas de albahaca
-- Sal y pimienta
+- Sal
+- Pimienta
 
 ## Preparación
 

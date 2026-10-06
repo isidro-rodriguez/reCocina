@@ -14,9 +14,14 @@ tags:
 - 3 dientes de ajo
 - 2 limones
 - 200 ml de vino tinto
-- Almendras tostadas y pasas
-- Orégano, comino y laurel
-- Aceite, sal y pimienta
+- Almendras tostadas
+- Pasas
+- Orégano
+- comino
+- Laurel
+- Aceite
+- Sal
+- Pimienta
 
 ## Preparación
 
@@ -24,7 +29,7 @@ Guisar la carne de cabra con un limón y media cebolla. Al romper a hervir, saca
 
 Aderezar la carne con zumo de limón y salpimentarla.
 
-Saltear la carne en un caldero junto con la verdura para sofreírla.
+Saltear con aceite la carne en un caldero junto con la verdura para sofreírla.
 
 Majar las especias junto a las almendras tostadas y añadirlas al caldero.
 

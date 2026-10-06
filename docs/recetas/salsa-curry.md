@@ -18,17 +18,18 @@ tags:
 - 1 cucharada de curry
 - 1 cucharada de cúrcuma
 - 1 cucharadita de maicena
-- 1 cucharadita de jengibre en polvo
+- 1 trozo de jengibre
 - Aceite de girasol
-- Sal y pimienta
+- Sal
+- Pimienta
 
 ## Preparación
 
-Pela y pica en dados la cebolla y el ajo.
+Pela y pica en dados la cebolla y el ajo. Ralla el jengibre.
 
-En un wok rehoga la verdura picada hasta que transparente la cebolla. Añade el curry, la cúrcuma y
-el jengibre y sigue rehogando dos minutos más. Añade la leche de coco y el caldo y deja cocinar a
-fuego medio durante 15 minutos.
+En un wok rehoga en aceite la verdura picada hasta durante 5 minutos. Añade el curry, la
+cúrcuma y el jengibre y sigue rehogando dos minutos más. Añade la leche de coco y el caldo y deja
+cocinar a fuego medio durante 15 minutos.
 
 Pela el plátano y tritúralo con un tenedor, añádelo a la salsa junto con la maicena. Tritura la
 salsa con una batidora y déjala cocinando a fuego medio unos 10 minutos más

@@ -26,8 +26,8 @@ Para decorar:
 
 ## Preparación
 
-Pocha la cebolla picada hasta que transparente, luego incorpora la calabaza picada en dados y sigue
-rehogándolas durante 10 minutos con la cazuela tapada.
+Pocha en aceite la cebolla picada durante 5 minutos, luego incorpora la calabaza picada en dados
+y sigue rehogándolas durante 10 minutos con la cazuela tapada.
 
 Añade la quinoa, el caldo de verdura y el comino. Cuece durante 15 minutos y tritura la verdura con
 una batidora. Termina por añadir la canela y la albahaca y deja reposar la crema

@@ -16,7 +16,8 @@ tags:
 - 80 g de queso rallado
 - 3 dientes de ajo
 - Aceite de oliva
-- Sal y pimienta
+- Sal
+- Pimienta
 
 ## Preparación
 

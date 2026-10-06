@@ -18,7 +18,8 @@ tags:
 - 1 cucharadita de maicena
 - Aceite de oliva
 - 1 cucharada de tomillo
-- Sal y pimienta
+- Sal
+- Pimienta
 
 ## Preparación
 

@@ -21,7 +21,8 @@ tags:
 - 100 g de queso rallado
 - 2 cucharadas de mantequilla
 - Unas hojas de salvia
-- Sal y pimienta
+- Sal
+- Pimienta
 
 > La salvia puede sustituirse efectivamente por una mezcla de romero y tomillo.
 

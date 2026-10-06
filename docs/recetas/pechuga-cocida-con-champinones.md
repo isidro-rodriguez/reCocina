@@ -17,7 +17,8 @@ source: Lecturas
 - 200 g de arroz
 - Aceite de oliva
 - Perejil
-- Sal y pimienta
+- Sal
+- Pimienta
 
 ## Preparación
 

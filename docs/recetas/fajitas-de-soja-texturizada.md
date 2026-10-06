@@ -17,7 +17,11 @@ tags:
 - 100 g maíz
 - 100 g guacamole
 - 1 limón
-- Aceite, sal, pimienta, comino y cilantro
+- Aceite
+- Sal
+- Pimienta
+- Comino
+- Cilantro
 
 ## Preparación
 
@@ -26,6 +30,6 @@ Pochar la cebolla y pimientos picados.
 Añadir la soja texturizada junto a las alubias y pochar unos minutos más hasta que la soja esté
 blanda.
 
-Mezclar en frío el maíz, el guacamole, las especias y el zumo del limón.
+Mezclar en frío el maíz, el guacamole, el zumo del limón, el comino, el cilantro y salpimenta.
 
 Rellenar las fajitas.

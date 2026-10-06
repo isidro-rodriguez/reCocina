@@ -20,7 +20,8 @@ source: Lecturas
 - 150 ml de caldo de pescado
 - 1 cucharadita de perejil picado
 - Aceite de oliva
-- Sal y pimienta
+- Sal
+- Pimienta
 
 ## Preparación
 

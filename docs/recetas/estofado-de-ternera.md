@@ -21,7 +21,8 @@ source: Lecturas
 - 2 ramitas de perejil
 - Tomillo
 - Aceite de oliva
-- Sal y pimienta
+- Sal
+- Pimienta
 
 ## Preparación
 

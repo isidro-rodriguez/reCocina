@@ -17,7 +17,10 @@ date: 2023-08-17
 - 2 cebollas
 - Caldo de verduras
 - Aceite
-- Curry, sal, pimienta, avecrem
+- Pastilla de caldo de pollo
+- Curry
+- Sal
+- Pimienta
 
 ## Preparación
 
@@ -26,8 +29,8 @@ hechas y reservar.
 
 En la misma sartén pochar la cebolla, la zanahoria, el ajo, los pimientos y el calabacín.
 
-A continuación agregamos el pollo y las especias al gusto (sobres de fajitas, curry, avecrem, etc.),
-dejar unos minutos y reservar.
+A continuación agregamos el pollo y las especias al gusto (sobres de fajitas, curry, la pastilla
+de caldo de pollo, etc.), dejar unos minutos y reservar.
 
 Preparar taza y media de cuscús y dos tazas de caldo de verduras.
 Calentar el caldo y echarlo al cuscús.

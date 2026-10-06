@@ -17,7 +17,8 @@ tags:
 - 250 ml de [salsa pesto](salsa-pesto.md)
 - Piñones
 - Aceite de oliva
-- Sal y pimienta
+- Sal
+- Pimienta
 
 > Alternativa:
 > Sustituye la mozzarella, el tomate y la albahaca por pimiento de piquillo, jamón serrano y queso

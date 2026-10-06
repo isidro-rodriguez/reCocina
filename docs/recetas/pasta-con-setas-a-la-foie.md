@@ -17,7 +17,8 @@ source: Lecturas
 - 1 rama de perejil
 - 1 rama de romero
 - Aceite de oliva
-- Pimienta y sal
+- Pimienta
+- Sal
 
 ## Preparación
 

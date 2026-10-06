@@ -15,7 +15,10 @@ source: Lo mejor de la cocina canaria
 - 1 pimiento verde
 - 3 piñas de millo
 - 2 dientes de ajo
-- Comino, azafrán, sal y pimienta
+- Comino
+- Azafrán
+- Sal
+- Pimienta
 
 ## Preparación
 

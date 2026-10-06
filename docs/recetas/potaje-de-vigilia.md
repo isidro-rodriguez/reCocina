@@ -18,7 +18,10 @@ tags:
 - 400 g espinacas
 - 400 g bacalao
 - 600 g tomate triturado
-- aceite, bicarbonato, sal y pimienta
+- Aceite
+- Bicarbonato
+- Sal
+- Pimienta
 
 ## Preparación
 
@@ -26,8 +29,8 @@ Poner los garbanzos en remojo con una cucharadita de bicarbonato.
 
 Guisar los garbanzos con la suficiente agua como para cubrirlos (sin sal).
 
-Pochar las cebollas y pimientos hasta ablandar. Añadir el tomate triturado y dejar reducir hasta que
-quede una pasta seca.
+Pochar en aceite las cebollas y los pimientos hasta ablandar. Añadir el tomate triturado y dejar
+reducir hasta que quede una pasta seca.
 
 Moler el sofrito con caldo de pescado (que cubra el sofrito en el vaso de moler).
 

@@ -10,7 +10,7 @@ tags:
 
 ## Ingredientes
 
-- 400 g de lomo de atún o bonito
+- 400 g de atún
 - 1 cebolla
 - 1 tomate
 - 1 pimiento verde
@@ -24,7 +24,10 @@ tags:
 - 2 hojas de laurel
 - 1 ramita de perejil
 - Aceite de oliva
-- Sal y pimienta
+- Sal
+- Pimienta
+
+> Se puede sustituir el atún por bonito.
 
 ## Preparación
 

@@ -20,7 +20,8 @@ tags:
 - 2 dientes de ajo
 - Aceite de oliva
 - Perejil
-- Sal y pimienta
+- Sal
+- Pimienta
 
 ## Preparación
 

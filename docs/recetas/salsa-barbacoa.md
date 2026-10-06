@@ -18,7 +18,8 @@ date: 2023-08-20
 - 4 cucharaditas de vinagre
 - 2 chorritos de tabasco
 - 1 cucharadita de aceite de oliva
-- pimienta negra y sal
+- Sal
+- Pimienta negra
 
 ## Preparación
 

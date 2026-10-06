@@ -20,7 +20,8 @@ tags:
 - 1 diente de ajo
 - Albahaca
 - Aceite de oliva
-- Sal y pimienta
+- Sal
+- Pimienta
 
 ## Preparación
 

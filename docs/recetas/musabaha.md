@@ -18,7 +18,8 @@ tags:
 - Aceite de oliva virgen extra
 - 3 cucharadas de tahini
 - 1 cucharada de yogur griego
-- Sal y pimienta
+- Sal
+- Pimienta
 
 ## Preparación
 

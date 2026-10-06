@@ -16,7 +16,8 @@ tags:
 - Jamón serrano
 - 1 ramito de menta fresca
 - Aceite de oliva virgen extra
-- Sal y pimienta
+- Sal
+- Pimienta
 
 ## Preparación
 
@@ -25,7 +26,7 @@ sea cómodo para usar con batidora.
 
 Añade la nata líquida, el yogur, el zumo del limón y salpimenta.
 
-Licúa la mezcla con una batidora y déjala enfriar en la nevera un par de horas con la ramita de
-menta fresca para aportar frescura.
+Licuar la mezcla con una batidora, salpimentar al gusto y dejar enfriar en la nevera un par de
+horas con la ramita de menta fresca para aportar frescura.
 
 Emplatar con un chorrito de aceite de oliva virgen extra y unas virutas de jamón serrano.

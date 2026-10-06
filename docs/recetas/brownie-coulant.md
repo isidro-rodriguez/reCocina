@@ -17,7 +17,7 @@ tags:
 - 100 g de harina
 - 100 g de nueces troceadas
 - 100 g de pepitas de chocolate
-- 1 café corto
+- 50 ml de café
 - 1 cucharadita de sal
 - 1 cucharadita de esencia de vainilla
 

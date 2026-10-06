@@ -17,7 +17,8 @@ date: 2023-08-31
 - 3 huevos
 - Pan rallado
 - Aceite de oliva
-- Sal y pimienta
+- Sal
+- Pimienta
 
 ## Preparación
 

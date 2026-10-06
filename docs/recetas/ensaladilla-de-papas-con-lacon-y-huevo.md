@@ -17,7 +17,8 @@ source: Lecturas
 - 60 ml de yogur griego
 - Aceite de oliva
 - Perejil
-- Sal y pimienta
+- Sal
+- Pimienta
 
 ## Preparación
 
