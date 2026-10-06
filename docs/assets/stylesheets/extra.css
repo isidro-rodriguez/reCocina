@@ -47,7 +47,7 @@
 .md-typeset {
     font-size: 0.9rem; /* 18 px (1rem = 20 px en Material) */
     line-height: 1.7;
-    color: var(--tinta-900);
+    color: var(--md-default-fg-color);
 
     & p,
     & li {
@@ -108,7 +108,7 @@ img {
     display: flex;
     flex-wrap: wrap; /* en móvil baja de línea en vez de desbordar */
     gap: 0.5rem 1rem;
-    color: var(--carbon-600);
+    color: var(--md-default-fg-color--light);
 }
 
 /* --- Receta del día --- */
