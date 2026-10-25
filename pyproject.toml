@@ -6,19 +6,19 @@ readme = "README.md"
 requires-python = ">=3.12"
 authors = [{ name = "Isidro Rodríguez" }]
 dependencies = [
-    "zensical==0.0.68",
+  "zensical==0.0.68",
 ]
 
 [dependency-groups]
 dev = [
-    "pillow>=12.3.0",
-    "pre-commit>=3",
-    "pydantic>=2.13.5",
-    "pytest>=8",
-    "pyyaml>=6.0.3",
-    "ruff>=0.6",
-    "spylls>=0.1.7",
-    "ty>=0.0.84",
+  "pillow>=12.3.0",
+  "pre-commit>=3",
+  "pydantic>=2.13.5",
+  "pytest>=8",
+  "pyyaml>=6.0.3",
+  "ruff>=0.6",
+  "spylls>=0.1.7",
+  "ty>=0.0.84",
 ]
 
 # --- Poe the Poet (opcional) -------------------------------------------------
@@ -70,6 +70,7 @@ extend-exclude = ["site", "theme"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B", "D", "SIM", "PTH"]
+
 [tool.ruff.lint.pydocstyle]
 convention = "google"
 
