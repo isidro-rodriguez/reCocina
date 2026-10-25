@@ -18,6 +18,7 @@ nav = [
     { "Entrada" = "index.md" },
     { "Etiquetas" = "etiquetas.md" },
     { "Fuentes" = "fuentes.md" },
+    { "Glosario" = "glosario.md" },
     { "Aperitivos" = [
         "recetas/almogrote-gomero.md",
         "recetas/ensaladilla-de-papas-con-lacon-y-huevo.md",

@@ -90,8 +90,8 @@ Checklist before handing off:
   `## Alternativas`.
 - Image is auto-rendered by `theme/main.html` from `fotos/<slug>.webp` — never link it in Markdown.
 - Nav categories (the `nav` in `zensical.toml` is the source of truth for names and order):
-  `Entrada` (`index.md`), `Etiquetas` (`etiquetas.md`), `Fuentes` (`fuentes.md`), then the recipe
-  sections.
+  `Entrada` (`index.md`), `Etiquetas` (`etiquetas.md`), `Fuentes` (`fuentes.md`), `Glosario`
+  (`glosario.md`), then the recipe sections.
 - Tags taxonomy lives in `docs/etiquetas.md`: aparatos (`Batidora`, `Horno`, `Mortero`,
   `Paellera`, `Wok`) + dieta (`Pescetariano`, `Vegano`, `Vegetariano`); icons mapped in
   `zensical.toml` (`[project.extra.tags]`, `[project.theme.icon.tag]`).
