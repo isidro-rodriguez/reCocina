@@ -2,12 +2,10 @@
 template: page.html
 ---
 
-# Etiquetas
+# Etiquetas { .definiciones }
 
 Las recetas se clasifican con dos tipos de etiquetas: los **aparatos** que requieren y el tipo de
 **dieta** con la que son compatibles.
-
----
 
 ## Aparatos
 
@@ -38,8 +36,6 @@ el reparto del caldo y el punto del arroz.
 
 Recetas que se cocinan a fuego vivo en wok: salteados y salsas que se reducen rápido. Su base curva
 facilita saltear y remover sin que se escape el contenido.
-
----
 
 ## Dieta
 
