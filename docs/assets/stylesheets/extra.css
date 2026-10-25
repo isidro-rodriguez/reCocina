@@ -177,6 +177,8 @@ img {
     gap: 1rem;
     grid-template-columns: minmax(0, 24rem); /* una por fila */
     justify-content: center;
+    align-items: start; /* cada tarjeta a su altura: un título largo no estira a la vecina */
+    align-items: start; /* cada tarjeta con su altura: un título largo no estira la vecina */
 
     /* Mismo umbral que el menú lateral: aparece → dos columnas */
     @media screen and (min-width: 76.25em) {
