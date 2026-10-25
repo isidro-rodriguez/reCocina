@@ -31,7 +31,7 @@ def main() -> None:
         KeyError: Si `pyproject.toml` no declara `[project].name`.
         subprocess.CalledProcessError: Si `git bundle` termina con error.
     """
-    target = ROOT / f"{_project_name()}-{datetime.now():%Y-%m-%d_%H-%M-%S}.bundle"
+    target = ROOT / f"{_project_name()}_{datetime.now():%Y-%m-%d_%H-%M-%S}.bundle"
     # cwd explícito: git debe operar sobre este repo aunque se lance desde otro sitio.
     subprocess.run(
         ["git", "bundle", "create", str(target), "--all"], cwd=ROOT, check=True
