@@ -40,7 +40,7 @@
       `<div class="card-recipe__body"><h3></h3><p></p></div>`;
     card.querySelector("h3").textContent = r.title;
     const items = [
-      r.people && ["people", `${r.people} personas`],
+      r.people && ["people", `${r.people} ${r.people === 1 ? "ración" : "raciones"}`],
       r.time && ["clock", formatTime(r.time)],
     ].filter(Boolean);
 

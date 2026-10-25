@@ -1,4 +1,27 @@
 /* ========================================
+   0. Fuentes (servidas desde el propio sitio)
+   ======================================== */
+@font-face {
+    font-family: "Literata";
+    font-style: normal;
+    font-weight: 200 900;
+    font-display: swap;
+    src: url("../fonts/literata-latin-wght-normal.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Literata";
+    font-style: italic;
+    font-weight: 200 900;
+    font-display: swap;
+    src: url("../fonts/literata-latin-wght-italic.woff2") format("woff2");
+}
+
+:root {
+    --md-text-font: "Literata";
+}
+
+/* ========================================
    1. Paleta (capa 1: colores en bruto)
    Escala 50 (claro) → 950 (oscuro)
    ======================================== */
@@ -14,6 +37,7 @@
     --terracota-300: #E3A083;
     --terracota-400: #D0805F;
     --terracota-500: #C96F4A;
+    --terracota-600: #A85A3A; /* 5:1 con blanco */
 
     /* Papel (esquema claro) */
     --arena-50: #FFFCF7;
@@ -111,6 +135,21 @@ img {
     color: var(--md-default-fg-color--light);
 }
 
+.page-metadata__date {
+    font-size: 0.85em;
+    opacity: 0.8;
+}
+
+/* Texto solo para lectores de pantalla */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
 /* --- Receta del día --- */
 #daily-recipe {
     display: grid;
@@ -194,8 +233,11 @@ img {
     display: none;
 }
 
+/* Activo: icono blanco sobre círculo, el estado no depende solo del color */
 .md-header__button[data-md-component="cocina"][aria-pressed="true"] {
-    color: var(--md-accent-fg-color);
+    color: var(--blanco);
+    background-color: var(--terracota-600);
+    border-radius: 50%;
 }
 
 /* ========================================
@@ -312,8 +354,8 @@ img {
     }
 
     & .md-button--primary {
-        background-color: var(--terracota-400);
-        border-color: var(--terracota-400);
+        background-color: var(--terracota-600);
+        border-color: var(--terracota-600);
         color: var(--blanco);
     }
 }

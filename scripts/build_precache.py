@@ -20,6 +20,7 @@ VALID_SUFFIXES = {
     ".svg",
     ".webmanifest",
     ".webp",
+    ".woff2",
 }
 
 

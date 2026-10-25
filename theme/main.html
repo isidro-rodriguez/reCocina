@@ -1,5 +1,5 @@
 {% extends "page.html" %}
-{% from "partials/macros.html" import slugify %}
+{% from "partials/macros.html" import format_date, format_time, slugify %}
 
 {% block content %}
 {% include "partials/actions.html" %}
@@ -9,38 +9,45 @@
 <h1 id="{{slug}}">{{ page.title | d(config.site_name, true)}}</h1>
 
 <p>
-    <img alt="{{page.title}}" src="{{ ('fotos/' ~ slug ~ '.webp') | url }}">
+    <img alt="{{page.title}}" src="{{ ('fotos/' ~ slug ~ '.webp') | url }}" width="900" height="600">
 </p>
 
 <p class="page-metadata">
     <span>
-        <span class="twemoji">
+        <span class="twemoji" aria-hidden="true">
             {% include ".icons/fontawesome/solid/people-group.svg" %}
-        </span> {{page.meta.people}}
+        </span>
+        <span class="visually-hidden">Raciones:</span>
+        {{page.meta.people}} {{ "ración" if page.meta.people == 1 else "raciones" }}
     </span>
 
     <span>
-        <span class="twemoji">
+        <span class="twemoji" aria-hidden="true">
             {% include ".icons/fontawesome/regular/clock.svg" %}
-        </span> {{page.meta.time}}
-    </span>
-
-    <span>
-        <span class="twemoji">
-            {% include ".icons/fontawesome/solid/calendar-days.svg" %}
-        </span> {{page.meta.date}}
+        </span>
+        <span class="visually-hidden">Tiempo:</span>
+        {{ format_time(page.meta.time) }}
     </span>
 
     {% if page.meta.source %}
     <span>
-        <span class="twemoji">
+        <span class="twemoji" aria-hidden="true">
             {% include ".icons/fontawesome/solid/newspaper.svg" %}
         </span>
+        <span class="visually-hidden">Fuente:</span>
         <a href="{{ ('fuentes#' ~ slugify(page.meta.source)) | url }}">
             {{page.meta.source}}
         </a>
     </span>
     {% endif %}
+
+    <span class="page-metadata__date">
+        <span class="twemoji" aria-hidden="true">
+            {% include ".icons/fontawesome/solid/calendar-days.svg" %}
+        </span>
+        <span class="visually-hidden">Añadida:</span>
+        <time datetime="{{page.meta.date}}">{{ format_date(page.meta.date) }}</time>
+    </span>
 </p>
 
 {{ page.content }}

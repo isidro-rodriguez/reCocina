@@ -5,3 +5,22 @@
     | replace('á', 'a') | replace('é', 'e') | replace('í', 'i')
     | replace('ó', 'o') | replace('ú', 'u') | replace('ü', 'u') -}}
 {%- endmacro %}
+
+{#- Mismo formato que formatTime de daily-recipe.js: 45 min, 1 h, 1 h 30 min. -#}
+{% macro format_time(minutes) -%}
+    {%- set h = minutes // 60 -%}
+    {%- set m = minutes % 60 -%}
+    {%- if h -%}
+        {{ h }} h{% if m %} {{ m }} min{% endif %}
+    {%- else -%}
+        {{ m }} min
+    {%- endif -%}
+{%- endmacro %}
+
+{#- Fecha ISO (YYYY-MM-DD) → 17 ago 2023. -#}
+{% macro format_date(date) -%}
+    {%- set months = ["ene", "feb", "mar", "abr", "may", "jun",
+                      "jul", "ago", "sep", "oct", "nov", "dic"] -%}
+    {%- set parts = (date ~ "") | split("-") | list -%}
+    {{- parts[2] | int }} {{ months[(parts[1] | int) - 1] }} {{ parts[0] -}}
+{%- endmacro %}
