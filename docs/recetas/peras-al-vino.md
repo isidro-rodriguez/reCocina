@@ -28,6 +28,6 @@ Echa las peras en el vino y deja cocinar a fuego lento durante 25 minutos.
 
 Quita la canela y deja enfriar las peras en la misma olla.
 
-Retira las peras y pon a hervir el vino hasta que reduzca a una salsa espesa como un almíbar.
+Retira las peras y pon a hervir el vino con el resto del azúcar hasta que reduzca a una salsa espesa como un almíbar.
 
 Sirve las peras bañadas con el vino reducido.

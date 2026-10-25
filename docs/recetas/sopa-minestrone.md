@@ -39,4 +39,6 @@ calabaza, el calabacín, la zanahoria y el laurel. Salpimenta y deja que cueza a
 15 minutos.
 
 Agrega el brócoli, la pasta y las alubias y cuece hasta que la pasta esté lista según las
-indicaciones del fabricante. Añade la albahaca y rectifica salpimentando. Deja reposar la sopa.
+indicaciones del fabricante.
+
+Añade la albahaca, el queso rallado y rectifica salpimentando. Deja reposar la sopa.

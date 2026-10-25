@@ -15,7 +15,6 @@ tags:
 - 2 limones
 - 200 ml de vino tinto
 - Almendras tostadas
-- Pasas
 - Orégano
 - comino
 - Laurel
