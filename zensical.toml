@@ -1,5 +1,6 @@
 [project]
 site_name = "reCocina"
+site_url = "https://recocina.vercel.app/"
 site_description = "Recetario de cocina casera"
 site_author = "Isidro Rodríguez"
 docs_dir = "docs"
