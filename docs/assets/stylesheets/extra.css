@@ -27,32 +27,32 @@
    ======================================== */
 :root {
     /* Verde bosque */
-    --verde-200: #C1D8C7;
-    --verde-600: #526F5C;
-    --verde-700: #3F5F4A;
-    --verde-800: #314B3A;
-    --verde-900: #284B34;
+    --verde-200: #c1d8c7;
+    --verde-600: #526f5c;
+    --verde-700: #3f5f4a;
+    --verde-800: #314b3a;
+    --verde-900: #284b34;
 
     /* Terracota */
-    --terracota-300: #E3A083;
-    --terracota-400: #D0805F;
-    --terracota-500: #C96F4A;
-    --terracota-600: #A85A3A; /* 5:1 con blanco */
+    --terracota-300: #e3a083;
+    --terracota-400: #d0805f;
+    --terracota-500: #c96f4a;
+    --terracota-600: #a85a3a; /* 5:1 con blanco */
 
     /* Papel (esquema claro) */
-    --arena-50: #FFFCF7;
-    --arena-100: #F3EBDD;
-    --blanco: #FFFFFF;
+    --arena-50: #fffcf7;
+    --arena-100: #f3ebdd;
+    --blanco: #ffffff;
     --tinta-900: #292725;
     --gris-500: #737970;
 
     /* Noche (esquema oscuro) */
     --carbon-600: #465047;
     --carbon-700: #303830;
-    --carbon-800: #29312A;
-    --carbon-900: #252C26;
+    --carbon-800: #29312a;
+    --carbon-900: #252c26;
     --carbon-950: #202620;
-    --marfil-100: #F3EFE5;
+    --marfil-100: #f3efe5;
 }
 
 /* ========================================
@@ -112,7 +112,9 @@
    4. Maquetación
    ======================================== */
 .md-grid {
-    max-width: calc(var(--ancho-menu) + var(--separacion-menu) + var(--ancho-articulo));
+    max-width: calc(
+        var(--ancho-menu) + var(--separacion-menu) + var(--ancho-articulo)
+    );
 }
 
 .md-content {
@@ -132,7 +134,10 @@
     }
 
     /* El artículo ocupa todo el ancho (sin margen interno) */
-    [dir="ltr"] .md-sidebar--primary:not([hidden]) ~ .md-content > .md-content__inner {
+    [dir="ltr"]
+        .md-sidebar--primary:not([hidden])
+        ~ .md-content
+        > .md-content__inner {
         margin-left: 0;
         margin-right: 0;
     }
@@ -287,7 +292,9 @@ img {
     font-size: 0.8rem;
     line-height: 1;
     font-variant-numeric: tabular-nums;
-    transition: background-color 0.15s, color 0.15s;
+    transition:
+        background-color 0.15s,
+        color 0.15s;
 
     & svg {
         display: block;
@@ -334,9 +341,12 @@ img {
 }
 
 /* --- Badges: categorías (verde, color primario) y etiquetas (neutras) --- */
+.md-tags {
+    margin-right: 6px;
+}
+
 .md-typeset .md-tag--categoria {
     --md-tag-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'%3E%3Cpath d='m56 225.6-23.6 70.6V96c0-35.3 28.7-64 64-64h138.7c13.8 0 27.3 4.5 38.4 12.8l38.4 28.8c5.5 4.2 12.3 6.4 19.2 6.4h117.3c35.3 0 64 28.7 64 64v16H147c-41.3 0-78 26.4-91.1 65.6zM477.8 448H99c-32.8 0-55.9-32.1-45.5-63.2l48-144C108 221.2 126.4 208 147 208h378.8c32.8 0 55.9 32.1 45.5 63.2l-48 144c-6.5 19.6-24.9 32.8-45.5 32.8'/%3E%3C/svg%3E");
-
     background-color: var(--categoria-bg);
 }
 
@@ -360,7 +370,8 @@ img {
     color: var(--blanco);
 }
 
-.md-typeset .md-tag-icon[href]:not(.md-tag--categoria):is(:hover, :focus)::before {
+.md-typeset
+    .md-tag-icon[href]:not(.md-tag--categoria):is(:hover, :focus)::before {
     background-color: var(--blanco);
 }
 
@@ -480,7 +491,9 @@ article:has(.page-metadata) {
                 box-sizing: border-box;
                 border: 2px solid var(--md-default-fg-color--lighter);
                 border-radius: 50%;
-                transition: background-color 0.2s, border-color 0.2s;
+                transition:
+                    background-color 0.2s,
+                    border-color 0.2s;
             }
 
             &[aria-checked="true"] {
@@ -489,7 +502,8 @@ article:has(.page-metadata) {
 
                 &::before {
                     border-color: var(--md-accent-fg-color);
-                    background: var(--md-accent-fg-color) var(--marca-check) center / 75% no-repeat;
+                    background: var(--md-accent-fg-color) var(--marca-check)
+                        center / 75% no-repeat;
                 }
             }
         }
@@ -504,7 +518,9 @@ article:has(.page-metadata) {
         padding: 0.3rem 0.5rem 0.3rem 2.6rem;
         border-radius: 0.5rem;
         counter-increment: paso;
-        transition: background-color 0.2s, color 0.2s;
+        transition:
+            background-color 0.2s,
+            color 0.2s;
         --alto-linea: 1lh;
 
         &::before {
@@ -523,7 +539,9 @@ article:has(.page-metadata) {
             font-size: 0.75rem;
             font-weight: 700;
             line-height: 1;
-            transition: background-color 0.2s, color 0.2s;
+            transition:
+                background-color 0.2s,
+                color 0.2s;
         }
 
         &[aria-current="step"] {
@@ -616,7 +634,11 @@ article:has(.page-metadata) {
 
     /* Accent — Terracota */
     --md-accent-fg-color: var(--terracota-500);
-    --md-accent-fg-color--transparent: color-mix(in srgb, var(--terracota-500) 12%, transparent);
+    --md-accent-fg-color--transparent: color-mix(
+        in srgb,
+        var(--terracota-500) 12%,
+        transparent
+    );
 
     /* Fondos */
     --md-default-bg-color: var(--arena-50);
@@ -626,9 +648,21 @@ article:has(.page-metadata) {
 
     /* Texto */
     --md-default-fg-color: var(--tinta-900);
-    --md-default-fg-color--light: color-mix(in srgb, var(--tinta-900) 70%, transparent);
-    --md-default-fg-color--lighter: color-mix(in srgb, var(--tinta-900) 50%, transparent);
-    --md-default-fg-color--lightest: color-mix(in srgb, var(--tinta-900) 25%, transparent);
+    --md-default-fg-color--light: color-mix(
+        in srgb,
+        var(--tinta-900) 70%,
+        transparent
+    );
+    --md-default-fg-color--lighter: color-mix(
+        in srgb,
+        var(--tinta-900) 50%,
+        transparent
+    );
+    --md-default-fg-color--lightest: color-mix(
+        in srgb,
+        var(--tinta-900) 25%,
+        transparent
+    );
 
     /* Enlaces: color del tema en vez del azul de Material */
     --md-typeset-a-color: var(--md-primary-fg-color);
@@ -640,7 +674,11 @@ article:has(.page-metadata) {
     /* Superficies y bordes */
     --md-code-bg-color: var(--arena-100);
     --md-code-fg-color: var(--tinta-900);
-    --md-typeset-table-color: color-mix(in srgb, var(--gris-500) 35%, transparent);
+    --md-typeset-table-color: color-mix(
+        in srgb,
+        var(--gris-500) 35%,
+        transparent
+    );
 }
 
 /* ========================================
@@ -654,7 +692,11 @@ article:has(.page-metadata) {
 
     /* Acento gastronómico */
     --md-accent-fg-color: var(--terracota-400);
-    --md-accent-fg-color--transparent: color-mix(in srgb, var(--terracota-400) 14%, transparent);
+    --md-accent-fg-color--transparent: color-mix(
+        in srgb,
+        var(--terracota-400) 14%,
+        transparent
+    );
 
     /* Fondos */
     --md-default-bg-color: var(--carbon-950);
@@ -664,9 +706,21 @@ article:has(.page-metadata) {
 
     /* Texto */
     --md-default-fg-color: var(--marfil-100);
-    --md-default-fg-color--light: color-mix(in srgb, var(--marfil-100) 72%, transparent);
-    --md-default-fg-color--lighter: color-mix(in srgb, var(--marfil-100) 52%, transparent);
-    --md-default-fg-color--lightest: color-mix(in srgb, var(--marfil-100) 28%, transparent);
+    --md-default-fg-color--light: color-mix(
+        in srgb,
+        var(--marfil-100) 72%,
+        transparent
+    );
+    --md-default-fg-color--lighter: color-mix(
+        in srgb,
+        var(--marfil-100) 52%,
+        transparent
+    );
+    --md-default-fg-color--lightest: color-mix(
+        in srgb,
+        var(--marfil-100) 28%,
+        transparent
+    );
 
     /* Código */
     --md-code-bg-color: var(--carbon-800);
