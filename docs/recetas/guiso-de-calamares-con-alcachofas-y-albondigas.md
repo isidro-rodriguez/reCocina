@@ -1,4 +1,4 @@
-﻿---
+---
 title: Guiso de calamares con alcachofas y albóndigas
 people: 4
 time: 75

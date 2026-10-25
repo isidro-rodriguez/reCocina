@@ -1,4 +1,4 @@
-﻿---
+---
 title: Salsa barbacoa
 people: 4
 time: 20

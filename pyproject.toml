@@ -6,17 +6,17 @@ readme = "README.md"
 requires-python = ">=3.12"
 authors = [{ name = "Isidro Rodríguez" }]
 dependencies = [
+  "pyyaml>=6.0.3",
   "zensical==0.0.68",
 ]
 
 [dependency-groups]
 dev = [
   "pillow>=12.3.0",
-  "pre-commit>=3",
+  "pre-commit>=4.6.2",
   "pydantic>=2.13.5",
-  "pytest>=8",
-  "pyyaml>=6.0.3",
-  "ruff>=0.6",
+  "pytest>=9.1.1",
+  "ruff>=0.16.10",
   "spylls>=0.1.7",
   "ty>=0.0.84",
 ]

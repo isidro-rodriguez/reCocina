@@ -1,4 +1,4 @@
-﻿---
+---
 title: Cuscús de pollo y verduras
 people: 4
 time: 30

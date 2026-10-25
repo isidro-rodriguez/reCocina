@@ -4,7 +4,7 @@ site_url = "https://recocina.vercel.app/"
 site_description = "Recetario de cocina casera"
 site_author = "Isidro Rodríguez"
 docs_dir = "docs"
-copyright = "© reCocina"
+copyright = "© 2023–2026 Isidro Rodríguez"
 extra_css = [
     "assets/stylesheets/extra.css",
     "assets/stylesheets/print.css"
@@ -113,15 +113,7 @@ toggle.name = "Cambiar a modo claro"
 
 [[project.extra.social]]
 icon = "fontawesome/brands/github"
-link = "https://github.com/isidro-rodriguez/recocina"
-
-[[project.extra.social]]
-icon = "fontawesome/brands/python"
-link = "https://www.python.org"
-
-[[project.extra.social]]
-icon = "fontawesome/brands/markdown"
-link = "https://daringfireball.net/projects/markdown/"
+link = "https://github.com/isidro-rodriguez/reCocina"
 
 [project.extra.tags]
 Batidora = "mixer"

@@ -1,3 +1,5 @@
+{% from "partials/macros.html" import slugify %}
+
 {% if page.meta and page.meta.hide %}
     {% set hidden = "hidden" if "tags" in page.meta.hide %}
 {% endif %}
@@ -5,13 +7,6 @@
 {% if tags %}
     <nav class="md-tags" {{ hidden }}>
         {% for tag in tags %}
-            {%
-                set tag_slug = tag.name | lower
-                | replace(' ', '-') | replace('ñ', 'n')
-                | replace('á', 'a') | replace('é', 'e') | replace('í', 'i')
-                | replace('ó', 'o') | replace('ú', 'u') | replace('ü', 'u')
-            %}
-
             {% set class = "md-tag" %}
 
             {% if tag.hidden %}
@@ -25,7 +20,7 @@
                 {% endif %}
             {% endif %}
 
-            <a href="{{ ('etiquetas#' ~ tag_slug) | url }}" class="{{ class }}">
+            <a href="{{ ('etiquetas#' ~ slugify(tag.name)) | url }}" class="{{ class }}">
                 <span>
                     {{- tag.name -}}
                 </span>

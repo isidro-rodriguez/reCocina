@@ -1,4 +1,4 @@
-﻿---
+---
 title: Pastel de calabaza y pollo
 people: 8
 time: 60

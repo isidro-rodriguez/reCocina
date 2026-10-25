@@ -1,0 +1,7 @@
+{#- Ancla de `fuentes`/`etiquetas`; tests/test_anchors.py replica esta lógica. -#}
+{% macro slugify(text) -%}
+    {{- text | lower
+    | replace(' ', '-') | replace('ñ', 'n')
+    | replace('á', 'a') | replace('é', 'e') | replace('í', 'i')
+    | replace('ó', 'o') | replace('ú', 'u') | replace('ü', 'u') -}}
+{%- endmacro %}

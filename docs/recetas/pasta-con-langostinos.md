@@ -1,4 +1,4 @@
-﻿---
+---
 title: Pasta con langostinos
 people: 4
 time: 20

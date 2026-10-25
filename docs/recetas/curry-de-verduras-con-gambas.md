@@ -1,4 +1,4 @@
-﻿---
+---
 title: Curry de verduras con gambas
 people: 4
 time: 35

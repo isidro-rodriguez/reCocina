@@ -1,4 +1,4 @@
-﻿---
+---
 title: Salsa teriyaki
 people: 4
 time: 10

@@ -30,7 +30,7 @@ En la misma sartén añade el vino y el tomillo y deja evaporar 1 minuto. Vierte
 hasta que reduzca a la mitad, luego agrega la maicena disuelta en un poco de agua y cuece hasta que
 espese la salsa. Salpimenta y reserva.
 
-Unta cada roda de solomillo con la salsa preparada y rebózalos con los frutos secos picados  
+Unta cada roda de solomillo con la salsa preparada y rebózalos con los frutos secos picados
 para hacer costra.
 
 Coloca el solomillo rebozado en una bandeja refractaria y hornéalos 8 minutos a 180 °C en un

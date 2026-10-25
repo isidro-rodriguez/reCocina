@@ -1,9 +1,10 @@
 """Tests de los enlaces internos a fuentes y etiquetas.
 
 Las plantillas (`theme/main.html`, `theme/partials/tags.html`) construyen los
-enlaces `fuentes#<slug>` y `etiquetas#<slug>` slugificando a mano (minúsculas,
-guiones, tildes → vocal). Estos tests comprueban que el slug enlazado existe
-como sección (`##` / `###`) en el fichero destino.
+enlaces `fuentes#<slug>` y `etiquetas#<slug>` con la macro `slugify` de
+`theme/partials/macros.html` (minúsculas, guiones, tildes → vocal). Estos tests
+comprueban que el slug enlazado existe como sección (`##` / `###`) en el
+fichero destino.
 
 Ejecutar con::
 

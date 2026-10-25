@@ -1,4 +1,4 @@
-﻿---
+---
 title: Estofado de ternera
 people: 4
 time: 90

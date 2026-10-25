@@ -1,4 +1,4 @@
-﻿---
+---
 title: Salmón teriyaki con arroz
 people: 4
 time: 40

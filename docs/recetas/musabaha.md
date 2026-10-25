@@ -1,4 +1,4 @@
-﻿---
+---
 title: Musabaha
 people: 4
 time: 30

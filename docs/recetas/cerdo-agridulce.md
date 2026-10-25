@@ -1,4 +1,4 @@
-﻿---
+---
 title: Cerdo agridulce
 people: 6
 time: 60

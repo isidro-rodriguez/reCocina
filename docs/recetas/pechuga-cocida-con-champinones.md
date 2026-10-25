@@ -1,4 +1,4 @@
-﻿---
+---
 title: Pechuga cocida con champiñones
 people: 4
 time: 40

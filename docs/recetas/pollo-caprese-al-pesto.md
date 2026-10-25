@@ -1,4 +1,4 @@
-﻿---
+---
 title: Pollo caprese al pesto
 people: 4
 time: 55

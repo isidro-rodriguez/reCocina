@@ -1,4 +1,4 @@
-﻿---
+---
 title: Espagueti carbonara
 people: 4
 time: 30

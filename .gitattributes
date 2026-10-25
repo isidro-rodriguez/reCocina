@@ -144,7 +144,7 @@ docker-compose*.yml  text eol=lf
 #   linguist-vendored o generado.
 
 # ─── Específico de reCocina ──────────────────────────────────
-# Web (Zensical): AGENTS.md exige LF en CSS/JS/HTML y la CI corre en Windows.
+# Web (Zensical): CLAUDE.md exige LF en CSS/JS/HTML y la CI corre en Windows.
 *.css         text eol=lf
 *.js          text eol=lf
 *.html        text eol=lf

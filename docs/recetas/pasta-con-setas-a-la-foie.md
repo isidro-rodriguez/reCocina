@@ -1,4 +1,4 @@
-﻿---
+---
 title: Pasta con setas a la foie
 people: 4
 time: 35

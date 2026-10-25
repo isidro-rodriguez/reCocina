@@ -1,4 +1,4 @@
-﻿---
+---
 title: Potaje de vigilia
 people: 4
 time: 100

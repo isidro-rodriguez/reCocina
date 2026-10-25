@@ -1,4 +1,4 @@
-﻿---
+---
 title: Marmitako de atún
 people: 4
 time: 45

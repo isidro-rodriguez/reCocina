@@ -1,4 +1,4 @@
-﻿---
+---
 title: Mojo de cilantro
 people: 4
 time: 20

@@ -24,4 +24,4 @@ En una sartén derrite la mantequilla y añade la harina tamizada. Mezclar y rem
 formar una roux homogénea levemente tostada.
 
 Añade nuez moscada, la sal y la pimienta y la leche caliente poco a poco mientras la vaya
-absorbiendo la harina 
+absorbiendo la harina

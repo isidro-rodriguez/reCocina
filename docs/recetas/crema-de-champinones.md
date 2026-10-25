@@ -1,4 +1,4 @@
-﻿---
+---
 title: Crema de champiñones
 people: 6
 time: 50

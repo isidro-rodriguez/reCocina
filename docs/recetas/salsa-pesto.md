@@ -1,4 +1,4 @@
-﻿---
+---
 title: Salsa pesto
 people: 4
 time: 5

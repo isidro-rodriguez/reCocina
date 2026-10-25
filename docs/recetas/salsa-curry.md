@@ -1,4 +1,4 @@
-﻿---
+---
 title: Salsa curry
 people: 4
 time: 20

@@ -1,16 +1,10 @@
 {% extends "page.html" %}
+{% from "partials/macros.html" import slugify %}
 
 {% block content %}
 {% include "partials/actions.html" %}
 
 {% set slug = page.url | trim('/') | split('/') | last %}
-
-{%
-    set source_slug = page.meta.source | lower
-    | replace(' ', '-') | replace('ñ', 'n')
-    | replace('á', 'a') | replace('é', 'e') | replace('í', 'i')
-    | replace('ó', 'o') | replace('ú', 'u') | replace('ü', 'u')
-%}
 
 <h1 id="{{slug}}">{{ page.title | d(config.site_name, true)}}</h1>
 
@@ -42,7 +36,7 @@
         <span class="twemoji">
             {% include ".icons/fontawesome/solid/newspaper.svg" %}
         </span>
-        <a href="{{ ('fuentes#' ~ source_slug) | url }}">
+        <a href="{{ ('fuentes#' ~ slugify(page.meta.source)) | url }}">
             {{page.meta.source}}
         </a>
     </span>

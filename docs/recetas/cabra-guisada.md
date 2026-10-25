@@ -1,4 +1,4 @@
-﻿---
+---
 title: Cabra guisada
 people: 4
 time: 180

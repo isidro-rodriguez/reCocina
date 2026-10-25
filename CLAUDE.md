@@ -1,4 +1,4 @@
-# AGENTS.md
+# CLAUDE.md
 
 Operational rules for AI agents and contributors working **on** this repo.
 `README.md` is the source of truth for **usage** (quick start, recipe template) — don't
@@ -20,20 +20,19 @@ duplicate it here. Quality and build commands live in this file.
   (unless inside an isolated venv).
 - **Code:** English identifiers and structure.
 - **Human-facing text:** Spanish — docstrings, comments, user/UI output, and the recipes themselves.
-- Idiomatic Python: PEP 8, `pathlib` over `os.path`, `from __future__ import annotations`.
+- Idiomatic Python: PEP 8, `pathlib` over `os.path`.
 - **Strict type hints** on every signature; `ty check` must pass.
 - **Docstrings** Google-style: complete for public functions, one line for private/nested ones.
   A public docstring lists in `Raises` the exceptions raised by the private functions it calls.
-- **Comments** explain the *why*, never the *what*.
+- **Comments** explain the _why_, never the _what_.
 - **ruff is the boss:** `target-version = py312`, `line-length = 88`, rules
   `E, F, I, UP, B, D, SIM, PTH`, pydocstyle `google`; excludes `site/` and `theme/`.
 
 ## Web assets (CSS/JS/HTML)
 
-- `docs/assets/stylesheets/*.css`, `docs/assets/javascripts/*.js`, `docs/sw.js`: **4-space indent,
-  LF, trailing newline**. No auto-formatter configured — match the existing style by hand.
-- `theme/*.html` (Jinja): no formatter configured — keep partials aligned manually (4-space indent,
-  LF).
+- `docs/assets/stylesheets/*.css`, `docs/assets/javascripts/*.js`, `docs/sw.js`: **LF, trailing
+  newline**. No auto-formatter configured — match the existing style by hand.
+- `theme/*.html` (Jinja): no formatter configured — keep partials aligned manually (LF).
 - Line endings are forced to LF per extension by `.gitattributes` (canonical file + reCocina
   section); a new text file type needs its own `eol=lf` rule. Don't rely on `core.autocrlf`.
 - New JS/CSS must be registered in `zensical.toml` (`extra_javascript` / `extra_css`), e.g.
@@ -46,7 +45,7 @@ duplicate it here. Quality and build commands live in this file.
 Nothing is "done" until every applicable gate is green:
 
 | Gate          | Command                                                                                                                                      | When                                        |
-|---------------|----------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
 | Python lint   | `uv run ruff check .`                                                                                                                        | any `.py` change                            |
 | Python format | `uv run ruff format --check .`                                                                                                               | any `.py` change                            |
 | Type check    | `uv run ty check`                                                                                                                            | any `.py` change                            |
@@ -60,20 +59,20 @@ CI (`.github/workflows/ci.yml`) runs on push/PR (ubuntu + windows): `pre-commit 
 **Poe shortcuts** (optional; `poe` installed globally with `uv tool install poethepoet`, tasks in
 `pyproject.toml` `[tool.poe]`). `uv run …` stays the canonical form; never add poe as a dependency.
 
-| Task          | Equivalent                                                                    |
-|---------------|-------------------------------------------------------------------------------|
-| `poe check`   | ruff format --check, ruff check, ty check, pytest                             |
-| `poe fix`     | ruff format, ruff check --fix                                                 |
-| `poe build`   | `build_recipe_index.py` → `zensical build --strict` → `build_precache.py`     |
-| `poe serve`   | `build_recipe_index.py` → `zensical serve`                                    |
-| `poe backup`  | `scripts/backup.py` (`<name>-<timestamp>.bundle` in the repo root)            |
+| Task         | Equivalent                                                                |
+| ------------ | ------------------------------------------------------------------------- |
+| `poe check`  | ruff format --check, ruff check, ty check, pytest                         |
+| `poe fix`    | ruff format, ruff check --fix                                             |
+| `poe build`  | `build_recipe_index.py` → `zensical build --strict` → `build_precache.py` |
+| `poe serve`  | `build_recipe_index.py` → `zensical serve`                                |
+| `poe backup` | `scripts/backup.py` (`<name>-<timestamp>.bundle` in the repo root)        |
 
 Checklist before handing off:
 
 - [ ] `poe check` (or `uv run pre-commit run --all-files` + `uv run ty check`) passes.
 - [ ] `poe build` (or the chain in `vercel.json`) has no errors.
 - [ ] Legit new words (dishes, brands, proper nouns, tech terms used in prose) added to
-  `tests/spelling/allowlist.txt` (code spans and fenced blocks are skipped by the test).
+      `tests/spelling/allowlist.txt` (code spans and fenced blocks are skipped by the test).
 - [ ] No `git commit --no-verify` unless the user explicitly asks.
 
 ## Content conventions (recipes)

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Calamares rellenos de carne
 people: 4
 time: 60

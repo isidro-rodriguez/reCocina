@@ -1,4 +1,4 @@
-﻿---
+---
 title: Pechuga a la miel y mostaza
 people: 4
 time: 70

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Pasta con cherry
 people: 4
 time: 40

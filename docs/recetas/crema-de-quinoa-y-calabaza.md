@@ -1,4 +1,4 @@
-﻿---
+---
 title: Crema de quinoa y calabaza
 people: 4
 time: 40

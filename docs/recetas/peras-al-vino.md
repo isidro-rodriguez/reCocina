@@ -1,4 +1,4 @@
-﻿---
+---
 title: Peras al vino
 people: 4
 time: 50
