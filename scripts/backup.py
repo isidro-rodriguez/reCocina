@@ -1,78 +1,42 @@
-"""Copia de seguridad manual de reCocina.
+"""Copia de seguridad del repositorio con `git bundle`.
 
-Limpia cachés `__pycache__` y comprime el código fuente en un zip
-ubicado en `local/recocina.zip`.
+Crea en la raíz `<proyecto>-<AAAA-MM-DD_HH-MM-SS>.bundle` con todas las ramas y
+etiquetas. El nombre del proyecto se lee de `pyproject.toml`.
 
 Uso:
+    poe backup
     uv run python scripts/backup.py
 """
 
-import pathlib
-import zipfile
+import subprocess
+import tomllib
+from datetime import datetime
+from pathlib import Path
 
-ROOT = pathlib.Path(__file__).resolve().parents[1]
-BACKUP_DIR = ROOT / "local"
-BACKUP_PATH = BACKUP_DIR / "recocina.zip"
-
-# Directorios cuya estructura se incluye completa.
-DIRS = [".github", "docs", "scripts", "tests", "theme"]
-
-# Patrones de ficheros sueltos de raíz a incluir.
-ROOT_PATTERNS = [
-    ".gitattributes",
-    ".gitignore",
-    "*.json",
-    "*.lock",
-    "*.md",
-    "*.py",
-    "*.toml",
-    "*.yaml",
-]
+ROOT = Path(__file__).resolve().parent.parent
 
 
-def _limpiar_pycache() -> int:
-    """Borra todos los directorios `__pycache__` bajo `ROOT`. Devuelve el count."""
-    eliminados = 0
-    for ruta in ROOT.rglob("__pycache__"):
-        if ruta.is_dir():
-            for hijo in sorted(ruta.rglob("*"), reverse=True):
-                hijo.unlink(missing_ok=True)
-            ruta.rmdir()
-            eliminados += 1
-    return eliminados
-
-
-def _crear_zip() -> None:
-    """Crea el zip con los directorios y los ficheros de raíz seleccionados."""
-    with zipfile.ZipFile(BACKUP_PATH, "w", zipfile.ZIP_DEFLATED) as zf:
-        for nombre_dir in DIRS:
-            dir_path = ROOT / nombre_dir
-            if not dir_path.exists():
-                continue
-            for archivo in dir_path.rglob("*"):
-                if archivo.is_file():
-                    zf.write(archivo, archivo.relative_to(ROOT))
-
-        for patron in ROOT_PATTERNS:
-            for archivo in ROOT.glob(patron):
-                if archivo.is_file():
-                    zf.write(archivo, archivo.relative_to(ROOT))
+def _project_name() -> str:
+    """Nombre del proyecto declarado en `[project].name` de `pyproject.toml`."""
+    data = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))
+    return str(data["project"]["name"])
 
 
 def main() -> None:
-    """Limpia las cachés, crea la copia de seguridad e informa del resultado."""
-    print("Limpiando cachés __pycache__...")
-    n_cache = _limpiar_pycache()
-    print(f"  {n_cache} directorios __pycache__ eliminados")
+    """Crea la copia de seguridad en la raíz del repositorio e informa de su ruta.
 
-    print("Creando copia de seguridad...")
-    BACKUP_DIR.mkdir(parents=True, exist_ok=True)
-    if BACKUP_PATH.exists():
-        BACKUP_PATH.unlink()
-    _crear_zip()
-
-    size = BACKUP_PATH.stat().st_size
-    print(f"  {BACKUP_PATH} ({size:,} bytes)")
+    Raises:
+        FileNotFoundError: Si falta `pyproject.toml` o `git` no está instalado.
+        tomllib.TOMLDecodeError: Si `pyproject.toml` no es TOML válido.
+        KeyError: Si `pyproject.toml` no declara `[project].name`.
+        subprocess.CalledProcessError: Si `git bundle` termina con error.
+    """
+    target = ROOT / f"{_project_name()}-{datetime.now():%Y-%m-%d_%H-%M-%S}.bundle"
+    # cwd explícito: git debe operar sobre este repo aunque se lance desde otro sitio.
+    subprocess.run(
+        ["git", "bundle", "create", str(target), "--all"], cwd=ROOT, check=True
+    )
+    print(f"Copia creada en {target}")
 
 
 if __name__ == "__main__":

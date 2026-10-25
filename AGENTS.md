@@ -1,8 +1,8 @@
 # AGENTS.md
 
 Operational rules for AI agents and contributors working **on** this repo.
-`README.md` is the source of truth for **usage** (setup, recipe template, commands) — don't
-duplicate it here.
+`README.md` is the source of truth for **usage** (quick start, recipe template) — don't
+duplicate it here. Quality and build commands live in this file.
 
 ## Agent behavior
 
@@ -20,8 +20,11 @@ duplicate it here.
   (unless inside an isolated venv).
 - **Code:** English identifiers and structure.
 - **Human-facing text:** Spanish — docstrings, comments, user/UI output, and the recipes themselves.
-- Idiomatic Python: type hints, PEP 8, `pathlib` over `os.path`,
-  `from __future__ import annotations`.
+- Idiomatic Python: PEP 8, `pathlib` over `os.path`, `from __future__ import annotations`.
+- **Strict type hints** on every signature; `ty check` must pass.
+- **Docstrings** Google-style: complete for public functions, one line for private/nested ones.
+  A public docstring lists in `Raises` the exceptions raised by the private functions it calls.
+- **Comments** explain the *why*, never the *what*.
 - **ruff is the boss:** `target-version = py312`, `line-length = 88`, rules
   `E, F, I, UP, B, D, SIM, PTH`, pydocstyle `google`; excludes `site/` and `theme/`.
 
@@ -31,8 +34,8 @@ duplicate it here.
   LF, trailing newline**. No auto-formatter configured — match the existing style by hand.
 - `theme/*.html` (Jinja): no formatter configured — keep partials aligned manually (4-space indent,
   LF).
-- Line endings are forced to LF by `.gitattributes` (`* text=auto eol=lf`); don't rely on
-  `core.autocrlf`.
+- Line endings are forced to LF per extension by `.gitattributes` (canonical file + reCocina
+  section); a new text file type needs its own `eol=lf` rule. Don't rely on `core.autocrlf`.
 - New JS/CSS must be registered in `zensical.toml` (`extra_javascript` / `extra_css`), e.g.
   `daily-recipe.js` (recetas del día de la portada) and `kitchen-mode.js` (modo cocina).
   `daily-recipe.js` reads `assets/recetas.json`, produced by `scripts/build_recipe_index.py` —
@@ -51,15 +54,24 @@ Nothing is "done" until every applicable gate is green:
 | Strict build  | `uv run zensical build --strict` (+ `scripts/build_recipe_index.py` before, `scripts/build_precache.py` after — full chain in `vercel.json`) | any `zensical.toml`/`docs/`/`theme/` change |
 | Everything    | `uv run pre-commit run --all-files` (ruff check, ruff format --check, pytest)                                                                | before finishing                            |
 
-CI (`.github/workflows/ci.yml`) runs `uv run pre-commit run --all-files` on push/PR (ubuntu +
-windows) — keep `main` green.
+CI (`.github/workflows/ci.yml`) runs on push/PR (ubuntu + windows): `pre-commit run --all-files`,
+`ty check` and the full strict build chain — keep `main` green.
+
+**Poe shortcuts** (optional; `poe` installed globally with `uv tool install poethepoet`, tasks in
+`pyproject.toml` `[tool.poe]`). `uv run …` stays the canonical form; never add poe as a dependency.
+
+| Task          | Equivalent                                                                    |
+|---------------|-------------------------------------------------------------------------------|
+| `poe check`   | ruff format --check, ruff check, ty check, pytest                             |
+| `poe fix`     | ruff format, ruff check --fix                                                 |
+| `poe build`   | `build_recipe_index.py` → `zensical build --strict` → `build_precache.py`     |
+| `poe serve`   | `build_recipe_index.py` → `zensical serve`                                    |
+| `poe backup`  | `scripts/backup.py` (`<name>-<timestamp>.bundle` in the repo root)            |
 
 Checklist before handing off:
 
-- [ ] `uv run pre-commit run --all-files` passes.
-- [ ] `uv run ty check` passes.
-- [ ] `uv run zensical build --strict` has no errors (with recipe index generated before and
-  precache after, per `vercel.json`).
+- [ ] `poe check` (or `uv run pre-commit run --all-files` + `uv run ty check`) passes.
+- [ ] `poe build` (or the chain in `vercel.json`) has no errors.
 - [ ] Legit new words (dishes, brands, proper nouns, tech terms used in prose) added to
   `tests/spelling/allowlist.txt` (code spans and fenced blocks are skipped by the test).
 - [ ] No `git commit --no-verify` unless the user explicitly asks.
@@ -78,7 +90,7 @@ Checklist before handing off:
 - Body sections: `## Ingredientes`, `## Preparación`. Optional ones already in use: `## Opcional`,
   `## Alternativas`.
 - Image is auto-rendered by `theme/main.html` from `fotos/<slug>.webp` — never link it in Markdown.
-- Nav categories (same order as the `nav` in `zensical.toml` — see the list in `README.md`):
+- Nav categories (the `nav` in `zensical.toml` is the source of truth for names and order):
   `Entrada` (`index.md`), `Etiquetas` (`etiquetas.md`), `Fuentes` (`fuentes.md`), then the recipe
   sections.
 - Tags taxonomy lives in `docs/etiquetas.md`: aparatos (`Batidora`, `Horno`, `Mortero`,
@@ -88,7 +100,7 @@ Checklist before handing off:
   existing recipes just to normalize this.
 - Generated artifacts are gitignored: `docs/assets/recetas.json` (from
   `scripts/build_recipe_index.py`), `site/` incl. `precache.json` (from
-  `scripts/build_precache.py`), `local/` (backup zip from `scripts/backup.py`).
+  `scripts/build_precache.py`), `*.bundle` (from `scripts/backup.py`).
 
 ## Tests contract
 
@@ -105,7 +117,7 @@ Checklist before handing off:
 
 - `uv.lock` (regenerate with uv, never hand-edit). `tests/spelling/es_ES.*` + `LICENSE/` (vendored
   dictionary).
-- Respect `.gitignore` (`.venv/`, `site/`, `docs/assets/recetas.json`, `local/`, `nul`, …). Don't
+- Respect `.gitignore` (`.venv/`, `site/`, `docs/assets/recetas.json`, `*.bundle`, …). Don't
   commit build output.
 
 ## Commits

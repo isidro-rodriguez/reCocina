@@ -21,6 +21,45 @@ dev = [
     "ty>=0.0.84",
 ]
 
+# --- Poe the Poet (opcional) -------------------------------------------------
+# Atajos para quien tenga `poe` instalado globalmente (`uv tool install poethepoet`).
+# No es dependencia del proyecto: todo se puede ejecutar también con `uv run`.
+[tool.poe]
+executor.type = "uv"
+
+[tool.poe.tasks.check]
+help = "Formato, lint, tipos y tests"
+sequence = [
+  "ruff format --check .",
+  "ruff check .",
+  "ty check",
+  "pytest",
+]
+default_item_type = "cmd"
+
+[tool.poe.tasks.fix]
+help = "Aplica el formato y las correcciones automáticas de Ruff"
+sequence = ["ruff format .", "ruff check --fix ."]
+default_item_type = "cmd"
+
+[tool.poe.tasks.build]
+help = "Genera el sitio en site/ (misma cadena que vercel.json y la CI)"
+sequence = [
+  "python scripts/build_recipe_index.py",
+  "zensical build --strict",
+  "python scripts/build_precache.py",
+]
+default_item_type = "cmd"
+
+[tool.poe.tasks.serve]
+help = "Previsualiza en http://localhost:8000 con el índice de recetas generado"
+sequence = ["python scripts/build_recipe_index.py", "zensical serve"]
+default_item_type = "cmd"
+
+[tool.poe.tasks.backup]
+help = "Copia de seguridad del repositorio con git bundle"
+cmd = "python scripts/backup.py"
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 
