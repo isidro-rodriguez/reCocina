@@ -26,9 +26,9 @@ date: 2023-08-20
 Pocha la cebolla hasta quedar transparente, añade el azúcar y sigue rehogando unos minutos para que
 la cebolla termine de caramelizarse por completo.
 
-Añadir el tomate triturado y cocinar hasta que evapore la mayor parte del agua y coja un color más
+Añade el tomate triturado y cocina hasta que evapore la mayor parte del agua y coja un color más
 oscuro.
 
-Añadir los demás condimentos y cocinar a fuego lento unos cinco minutos removiendo con frecuencia.
+Añade los demás condimentos y cocina a fuego lento unos cinco minutos removiendo con frecuencia.
 
-Rectificar con sal y pimienta, dejar reposar y servir.
+Rectifica con sal y pimienta, deja reposar y sirve.

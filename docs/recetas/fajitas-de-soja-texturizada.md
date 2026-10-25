@@ -10,12 +10,12 @@ tags:
 ## Ingredientes
 
 - Fajitas
-- 200 g soja texturizada
+- 200 g de soja texturizada
 - 1 cebolla
 - 1 pimiento
-- 200 g alubias cocidas
-- 100 g maíz
-- 100 g guacamole
+- 200 g de alubias cocidas
+- 100 g de maíz
+- 100 g de guacamole
 - 1 limón
 - Aceite
 - Sal
@@ -25,11 +25,11 @@ tags:
 
 ## Preparación
 
-Pochar la cebolla y pimientos picados.
+Pocha la cebolla y pimientos picados.
 
-Añadir la soja texturizada junto a las alubias y pochar unos minutos más hasta que la soja esté
+Añade la soja texturizada junto a las alubias y pocha unos minutos más hasta que la soja esté
 blanda.
 
-Mezclar en frío el maíz, el guacamole, el zumo del limón, el comino, el cilantro y salpimenta.
+Mezcla en frío el maíz, el guacamole, el zumo del limón, el comino, el cilantro y salpimenta.
 
-Rellenar las fajitas.
+Rellena las fajitas.

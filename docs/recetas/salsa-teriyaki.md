@@ -24,9 +24,9 @@ tags:
 
 ## Preparación
 
-Rallar el jengibre, picar fino el diente de ajo y exprimir la naranja.
+Ralla el jengibre, pica fino el diente de ajo y exprime la naranja.
 
-En un cazo echar la salsa de soja, la miel, el jengibre rallado, el ajo picado y el zumo de
+En un cazo echa la salsa de soja, la miel, el jengibre rallado, el ajo picado y el zumo de
 naranja.
 
-Llevar a ebullición hasta que quede reducido a la mitad y dejar enfriar.
+Lleva a ebullición hasta que quede reducido a la mitad y deja enfriar.

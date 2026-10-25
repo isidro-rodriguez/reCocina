@@ -20,10 +20,10 @@ tags:
 
 ## Preparación
 
-Pelar los ajos y limpiar la pimienta. Majarlos en un mortero con la sal.
+Pela los ajos y limpia la pimienta. Májalos en un mortero con la sal.
 
-Agregar el majado a los tomates triturados y reservar.
+Agrega el majado a los tomates triturados y reserva.
 
-Rallar el queso e incorporar un chorrito junto con la mezcla de tomate tritura y majado.
+Ralla el queso e incorpora un chorrito junto con la mezcla de tomate triturado y majado.
 
-Remover hasta conseguir una pasta bien ligada.
+Remueve hasta conseguir una pasta bien ligada.

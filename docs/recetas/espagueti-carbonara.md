@@ -18,15 +18,15 @@ tags:
 
 ## Preparación
 
-Picar la panceta en dados y dorarla en un wok con una cucharadita de mantequilla derretida. Reservar
+Pica la panceta en dados y dórala en un wok con una cucharadita de mantequilla derretida. Reserva
 la carne separando la grasa derretida.
 
-Cocer la pasta al dente y reservar un vaso de caldo de cocción de la pasta.
+Cuece la pasta al dente y reserva un vaso de caldo de cocción de la pasta.
 
 Sobre el caldero usado para cocer la pasta coloca un bol para que se caliente. En el bol vierte el
-queso rallado, las yemas batidas, la grasa derretida de la panceta y pimienta negra. Remover hasta
-conseguir una pasta homogénea e ir añadiendo agua de la cocción hasta obtener una salsa espesa.
+queso rallado, las yemas batidas, la grasa derretida de la panceta y pimienta negra. Remueve hasta
+conseguir una pasta homogénea y ve añadiendo agua de la cocción hasta obtener una salsa espesa.
 
-Incorporar la salsa a la pasta, remover y dejar reposar unos minutos para que integren los sabores.
+Incorpora la salsa a la pasta, remueve y deja reposar unos minutos para que integren los sabores.
 
-Servir con un poco de queso rallado y pimienta negra espolvoreada.
+Sirve con un poco de queso rallado y pimienta negra espolvoreada.

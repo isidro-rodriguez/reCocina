@@ -30,6 +30,6 @@ Pocha en aceite la cebolla picada durante 5 minutos, luego incorpora la calabaza
 y sigue rehogándolas durante 10 minutos con la cazuela tapada.
 
 Añade la quinoa, el caldo de verdura y el comino. Cuece durante 15 minutos y tritura la verdura con
-una batidora. Termina por añadir la canela y la albahaca y deja reposar la crema
+una batidora. Termina por añadir la canela y la albahaca y deja reposar la crema.
 
 Presenta la crema en un cuenco con canela espolvoreada, varias pipas de calabaza y albahaca.

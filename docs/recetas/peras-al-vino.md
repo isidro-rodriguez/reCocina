@@ -30,4 +30,4 @@ Quita la canela y deja enfriar las peras en la misma olla.
 
 Retira las peras y pon a hervir el vino hasta que reduzca a una salsa espesa como un almíbar.
 
-Servir las peras bañadas con el vino reducido.
+Sirve las peras bañadas con el vino reducido.

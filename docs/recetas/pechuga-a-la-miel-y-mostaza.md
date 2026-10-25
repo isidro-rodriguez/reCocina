@@ -41,6 +41,6 @@ Salpimenta las pechugas y séllalas en una sartén.
 
 En una fuente de horno extiende las papas cortadas en rodajas, pulveriza un poco de aceite y
 salpimenta. Encima coloca las pechugas selladas y vierte la salsa de miel y mostaza. Hornea la
-fuente en un horno precalentado a 190 ºC durante 35 minutos.
+fuente en un horno precalentado a 190 °C durante 35 minutos.
 
 Emplata la ración con una pechuga, una ración de papas y ensalada.

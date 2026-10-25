@@ -26,12 +26,12 @@ tags:
 
 ## Preparación
 
-Corta los tomates y las rodajas de mozzarella en rodajas de medio centímetro.
+Corta los tomates y la mozzarella en rodajas de medio centímetro.
 
 Haz cortes transversales a las pechugas, sin llegar hasta el fondo. En cada corte introduce una
 rodaja de tomate, otra de mozzarella y una hoja de albahaca.
 
 Coloca las pechugas en una fuente de horno, salpiméntalas y pulveriza un poco de aceite sobre ellas.
-Introduce en el horno precalentado a 190 ºC y cocina 30 minutos.
+Introduce en el horno precalentado a 190 °C y cocina 30 minutos.
 
 Retira del horno y sirve con la salsa pesto y piñones tostados en una sartén sin aceite.

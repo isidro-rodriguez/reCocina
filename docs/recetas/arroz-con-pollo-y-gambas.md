@@ -39,4 +39,4 @@ hervir un par de minutos para que evapore el alcohol.
 Añade el arroz, el jamón serrano y los pimentones y revuelve bien para integrar los sabores. Vierte
 el caldo y deja cocinar a fuego medio el tiempo indicado para el arroz.
 
-Dejar reposar media hora y servir decorado con un poco de perejil picado o cebollino.
+Deja reposar media hora y sirve decorado con un poco de perejil picado o cebollino.

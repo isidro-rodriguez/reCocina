@@ -26,7 +26,7 @@ source: Lecturas
 
 ## Preparación
 
-Salpimenta la carne y rebózalas en harina para dorarla en una cazuela con aceite.
+Salpimenta la carne y rebózala en harina para dorarla en una cazuela con aceite.
 
 Añade la cebolla y rehoga unos minutos hasta que transparente.
 

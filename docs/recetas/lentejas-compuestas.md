@@ -29,18 +29,18 @@ source: Lo mejor de la cocina canaria
 
 ## Preparación
 
-En una cazuela, pochar el tocino a fuego lento para que disuelva la grasa y reservar el tocino
+En una cazuela, pocha el tocino a fuego lento para que disuelva la grasa y reserva el tocino
 dejando la grasa en la cazuela.
 
 Mientras tanto, pela y pica la verdura (cebolla, tomates, ajo y pimiento) y rehógala 10 minutos
 en la cazuela con la grasa del tocino y un poco de aceite si fuese necesario.
 
-Añadir el vino y dejar cocinar unos minutos hasta que pierda el olor a alcohol.
+Añade el vino y deja cocinar unos minutos hasta que pierda el olor a alcohol.
 
-Añadir el chorizo picado y las especias (tomillo, laurel y pimentón) y revolver hasta integrar.
+Añade el chorizo picado y las especias (tomillo, laurel y pimentón) y revuelve hasta integrar.
 
-Por último, añadir a la cazuela el caldo, las lentejas lavadas, el tocino pochado y salpimentar.
+Por último, añade a la cazuela el caldo, las lentejas lavadas, el tocino pochado y salpimenta.
 
-Dejar cocinándose 20-30 minutos hasta que las lentejas estén al gusto.
+Deja cocinándose 20-30 minutos hasta que las lentejas estén al gusto.
 
-Servir acompañada de un huevo duro por persona y de pan tostado frito.
+Sirve acompañada de un huevo duro por persona y de pan tostado frito.

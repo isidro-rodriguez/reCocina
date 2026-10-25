@@ -10,7 +10,7 @@ tags:
 
 ## Ingredientes
 
-- 300 g de garbanzos cocidos (200 gramos de garbanzos secos)
+- 300 g de garbanzos cocidos (200 g de garbanzos secos)
 - 1 diente de ajo
 - 1 pimienta
 - 1 manojo de perejil fresco
@@ -32,11 +32,11 @@ aceite de oliva, sal y pimienta.
 Prepara una salsa para los garbanzos mezclando el tahini, el yogur, el zumo de limón, sal y pimienta
 negra.
 
-Reservar unos pocos garbanzos para la decoración final y poner el resto en un plato. Aplastar la
-mitad con un tenedor y picar grueso el resto, mezclar con la salsa de tahini y un par de cucharadas
+Reserva unos pocos garbanzos para la decoración final y pon el resto en un plato. Aplasta la
+mitad con un tenedor y pica grueso el resto, mezcla con la salsa de tahini y un par de cucharadas
 de la salsa de perejil.
 
-Probar y ajustar de sal, pimienta y limón al gusto.
+Prueba y ajusta de sal, pimienta y limón al gusto.
 
-Añadir el resto de los garbanzos por encima, un chorrito de aceite de oliva y el resto de la salsa
+Añade el resto de los garbanzos por encima, un chorrito de aceite de oliva y el resto de la salsa
 de hierbas.

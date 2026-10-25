@@ -11,13 +11,13 @@ tags:
 
 ## Ingredientes
 
-- 360 g garbanzos
+- 360 g de garbanzos
 - 2 cebollas picadas
 - 2 pimientos verdes picados
 - 4 huevos cocidos
-- 400 g espinacas
-- 400 g bacalao
-- 600 g tomate triturado
+- 400 g de espinacas
+- 400 g de bacalao
+- 600 g de tomate triturado
 - Aceite
 - Bicarbonato
 - Sal
@@ -25,15 +25,15 @@ tags:
 
 ## Preparación
 
-Poner los garbanzos en remojo con una cucharadita de bicarbonato.
+Pon los garbanzos en remojo con una cucharadita de bicarbonato.
 
-Guisar los garbanzos con la suficiente agua como para cubrirlos (sin sal).
+Guisa los garbanzos con la suficiente agua como para cubrirlos (sin sal).
 
-Pochar en aceite las cebollas y los pimientos hasta ablandar. Añadir el tomate triturado y dejar
+Pocha en aceite las cebollas y los pimientos hasta ablandar. Añade el tomate triturado y deja
 reducir hasta que quede una pasta seca.
 
-Moler el sofrito con caldo de pescado (que cubra el sofrito en el vaso de moler).
+Muele el sofrito con caldo de pescado (que cubra el sofrito en el vaso de moler).
 
-Añadir el sofrito molido con el bacalao y las espinacas y dejar cocinar 5 minutos.
+Añade el sofrito molido con el bacalao y las espinacas y deja cocinar 5 minutos.
 
-Añadir los huevos cocidos y salpimentar a gusto.
+Añade los huevos cocidos y salpimenta a gusto.

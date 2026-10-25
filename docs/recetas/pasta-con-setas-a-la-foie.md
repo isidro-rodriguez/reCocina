@@ -31,7 +31,7 @@ Añade la nata y cuece hasta que espese. Mezcla el foie con la nata hasta incorp
 de carne y lleva a ebullición. Cuece durante cinco minutos más a fuego fuerte hasta que reduzca el
 caldo. Prueba la salsa y rectifica con sal y pimienta.
 
-En una cazuela aparte cuece las pasta al dente, escúrrela, añade la salsa y remuévela hasta que esté
+En una cazuela aparte cuece la pasta al dente, escúrrela, añade la salsa y remuévela hasta que esté
 bien impregnada.
 
-Servir la pasta y decórala con el romero y el perejil picado fino.
+Sirve la pasta y decórala con el romero y el perejil picado fino.

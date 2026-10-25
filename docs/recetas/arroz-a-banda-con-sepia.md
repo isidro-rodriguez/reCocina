@@ -13,7 +13,7 @@ tags:
 - 400 g de sepia limpia
 - 350 g de arroz bomba
 - 1 l de caldo de pescado
-- 400 ml tomate triturado
+- 400 ml de tomate triturado
 - 1 pimiento verde
 - 2 dientes de ajo
 - 2 ramitas de perejil

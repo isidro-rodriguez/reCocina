@@ -7,7 +7,7 @@ date: 2023-08-17
 
 ## Ingredientes
 
-- 200 g cuscús
+- 200 g de cuscús
 - 3 pechugas de pollo
 - 1 zanahoria
 - 1 calabacín
@@ -24,17 +24,17 @@ date: 2023-08-17
 
 ## Preparación
 
-Picar la pechuga en tiras y sellarlas en una sartén caliente con aceite. Apartar las pechugas medio
-hechas y reservar.
+Pica la pechuga en tiras y séllalas en una sartén caliente con aceite. Aparta las pechugas medio
+hechas y reserva.
 
-En la misma sartén pochar la cebolla, la zanahoria, el ajo, los pimientos y el calabacín.
+En la misma sartén pocha la cebolla, la zanahoria, el ajo, los pimientos y el calabacín.
 
-A continuación agregamos el pollo y las especias al gusto (sobres de fajitas, curry, la pastilla
-de caldo de pollo, etc.), dejar unos minutos y reservar.
+A continuación agrega el pollo y las especias al gusto (sobres de fajitas, curry, la pastilla
+de caldo de pollo, etc.), deja unos minutos y reserva.
 
-Preparar taza y media de cuscús y dos tazas de caldo de verduras.
-Calentar el caldo y echarlo al cuscús.
+Prepara taza y media de cuscús y dos tazas de caldo de verduras.
+Calienta el caldo y échalo al cuscús.
 
-Mezclar el cuscús listo con la verdura y el pollo preparados en su jugo.
+Mezcla el cuscús listo con la verdura y el pollo preparados en su jugo.
 
-Dejar reposar unos minutos y servir.
+Deja reposar unos minutos y sirve.

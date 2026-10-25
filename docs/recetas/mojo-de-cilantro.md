@@ -23,8 +23,8 @@ tags:
 
 ## Preparación
 
-Tostar el comino y majarlo en un mortero.
+Tuesta el comino y májalo en un mortero.
 
-Añadir el ajo, el cilantro, la pimienta y la sal. Seguir majando hasta conseguir una masa uniforme.
+Añade el ajo, el cilantro, la pimienta y la sal. Sigue majando hasta conseguir una masa uniforme.
 
-Añadir el aceite y el vinagre y revolver hasta que la mezcla emulsione.
+Añade el aceite y el vinagre y revuelve hasta que la mezcla emulsione.

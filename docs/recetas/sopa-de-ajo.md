@@ -13,17 +13,17 @@ tags:
 - 3 dientes de ajo
 - 100 g de pan en tiras
 - 1 cucharadita de pimentón
-- 1 litro de caldo de verduras
+- 1 l de caldo de verduras
 - 2 huevos batidos
 
 ## Preparación
 
-En sartén poner a freír el ajo con el aceite y antes de que dore añadir el pan y dejar pochando.
+En sartén pon a freír el ajo con el aceite y antes de que dore añade el pan y deja pochando.
 
-Añadir el pimentón y pochar un poco más, sin quemarlo, y añadir el caldo de verdura.
+Añade el pimentón y pocha un poco más, sin quemarlo, y añade el caldo de verdura.
 
-Tapar y dejar cocer a fuego lento unos 15 minutos.
+Tapa y deja cocer a fuego lento unos 15 minutos.
 
-Justo antes de sacar añadir los huevos batidos mientras se remueve el caldo.
+Justo antes de sacar añade los huevos batidos mientras se remueve el caldo.
 
-Dejar reposar unos minutos y servir caliente.
+Deja reposar unos minutos y sirve caliente.

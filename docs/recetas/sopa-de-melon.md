@@ -26,7 +26,7 @@ sea cómodo para usar con batidora.
 
 Añade la nata líquida, el yogur, el zumo del limón y salpimenta.
 
-Licuar la mezcla con una batidora, salpimentar al gusto y dejar enfriar en la nevera un par de
+Licúa la mezcla con una batidora, salpimenta al gusto y deja enfriar en la nevera un par de
 horas con la ramita de menta fresca para aportar frescura.
 
-Emplatar con un chorrito de aceite de oliva virgen extra y unas virutas de jamón serrano.
+Emplata con un chorrito de aceite de oliva virgen extra y unas virutas de jamón serrano.

@@ -32,9 +32,9 @@ tener una masa homogénea.
 
 Termina añadiendo la harina y remueve sin batir demasiado.
 
-Hornear a 175 ºC durante 25-30 minutos, debería quedar temblando un poco en su centro.
+Hornea a 175 °C durante 25-30 minutos, debería quedar temblando un poco en su centro.
 
-Dejar enfriar al menos 2 o 3 horas antes de empezar a partir el brownie.
+Deja enfriar al menos 2 o 3 horas antes de empezar a partir el brownie.
 
 ## Opcional
 

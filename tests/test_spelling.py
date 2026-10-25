@@ -78,3 +78,16 @@ def test_ortografia(path: Path, dictionary: Dictionary) -> None:
         "culinarios, marcas, nombres propios), añádelas a "
         f"tests/spelling/allowlist.txt: {', '.join(unknown)}"
     )
+
+
+def test_allowlist_sin_entradas_huerfanas() -> None:
+    """Toda entrada de la allowlist aparece en algún fichero revisado."""
+    used = {
+        word.lower()
+        for path in MD_FILES
+        for word in _WORD.findall(_strip_non_prose(read_text(path)))
+    }
+    orphans = sorted(_allowlist() - used)
+    assert not orphans, (
+        f"Entradas sin uso en tests/spelling/allowlist.txt: {', '.join(orphans)}"
+    )

@@ -13,7 +13,7 @@ source: Lecturas
 - 1 cebolla
 - 100 g de pan duro
 - 50 ml de leche
-- 100 ml de tomate frito.
+- 100 ml de tomate frito
 - 400 ml de caldo de carne
 - 150 g de guisantes
 - Aceite de oliva
@@ -41,7 +41,7 @@ manos humedecidas y enharinadas. Reserva.
 > También puedes hacer esta receta con albóndigas de pollo o pescado.
 
 Limpia los calamares retirando la boca y las tripas y lávalos bien. Pela las alcachofas y
-córtalas en cuartos retirando el heno. Pela y pica las cebollas. Resérvalo todo.
+córtalas en cuartos retirando el heno. Pela y pica la cebolla. Resérvalo todo.
 
 En una cazuela con aceite dora las albóndigas con los calamares, la cebolla y las alcachofas.
 Añade la ñora y el tomate frito y cuece unos minutos para reducir el agua. Añade el caldo de

@@ -8,7 +8,6 @@
 # --- Términos culinarios, préstamos y marcas ---
 alitas
 almogrote
-avecrem
 basmati
 bechamel
 brócoli
@@ -16,13 +15,11 @@ brownie
 calabacín
 caprese
 cherry
-cherrys
 champiñones
 chorrito
 chorritos
 comidista
 coulant
-cuisine
 cuscús
 fajitas
 foie
@@ -31,7 +28,6 @@ maicena
 marmitako
 minestrone
 mirin
-monsieur
 mozzarella
 musabaha
 ñora
@@ -50,7 +46,6 @@ serializada
 tahini
 teriyaki
 texturizada
-thermomix
 youtube
 wok
 worcestershire
@@ -59,7 +54,6 @@ worcestershire
 # --- Formas verbales (imperativo + pronombre) y derivadas ---
 cáscalas
 colocándola
-descoméntala
 empánalos
 lamínalos
 licúa
@@ -68,76 +62,36 @@ mézclalo
 pelarlo
 póchalo
 pochando
-pochar
 pochen
+precalienta
 precalentado
-precalentar
-previsualiza
 regístrala
 remuévela
 salpimenta
+salpiméntala
 salpiméntalas
 salpiméntalos
 sécalas
+séllala
 séllalas
 séllalos
 ásalos
 
 
 # --- Términos técnicos ---
-allowlist
-apple
-build
-checklist
-comitear
-commit
-favicon
-favicons
-for
-frontmatter
-hook
-hooks
 html
-http
-hunspell
-icon
 ISBN
-json
-kebab
-lint
-linteo
-localhost
-markdown
-mkdocs
 ml
 page
-pipeline
-plugin
-png
-pre
-precarga
-precargar
-pwa
 python
-readme
 recocina
-repo
-service
-spylls
-stale
-tests
-touch
 URL
 uv
-vercel
 webp
-worker
-yaml
 zensical
 
 
 # --- Frontmatter ---
-hidden
 people
 source
 tags

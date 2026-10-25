@@ -19,7 +19,7 @@ tags:
 - 1 zanahoria
 - 1/2 calabacín
 - 1/2 brócoli
-- 2 litros de caldo de verdura
+- 2 l de caldo de verdura
 - 50 g de queso rallado
 - Aceite de oliva
 - 2 hojas de laurel
@@ -33,7 +33,7 @@ Limpia la cebolla y pícala, pela el tomate y pícalo menudo, raspa la zanahoria
 pela y pica la calabaza, pica el calabacín, limpia el brócoli y córtalo en gajos y guisa las
 alubias.
 
-En una cazuela con aceite sofríe la cebolla hasta que transparente, luego incorpora y tomate y
+En una cazuela con aceite sofríe la cebolla hasta que transparente, luego incorpora el tomate y
 rehoga 10 minutos para que evapore el agua. Vierte el caldo de verduras y añade el apio, la
 calabaza, el calabacín, la zanahoria y el laurel. Salpimenta y deja que cueza a fuego medio durante
 15 minutos.

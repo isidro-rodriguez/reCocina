@@ -25,14 +25,14 @@ tags:
 
 ## Preparación
 
-Guisar la carne de cabra con un limón y media cebolla. Al romper a hervir, sacar la carne y lavarla.
+Guisa la carne de cabra con un limón y media cebolla. Al romper a hervir, saca la carne y lávala.
 
-Aderezar la carne con zumo de limón y salpimentarla.
+Adereza la carne con zumo de limón y salpiméntala.
 
-Saltear con aceite la carne en un caldero junto con la verdura para sofreírla.
+Saltea con aceite la carne en un caldero junto con la verdura para sofreírla.
 
-Majar las especias junto a las almendras tostadas y añadirlas al caldero.
+Maja las especias junto a las almendras tostadas y añádelas al caldero.
 
-Añadir el vino al caldero y dejar que evapore el alcohol.
+Añade el vino al caldero y deja que evapore el alcohol.
 
-Cubrir el cocido con agua y guisar durante una hora y media.
+Cubre el cocido con agua y guisa durante una hora y media.

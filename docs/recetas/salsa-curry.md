@@ -12,7 +12,7 @@ tags:
 
 - 1 cebolla pequeña
 - 2 dientes de ajo
-- 200 g de leche de coco
+- 200 ml de leche de coco
 - 200 ml de caldo de carne o pescado
 - 1 plátano
 - 1 cucharada de curry
@@ -27,12 +27,12 @@ tags:
 
 Pela y pica en dados la cebolla y el ajo. Ralla el jengibre.
 
-En un wok rehoga en aceite la verdura picada hasta durante 5 minutos. Añade el curry, la
+En un wok rehoga en aceite la verdura picada durante 5 minutos. Añade el curry, la
 cúrcuma y el jengibre y sigue rehogando dos minutos más. Añade la leche de coco y el caldo y deja
 cocinar a fuego medio durante 15 minutos.
 
 Pela el plátano y tritúralo con un tenedor, añádelo a la salsa junto con la maicena. Tritura la
-salsa con una batidora y déjala cocinando a fuego medio unos 10 minutos más
+salsa con una batidora y déjala cocinando a fuego medio unos 10 minutos más.
 
 ## Alternativas
 

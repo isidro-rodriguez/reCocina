@@ -12,13 +12,13 @@ ingredientes y preparación paso a paso.
 - 🥂 **Aperitivos**: para picar y abrir boca.
 - 🥘 **Arroz**: de la paella al arroz a banda.
 - 🍝 **Pasta**: rápida, de diario o de domingo.
-- 🍗 **Pollo**: guisos, asados y planchas.
-- 🥩 **Carne**: guisos, asados y planchas.
+- 🍗 **Pollo**: pechugas, guisos y al horno.
+- 🥩 **Carne**: estofados de cerdo, ternera y cabra.
 - 🐟 **Pescado y Mariscos**: del mar a la mesa.
-- 🥬 **Verduras, Legumbres y Potajes**: cuchara de las de siempre.
-- 🍲 **Sopas y Cremas**: calientes, o frías en verano.
-- 🥫 **Salsas**: el fondo de armario de la cocina.
 - 🍰 **Postres**: el final feliz.
+- 🥫 **Salsas**: el fondo de armario de la cocina.
+- 🍲 **Sopas y Cremas**: calientes, o frías en verano.
+- 🥬 **Verduras, Legumbres y Potajes**: cuchara de las de siempre.
 
 ## Recetas del día
 
