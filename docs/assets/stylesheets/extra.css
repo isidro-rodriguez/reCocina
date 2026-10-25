@@ -240,6 +240,130 @@ img {
     border-radius: 50%;
 }
 
+/* --- Receta: ingredientes que se tachan y pasos numerados --- */
+/* Registrada para que 1lh se resuelva en el párrafo y no en el ::before (otra letra) */
+@property --alto-linea {
+    syntax: "<length>";
+    inherits: true;
+    initial-value: 0px;
+}
+
+/* Cada sección acaba en el siguiente h2: todas las listas de ingredientes se marcan;
+   Opcional y Alternativas no se numeran */
+article:has(.page-metadata) {
+    --marca-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 8.5l3 3 6-7' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+
+    & #ingredientes ~ ul:not(#ingredientes ~ h2 ~ ul) {
+        list-style: none;
+        margin-left: 0;
+
+        & > li {
+            position: relative;
+            margin-left: 0;
+            padding-left: 1.8rem;
+            list-style: none;
+            transition: color 0.2s;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: calc((1lh - 1.05rem) / 2);
+                width: 1.05rem;
+                height: 1.05rem;
+                box-sizing: border-box;
+                border: 2px solid var(--md-default-fg-color--lighter);
+                border-radius: 50%;
+                transition: background-color 0.2s, border-color 0.2s;
+            }
+
+            &[aria-checked="true"] {
+                color: var(--md-default-fg-color--lighter);
+                text-decoration: line-through;
+
+                &::before {
+                    border-color: var(--md-accent-fg-color);
+                    background: var(--md-accent-fg-color) var(--marca-check) center / 75% no-repeat;
+                }
+            }
+        }
+    }
+
+    & #preparacion {
+        counter-reset: paso;
+    }
+
+    & #preparacion ~ p:not(#preparacion ~ h2 ~ p) {
+        position: relative;
+        padding: 0.3rem 0.5rem 0.3rem 2.6rem;
+        border-radius: 0.5rem;
+        counter-increment: paso;
+        transition: background-color 0.2s, color 0.2s;
+        --alto-linea: 1lh;
+
+        &::before {
+            content: counter(paso);
+            position: absolute;
+            left: 0.4rem;
+            top: calc(0.3rem + (var(--alto-linea) - 1.5rem) / 2);
+            display: grid;
+            place-items: center;
+            width: 1.5rem;
+            height: 1.5rem;
+            box-sizing: border-box;
+            border: 2px solid var(--md-accent-fg-color);
+            border-radius: 50%;
+            color: var(--md-accent-fg-color);
+            font-size: 0.75rem;
+            font-weight: 700;
+            line-height: 1;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        &[aria-current="step"] {
+            background-color: var(--md-accent-fg-color--transparent);
+
+            &::before {
+                background-color: var(--md-accent-fg-color);
+                color: var(--blanco);
+            }
+        }
+    }
+
+    /* Subpasos */
+    & #preparacion ~ ol:not(#preparacion ~ h2 ~ ol) {
+        margin-left: 2.6rem;
+        list-style-type: lower-alpha;
+        transition: color 0.2s;
+    }
+
+    & #preparacion ~ .done {
+        color: var(--md-default-fg-color--lighter);
+    }
+
+    & [role="checkbox"],
+    & [role="button"] {
+        cursor: pointer;
+
+        &:focus-visible {
+            outline: 2px solid var(--md-accent-fg-color);
+            outline-offset: 2px;
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    article:has(.page-metadata) {
+        & #ingredientes ~ ul > li,
+        & #ingredientes ~ ul > li::before,
+        & #preparacion ~ p,
+        & #preparacion ~ p::before,
+        & #preparacion ~ ol {
+            transition: none;
+        }
+    }
+}
+
 /* ========================================
    6. Transiciones entre páginas
    ======================================== */

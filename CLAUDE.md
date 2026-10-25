@@ -36,7 +36,8 @@ duplicate it here. Quality and build commands live in this file.
 - Line endings are forced to LF per extension by `.gitattributes` (canonical file + reCocina
   section); a new text file type needs its own `eol=lf` rule. Don't rely on `core.autocrlf`.
 - New JS/CSS must be registered in `zensical.toml` (`extra_javascript` / `extra_css`), e.g.
-  `daily-recipe.js` (recetas del día de la portada) and `kitchen-mode.js` (modo cocina).
+  `daily-recipe.js` (recetas del día de la portada), `kitchen-mode.js` (modo cocina) and
+  `recipe-steps.js` (ingredientes que se tachan y paso actual; estado en `sessionStorage`).
   `daily-recipe.js` reads `assets/recetas.json`, produced by `scripts/build_recipe_index.py` —
   never hand-edit that JSON.
 

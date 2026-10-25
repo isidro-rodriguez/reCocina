@@ -12,6 +12,7 @@ extra_css = [
 extra_javascript = [
     "assets/javascripts/daily-recipe.js",
     "assets/javascripts/kitchen-mode.js",
+    "assets/javascripts/recipe-steps.js",
 ]
 
 nav = [

@@ -178,4 +178,32 @@
             break-inside: avoid;
         }
     }
+
+    /* ========================================
+       6. Receta interactiva: en papel solo queda la numeración
+       ======================================== */
+    article:has(.page-metadata) {
+        & #ingredientes ~ ul:not(#ingredientes ~ h2 ~ ul) > li[aria-checked="true"] {
+            color: inherit;
+            text-decoration: none;
+
+            &::before {
+                border-color: var(--md-default-fg-color--lighter);
+                background: none;
+            }
+        }
+
+        & #preparacion ~ p:not(#preparacion ~ h2 ~ p)[aria-current="step"] {
+            background-color: transparent;
+
+            &::before {
+                background-color: transparent;
+                color: var(--md-accent-fg-color);
+            }
+        }
+
+        & #preparacion ~ .done {
+            color: inherit;
+        }
+    }
 }
