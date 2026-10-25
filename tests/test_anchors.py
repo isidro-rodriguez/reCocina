@@ -1,10 +1,10 @@
 """Tests de los enlaces internos a fuentes y etiquetas.
 
-Las plantillas (`theme/main.html`, `theme/partials/tags.html`) construyen los
-enlaces `fuentes#<slug>` y `etiquetas#<slug>` con la macro `slugify` de
-`theme/partials/macros.html` (minúsculas, guiones, tildes → vocal). Estos tests
-comprueban que el slug enlazado existe como sección (`##` / `###`) en el
-fichero destino.
+Las plantillas (`docs_templates/main.html`, `docs_templates/partials/tags.html`)
+construyen los enlaces `fuentes#<slug>` y `etiquetas#<slug>` con la macro
+`slugify` de `docs_templates/partials/macros.html` (minúsculas, guiones,
+tildes → vocal). Estos tests comprueban que el slug enlazado existe como
+sección (`##` / `###`) en el fichero destino.
 
 Ejecutar con::
 
@@ -100,18 +100,18 @@ def _base_theme_files() -> frozenset[str]:
 
 
 def test_plantillas_no_referencian_ficheros_inexistentes() -> None:
-    """Los `include` de `theme/main.html` existen (propios o del tema base)."""
-    theme_dir = Path(__file__).resolve().parent.parent / "theme"
+    """Los `include` de `docs_templates/main.html` existen (propios o heredados)."""
+    templates_dir = Path(__file__).resolve().parent.parent / "docs_templates"
     own_files = {
-        path.relative_to(theme_dir).as_posix()
-        for path in theme_dir.rglob("*")
+        path.relative_to(templates_dir).as_posix()
+        for path in templates_dir.rglob("*")
         if path.is_file()
     }
     available = own_files | _base_theme_files()
     missing = {
         match
         for match in re.findall(
-            r'{%\s*include\s+"([^"]+)"\s*%}', (theme_dir / "main.html").read_text()
+            r'{%\s*include\s+"([^"]+)"\s*%}', (templates_dir / "main.html").read_text()
         )
         if match not in available
     }

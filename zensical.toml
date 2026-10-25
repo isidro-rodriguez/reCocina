@@ -85,7 +85,7 @@ nav = [
 [project.theme]
 variant = "classic"
 language = "es"
-custom_dir = "theme"
+custom_dir = "docs_templates"
 favicon = "assets/images/favicon.ico"
 logo = "assets/images/logo.svg"
 font = false

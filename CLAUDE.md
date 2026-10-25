@@ -26,13 +26,13 @@ duplicate it here. Quality and build commands live in this file.
   A public docstring lists in `Raises` the exceptions raised by the private functions it calls.
 - **Comments** explain the _why_, never the _what_.
 - **ruff is the boss:** `target-version = py312`, `line-length = 88`, rules
-  `E, F, I, UP, B, D, SIM, PTH`, pydocstyle `google`; excludes `site/` and `theme/`.
+  `E, F, I, UP, B, D, SIM, PTH`, pydocstyle `google`; excludes `site/` and `docs_templates/`.
 
 ## Web assets (CSS/JS/HTML)
 
 - `docs/assets/stylesheets/*.css`, `docs/assets/javascripts/*.js`, `docs/sw.js`: **LF, trailing
   newline**. No auto-formatter configured — match the existing style by hand.
-- `theme/*.html` (Jinja): no formatter configured — keep partials aligned manually (LF).
+- `docs_templates/*.html` (Jinja): no formatter configured — keep partials aligned manually (LF).
 - Line endings are forced to LF per extension by `.gitattributes` (canonical file + reCocina
   section); a new text file type needs its own `eol=lf` rule. Don't rely on `core.autocrlf`.
 - New JS/CSS must be registered in `zensical.toml` (`extra_javascript` / `extra_css`), e.g.
@@ -50,7 +50,7 @@ Nothing is "done" until every applicable gate is green:
 | Python format | `uv run ruff format --check .`                                                                                                               | any `.py` change                            |
 | Type check    | `uv run ty check`                                                                                                                            | any `.py` change                            |
 | Tests         | `uv run pytest`                                                                                                                              | any change                                  |
-| Strict build  | `uv run zensical build --strict` (+ `scripts/build_recipe_index.py` before, `scripts/build_precache.py` after — full chain in `vercel.json`) | any `zensical.toml`/`docs/`/`theme/` change |
+| Strict build  | `uv run zensical build --strict` (+ `scripts/build_recipe_index.py` before, `scripts/build_precache.py` after — full chain in `vercel.json`) | any `zensical.toml`/`docs/`/`docs_templates/` change |
 | Everything    | `uv run pre-commit run --all-files` (ruff check, ruff format --check, pytest)                                                                | before finishing                            |
 
 CI (`.github/workflows/ci.yml`) runs on push/PR (ubuntu + windows): `pre-commit run --all-files`,
@@ -88,7 +88,8 @@ Checklist before handing off:
   no unknown keys.
 - Body sections: `## Ingredientes`, `## Preparación`. Optional ones already in use: `## Opcional`,
   `## Alternativas`.
-- Image is auto-rendered by `theme/main.html` from `fotos/<slug>.webp` — never link it in Markdown.
+- Image is auto-rendered by `docs_templates/main.html` from `fotos/<slug>.webp` — never link it in
+  Markdown.
 - Nav categories (the `nav` in `zensical.toml` is the source of truth for names and order):
   `Entrada` (`index.md`), `Etiquetas` (`etiquetas.md`), `Fuentes` (`fuentes.md`), `Glosario`
   (`glosario.md`), then the recipe sections.
