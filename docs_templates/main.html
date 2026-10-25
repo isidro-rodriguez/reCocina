@@ -29,6 +29,16 @@
         {{ format_time(page.meta.time) }}
     </span>
 
+    <span>
+        <span class="twemoji" aria-hidden="true">
+            {% include ".icons/fontawesome/solid/folder-open.svg" %}
+        </span>
+        <span class="visually-hidden">Categoría:</span>
+        <a href="{{ ('categoria/' ~ slugify(page.meta.category) ~ '/') | url }}">
+            {{page.meta.category}}
+        </a>
+    </span>
+
     {% if page.meta.source %}
     <span>
         <span class="twemoji" aria-hidden="true">

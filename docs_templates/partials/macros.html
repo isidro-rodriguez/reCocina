@@ -1,7 +1,8 @@
-{#- Ancla de `fuentes`/`etiquetas`; tests/test_anchors.py replica esta lógica. -#}
+{#- Ancla de `fuentes`/`etiquetas` y slug de `categoria/`; tests/test_anchors.py replica
+    esta lógica. Las comas se eliminan, como en las anclas que genera Zensical. -#}
 {% macro slugify(text) -%}
     {{- text | lower
-    | replace(' ', '-') | replace('ñ', 'n')
+    | replace(',', '') | replace(' ', '-') | replace('ñ', 'n')
     | replace('á', 'a') | replace('é', 'e') | replace('í', 'i')
     | replace('ó', 'o') | replace('ú', 'u') | replace('ü', 'u') -}}
 {%- endmacro %}

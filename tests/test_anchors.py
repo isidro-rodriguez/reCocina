@@ -1,10 +1,11 @@
-"""Tests de los enlaces internos a fuentes y etiquetas.
+"""Tests de los enlaces internos a fuentes, etiquetas y categorías.
 
 Las plantillas (`docs_templates/main.html`, `docs_templates/partials/tags.html`)
-construyen los enlaces `fuentes#<slug>` y `etiquetas#<slug>` con la macro
-`slugify` de `docs_templates/partials/macros.html` (minúsculas, guiones,
+construyen los enlaces `fuentes#<slug>`, `etiquetas#<slug>` y
+`categoria/<slug>/` con la macro `slugify` de
+`docs_templates/partials/macros.html` (minúsculas, sin comas, guiones,
 tildes → vocal). Estos tests comprueban que el slug enlazado existe como
-sección (`##` / `###`) en el fichero destino.
+sección (`##` / `###`) o como página en el destino.
 
 Ejecutar con::
 
@@ -18,14 +19,22 @@ import unicodedata
 from pathlib import Path
 
 import pytest
-from support import RECIPE_PATHS, SOURCES_FILE, TAGS_FILE, headings, load_frontmatter
+from support import (
+    CATEGORY_PATHS,
+    RECIPE_PATHS,
+    SOURCES_FILE,
+    TAGS_FILE,
+    headings,
+    load_frontmatter,
+    page_meta,
+)
 
 
 def _slugify(text: str) -> str:
     """Réplica en Python del slugificado de las plantillas Jinja."""
     slug = unicodedata.normalize("NFD", text.casefold())
     slug = "".join(char for char in slug if unicodedata.category(char) != "Mn")
-    return re.sub(r"\s+", "-", slug)
+    return re.sub(r"\s+", "-", slug.replace(",", ""))
 
 
 def _used_sources() -> set[str]:
@@ -58,6 +67,14 @@ def test_tag_resuelve_a_seccion(tag: str) -> None:
     )
 
 
+@pytest.mark.parametrize("path", CATEGORY_PATHS, ids=lambda p: p.stem)
+def test_categoria_resuelve_a_pagina(path: Path) -> None:
+    """El enlace `categoria/<slug>/` de la receta apunta a su propio fichero."""
+    assert _slugify(page_meta(path)["title"]) == path.stem, (
+        f"el título de {path.name} no genera el slug '{path.stem}'"
+    )
+
+
 def test_slugify_cubre_plantillas() -> None:
     """El slugificado Python coincide con el de las plantillas para lo usado.
 
@@ -67,7 +84,8 @@ def test_slugify_cubre_plantillas() -> None:
     completa.
     """
     template_chars = set("ñáéíóúü")
-    for name in _used_sources() | _used_tags():
+    categories = {page_meta(path)["title"] for path in CATEGORY_PATHS}
+    for name in _used_sources() | _used_tags() | categories:
         lowered = name.casefold()
         extras = {
             char
