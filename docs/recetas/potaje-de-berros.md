@@ -3,7 +3,8 @@ title: Potaje de berros
 people: 4
 time: 60
 date: 2023-08-17
-category: Verduras, Legumbres y Potajes
+categories:
+  - Verduras y Legumbres
 source: Lo mejor de la cocina canaria
 ---
 

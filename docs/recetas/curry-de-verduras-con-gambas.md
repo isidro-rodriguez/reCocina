@@ -3,7 +3,10 @@ title: Curry de verduras con gambas
 people: 4
 time: 35
 date: 2023-08-27
-category: Arroz
+categories:
+  - Arroz
+  - Pescado y Mariscos
+  - Verduras y Legumbres
 source: Lecturas
 ---
 

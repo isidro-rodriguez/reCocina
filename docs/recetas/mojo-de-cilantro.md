@@ -3,7 +3,8 @@ title: Mojo de cilantro
 people: 4
 time: 20
 date: 2026-10-02
-category: Salsas
+categories:
+  - Salsas
 source: Lo mejor de la cocina canaria
 tags:
   - Mortero

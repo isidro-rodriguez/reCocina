@@ -18,7 +18,7 @@ ingredientes y preparación paso a paso.
 - 🍰 [**Postres**](categoria/postres.md): el final feliz.
 - 🥫 [**Salsas**](categoria/salsas.md): el fondo de armario de la cocina.
 - 🍲 [**Sopas y Cremas**](categoria/sopas-y-cremas.md): calientes, o frías en verano.
-- 🥬 [**Verduras, Legumbres y Potajes**](categoria/verduras-legumbres-y-potajes.md): cuchara de las de siempre.
+- 🥬 [**Verduras y Legumbres**](categoria/verduras-y-legumbres.md): cuchara de las de siempre.
 
 ## Recetas del día
 

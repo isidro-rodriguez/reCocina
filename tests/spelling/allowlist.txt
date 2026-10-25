@@ -93,7 +93,7 @@ zensical
 
 
 # --- Frontmatter ---
-category
+categories
 description
 people
 source

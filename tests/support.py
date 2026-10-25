@@ -49,7 +49,7 @@ class Recipe(BaseModel):
     people: StrictPositiveInt
     time: StrictPositiveInt
     date: dt.date
-    category: Text
+    categories: Annotated[list[Text], Field(min_length=1, max_length=3)]
     source: Text | None = None
     tags: Annotated[list[Text], Field(min_length=1)] | None = None
 
@@ -63,6 +63,16 @@ class Recipe(BaseModel):
                 msg = f"claves presentes pero vacías: {', '.join(empty)}"
                 raise ValueError(msg)
         return data
+
+    @field_validator("categories")
+    @classmethod
+    def _unique_categories(cls, value: list[str]) -> list[str]:
+        """Una categoría repetida es un error de edición, no una prioridad."""
+        repeated = sorted({item for item in value if value.count(item) > 1})
+        if repeated:
+            msg = f"categorías repetidas: {', '.join(repeated)}"
+            raise ValueError(msg)
+        return value
 
     @field_validator("date")
     @classmethod

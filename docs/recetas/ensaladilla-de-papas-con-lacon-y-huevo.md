@@ -3,7 +3,8 @@ title: Ensaladilla de papas con lacón y huevo
 people: 4
 time: 30
 date: 2023-08-24
-category: Aperitivos
+categories:
+  - Aperitivos
 source: Lecturas
 ---
 

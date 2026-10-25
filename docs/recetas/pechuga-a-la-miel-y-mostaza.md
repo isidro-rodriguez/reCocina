@@ -3,7 +3,8 @@ title: Pechuga a la miel y mostaza
 people: 4
 time: 70
 date: 2023-08-24
-category: Pollo
+categories:
+  - Pollo
 source: Lecturas
 tags:
   - Horno

@@ -3,7 +3,8 @@ title: Estofado de ternera
 people: 4
 time: 90
 date: 2023-08-23
-category: Carne
+categories:
+  - Carne
 source: Lecturas
 ---
 

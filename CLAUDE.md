@@ -79,14 +79,15 @@ Checklist before handing off:
 ## Content conventions (recipes)
 
 - One recipe = `docs/recetas/<kebab-case-no-accents>.md` + `docs/fotos/<slug>.webp` (WebP de
-  900x600) + its `category` + an entry in the "Recetas" section of the `zensical.toml` `nav`
+  900x600) + its `categories` + an entry in the "Recetas" section of the `zensical.toml` `nav`
   (alphabetical). Missing any of them fails the tests. `docs/recetas/index.md` is the listing
   page, not a recipe.
 - Filename kebab-case **without** accents (ej. `sopa-de-melon.md`); `title` in frontmatter is the
   display name **with accents**.
 - Mandatory frontmatter (`tests/support.py` schema): `title` (non-empty), `people`/`time`
   (strict positive ints, `time` in minutes), `date` (`YYYY-MM-DD`, not in the future),
-  `category` (one; must match the `title` of a `docs/categoria/*.md`). Optional:
+  `categories` (list of 1–3, no repeats; each must match the `title` of a
+  `docs/categoria/*.md`). Optional:
   `source` (must match a `##` in `docs/fuentes.md`), `tags` (non-empty list, each must match a
   `###` in `docs/etiquetas.md`). No empty values (`source:` with nothing), no duplicated keys,
   no unknown keys.
@@ -102,7 +103,10 @@ Checklist before handing off:
   for that (review it when upgrading Zensical).
 - Categories live in `docs/categoria/<slug>.md` (`template: listado.html`, `title`,
   `description`), alphabetical in the "Categorías" section of the `nav`. The slug is
-  `slugify(title)` (commas dropped). A new one = file + line in "Categorías".
+  `slugify(title)` (commas dropped). A new one = file + line in "Categorías". On recipe pages
+  they render as badges before the tags (`docs_templates/partials/categories.html`, green
+  `.md-tag--categoria`); the menu marks the section with `.md-nav__item--categorias`
+  (`nav-item.html`) for its own styling.
 - Tags taxonomy lives in `docs/etiquetas.md`: aparatos (`Batidora`, `Horno`, `Mortero`,
   `Paellera`, `Wok`) + dieta (`Pescetariano`, `Vegano`, `Vegetariano`); icons mapped in
   `zensical.toml` (`[project.extra.tags]`, `[project.theme.icon.tag]`).
@@ -118,7 +122,7 @@ Checklist before handing off:
   of truth for `load_frontmatter` / `page_meta` / `headings`.
 - `tests/test_frontmatter.py` — frontmatter valid; no orphans (every `source` → `##` in
   `docs/fuentes.md`, every tag → `###` in `docs/etiquetas.md`); no duplicated titles; every
-  `category` has a page (`test_categoria_tiene_pagina`), every category page is used
+  category has a page (`test_categorias_tienen_pagina`), every category page is used
   (`test_categorias_sin_paginas_huerfanas`) and listed under "Categorías"
   (`test_categoria_en_el_nav`).
 - `tests/test_anchors.py` — template links resolve: `fuentes#…`, `etiquetas#…` and

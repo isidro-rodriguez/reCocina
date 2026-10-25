@@ -71,7 +71,7 @@ nav = [
         { "Postres" = "categoria/postres.md" },
         { "Salsas" = "categoria/salsas.md" },
         { "Sopas y Cremas" = "categoria/sopas-y-cremas.md" },
-        { "Verduras, Legumbres y Potajes" = "categoria/verduras-legumbres-y-potajes.md" },
+        { "Verduras y Legumbres" = "categoria/verduras-y-legumbres.md" },
     ] },
     { "Etiquetas" = "etiquetas.md" },
     { "Fuentes" = "fuentes.md" },

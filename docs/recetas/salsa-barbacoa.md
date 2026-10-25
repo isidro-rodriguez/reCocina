@@ -3,7 +3,8 @@ title: Salsa barbacoa
 people: 4
 time: 20
 date: 2023-08-20
-category: Salsas
+categories:
+  - Salsas
 ---
 
 ## Ingredientes

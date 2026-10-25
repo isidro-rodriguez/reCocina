@@ -3,7 +3,8 @@ title: Sopa de verduras con huevo
 people: 4
 time: 90
 date: 2023-08-25
-category: Sopas y Cremas
+categories:
+  - Sopas y Cremas
 source: Lecturas
 tags:
   - Vegetariano

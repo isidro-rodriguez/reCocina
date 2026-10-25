@@ -254,42 +254,165 @@ img {
     scroll-margin-top: 4rem; /* que la cabecera fija no tape el principio */
 }
 
-.pagination {
+/* Paginación al estilo de Bootstrap: botones unidos en un grupo, extremos redondeados.
+   nav.pagination ul: supera a `.md-typeset ul:not([hidden])` del tema (display: flow-root) */
+.md-typeset nav.pagination ul.pagination__list {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 0.4rem;
-    margin-top: 1.5rem;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.md-typeset .pagination__list > .pagination__item {
+    margin: 0;
 }
 
 /* nav.pagination: gana a la regla de enlaces del tema oscuro */
-.md-typeset nav.pagination a {
-    display: inline-grid;
-    place-items: center;
-    min-width: 2.2rem;
-    height: 2.2rem;
-    padding: 0 0.6rem;
+.md-typeset nav.pagination .pagination__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.4rem;
+    height: 2.4rem;
+    padding: 0 0.75rem;
+    margin-left: -1px; /* bordes compartidos entre botones vecinos */
     box-sizing: border-box;
-    border: 1px solid var(--md-default-fg-color--lighter);
-    border-radius: 999px;
-    color: var(--md-default-fg-color);
-    transition: border-color 0.2s, color 0.2s;
+    border: 1px solid var(--md-default-fg-color--lightest);
+    background-color: var(--md-default-bg-color);
+    color: var(--md-typeset-a-color);
+    font-size: 0.8rem;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    transition: background-color 0.15s, color 0.15s;
+
+    & svg {
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
 
     &:hover {
-        border-color: var(--md-accent-fg-color);
-        color: var(--md-accent-fg-color);
+        z-index: 1;
+        background-color: var(--md-code-bg-color);
     }
 
     &:focus-visible {
-        outline: 2px solid var(--md-accent-fg-color);
-        outline-offset: 2px;
+        z-index: 3;
+        outline: none;
+        box-shadow: 0 0 0 0.2rem var(--md-accent-fg-color--transparent);
     }
 
     &[aria-current="page"] {
+        z-index: 2;
         border-color: var(--terracota-600);
         background-color: var(--terracota-600);
         color: var(--blanco);
     }
+
+    &[aria-disabled="true"] {
+        color: var(--md-default-fg-color--lighter);
+        pointer-events: none;
+    }
+}
+
+.md-typeset .pagination__item:first-child .pagination__link {
+    margin-left: 0;
+    border-radius: 0.4rem 0 0 0.4rem;
+}
+
+.md-typeset .pagination__item:last-child .pagination__link {
+    border-radius: 0 0.4rem 0.4rem 0;
+}
+
+/* --- Badges: categorías (verde, color primario) y etiquetas (neutras) --- */
+.md-typeset .md-tag--categoria {
+    --md-tag-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'%3E%3Cpath d='m56 225.6-23.6 70.6V96c0-35.3 28.7-64 64-64h138.7c13.8 0 27.3 4.5 38.4 12.8l38.4 28.8c5.5 4.2 12.3 6.4 19.2 6.4h117.3c35.3 0 64 28.7 64 64v16H147c-41.3 0-78 26.4-91.1 65.6zM477.8 448H99c-32.8 0-55.9-32.1-45.5-63.2l48-144C108 221.2 126.4 208 147 208h378.8c32.8 0 55.9 32.1 45.5 63.2l-48 144c-6.5 19.6-24.9 32.8-45.5 32.8'/%3E%3C/svg%3E");
+
+    background-color: var(--categoria-bg);
+}
+
+/* [href]: misma especificidad que la regla del tema, que pondría el texto en terracota */
+.md-typeset .md-tag--categoria[href] {
+    color: var(--categoria-fg);
+}
+
+.md-typeset .md-tag--categoria.md-tag-icon::before {
+    background-color: currentColor;
+}
+
+.md-typeset .md-tag--categoria[href]:is(:hover, :focus) {
+    background-color: var(--md-primary-fg-color);
+    color: var(--blanco);
+}
+
+/* Etiquetas: el hover del tema (terracota 500 + blanco) no llega a 4,5:1 */
+.md-typeset .md-tag[href]:not(.md-tag--categoria):is(:hover, :focus) {
+    background-color: var(--terracota-600);
+    color: var(--blanco);
+}
+
+.md-typeset .md-tag-icon[href]:not(.md-tag--categoria):is(:hover, :focus)::before {
+    background-color: var(--blanco);
+}
+
+/* --- Menú lateral: desplegable de categorías --- */
+/* En escritorio el chevron va pegado al texto: con el panel del mismo color que la
+   página, en el extremo derecho quedaba suelto. En el cajón móvil se deja a la derecha. */
+@media screen and (min-width: 76.25em) {
+    /* Texto e icono en línea (no flex): así el icono, en inline-block, se apoya en la
+       línea base del texto sin depender de las métricas de la fuente. */
+    .md-nav__item--categorias > .md-nav__link {
+        display: block;
+
+        & .md-ellipsis {
+            display: inline;
+        }
+
+        /* Caja de 1cap sobre la línea base: va de la base al alto de las mayúsculas.
+           Supera a `[dir=ltr] .md-nav__link .md-icon:last-child { margin-left: auto }`. */
+        & .md-nav__icon.md-icon:last-child {
+            display: inline-block;
+            vertical-align: baseline;
+            width: 1cap;
+            height: 1cap;
+            margin: 0 0 0 0.35em;
+
+            /* El chevron del tema ocupa la mitad central de su caja de 24 unidades; con
+               el viewBox recortado (y centrado, para que siga girando bien) la llena. */
+            &::after {
+                /* En bloque: sin línea interior, la base del icono es su borde inferior */
+                display: block;
+                vertical-align: 0;
+                mask-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="6 6 12 12"><path d="M8.59 16.58 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>');
+                -webkit-mask-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="6 6 12 12"><path d="M8.59 16.58 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>');
+            }
+        }
+    }
+}
+
+.md-nav__item--categorias > .md-nav > .md-nav__list {
+    padding-block: 0.3rem 0.5rem; /* separa la lista abierta de Etiquetas y del propio título */
+}
+
+.md-nav__item--categorias > .md-nav .md-nav__link {
+    font-size: 0.92em;
+    color: var(--md-default-fg-color--light);
+}
+
+/* Recupera los colores de estado del tema, que la regla anterior pisaría */
+.md-nav__item--categorias > .md-nav .md-nav__link--active {
+    color: var(--md-typeset-a-color);
+}
+
+.md-nav__item--categorias > .md-nav .md-nav__link:is(:hover, :focus-visible) {
+    color: var(--md-accent-fg-color);
 }
 
 /* --- Iconos (máscara: heredan el color del texto) --- */
@@ -508,6 +631,10 @@ article:has(.page-metadata) {
     /* Enlaces: color del tema en vez del azul de Material */
     --md-typeset-a-color: var(--md-primary-fg-color);
 
+    /* Badges de categoría */
+    --categoria-bg: color-mix(in srgb, var(--verde-700) 22%, transparent);
+    --categoria-fg: var(--verde-800);
+
     /* Superficies y bordes */
     --md-code-bg-color: var(--arena-100);
     --md-code-fg-color: var(--tinta-900);
@@ -542,6 +669,13 @@ article:has(.page-metadata) {
     /* Código */
     --md-code-bg-color: var(--carbon-800);
     --md-code-fg-color: var(--marfil-100);
+
+    /* Enlaces fuera del artículo (menú, paginación): mismo terracota que los del texto */
+    --md-typeset-a-color: var(--terracota-400);
+
+    /* Badges de categoría */
+    --categoria-bg: color-mix(in srgb, var(--verde-600) 55%, transparent);
+    --categoria-fg: var(--marfil-100);
 
     /* Componentes */
 

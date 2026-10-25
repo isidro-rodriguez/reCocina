@@ -3,7 +3,8 @@ title: Cuscús de pollo y verduras
 people: 4
 time: 30
 date: 2023-08-17
-category: Pollo
+categories:
+  - Pollo
 ---
 
 ## Ingredientes

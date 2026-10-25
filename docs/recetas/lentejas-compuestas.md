@@ -3,7 +3,8 @@ title: Lentejas compuestas
 people: 6
 time: 50
 date: 2026-10-06
-category: Verduras, Legumbres y Potajes
+categories:
+  - Verduras y Legumbres
 source: Lo mejor de la cocina canaria
 # tags:
 ---

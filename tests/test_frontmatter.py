@@ -6,9 +6,9 @@ esquema ``support.Recipe``:
 * ``title``: obligatorio, cadena no vacía.
 * ``people`` y ``time``: obligatorios, enteros positivos.
 * ``date``: obligatorio, ``YYYY-MM-DD``, fecha válida y no futura.
-* ``category``: obligatorio; debe coincidir con el ``title`` de una página
-  ``docs/categoria/*.md``, que a su vez está en la sección "Categorías" del
-  ``nav``.
+* ``categories``: obligatorio, lista de 1 a 3 sin repetir; cada una debe
+  coincidir con el ``title`` de una página ``docs/categoria/*.md``, que a su
+  vez está en la sección "Categorías" del ``nav``.
 * ``source``: opcional; si existe, debe tener un ``##`` homónimo en
   ``docs/fuentes.md``.
 * ``tags``: opcional, lista no vacía; cada tag debe tener un ``###`` homónimo
@@ -97,15 +97,15 @@ def _category_titles() -> set[str]:
 
 
 @per_recipe
-def test_categoria_tiene_pagina(path: Path) -> None:
-    """La ``category`` coincide con el ``title`` de una página de categoría."""
-    category = load_frontmatter(path).category
-    assert category in _category_titles(), f"'{category}' sin página en docs/categoria/"
+def test_categorias_tienen_pagina(path: Path) -> None:
+    """Cada ``categories`` coincide con el ``title`` de una página de categoría."""
+    unknown = set(load_frontmatter(path).categories) - _category_titles()
+    assert not unknown, f"categorías sin página en docs/categoria/: {sorted(unknown)}"
 
 
 def test_categorias_sin_paginas_huerfanas() -> None:
     """Toda página de categoría la usa alguna receta."""
-    used = {recipe.category for recipe in all_recipes()}
+    used = {name for recipe in all_recipes() for name in recipe.categories}
     orphans = sorted(_category_titles() - used)
     assert not orphans, f"Categorías sin recetas en docs/categoria/: {orphans}"
 

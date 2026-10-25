@@ -3,7 +3,8 @@ title: Sopa de ajo
 people: 4
 time: 40
 date: 2023-08-17
-category: Sopas y Cremas
+categories:
+  - Sopas y Cremas
 source: El Comidista en EL PAÍS
 tags:
   - Vegetariano

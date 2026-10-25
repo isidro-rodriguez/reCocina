@@ -3,7 +3,9 @@ title: Musabaha
 people: 4
 time: 30
 date: 2024-07-24
-category: Verduras, Legumbres y Potajes
+categories:
+  - Verduras y Legumbres
+  - Aperitivos
 source: El Comidista en EL PAÍS
 tags:
   - Vegetariano

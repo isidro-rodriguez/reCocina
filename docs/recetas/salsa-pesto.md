@@ -3,7 +3,8 @@ title: Salsa pesto
 people: 4
 time: 5
 date: 2023-08-23
-category: Salsas
+categories:
+  - Salsas
 tags:
   - Batidora
   - Vegetariano

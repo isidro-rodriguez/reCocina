@@ -1,5 +1,5 @@
 {#-
-  Copia de partials/nav-item.html de Zensical 0.0.68 con un cambio marcado
+  Copia de partials/nav-item.html de Zensical 0.0.68 con dos cambios marcados
   como "reCocina" en render(). Al actualizar Zensical, revisa el original.
 -#}
 {% macro render_status(nav_item, type) %}
@@ -62,7 +62,7 @@
   {#- reCocina: "Recetas" es un enlace simple a su listado, sin desplegable. Las
       recetas siguen en el nav solo porque las plantillas no ven otras páginas
       (listado.html las recorre), pero no deben aparecer en el menú. Es el único
-      cambio respecto al partial original de Zensical. -#}
+      cambio de estructura respecto al partial original de Zensical. -#}
   {% set first = nav_item.children | first if nav_item.children else none %}
   {% if first and first.is_index and first.url == "recetas/" %}
     {% set link_class = "md-nav__link md-nav__link--active" if nav_item.active else "md-nav__link" %}
@@ -103,6 +103,10 @@
         {% set class = class ~ " md-nav__item--pruned" %}
         {% set is_pruned = true %}
       {% endif %}
+    {% endif %}
+    {#- reCocina: marca la sección "Categorías" para darle estilo propio en extra.css. -#}
+    {% if first and first.url and first.url is startingwith("categoria/") %}
+      {% set class = class ~ " md-nav__item--categorias" %}
     {% endif %}
     <li class="{{ class }} md-nav__item--nested">
       {% if not is_pruned %}

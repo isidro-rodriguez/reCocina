@@ -3,7 +3,9 @@ title: Potaje de vigilia
 people: 4
 time: 100
 date: 2023-08-17
-category: Verduras, Legumbres y Potajes
+categories:
+  - Verduras y Legumbres
+  - Pescado y Mariscos
 source: Lecturas
 tags:
   - Batidora

@@ -3,7 +3,9 @@ title: Pasta con cherry
 people: 4
 time: 40
 date: 2023-08-17
-category: Pasta
+categories:
+  - Pasta
+  - Pollo
 source: Lecturas
 tags:
   - Wok

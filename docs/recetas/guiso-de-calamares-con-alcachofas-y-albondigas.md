@@ -3,7 +3,9 @@ title: Guiso de calamares con alcachofas y albóndigas
 people: 4
 time: 75
 date: 2023-08-25
-category: Pescado y Mariscos
+categories:
+  - Pescado y Mariscos
+  - Carne
 source: Lecturas
 ---
 

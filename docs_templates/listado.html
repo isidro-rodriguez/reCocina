@@ -8,7 +8,7 @@
 
 {% set selection = namespace(items=[]) %}
 {% for recipe in ns.found %}
-    {% if page.url == "recetas/" or recipe.meta.category == page.meta.title %}
+    {% if page.url == "recetas/" or page.meta.title in recipe.meta.categories %}
         {% set selection.items = selection.items + [recipe] %}
     {% endif %}
 {% endfor %}

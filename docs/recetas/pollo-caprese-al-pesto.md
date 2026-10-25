@@ -3,7 +3,8 @@ title: Pollo caprese al pesto
 people: 4
 time: 55
 date: 2023-08-23
-category: Pollo
+categories:
+  - Pollo
 source: Lecturas
 tags:
   - Horno

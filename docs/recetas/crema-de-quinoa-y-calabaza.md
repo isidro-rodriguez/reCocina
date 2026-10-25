@@ -3,7 +3,8 @@ title: Crema de quinoa y calabaza
 people: 4
 time: 40
 date: 2023-08-22
-category: Sopas y Cremas
+categories:
+  - Sopas y Cremas
 source: Lecturas
 tags:
   - Batidora

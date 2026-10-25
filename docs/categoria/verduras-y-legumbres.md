@@ -1,5 +1,5 @@
 ---
 template: listado.html
-title: Verduras, Legumbres y Potajes
+title: Verduras y Legumbres
 description: Cuchara de las de siempre.
 ---

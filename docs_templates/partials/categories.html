@@ -1,0 +1,14 @@
+{#- Categorías de la receta como badges, junto a las etiquetas (partials/tags.html). -#}
+{% from "partials/macros.html" import slugify %}
+
+{% if page.meta and page.meta.categories is defined %}
+    <nav class="md-tags md-tags--categorias" aria-label="Categorías">
+        {% for name in page.meta.categories %}
+            <a href="{{ ('categoria/' ~ slugify(name) ~ '/') | url }}" class="md-tag md-tag-icon md-tag--categoria">
+                <span>
+                    {{- name -}}
+                </span>
+            </a>
+        {% endfor %}
+    </nav>
+{% endif %}

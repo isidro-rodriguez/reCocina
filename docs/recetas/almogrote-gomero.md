@@ -3,7 +3,8 @@ title: Almogrote gomero
 people: 8
 time: 30
 date: 2026-10-02
-category: Aperitivos
+categories:
+  - Aperitivos
 source: Lo mejor de la cocina canaria
 tags:
   - Mortero

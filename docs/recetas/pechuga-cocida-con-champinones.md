@@ -3,7 +3,8 @@ title: Pechuga cocida con champiñones
 people: 4
 time: 40
 date: 2023-08-23
-category: Pollo
+categories:
+  - Pollo
 source: Lecturas
 ---
 

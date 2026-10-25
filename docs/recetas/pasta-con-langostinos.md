@@ -3,7 +3,9 @@ title: Pasta con langostinos
 people: 4
 time: 20
 date: 2023-10-16
-category: Pasta
+categories:
+  - Pasta
+  - Pescado y Mariscos
 tags:
   - Wok
   - Pescetariano
