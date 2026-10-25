@@ -170,8 +170,9 @@ img {
     white-space: nowrap;
 }
 
-/* --- Receta del día --- */
-#daily-recipe {
+/* --- Rejilla de tarjetas: recetas del día y listados --- */
+#daily-recipe,
+.recipe-grid {
     display: grid;
     gap: 1rem;
     grid-template-columns: minmax(0, 24rem); /* una por fila */
@@ -228,6 +229,66 @@ img {
             align-items: center;
             gap: 0.35rem;
         }
+    }
+}
+
+/* --- Listados de recetas (recetas/ y categoria/) --- */
+.listado__descripcion {
+    margin-top: -0.5em;
+    color: var(--md-default-fg-color--light);
+    font-size: 1.1em;
+}
+
+.listado__recuento {
+    color: var(--md-default-fg-color--light);
+    font-size: 0.85em;
+}
+
+/* Paginación sin JS: se ve la sección enlazada (#pagina-N) o, si no hay ancla, la primera */
+.recipe-list:has(.recipe-page:target) .recipe-page:not(:target),
+.recipe-list:not(:has(.recipe-page:target)) .recipe-page:not(:first-child) {
+    display: none;
+}
+
+.recipe-page {
+    scroll-margin-top: 4rem; /* que la cabecera fija no tape el principio */
+}
+
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-top: 1.5rem;
+}
+
+/* nav.pagination: gana a la regla de enlaces del tema oscuro */
+.md-typeset nav.pagination a {
+    display: inline-grid;
+    place-items: center;
+    min-width: 2.2rem;
+    height: 2.2rem;
+    padding: 0 0.6rem;
+    box-sizing: border-box;
+    border: 1px solid var(--md-default-fg-color--lighter);
+    border-radius: 999px;
+    color: var(--md-default-fg-color);
+    transition: border-color 0.2s, color 0.2s;
+
+    &:hover {
+        border-color: var(--md-accent-fg-color);
+        color: var(--md-accent-fg-color);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--md-accent-fg-color);
+        outline-offset: 2px;
+    }
+
+    &[aria-current="page"] {
+        border-color: var(--terracota-600);
+        background-color: var(--terracota-600);
+        color: var(--blanco);
     }
 }
 

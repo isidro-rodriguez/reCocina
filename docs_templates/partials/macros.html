@@ -24,3 +24,46 @@
     {%- set parts = (date ~ "") | split("-") | list -%}
     {{- parts[2] | int }} {{ months[(parts[1] | int) - 1] }} {{ parts[0] -}}
 {%- endmacro %}
+
+{#- Recetas del nav (las plantillas no ven otras páginas): las que tienen categoría. -#}
+{% macro collect_recipes(items, ns) -%}
+    {%- for item in items -%}
+        {%- if item.meta and item.meta.category is defined -%}
+            {%- set ns.found = ns.found + [item] -%}
+        {%- endif -%}
+        {{- collect_recipes(item.children, ns) -}}
+    {%- endfor -%}
+{%- endmacro %}
+
+{#- Misma estructura y clases que la tarjeta de daily-recipe.js. -#}
+{% macro card(recipe) -%}
+    {%- set slug = recipe.url | trim('/') | split('/') | last -%}
+    {%- set people = recipe.meta.people -%}
+    <a class="card-recipe" href="{{ recipe.url | url }}">
+        <img src="{{ ('fotos/' ~ slug ~ '.webp') | url }}" alt="" loading="lazy" width="900" height="600">
+        <div class="card-recipe__body">
+            <h3>{{ recipe.title }}</h3>
+            <p>
+                <span><i class="icon icon--people" aria-hidden="true"></i>{{ people }} {{ "ración" if people == 1 else "raciones" }}</span>
+                <span><i class="icon icon--clock" aria-hidden="true"></i>{{ format_time(recipe.meta.time) }}</span>
+            </p>
+        </div>
+    </a>
+{%- endmacro %}
+
+{#- Paginación por anclas (#pagina-N): el CSS muestra la sección enlazada. -#}
+{% macro pagination(total, current) -%}
+    {%- if total > 1 -%}
+    <nav class="pagination" aria-label="Paginación">
+        {% if current > 1 -%}
+        <a href="#pagina-{{ current - 1 }}" rel="prev" aria-label="Página anterior">‹</a>
+        {%- endif %}
+        {% for n in range(1, total + 1) -%}
+        <a href="#pagina-{{ n }}" aria-label="Página {{ n }}"{% if n == current %} aria-current="page"{% endif %}>{{ n }}</a>
+        {% endfor -%}
+        {% if current < total -%}
+        <a href="#pagina-{{ current + 1 }}" rel="next" aria-label="Página siguiente">›</a>
+        {%- endif %}
+    </nav>
+    {%- endif -%}
+{%- endmacro %}

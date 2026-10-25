@@ -1,10 +1,40 @@
 {% extends "page.html" %}
+{% from "partials/macros.html" import card, collect_recipes, pagination %}
 
-{#- Listado de recetas: la página de recetas y cada categoría. -#}
+{#- Listado de recetas: la página de recetas (todas) y cada categoría (las suyas). -#}
 {% block content %}
+{% set ns = namespace(found=[]) %}
+{{- collect_recipes(nav.items, ns) -}}
+
+{% set selection = namespace(items=[]) %}
+{% for recipe in ns.found %}
+    {% if page.url == "recetas/" or recipe.meta.category == page.meta.title %}
+        {% set selection.items = selection.items + [recipe] %}
+    {% endif %}
+{% endfor %}
+
+{#- Por url: el slug es ASCII y ordena bien aunque un título empiece por tilde -#}
+{% set batches = selection.items | sort(attribute="url") | batch(10) | list %}
+{% set total = selection.items | length %}
+
 <h1>{{ page.meta.title }}</h1>
 
 {% if page.meta.description is defined %}
 <p class="listado__descripcion">{{ page.meta.description }}</p>
 {% endif %}
+
+<p class="listado__recuento">{{ total }} {{ "receta" if total == 1 else "recetas" }}</p>
+
+<div class="recipe-list">
+    {% for recipes in batches %}
+    <section class="recipe-page" id="pagina-{{ loop.index }}">
+        <div class="recipe-grid">
+            {% for recipe in recipes %}
+            {{ card(recipe) }}
+            {% endfor %}
+        </div>
+        {{ pagination(batches | length, loop.index) }}
+    </section>
+    {% endfor %}
+</div>
 {% endblock %}

@@ -206,4 +206,16 @@
             color: inherit;
         }
     }
+
+    /* ========================================
+       7. Listados: todas las páginas, sin paginación
+       ======================================== */
+    .recipe-list:has(.recipe-page:target) .recipe-page:not(:target),
+    .recipe-list:not(:has(.recipe-page:target)) .recipe-page:not(:first-child) {
+        display: block;
+    }
+
+    .pagination {
+        display: none;
+    }
 }
