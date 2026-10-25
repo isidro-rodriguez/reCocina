@@ -3,6 +3,7 @@ title: Cerdo agridulce
 people: 6
 time: 60
 date: 2023-08-31
+category: Carne
 ---
 
 ## Ingredientes

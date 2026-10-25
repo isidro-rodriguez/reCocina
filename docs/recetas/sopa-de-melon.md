@@ -3,6 +3,7 @@ title: Sopa de melón
 people: 6
 time: 15
 date: 2024-07-24
+category: Postres
 tags:
   - Batidora
 ---

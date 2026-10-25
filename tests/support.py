@@ -24,9 +24,14 @@ RECIPES_DIR: Final = DOCS_DIR / "recetas"
 PHOTOS_DIR: Final = DOCS_DIR / "fotos"
 SOURCES_FILE: Final = DOCS_DIR / "fuentes.md"
 TAGS_FILE: Final = DOCS_DIR / "etiquetas.md"
+CATEGORIES_DIR: Final = DOCS_DIR / "categoria"
 ZENSICAL_FILE: Final = PROJECT_DIR / "zensical.toml"
 
-RECIPE_PATHS: Final = sorted(RECIPES_DIR.glob("*.md"))
+# `recetas/index.md` es la página del listado, no una receta.
+RECIPE_PATHS: Final = sorted(
+    path for path in RECIPES_DIR.glob("*.md") if path.name != "index.md"
+)
+CATEGORY_PATHS: Final = sorted(CATEGORIES_DIR.glob("*.md"))
 
 _FRONTMATTER = re.compile(r"\A---\r?\n(.*?)\r?\n---[ \t]*(?:\r?\n|\Z)", re.DOTALL)
 
@@ -44,6 +49,7 @@ class Recipe(BaseModel):
     people: StrictPositiveInt
     time: StrictPositiveInt
     date: dt.date
+    category: Text
     source: Text | None = None
     tags: Annotated[list[Text], Field(min_length=1)] | None = None
 
@@ -97,6 +103,22 @@ def _frontmatter_block(text: str, name: str) -> str:
 
 
 @cache
+def page_meta(path: Path) -> dict[str, Any]:
+    """Lee el frontmatter de cualquier página, sin validar el esquema de receta.
+
+    Raises:
+        ValueError: Si falta el bloque ``---`` o el YAML no es un mapa.
+        yaml.YAMLError: Si el YAML es inválido o repite claves.
+    """
+    block = _frontmatter_block(read_text(path), path.name)
+    meta = yaml.load(block, Loader=_UniqueKeyLoader)
+    if not isinstance(meta, dict):
+        msg = f"{path.name}: el frontmatter debe ser un mapa clave: valor"
+        raise ValueError(msg)
+    return meta
+
+
+@cache
 def load_frontmatter(path: Path) -> Recipe:
     """Lee y valida el frontmatter de una receta.
 
@@ -105,12 +127,7 @@ def load_frontmatter(path: Path) -> Recipe:
         yaml.YAMLError: Si el YAML es inválido o repite claves.
         pydantic.ValidationError: Si algún campo incumple el esquema.
     """
-    block = _frontmatter_block(read_text(path), path.name)
-    meta = yaml.load(block, Loader=_UniqueKeyLoader)
-    if not isinstance(meta, dict):
-        msg = f"{path.name}: el frontmatter debe ser un mapa clave: valor"
-        raise ValueError(msg)
-    return Recipe.model_validate(meta)
+    return Recipe.model_validate(page_meta(path))
 
 
 def all_recipes() -> list[Recipe]:

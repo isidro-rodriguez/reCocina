@@ -3,6 +3,7 @@ title: Arroz con pollo y gambas
 people: 6
 time: 50
 date: 2024-09-19
+category: Arroz
 tags:
   - Paellera
 ---

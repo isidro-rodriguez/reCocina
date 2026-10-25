@@ -3,6 +3,7 @@ title: Pasta con setas a la foie
 people: 4
 time: 35
 date: 2023-08-20
+category: Pasta
 source: Lecturas
 ---
 

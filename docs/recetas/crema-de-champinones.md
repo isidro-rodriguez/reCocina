@@ -3,6 +3,7 @@ title: Crema de champiñones
 people: 6
 time: 50
 date: 2023-11-26
+category: Sopas y Cremas
 tags:
   - Batidora
 ---

@@ -3,6 +3,7 @@ title: Arroz a banda con sepia
 people: 4
 time: 60
 date: 2023-08-17
+category: Arroz
 source: Lecturas
 tags:
   - Pescetariano

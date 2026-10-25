@@ -3,6 +3,7 @@ title: Calamares rellenos de carne
 people: 4
 time: 60
 date: 2023-08-22
+category: Pescado y Mariscos
 source: Lecturas
 ---
 

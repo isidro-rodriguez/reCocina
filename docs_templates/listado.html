@@ -1,0 +1,10 @@
+{% extends "page.html" %}
+
+{#- Listado de recetas: la página de recetas y cada categoría. -#}
+{% block content %}
+<h1>{{ page.meta.title }}</h1>
+
+{% if page.meta.description is defined %}
+<p class="listado__descripcion">{{ page.meta.description }}</p>
+{% endif %}
+{% endblock %}

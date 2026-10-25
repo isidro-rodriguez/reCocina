@@ -3,6 +3,7 @@ title: Pastel de calabaza y pollo
 people: 8
 time: 60
 date: 2023-08-25
+category: Pollo
 source: Lecturas
 tags:
   - Horno

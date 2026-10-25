@@ -3,6 +3,7 @@ title: Sopa minestrone
 people: 4
 time: 45
 date: 2023-08-25
+category: Sopas y Cremas
 source: Lecturas
 tags:
   - Vegetariano

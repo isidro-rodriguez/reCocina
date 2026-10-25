@@ -93,6 +93,8 @@ zensical
 
 
 # --- Frontmatter ---
+category
+description
 people
 source
 tags

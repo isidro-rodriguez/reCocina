@@ -68,7 +68,10 @@ def build_recipe_index(*, strict: bool = False) -> int:
     """
     entries: list[RecipeEntry] = []
     errors: list[str] = []
+    # index.md es la página del listado, no una receta.
     for path in sorted(RECIPES_DIR.glob("*.md")):
+        if path.name == "index.md":
+            continue
         try:
             entries.append(_parse_recipe(path))
         except ValueError as exc:

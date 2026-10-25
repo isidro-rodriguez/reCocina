@@ -3,6 +3,7 @@ title: Cabra guisada
 people: 4
 time: 180
 date: 2023-08-17
+category: Carne
 tags:
   - Mortero
 ---

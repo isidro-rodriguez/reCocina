@@ -3,6 +3,7 @@ title: Peras al vino
 people: 4
 time: 50
 date: 2024-09-17
+category: Postres
 source: LOVE cocina
 tags:
   - Vegano

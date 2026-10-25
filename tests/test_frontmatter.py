@@ -6,12 +6,16 @@ esquema ``support.Recipe``:
 * ``title``: obligatorio, cadena no vacía.
 * ``people`` y ``time``: obligatorios, enteros positivos.
 * ``date``: obligatorio, ``YYYY-MM-DD``, fecha válida y no futura.
+* ``category``: obligatorio; debe coincidir con el ``title`` de una página
+  ``docs/categoria/*.md``, que a su vez está en la sección "Categorías" del
+  ``nav``.
 * ``source``: opcional; si existe, debe tener un ``##`` homónimo en
   ``docs/fuentes.md``.
 * ``tags``: opcional, lista no vacía; cada tag debe tener un ``###`` homónimo
   en ``docs/etiquetas.md``.
 
-Además, no puede haber secciones ni etiquetas huérfanas, ni títulos repetidos.
+Además, no puede haber secciones, etiquetas ni categorías huérfanas, ni
+títulos repetidos.
 
 Ejecutar con::
 
@@ -20,18 +24,25 @@ Ejecutar con::
 
 from __future__ import annotations
 
+import tomllib
 from collections import Counter
 from pathlib import Path
 
 import pytest
 from support import (
+    CATEGORY_PATHS,
+    DOCS_DIR,
     RECIPE_PATHS,
     SOURCES_FILE,
     TAGS_FILE,
+    ZENSICAL_FILE,
     all_recipes,
     headings,
     load_frontmatter,
+    page_meta,
 )
+
+NAV_CATEGORIES = "Categorías"
 
 per_recipe = pytest.mark.parametrize("path", RECIPE_PATHS, ids=lambda p: p.stem)
 
@@ -78,3 +89,37 @@ def test_etiquetas_sin_tags_huerfanos() -> None:
     used = {tag for recipe in all_recipes() for tag in recipe.tags or []}
     orphans = sorted(headings(TAGS_FILE, 3) - used)
     assert not orphans, f"Etiquetas sin usar en docs/etiquetas.md: {orphans}"
+
+
+def _category_titles() -> set[str]:
+    """Títulos de las páginas ``docs/categoria/*.md``."""
+    return {page_meta(path)["title"] for path in CATEGORY_PATHS}
+
+
+@per_recipe
+def test_categoria_tiene_pagina(path: Path) -> None:
+    """La ``category`` coincide con el ``title`` de una página de categoría."""
+    category = load_frontmatter(path).category
+    assert category in _category_titles(), f"'{category}' sin página en docs/categoria/"
+
+
+def test_categorias_sin_paginas_huerfanas() -> None:
+    """Toda página de categoría la usa alguna receta."""
+    used = {recipe.category for recipe in all_recipes()}
+    orphans = sorted(_category_titles() - used)
+    assert not orphans, f"Categorías sin recetas en docs/categoria/: {orphans}"
+
+
+def test_categoria_en_el_nav() -> None:
+    """Toda página de categoría está en la sección "Categorías" del ``nav``."""
+    nav = tomllib.loads(ZENSICAL_FILE.read_text(encoding="utf-8"))["project"]["nav"]
+    section = next(
+        (entry[NAV_CATEGORIES] for entry in nav if NAV_CATEGORIES in entry), []
+    )
+    listed = {page for item in section for page in item.values()}
+    missing = sorted(
+        path.relative_to(DOCS_DIR).as_posix()
+        for path in CATEGORY_PATHS
+        if path.relative_to(DOCS_DIR).as_posix() not in listed
+    )
+    assert not missing, f"Categorías fuera de '{NAV_CATEGORIES}' en el nav: {missing}"

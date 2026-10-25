@@ -3,6 +3,7 @@ title: Solomillo de cerdo con papas y frutos secos
 people: 4
 time: 45
 date: 2023-08-24
+category: Carne
 source: Lecturas
 tags:
   - Horno

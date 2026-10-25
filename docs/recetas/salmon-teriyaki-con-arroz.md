@@ -3,6 +3,7 @@ title: Salmón teriyaki con arroz
 people: 4
 time: 40
 date: 2023-08-27
+category: Arroz
 source: Lecturas
 tags:
   - Wok
