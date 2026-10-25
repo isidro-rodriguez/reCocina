@@ -300,6 +300,9 @@ img {
     --md-default-fg-color--lighter: color-mix(in srgb, var(--tinta-900) 50%, transparent);
     --md-default-fg-color--lightest: color-mix(in srgb, var(--tinta-900) 25%, transparent);
 
+    /* Enlaces: color del tema en vez del azul de Material */
+    --md-typeset-a-color: var(--md-primary-fg-color);
+
     /* Superficies y bordes */
     --md-code-bg-color: var(--arena-100);
     --md-code-fg-color: var(--tinta-900);

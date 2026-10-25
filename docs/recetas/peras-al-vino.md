@@ -19,8 +19,8 @@ tags:
 
 ## Preparación
 
-En una olla pon a hervir durante 10 minutos el vino con el anís, la canela, la cáscara del limón y
-la mitad del azúcar.
+En una olla pon a hervir durante 10 minutos el vino con el anís, la canela, la
+cáscara del limón y la mitad del azúcar.
 
 Mientras tanto, lava y pela las peras dejando el rabito.
 
@@ -28,6 +28,7 @@ Echa las peras en el vino y deja cocinar a fuego lento durante 25 minutos.
 
 Quita la canela y deja enfriar las peras en la misma olla.
 
-Retira las peras y pon a hervir el vino con el resto del azúcar hasta que reduzca a una salsa espesa como un almíbar.
+Retira las peras y pon a hervir el vino con el resto del azúcar hasta que reduzca
+a una salsa espesa como un almíbar.
 
 Sirve las peras bañadas con el vino reducido.
