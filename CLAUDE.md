@@ -79,11 +79,14 @@ Checklist before handing off:
 ## Content conventions (recipes)
 
 - One recipe = `docs/recetas/<kebab-case-no-accents>.md` + `docs/fotos/<slug>.webp` (WebP de
-  900x600) + an entry in `zensical.toml` `nav`. Missing any of the three fails the tests.
+  900x600) + its `category` + an entry in the "Recetas" section of the `zensical.toml` `nav`
+  (alphabetical). Missing any of them fails the tests. `docs/recetas/index.md` is the listing
+  page, not a recipe.
 - Filename kebab-case **without** accents (ej. `sopa-de-melon.md`); `title` in frontmatter is the
   display name **with accents**.
 - Mandatory frontmatter (`tests/support.py` schema): `title` (non-empty), `people`/`time`
-  (strict positive ints, `time` in minutes), `date` (`YYYY-MM-DD`, not in the future). Optional:
+  (strict positive ints, `time` in minutes), `date` (`YYYY-MM-DD`, not in the future),
+  `category` (one; must match the `title` of a `docs/categoria/*.md`). Optional:
   `source` (must match a `##` in `docs/fuentes.md`), `tags` (non-empty list, each must match a
   `###` in `docs/etiquetas.md`). No empty values (`source:` with nothing), no duplicated keys,
   no unknown keys.
@@ -91,9 +94,15 @@ Checklist before handing off:
   `## Alternativas`.
 - Image is auto-rendered by `docs_templates/main.html` from `fotos/<slug>.webp` — never link it in
   Markdown.
-- Nav categories (the `nav` in `zensical.toml` is the source of truth for names and order):
-  `Entrada` (`index.md`), `Etiquetas` (`etiquetas.md`), `Fuentes` (`fuentes.md`), `Glosario`
-  (`glosario.md`), then the recipe sections.
+- Nav (the `nav` in `zensical.toml` is the source of truth for names and order): `Entrada`
+  (`index.md`), `Recetas` (`recetas/index.md` + every recipe), `Categorías`, `Etiquetas`
+  (`etiquetas.md`), `Fuentes` (`fuentes.md`), `Glosario` (`glosario.md`). Recipes stay in the
+  `nav` because templates only see `nav` pages (`listado.html` walks it), but the menu draws
+  `Recetas` as a plain link: `docs_templates/partials/nav-item.html` overrides Zensical's partial
+  for that (review it when upgrading Zensical).
+- Categories live in `docs/categoria/<slug>.md` (`template: listado.html`, `title`,
+  `description`), alphabetical in the "Categorías" section of the `nav`. The slug is
+  `slugify(title)` (commas dropped). A new one = file + line in "Categorías".
 - Tags taxonomy lives in `docs/etiquetas.md`: aparatos (`Batidora`, `Horno`, `Mortero`,
   `Paellera`, `Wok`) + dieta (`Pescetariano`, `Vegano`, `Vegetariano`); icons mapped in
   `zensical.toml` (`[project.extra.tags]`, `[project.theme.icon.tag]`).
@@ -106,9 +115,14 @@ Checklist before handing off:
 ## Tests contract
 
 - `tests/support.py` — shared paths + frontmatter schema (`Recipe` pydantic model); single source
-  of truth for `load_frontmatter` / `headings`.
+  of truth for `load_frontmatter` / `page_meta` / `headings`.
 - `tests/test_frontmatter.py` — frontmatter valid; no orphans (every `source` → `##` in
-  `docs/fuentes.md`, every tag → `###` in `docs/etiquetas.md`); no duplicated titles.
+  `docs/fuentes.md`, every tag → `###` in `docs/etiquetas.md`); no duplicated titles; every
+  `category` has a page (`test_categoria_tiene_pagina`), every category page is used
+  (`test_categorias_sin_paginas_huerfanas`) and listed under "Categorías"
+  (`test_categoria_en_el_nav`).
+- `tests/test_anchors.py` — template links resolve: `fuentes#…`, `etiquetas#…` and
+  `categoria/<slug>/` (`test_categoria_resuelve_a_pagina`).
 - `tests/test_recipes.py` — recipes ⇄ nav ⇄ photos in sync; no broken/dead/orphan images; photos
   must be 900x600 WebP.
 - `tests/test_spelling.py` — Spanish spelling (spylls + vendored `es_ES`); unknown words must be in

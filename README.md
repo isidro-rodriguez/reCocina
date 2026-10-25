@@ -24,12 +24,13 @@ Tres pasos:
 
 1. **Crea el archivo** `docs/recetas/<nombre-en-kebab-case>.md`
 2. **Copia la foto** en `docs/fotos` (WebP de 900x600)
-3. **Regístrala en el menú**: abre `zensical.toml` y añade la ruta dentro de la categoría
-   correspondiente del bloque `nav`:
+3. **Regístrala en el menú**: abre `zensical.toml` y añade la ruta en la sección "Recetas" del
+   bloque `nav`, en orden alfabético. La categoría no se pone aquí, sino en `category`:
 
 ```toml
 nav = [
-    { "Arroz" = [
+    { "Recetas" = [
+        "recetas/index.md",
         "recetas/arroz-a-banda-con-sepia.md",
         "recetas/mi-receta-nueva.md", # <- añade esta línea
     ] },
@@ -38,7 +39,7 @@ nav = [
 
 ### Plantilla de receta
 
-Copia y pega en el nuevo `.md` (`title`, `people`, `time` y `date` son obligatorios;
+Copia y pega en el nuevo `.md` (`title`, `people`, `time`, `date` y `category` son obligatorios;
 `source` y `tags` solo si la receta los necesita — nunca dejes claves vacías):
 
 ```markdown
@@ -47,6 +48,7 @@ title:
 people:
 time:
 date:
+category:
 # source:
 # tags:
 ---
@@ -67,6 +69,8 @@ Describe el segundo paso.
 - `people`: número de comensales de la receta (entero positivo).
 - `time`: tiempo, en minutos, aproximado de elaboración (entero positivo).
 - `date`: fecha en que se añade la receta (`AAAA-MM-DD`, no futura).
+- `category`: categoría de la receta (una sola; debe coincidir con el `title` de una página de
+  `docs/categoria/`, p. ej. `Arroz` o `Sopas y Cremas`).
 - `source`: fuente de la que se obtuvo la receta (opcional, requiere sección homónima en `docs/fuentes.md`).
 - `tags`: lista de etiquetas (opcional, cada etiqueta requiere entrada homónima en `docs/etiquetas.md`).
 
