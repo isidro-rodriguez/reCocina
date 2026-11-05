@@ -7,7 +7,7 @@ requires-python = ">=3.12"
 authors = [{ name = "Isidro Rodríguez" }]
 dependencies = [
   "pyyaml>=6.0.3",
-  "zensical==0.0.68",
+  "zensical==0.0.74",
 ]
 
 [dependency-groups]
