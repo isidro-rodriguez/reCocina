@@ -82,7 +82,7 @@ nav = [
 variant = "classic"
 language = "es"
 custom_dir = "docs_templates"
-favicon = "assets/images/favicon.ico"
+favicon = "assets/favicon/favicon-32x32.png"
 logo = "assets/images/logo.svg"
 font = false
 features = [
@@ -106,6 +106,10 @@ primary = "custom"
 accent = "custom"
 toggle.icon = "fontawesome/regular/moon"
 toggle.name = "Cambiar a modo claro"
+
+[project.extra]
+# Color de la barra del navegador (docs_templates/page.html) y del manifiesto.
+theme_color = "#3f5f4a"
 
 [[project.extra.social]]
 icon = "fontawesome/brands/github"

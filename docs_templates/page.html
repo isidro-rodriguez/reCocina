@@ -1,18 +1,23 @@
 {% extends "base.html" %}
 
 {% block extrahead %}
-    <link rel="apple-touch-icon"
-          sizes="180x180"
-          href="{{ 'assets/images/apple-touch-icon.png' | url }}">
+    {#- Cabecera común (skill zensical-site): favicons, manifiesto y color del
+        navegador desde [project.extra] theme_color. Va aquí y no en main.html
+        porque main.html (recetas) y listado.html extienden esta plantilla. -#}
+    <link rel="icon" href="{{ 'assets/favicon/favicon.ico' | url }}" sizes="48x48">
     <link rel="icon"
           type="image/png"
           sizes="32x32"
-          href="{{ 'assets/images/favicon-32x32.png' | url }}">
+          href="{{ 'assets/favicon/favicon-32x32.png' | url }}">
     <link rel="icon"
           type="image/png"
           sizes="16x16"
-          href="{{ 'assets/images/favicon-16x16.png' | url }}">
-    <link rel="manifest" href="{{ '/site.webmanifest' | url }}">
+          href="{{ 'assets/favicon/favicon-16x16.png' | url }}">
+    <link rel="apple-touch-icon"
+          sizes="180x180"
+          href="{{ 'assets/favicon/apple-touch-icon.png' | url }}">
+    <link rel="manifest" href="{{ 'site.webmanifest' | url }}">
+    <meta name="theme-color" content="{{ config.extra.theme_color }}">
 
     <script blocking="render">
       const slug = (url) => new URL(url).pathname.split("/").filter(Boolean).pop();
