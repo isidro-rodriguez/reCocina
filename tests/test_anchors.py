@@ -100,20 +100,24 @@ def test_slugify_cubre_plantillas() -> None:
 
 
 def _base_theme_files() -> frozenset[str]:
-    """Ficheros del tema base Zensical (`templates/` del paquete instalado)."""
-    try:
-        from importlib.resources import as_file, files
+    """Ficheros del tema base Zensical (`templates/` del paquete instalado).
 
-        traversable = files("zensical") / "templates"
-        with as_file(traversable) as templates:
-            if templates.is_dir():
-                return frozenset(
-                    path.relative_to(templates).as_posix()
-                    for path in templates.rglob("*")
-                    if path.is_file()
-                )
-    except (ImportError, ModuleNotFoundError, FileNotFoundError):
-        pass
+    Desde Zensical 0.0.74 el tema vive en el paquete `zensical_ui`; antes estaba
+    dentro de `zensical`. Se prueba primero el nuevo para no depender de la versión.
+    """
+    from importlib.resources import as_file, files
+
+    for package in ("zensical_ui", "zensical"):
+        try:
+            with as_file(files(package) / "templates") as templates:
+                if templates.is_dir():
+                    return frozenset(
+                        path.relative_to(templates).as_posix()
+                        for path in templates.rglob("*")
+                        if path.is_file()
+                    )
+        except (ImportError, ModuleNotFoundError, FileNotFoundError):
+            continue
     return frozenset()
 
 
