@@ -60,7 +60,7 @@
    ======================================== */
 :root {
     --ancho-menu: 14rem; /* menú lateral de Material */
-    --ancho-articulo: 780px; /* fotos a 780px; el texto, a 64ch (≈ 75 caracteres) */
+    --ancho-articulo: 780px; /* ≈ 75 caracteres con la fuente de lectura */
     --separacion-menu: 4rem; /* aire entre menú y artículo */
     --umbral-menu: 76.25em; /* a partir de aquí aparece el menú lateral */
 }
@@ -70,7 +70,7 @@
    ======================================== */
 .md-typeset {
     font-size: 0.9rem; /* 18 px (1rem = 20 px en Material) */
-    line-height: 1.45; /* Practical Typography: 120-145 % (site.py measure) */
+    line-height: 1.7;
     color: var(--md-default-fg-color);
 
     & p,
@@ -81,12 +81,6 @@
 
     & li {
         margin-bottom: 0.3em;
-    }
-
-    /* Practical Typography: unos 75 caracteres por línea (site.py measure).
-       El artículo mide 780px para que quepan las fotos; el texto, menos. */
-    & > :is(p, ul, ol, dl, blockquote, .admonition, details):not(:has(img)) {
-        max-width: 64ch;
     }
 
     /* Material deja el término igual que su definición */
