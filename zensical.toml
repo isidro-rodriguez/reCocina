@@ -79,12 +79,11 @@ nav = [
 ]
 
 [project.theme]
-variant = "classic"
-language = "es"
+# Tema común de las webs: https://isidro-rodriguez.github.io/techsical/
+# Trae idioma, fuentes, paleta clara/oscura, favicons, manifiesto y transiciones.
+name = "techsical"
 custom_dir = "docs_templates"
-favicon = "assets/favicon/favicon-32x32.png"
 logo = "assets/images/logo.svg"
-font = false
 features = [
     "navigation.indexes",
     "navigation.top",
@@ -93,23 +92,14 @@ features = [
     "content.code.copy",
 ]
 
-[[project.theme.palette]]
-scheme = "light"
-primary = "custom"
-accent = "custom"
-toggle.icon = "fontawesome/regular/sun"
-toggle.name = "Cambiar a modo oscuro"
-
-[[project.theme.palette]]
-scheme = "slate"
-primary = "custom"
-accent = "custom"
-toggle.icon = "fontawesome/regular/moon"
-toggle.name = "Cambiar a modo claro"
-
-[project.extra]
-# Color de la barra del navegador (docs_templates/page.html) y del manifiesto.
-theme_color = "#3f5f4a"
+[project.extra.techsical]
+# Verde bosque y terracota; el papel y la noche cálidos, en extra.css.
+# Opciones: https://isidro-rodriguez.github.io/techsical/guia/personalizacion/
+primary = "#3f5f4a"
+accent = "#a85a3a"
+primary_dark = "#d0805f"  # en modo oscuro los enlaces van en terracota
+accent_dark = "#d0805f"
+figure_max = "720px"      # la foto de la receta, al ancho del texto
 
 [[project.extra.social]]
 icon = "fontawesome/brands/github"
