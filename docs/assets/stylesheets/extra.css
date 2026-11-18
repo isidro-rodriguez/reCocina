@@ -312,8 +312,11 @@ img {
 }
 
 /* --- Badges: categorías (verde, color primario) y etiquetas (neutras) --- */
-.md-tags {
-    margin-right: 6px;
+/* Categorías y etiquetas son dos <nav>: en línea, una fila de badges seguida. */
+.md-typeset .md-tags:not([hidden]) {
+    display: inline-flex;
+    margin-right: 0.5em;
+    vertical-align: top;
 }
 
 .md-typeset .md-tag--categoria {
