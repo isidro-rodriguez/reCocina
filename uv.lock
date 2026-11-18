@@ -571,7 +571,7 @@ version = "0.0.0"
 source = { virtual = "." }
 dependencies = [
     { name = "pyyaml" },
-    { name = "zensical" },
+    { name = "techsical" },
 ]
 
 [package.dev-dependencies]
@@ -588,7 +588,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "pyyaml", specifier = ">=6.0.3" },
-    { name = "zensical", specifier = "==0.1.2" },
+    { name = "techsical", specifier = ">=0.3.0" },
 ]
 
 [package.metadata.requires-dev]
@@ -634,6 +634,18 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/5c/c2/19f34deb2dc1475dfeadafbd5666246041ee7578bb933e82de794f0a9283/spylls-0.1.7.tar.gz", hash = "sha256:7045892dcbd324d3685f69c5a760063e78fb839913724ce18077cf0a0c93f220", size = 1499693, upload-time = "2022-01-23T13:26:54.032Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/cd/19/ce6fcb4b86e188983bcfc1f84e4ac6f3038ca8d68b6d70a678cdc566f66c/spylls-0.1.7-py2.py3-none-any.whl", hash = "sha256:0c7fa4b66615f390bd12fd37939b85934c012309fd3cce8584844c54270b7776", size = 1509482, upload-time = "2022-01-23T13:26:40.203Z" },
+]
+
+[[package]]
+name = "techsical"
+version = "0.3.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "zensical" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ca/22/2757d05b3036e0f3197461f51c7b6183c72dbc9adae520968cea72da6485/techsical-0.3.0.tar.gz", hash = "sha256:3b5c11387b39ccbba412a09407c72569f4eb40abb437e3b3e28f52f7eae788a7", size = 439046, upload-time = "2026-11-18T10:00:34.627Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/46/17/42bc6d7273b71c0e39bc512bd3d8a4a0b65b1af00e7ab24d9cd979a2b31d/techsical-0.3.0-py3-none-any.whl", hash = "sha256:8465ac202a31c8e68b5aa8d49261d4a1ab316e09ec08b605d67f4206f6baff3e", size = 447398, upload-time = "2026-11-18T10:00:33.369Z" },
 ]
 
 [[package]]

@@ -1,73 +1,108 @@
+{#-
+  reCocina: copia de partials/header.html de techsical 0.3.0 (a su vez copia del
+  de Zensical, zensical-ui 0.0.42) con un cambio, marcado con «reCocina»: el botón
+  del modo cocina antes del selector de paleta. Al actualizar techsical, compara
+  con su header.html (`site.py upgrade` lo revisa).
+-#}
 {% set class = "md-header" %}
 {% if "navigation.tabs.sticky" in features %}
-    {% set class = class ~ " md-header--shadow md-header--lifted" %}
+  {% set class = class ~ " md-header--shadow md-header--lifted" %}
 {% elif "navigation.tabs" not in features %}
-    {% set class = class ~ " md-header--shadow" %}
+  {% set class = class ~ " md-header--shadow" %}
 {% endif %}
 <header class="{{ class }}" data-md-component="header">
-    <nav class="md-header__inner md-grid" aria-label="{{ lang.t('header') }}">
-        <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}"
-           title="{{ config.site_name | e }}"
-           class="md-header__button md-logo"
-           aria-label="{{ config.site_name }}"
-           data-md-component="logo">{% include "partials/logo.html" %}</a>
-        <label class="md-header__button md-icon" for="__drawer">
-            {% set icon = config.theme.icon.menu or "material/menu" %}
-            {% include ".icons/" ~ icon ~ ".svg" %}
-            <span class="md-visually-hidden">{{ lang.t('nav') }}</span>
-        </label>
-        <div class="md-header__title" data-md-component="header-title">
-            <div class="md-header__ellipsis">
-                <div class="md-header__topic">
-                    <span class="md-ellipsis">{{ config.site_name }}</span>
-                </div>
-                <div class="md-header__topic" data-md-component="header-topic">
-                    <span class="md-ellipsis">
-                        {% if page.meta and page.meta.title %}
-                            {{ page.meta.title }}
-                        {% else %}
-                            {{ page.title }}
-                        {% endif %}
-                    </span>
-                </div>
-            </div>
+  <nav class="md-header__inner md-grid" aria-label="{{ lang.t('header') }}">
+    <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" title="{{ config.site_name | e }}" class="md-header__button md-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
+      {% include "partials/logo.html" %}
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      {% set icon = config.theme.icon.menu or "material/menu" %}
+      {% include ".icons/" ~ icon ~ ".svg" %}
+      <span class="md-visually-hidden">{{ lang.t('nav') }}</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          {#- techsical: marca editorial -#}
+          <span class="tx-brand">
+            <span class="tx-brand__name">{{ config.site_name }}</span>
+            {% if config.site_description %}
+              <span class="tx-brand__description">{{ config.site_description }}</span>
+            {% endif %}
+          </span>
         </div>
-        {# Modo cocina: oculto por defecto; el JS lo muestra si hay Wake Lock #}
-        <button type="button"
-                class="md-header__button md-icon"
-                data-md-component="cocina"
-                title="Modo cocina (pantalla siempre encendida)"
-                aria-label="Modo cocina (pantalla siempre encendida)"
-                aria-pressed="false"
-                hidden>
-            {% include ".icons/lucide/chef-hat.svg" %}
-        </button>
-        {% if config.theme.palette %}
-            {% if not config.theme.palette is mapping %}
-                {% include "partials/palette.html" %}
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            {% if page.meta and page.meta.title %}
+              {{ page.meta.title }}
+            {% else %}
+              {{ page.title }}
             {% endif %}
-        {% endif %}
-        {% if not config.theme.palette is mapping %}
-            {% include "partials/javascripts/palette.html" %}
-        {% endif %}
-        {% if config.extra.alternate %}
-            {% include "partials/alternate.html" %}
-        {% endif %}
-        {% if "search" in config.plugins %}
-            {% set search = config.plugins["search"] | attr("config") %}
-            {% if search.enabled %}
-                <label class="md-header__button md-icon" for="__search">
-                    {% set icon = config.theme.icon.search or "material/magnify" %}
-                    {% include ".icons/" ~ icon ~ ".svg" %}
-                    <span class="md-visually-hidden">{{ lang.t('search') }}</span>
-                </label>
-                {% include "partials/search.html" %}
-            {% endif %}
-        {% endif %}
-    </nav>
-    {% if "navigation.tabs.sticky" in features %}
-        {% if "navigation.tabs" in features %}
-            {% include "partials/tabs.html" %}
-        {% endif %}
+          </span>
+        </div>
+      </div>
+    </div>
+    {#- reCocina: modo cocina, oculto por defecto; kitchen-mode.js lo muestra si hay Wake Lock -#}
+    <button type="button"
+            class="md-header__button md-icon"
+            data-md-component="cocina"
+            title="Modo cocina (pantalla siempre encendida)"
+            aria-label="Modo cocina (pantalla siempre encendida)"
+            aria-pressed="false"
+            hidden>
+      {% include ".icons/lucide/chef-hat.svg" %}
+    </button>
+    {% if config.theme.palette %}
+      {% if not config.theme.palette is mapping %}
+        {% include "partials/palette.html" %}
+      {% endif %}
     {% endif %}
+    {% if not config.theme.palette is mapping %}
+      {% include "partials/javascripts/palette.html" %}
+    {% endif %}
+    {% if config.extra.alternate %}
+      {% include "partials/alternate.html" %}
+    {% endif %}
+    {% if "search" in config.plugins %}
+      {% set search = config.plugins["search"] | attr("config") %}
+      {% if search.enabled %}
+        <label class="md-header__button md-icon" for="__search">
+          {% set icon = config.theme.icon.search or "material/magnify" %}
+          {% include ".icons/" ~ icon ~ ".svg" %}
+          <span class="md-visually-hidden">{{ lang.t('search') }}</span>
+        </label>
+        {% include "partials/search.html" %}
+      {% endif %}
+    {% endif %}
+    <div class="md-header__source">
+      {% if config.repo_url %}
+        {% include "partials/source.html" %}
+      {% endif %}
+    </div>
+  </nav>
+  {% if "navigation.tabs.sticky" in features %}
+    {% if "navigation.tabs" in features %}
+      {% include "partials/tabs.html" %}
+    {% endif %}
+  {% endif %}
 </header>
+{#- techsical: barra de navegación propia bajo la cabecera -#}
+{% set tx = config.extra.techsical | d({}, true) %}
+{% if tx.header_nav %}
+  <nav class="tx-subnav" aria-label="{{ config.site_name | e }}">
+    <ul class="tx-subnav__list md-grid">
+      {% for item in tx.header_nav %}
+        {% set target = item.url | url %}
+        {% set prefix = item.url | replace("./", "") %}
+        {% set active = page and page.url and prefix and not "://" in prefix
+          and page.url[:prefix | length] == prefix %}
+        <li>
+          <a class="tx-subnav__link{% if active %} tx-subnav__link--active{% endif %}"
+             href="{{ target }}"{% if active %} aria-current="page"{% endif %}>
+            {{- item.title -}}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+{% endif %}

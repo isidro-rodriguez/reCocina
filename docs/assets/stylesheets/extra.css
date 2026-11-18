@@ -1,28 +1,13 @@
 /* ========================================
-   0. Fuentes (servidas desde el propio sitio)
+   reCocina sobre el tema techsical.
+   El tema pone tipografía, maquetación, transiciones y la paleta a partir de
+   [project.extra.techsical] (zensical.toml). Aquí van el papel y la noche
+   cálidos del recetario y los componentes propios (recetas, listados, badges,
+   modo cocina).
    ======================================== */
-@font-face {
-    font-family: "Literata";
-    font-style: normal;
-    font-weight: 200 900;
-    font-display: swap;
-    src: url("../fonts/literata-latin-wght-normal.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Literata";
-    font-style: italic;
-    font-weight: 200 900;
-    font-display: swap;
-    src: url("../fonts/literata-latin-wght-italic.woff2") format("woff2");
-}
-
-:root {
-    --md-text-font: "Literata";
-}
 
 /* ========================================
-   1. Paleta (capa 1: colores en bruto)
+   1. Paleta (colores en bruto)
    Escala 50 (claro) → 950 (oscuro)
    ======================================== */
 :root {
@@ -55,102 +40,82 @@
     --marfil-100: #f3efe5;
 }
 
+
 /* ========================================
-   2. Medidas del sitio
+   2. Papel claro y noche cálida (variables de techsical)
    ======================================== */
+:root,
+[data-md-color-scheme="default"] {
+    --tx-bg: var(--arena-50);
+    --tx-surface-1: var(--blanco);
+    --tx-surface-2: var(--arena-100);
+    --tx-surface-3: color-mix(in srgb, var(--arena-100) 70%, var(--gris-500));
+    --tx-border: color-mix(in srgb, var(--gris-500) 25%, var(--arena-50));
+    --tx-border-strong: color-mix(in srgb, var(--gris-500) 45%, var(--arena-50));
+    --tx-text: var(--tinta-900);
+    --tx-code-bg: var(--arena-100);
+    --tx-code-fg: var(--tinta-900);
+
+    /* Badges de categoría */
+    --categoria-bg: color-mix(in srgb, var(--verde-700) 22%, transparent);
+    --categoria-fg: var(--verde-800);
+}
+
 :root {
-    --ancho-menu: 14rem; /* menú lateral de Material */
-    --ancho-articulo: 780px; /* ≈ 75 caracteres con la fuente de lectura */
-    --separacion-menu: 4rem; /* aire entre menú y artículo */
-    --umbral-menu: 76.25em; /* a partir de aquí aparece el menú lateral */
+    --tx-night-bg: var(--carbon-950);
+    --tx-night-surface-1: var(--carbon-900);
+    --tx-night-surface-2: var(--carbon-800);
+    --tx-night-surface-3: var(--carbon-700);
+    --tx-night-border: var(--carbon-700);
+    --tx-night-border-strong: var(--carbon-600);
+    --tx-night-text: var(--marfil-100);
 }
 
-/* ========================================
-   3. Lectura (tipografía del artículo)
-   ======================================== */
-.md-typeset {
-    font-size: 0.9rem; /* 18 px (1rem = 20 px en Material) */
-    line-height: 1.7;
-    color: var(--md-default-fg-color);
+[data-md-color-scheme="slate"] {
+    /* La cabecera sigue verde bosque, como en claro. */
+    --tx-header-bg: var(--verde-700);
+    --tx-header-fg: var(--blanco);
+    --tx-header-fg-muted: color-mix(in srgb, var(--blanco) 78%, var(--verde-700));
+    --tx-header-rule: color-mix(in srgb, var(--blanco) 35%, var(--verde-700));
 
-    & p,
-    & li {
-        text-wrap: pretty; /* evita líneas con una palabra huérfana */
-        hyphens: auto; /* requiere lang="es" (language: es) */
+    --categoria-bg: color-mix(in srgb, var(--verde-600) 55%, transparent);
+    --categoria-fg: var(--marfil-100);
+
+    & .md-button--primary {
+        color: var(--blanco);
+        background-color: var(--terracota-600);
+        border-color: var(--terracota-600);
     }
+}
 
-    & li {
-        margin-bottom: 0.3em;
-    }
-
-    /* Material deja el término igual que su definición */
-    & dt {
+/* Glosario de etiquetas: ### para conservar anclas y tabla de contenidos, con
+   aspecto de lista de definiciones. */
+.md-typeset:has(> h1.definiciones) {
+    & h3 {
+        margin: 1em 0 0;
+        font-size: inherit;
         font-weight: 700;
+        line-height: inherit;
+        letter-spacing: normal;
     }
 
-    /* Etiquetas como el glosario, pero con ### para conservar anclas y tabla de contenidos */
-    &:has(> h1.definiciones) {
-        & h3 {
-            margin: 1em 0 0;
-            font-size: inherit;
-            font-weight: 700;
-            line-height: inherit;
-            letter-spacing: normal;
-        }
-
-        & h3 + p {
-            margin: 1em 0 1.5em 1.875em;
-        }
+    & h3 + p {
+        margin: 1em 0 1.5em 1.875em;
     }
+}
 
-    & .twemoji {
-        display: inline;
-    }
+.md-typeset .twemoji {
+    display: inline;
 }
 
 /* ========================================
-   4. Maquetación
+   3. Componentes
    ======================================== */
-.md-grid {
-    max-width: calc(
-        var(--ancho-menu) + var(--separacion-menu) + var(--ancho-articulo)
-    );
-}
-
-.md-content {
-    max-width: var(--ancho-articulo);
-    margin-right: auto;
-
-    @media screen and (max-width: 76.234375em) {
-        margin-left: auto;
-    }
-}
-
-@media screen and (min-width: 76.25em) {
-    /* Separación entre el menú lateral y el artículo */
-    [dir="ltr"] .md-sidebar--primary:not([hidden]) ~ .md-content {
-        margin-left: var(--separacion-menu);
-        margin-right: 0;
-    }
-
-    /* El artículo ocupa todo el ancho (sin margen interno) */
-    [dir="ltr"]
-        .md-sidebar--primary:not([hidden])
-        ~ .md-content
-        > .md-content__inner {
-        margin-left: 0;
-        margin-right: 0;
-    }
-}
 
 /* Evita deformar imágenes si tarjeta y cabecera tienen distinta proporción */
 img {
     object-fit: cover;
 }
-
-/* ========================================
-   5. Componentes
-   ======================================== */
 
 /* --- Metadatos de página --- */
 .page-metadata {
@@ -192,6 +157,12 @@ img {
 }
 
 /* --- Tarjeta de receta --- */
+/* La tarjeta entera es un enlace: sin el subrayado de los enlaces del tema. */
+.md-typeset .card-recipe,
+.md-typeset .card-recipe * {
+    text-decoration: none;
+}
+
 .card-recipe {
     display: block;
     border-radius: 0.6rem;
@@ -585,175 +556,5 @@ article:has(.page-metadata) {
         & #preparacion ~ ol {
             transition: none;
         }
-    }
-}
-
-/* ========================================
-   6. Transiciones entre páginas
-   ======================================== */
-@view-transition {
-    navigation: auto;
-}
-
-::view-transition-group(*) {
-    animation-duration: 0.4s;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    @view-transition {
-        navigation: none;
-    }
-}
-
-/* ========================================
-   7. Rasgos comunes a ambos temas
-   ======================================== */
-[data-md-color-scheme] {
-    --md-footer-bg-color: var(--verde-700);
-    --md-footer-bg-color--dark: var(--verde-700);
-
-    & .md-header,
-    & .md-footer,
-    & .md-tabs {
-        background-color: var(--verde-700);
-    }
-
-    & .md-button {
-        border-radius: 8px;
-    }
-}
-
-/* ========================================
-   8. Tema claro (capa 2: variables del tema)
-   ======================================== */
-[data-md-color-scheme="light"] {
-    /* Primary — Verde bosque */
-    --md-primary-fg-color: var(--verde-700);
-    --md-primary-fg-color--light: var(--verde-200);
-    --md-primary-fg-color--dark: var(--verde-900);
-
-    /* Accent — Terracota */
-    --md-accent-fg-color: var(--terracota-500);
-    --md-accent-fg-color--transparent: color-mix(
-        in srgb,
-        var(--terracota-500) 12%,
-        transparent
-    );
-
-    /* Fondos */
-    --md-default-bg-color: var(--arena-50);
-    --md-default-bg-color--light: var(--arena-50);
-    --md-default-bg-color--lighter: var(--blanco);
-    --md-default-bg-color--lightest: var(--blanco);
-
-    /* Texto */
-    --md-default-fg-color: var(--tinta-900);
-    --md-default-fg-color--light: color-mix(
-        in srgb,
-        var(--tinta-900) 70%,
-        transparent
-    );
-    --md-default-fg-color--lighter: color-mix(
-        in srgb,
-        var(--tinta-900) 50%,
-        transparent
-    );
-    --md-default-fg-color--lightest: color-mix(
-        in srgb,
-        var(--tinta-900) 25%,
-        transparent
-    );
-
-    /* Enlaces: color del tema en vez del azul de Material */
-    --md-typeset-a-color: var(--md-primary-fg-color);
-
-    /* Badges de categoría */
-    --categoria-bg: color-mix(in srgb, var(--verde-700) 22%, transparent);
-    --categoria-fg: var(--verde-800);
-
-    /* Superficies y bordes */
-    --md-code-bg-color: var(--arena-100);
-    --md-code-fg-color: var(--tinta-900);
-    --md-typeset-table-color: color-mix(
-        in srgb,
-        var(--gris-500) 35%,
-        transparent
-    );
-}
-
-/* ========================================
-   9. Tema oscuro cálido
-   ======================================== */
-[data-md-color-scheme="slate"] {
-    /* Identidad */
-    --md-primary-fg-color: var(--verde-700);
-    --md-primary-fg-color--light: var(--verde-600);
-    --md-primary-fg-color--dark: var(--verde-800);
-
-    /* Acento gastronómico */
-    --md-accent-fg-color: var(--terracota-400);
-    --md-accent-fg-color--transparent: color-mix(
-        in srgb,
-        var(--terracota-400) 14%,
-        transparent
-    );
-
-    /* Fondos */
-    --md-default-bg-color: var(--carbon-950);
-    --md-default-bg-color--light: var(--carbon-900);
-    --md-default-bg-color--lighter: var(--carbon-800);
-    --md-default-bg-color--lightest: var(--carbon-700);
-
-    /* Texto */
-    --md-default-fg-color: var(--marfil-100);
-    --md-default-fg-color--light: color-mix(
-        in srgb,
-        var(--marfil-100) 72%,
-        transparent
-    );
-    --md-default-fg-color--lighter: color-mix(
-        in srgb,
-        var(--marfil-100) 52%,
-        transparent
-    );
-    --md-default-fg-color--lightest: color-mix(
-        in srgb,
-        var(--marfil-100) 28%,
-        transparent
-    );
-
-    /* Código */
-    --md-code-bg-color: var(--carbon-800);
-    --md-code-fg-color: var(--marfil-100);
-
-    /* Enlaces fuera del artículo (menú, paginación): mismo terracota que los del texto */
-    --md-typeset-a-color: var(--terracota-400);
-
-    /* Badges de categoría */
-    --categoria-bg: color-mix(in srgb, var(--verde-600) 55%, transparent);
-    --categoria-fg: var(--marfil-100);
-
-    /* Componentes */
-
-    & .md-typeset a {
-        color: var(--terracota-400);
-
-        &:hover {
-            color: var(--terracota-300);
-        }
-    }
-
-    & .highlight {
-        background-color: var(--carbon-800);
-    }
-
-    & .md-typeset table:not([class]) {
-        border-color: var(--carbon-600);
-    }
-
-    & .md-button--primary {
-        background-color: var(--terracota-600);
-        border-color: var(--terracota-600);
-        color: var(--blanco);
     }
 }
