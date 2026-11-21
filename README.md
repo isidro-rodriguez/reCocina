@@ -16,7 +16,7 @@ uv run zensical build
 poe check
 ```
 
-Requisitos: [uv](https://docs.astral.sh/uv/) y Python 3.12+ (uv lo gestiona solo).
+Requisitos: [uv](https://docs.astral.sh/uv/) y Python 3.13+ (uv lo gestiona solo).
 
 ## Añadir una receta
 

@@ -3,7 +3,7 @@ name = "recocina"
 version = "0.0.0"
 description = "Recetario de cocina casera generado con Zensical"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.13"
 authors = [{ name = "Isidro Rodríguez" }]
 dependencies = [
   "pyyaml>=6.0.3",
@@ -64,7 +64,7 @@ cmd = "python scripts/backup.py"
 testpaths = ["tests"]
 
 [tool.ruff]
-target-version = "py312"
+target-version = "py313"
 line-length = 88
 extend-exclude = ["site", "docs_templates"]
 
@@ -75,7 +75,7 @@ select = ["E", "F", "I", "UP", "B", "D", "SIM", "PTH"]
 convention = "google"
 
 [tool.ty.environment]
-python-version = "3.12"
+python-version = "3.13"
 
 [tool.ty.analysis]
 strict-equality-semantics = true

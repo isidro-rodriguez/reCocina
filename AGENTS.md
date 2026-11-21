@@ -66,7 +66,7 @@ duplicate it here. Quality and build commands live in this file.
 
 ### Code
 
-- Python 3.12+ (ruff `target-version = py312`; configuration in `pyproject.toml`).
+- Python 3.13+ (ruff `target-version = py313`; configuration in `pyproject.toml`).
 - **Human-facing text** in Spanish includes UI output and the recipes themselves.
 
 ### Web assets (CSS/JS/HTML)
@@ -95,8 +95,8 @@ duplicate it here. Quality and build commands live in this file.
 | Everything   | `uv run pre-commit run --all-files` (ruff check, ruff format --check, pytest)                                                                | before finishing                                     |
 
 The shared quality gate applies to any change (tests included). CI
-(`.github/workflows/ci.yml`) runs on push/PR (ubuntu + windows): `pre-commit run --all-files`,
-`ty check` and the full strict build chain — keep `main` green.
+(`.github/workflows/ci.yml`) runs on push/PR (ubuntu + windows, Python 3.13 and 3.14):
+`pre-commit run --all-files`, `ty check` and the full strict build chain — keep `main` green.
 
 Other Poe shortcuts (same rules as `poe check`):
 
